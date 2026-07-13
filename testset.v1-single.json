@@ -1,0 +1,74 @@
+[
+  {
+    "query": "我的代码有SQL注入风险，怎么防",
+    "expected": ["01-security", "06a-security-audit"]
+  },
+  {
+    "query": "API key不小心硬编码到源码里了",
+    "expected": ["01-security"]
+  },
+  {
+    "query": "处理用户隐私数据如邮件病历时怎么保护不泄露",
+    "expected": ["01-security"]
+  },
+  {
+    "query": "对话上下文快满了模型变笨怎么办",
+    "expected": ["02-context"]
+  },
+  {
+    "query": "压缩上下文后怎么避免重复执行旧任务",
+    "expected": ["02-context"]
+  },
+  {
+    "query": "这个功能该用哪个agent，选Haiku还是Opus",
+    "expected": ["03-routing"]
+  },
+  {
+    "query": "MCP工具太多占了太多context怎么精简",
+    "expected": ["03-routing"]
+  },
+  {
+    "query": "新功能怎么拆分成可测试的切片",
+    "expected": ["04-planning"]
+  },
+  {
+    "query": "写代码前要做哪些调研和搜索",
+    "expected": ["04-planning"]
+  },
+  {
+    "query": "首次编辑文件前要先调查什么",
+    "expected": ["05-execute"]
+  },
+  {
+    "query": "并行跑多个agent怎么避免landing冲突",
+    "expected": ["05-execute"]
+  },
+  {
+    "query": "代码写完了要过哪些质量门和审查",
+    "expected": ["06-verify"]
+  },
+  {
+    "query": "怎么对代码库做完整的安全审计",
+    "expected": ["06a-security-audit"]
+  },
+  {
+    "query": "提交代码的commit message格式是什么",
+    "expected": ["07-output"]
+  },
+  {
+    "query": "规则写了怎么验证它真的有效不是信仰",
+    "expected": ["A4-rule-measurement"]
+  },
+  {
+    "query": "skill怎么设计，description该怎么写",
+    "expected": ["A2-skill-design"]
+  },
+  {
+    "query": "CLAUDE.md文件太长怎么拆分和懒加载",
+    "expected": ["A3-rule-craft"]
+  },
+  {
+    "query": "agent的记忆怎么管理，置信度怎么定",
+    "expected": ["A1-memory"]
+  }
+]

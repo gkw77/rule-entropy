@@ -1,0 +1,1360 @@
+{
+  "timestamp": "2026-07-13",
+  "corpus": "corpus/*.md (13 files)",
+  "router": "L0 keyword, weighted-coverage + idf, CJK bigram",
+  "testsetSize": 18,
+  "sweep": [
+    {
+      "threshold": 0.05,
+      "precision": 0.20815696649029986,
+      "recall": 0.9722222222222222,
+      "f1": 0.33391454224787565
+    },
+    {
+      "threshold": 0.1,
+      "precision": 0.5111111111111112,
+      "recall": 0.9166666666666666,
+      "f1": 0.6314814814814815
+    },
+    {
+      "threshold": 0.15,
+      "precision": 0.4907407407407407,
+      "recall": 0.5,
+      "f1": 0.4759259259259259
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.3055555555555556,
+      "recall": 0.2777777777777778,
+      "f1": 0.287037037037037
+    },
+    {
+      "threshold": 0.25,
+      "precision": 0.1111111111111111,
+      "recall": 0.08333333333333333,
+      "f1": 0.09259259259259259
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.05555555555555555,
+      "recall": 0.05555555555555555,
+      "f1": 0.05555555555555555
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    }
+  ],
+  "bestThreshold": 0.1,
+  "macroAtBest": {
+    "precision": 0.511,
+    "recall": 0.917,
+    "f1": 0.631
+  },
+  "detail": [
+    {
+      "query": "我的代码有SQL注入风险，怎么防",
+      "expected": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "predicted": [
+        "06-verify",
+        "02-context",
+        "04-planning",
+        "01-security"
+      ],
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333,
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "06-verify",
+          "conf": 0.209,
+          "hits": [
+            "sql",
+            "的代",
+            "代码",
+            "注入",
+            "风险",
+            "怎么"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.161,
+          "hits": [
+            "的代",
+            "代码",
+            "注入",
+            "风险",
+            "怎么"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.132,
+          "hits": [
+            "代码",
+            "注入",
+            "风险",
+            "怎么"
+          ]
+        },
+        {
+          "path": "01-security",
+          "conf": 0.109,
+          "hits": [
+            "sql",
+            "代码",
+            "注入",
+            "风险"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.072,
+          "hits": [
+            "的代",
+            "代码",
+            "注入"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "API key不小心硬编码到源码里了",
+      "expected": [
+        "01-security"
+      ],
+      "predicted": [
+        "01-security",
+        "06-verify"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "01-security",
+          "conf": 0.138,
+          "hits": [
+            "api",
+            "key",
+            "硬编",
+            "编码",
+            "源码",
+            "码里"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.115,
+          "hits": [
+            "api",
+            "硬编",
+            "编码",
+            "到源",
+            "源码"
+          ]
+        },
+        {
+          "path": "A2-skill-design",
+          "conf": 0.094,
+          "hits": [
+            "api",
+            "硬编",
+            "编码"
+          ]
+        },
+        {
+          "path": "A3-rule-craft",
+          "conf": 0.075,
+          "hits": [
+            "api",
+            "编码"
+          ]
+        },
+        {
+          "path": "06a-security-audit",
+          "conf": 0.062,
+          "hits": [
+            "api",
+            "key",
+            "源码"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "处理用户隐私数据如邮件病历时怎么保护不泄露",
+      "expected": [
+        "01-security"
+      ],
+      "predicted": [
+        "01-security"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "01-security",
+          "conf": 0.221,
+          "hits": [
+            "处理",
+            "理用",
+            "用户",
+            "户隐",
+            "隐私",
+            "私数",
+            "数据",
+            "邮件",
+            "病历",
+            "保护",
+            "不泄",
+            "泄露"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.096,
+          "hits": [
+            "处理",
+            "用户",
+            "数据",
+            "怎么",
+            "保护",
+            "不泄",
+            "泄露"
+          ]
+        },
+        {
+          "path": "06a-security-audit",
+          "conf": 0.044,
+          "hits": [
+            "处理",
+            "用户",
+            "数据",
+            "泄露"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.042,
+          "hits": [
+            "用户",
+            "数据",
+            "怎么"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.04,
+          "hits": [
+            "用户",
+            "数据",
+            "怎么"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "对话上下文快满了模型变笨怎么办",
+      "expected": [
+        "02-context"
+      ],
+      "predicted": [
+        "02-context",
+        "04-planning"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "02-context",
+          "conf": 0.165,
+          "hits": [
+            "对话",
+            "上下",
+            "下文",
+            "满了",
+            "模型",
+            "怎么",
+            "么办"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.104,
+          "hits": [
+            "上下",
+            "下文",
+            "模型",
+            "怎么"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.089,
+          "hits": [
+            "对话",
+            "上下",
+            "下文",
+            "模型",
+            "怎么"
+          ]
+        },
+        {
+          "path": "01-security",
+          "conf": 0.068,
+          "hits": [
+            "对话",
+            "上下",
+            "下文",
+            "模型"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.057,
+          "hits": [
+            "对话",
+            "上下",
+            "下文",
+            "模型"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "压缩上下文后怎么避免重复执行旧任务",
+      "expected": [
+        "02-context"
+      ],
+      "predicted": [
+        "02-context",
+        "04-planning"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "02-context",
+          "conf": 0.172,
+          "hits": [
+            "压缩",
+            "上下",
+            "下文",
+            "怎么",
+            "避免",
+            "执行",
+            "任务"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.131,
+          "hits": [
+            "上下",
+            "下文",
+            "怎么",
+            "重复",
+            "执行",
+            "任务"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.094,
+          "hits": [
+            "压缩",
+            "上下",
+            "下文",
+            "重复",
+            "执行"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.087,
+          "hits": [
+            "上下",
+            "下文",
+            "怎么",
+            "执行",
+            "任务"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.077,
+          "hits": [
+            "压缩",
+            "上下",
+            "下文",
+            "执行",
+            "任务"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "这个功能该用哪个agent，选Haiku还是Opus",
+      "expected": [
+        "03-routing"
+      ],
+      "predicted": [
+        "03-routing",
+        "A4-rule-measurement"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "03-routing",
+          "conf": 0.124,
+          "hits": [
+            "agent",
+            "haiku",
+            "opus",
+            "功能"
+          ]
+        },
+        {
+          "path": "A4-rule-measurement",
+          "conf": 0.101,
+          "hits": [
+            "haiku",
+            "opus",
+            "还是"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.097,
+          "hits": [
+            "agent",
+            "haiku",
+            "这个",
+            "功能"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.061,
+          "hits": [
+            "agent",
+            "这个",
+            "功能"
+          ]
+        },
+        {
+          "path": "05-execute",
+          "conf": 0.058,
+          "hits": [
+            "agent",
+            "功能"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "MCP工具太多占了太多context怎么精简",
+      "expected": [
+        "03-routing"
+      ],
+      "predicted": [
+        "A2-skill-design",
+        "03-routing"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "A2-skill-design",
+          "conf": 0.132,
+          "hits": [
+            "mcp",
+            "context",
+            "工具",
+            "怎么",
+            "么精"
+          ]
+        },
+        {
+          "path": "03-routing",
+          "conf": 0.119,
+          "hits": [
+            "mcp",
+            "context",
+            "工具",
+            "精简"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.098,
+          "hits": [
+            "context",
+            "工具",
+            "怎么"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.075,
+          "hits": [
+            "context",
+            "工具",
+            "怎么"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.052,
+          "hits": [
+            "mcp",
+            "context",
+            "工具"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "新功能怎么拆分成可测试的切片",
+      "expected": [
+        "04-planning"
+      ],
+      "predicted": [
+        "04-planning",
+        "06-verify"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "04-planning",
+          "conf": 0.16,
+          "hits": [
+            "新功",
+            "功能",
+            "怎么",
+            "可测",
+            "测试",
+            "切片"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.153,
+          "hits": [
+            "新功",
+            "功能",
+            "怎么",
+            "成可",
+            "测试",
+            "切片"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.058,
+          "hits": [
+            "功能",
+            "怎么",
+            "测试"
+          ]
+        },
+        {
+          "path": "03-routing",
+          "conf": 0.054,
+          "hits": [
+            "新功",
+            "功能",
+            "测试"
+          ]
+        },
+        {
+          "path": "05-execute",
+          "conf": 0.043,
+          "hits": [
+            "功能",
+            "测试"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "写代码前要做哪些调研和搜索",
+      "expected": [
+        "04-planning"
+      ],
+      "predicted": [
+        "04-planning"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "04-planning",
+          "conf": 0.13,
+          "hits": [
+            "写代",
+            "代码",
+            "码前",
+            "调研",
+            "搜索"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.096,
+          "hits": [
+            "代码",
+            "要做",
+            "和搜",
+            "搜索"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.083,
+          "hits": [
+            "写代",
+            "代码",
+            "调研",
+            "搜索"
+          ]
+        },
+        {
+          "path": "05-execute",
+          "conf": 0.068,
+          "hits": [
+            "写代",
+            "代码",
+            "搜索"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.044,
+          "hits": [
+            "代码",
+            "哪些"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "首次编辑文件前要先调查什么",
+      "expected": [
+        "05-execute"
+      ],
+      "predicted": [
+        "05-execute"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "05-execute",
+          "conf": 0.332,
+          "hits": [
+            "首次",
+            "次编",
+            "编辑",
+            "辑文",
+            "文件",
+            "先调",
+            "调查",
+            "什么"
+          ]
+        },
+        {
+          "path": "06a-security-audit",
+          "conf": 0.06,
+          "hits": [
+            "文件",
+            "调查",
+            "什么"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.058,
+          "hits": [
+            "编辑",
+            "文件",
+            "什么"
+          ]
+        },
+        {
+          "path": "A2-skill-design",
+          "conf": 0.056,
+          "hits": [
+            "编辑",
+            "文件",
+            "什么"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.052,
+          "hits": [
+            "编辑",
+            "文件",
+            "什么"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "并行跑多个agent怎么避免landing冲突",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "predicted": [
+        "05-execute",
+        "06-verify",
+        "04-planning",
+        "02-context"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "05-execute",
+          "conf": 0.216,
+          "hits": [
+            "agent",
+            "landing",
+            "并行",
+            "多个",
+            "冲突"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.146,
+          "hits": [
+            "agent",
+            "landing",
+            "并行",
+            "怎么"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.138,
+          "hits": [
+            "agent",
+            "并行",
+            "多个",
+            "怎么"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.101,
+          "hits": [
+            "agent",
+            "怎么",
+            "避免"
+          ]
+        },
+        {
+          "path": "A3-rule-craft",
+          "conf": 0.086,
+          "hits": [
+            "agent",
+            "多个",
+            "避免"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "代码写完了要过哪些质量门和审查",
+      "expected": [
+        "06-verify",
+        "04-planning"
+      ],
+      "predicted": [
+        "06-verify",
+        "04-planning",
+        "00-pipeline"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 1,
+      "f1": 0.8,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "06-verify",
+          "conf": 0.189,
+          "hits": [
+            "代码",
+            "码写",
+            "写完",
+            "要过",
+            "质量",
+            "量门",
+            "审查"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.11,
+          "hits": [
+            "代码",
+            "完了",
+            "质量",
+            "量门"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.101,
+          "hits": [
+            "代码",
+            "码写",
+            "写完",
+            "质量",
+            "量门",
+            "审查"
+          ]
+        },
+        {
+          "path": "05-execute",
+          "conf": 0.083,
+          "hits": [
+            "代码",
+            "码写",
+            "审查"
+          ]
+        },
+        {
+          "path": "03-routing",
+          "conf": 0.062,
+          "hits": [
+            "代码",
+            "写完",
+            "质量",
+            "审查"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "怎么对代码库做完整的安全审计",
+      "expected": [
+        "06a-security-audit",
+        "01-security"
+      ],
+      "predicted": [
+        "06-verify",
+        "06a-security-audit",
+        "04-planning",
+        "01-security"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "06-verify",
+          "conf": 0.19,
+          "hits": [
+            "怎么",
+            "代码",
+            "码库",
+            "完整",
+            "安全",
+            "全审",
+            "审计"
+          ]
+        },
+        {
+          "path": "06a-security-audit",
+          "conf": 0.183,
+          "hits": [
+            "代码",
+            "码库",
+            "完整",
+            "的安",
+            "安全",
+            "全审",
+            "审计"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.16,
+          "hits": [
+            "怎么",
+            "代码",
+            "码库",
+            "做完",
+            "完整",
+            "审计"
+          ]
+        },
+        {
+          "path": "01-security",
+          "conf": 0.13,
+          "hits": [
+            "代码",
+            "完整",
+            "安全",
+            "全审",
+            "审计"
+          ]
+        },
+        {
+          "path": "A2-skill-design",
+          "conf": 0.093,
+          "hits": [
+            "怎么",
+            "代码",
+            "完整",
+            "安全",
+            "审计"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "提交代码的commit message格式是什么",
+      "expected": [
+        "07-output"
+      ],
+      "predicted": [
+        "07-output",
+        "06-verify",
+        "04-planning",
+        "A1-memory"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "07-output",
+          "conf": 0.202,
+          "hits": [
+            "commit",
+            "message",
+            "提交",
+            "格式",
+            "什么"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.186,
+          "hits": [
+            "commit",
+            "message",
+            "提交",
+            "代码",
+            "什么"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.119,
+          "hits": [
+            "commit",
+            "提交",
+            "代码",
+            "什么"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.111,
+          "hits": [
+            "代码",
+            "格式",
+            "什么"
+          ]
+        },
+        {
+          "path": "05-execute",
+          "conf": 0.087,
+          "hits": [
+            "提交",
+            "代码",
+            "什么"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "规则写了怎么验证它真的有效不是信仰",
+      "expected": [
+        "A4-rule-measurement"
+      ],
+      "predicted": [
+        "04-planning",
+        "06a-security-audit",
+        "06-verify",
+        "A1-memory"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 4,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "04-planning",
+          "conf": 0.171,
+          "hits": [
+            "规则",
+            "写了",
+            "怎么",
+            "验证",
+            "的有",
+            "有效",
+            "不是",
+            "是信",
+            "信仰"
+          ]
+        },
+        {
+          "path": "06a-security-audit",
+          "conf": 0.109,
+          "hits": [
+            "规则",
+            "写了",
+            "验证",
+            "真的",
+            "有效",
+            "不是"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.106,
+          "hits": [
+            "规则",
+            "怎么",
+            "验证",
+            "它真",
+            "不是",
+            "信仰"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.102,
+          "hits": [
+            "规则",
+            "则写",
+            "写了",
+            "验证",
+            "不是",
+            "信仰"
+          ]
+        },
+        {
+          "path": "A2-skill-design",
+          "conf": 0.098,
+          "hits": [
+            "规则",
+            "怎么",
+            "验证",
+            "的有",
+            "有效",
+            "不是"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "skill怎么设计，description该怎么写",
+      "expected": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "predicted": [
+        "A2-skill-design",
+        "04-planning",
+        "A3-rule-craft",
+        "06-verify"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "A2-skill-design",
+          "conf": 0.276,
+          "hits": [
+            "skill",
+            "description",
+            "怎么",
+            "设计",
+            "怎么"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.204,
+          "hits": [
+            "skill",
+            "怎么",
+            "设计",
+            "怎么"
+          ]
+        },
+        {
+          "path": "A3-rule-craft",
+          "conf": 0.127,
+          "hits": [
+            "skill",
+            "description"
+          ]
+        },
+        {
+          "path": "06-verify",
+          "conf": 0.12,
+          "hits": [
+            "怎么",
+            "设计",
+            "怎么"
+          ]
+        },
+        {
+          "path": "03-routing",
+          "conf": 0.092,
+          "hits": [
+            "skill",
+            "设计"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "CLAUDE.md文件太长怎么拆分和懒加载",
+      "expected": [
+        "A3-rule-craft"
+      ],
+      "predicted": [
+        "A3-rule-craft",
+        "00-pipeline",
+        "04-planning"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "A3-rule-craft",
+          "conf": 0.2,
+          "hits": [
+            "claude",
+            "md",
+            "文件",
+            "拆分",
+            "懒加",
+            "加载"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.116,
+          "hits": [
+            "claude",
+            "md",
+            "文件",
+            "懒加",
+            "加载"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.107,
+          "hits": [
+            "claude",
+            "md",
+            "文件",
+            "件太",
+            "怎么"
+          ]
+        },
+        {
+          "path": "A2-skill-design",
+          "conf": 0.096,
+          "hits": [
+            "claude",
+            "md",
+            "文件",
+            "怎么",
+            "加载"
+          ]
+        },
+        {
+          "path": "02-context",
+          "conf": 0.064,
+          "hits": [
+            "claude",
+            "md",
+            "文件",
+            "怎么"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "agent的记忆怎么管理，置信度怎么定",
+      "expected": [
+        "A1-memory"
+      ],
+      "predicted": [
+        "07-output",
+        "A1-memory",
+        "04-planning",
+        "00-pipeline",
+        "A2-skill-design"
+      ],
+      "precision": 0.2,
+      "recall": 1,
+      "f1": 0.33333333333333337,
+      "tp": 1,
+      "fp": 4,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "07-output",
+          "conf": 0.157,
+          "hits": [
+            "agent",
+            "记忆",
+            "置信",
+            "信度"
+          ]
+        },
+        {
+          "path": "A1-memory",
+          "conf": 0.143,
+          "hits": [
+            "记忆",
+            "置信",
+            "信度"
+          ]
+        },
+        {
+          "path": "04-planning",
+          "conf": 0.12,
+          "hits": [
+            "agent",
+            "记忆",
+            "怎么",
+            "怎么"
+          ]
+        },
+        {
+          "path": "00-pipeline",
+          "conf": 0.112,
+          "hits": [
+            "agent",
+            "记忆",
+            "管理",
+            "置信",
+            "信度"
+          ]
+        },
+        {
+          "path": "A2-skill-design",
+          "conf": 0.103,
+          "hits": [
+            "agent",
+            "记忆",
+            "怎么",
+            "怎么"
+          ]
+        }
+      ]
+    }
+  ]
+}

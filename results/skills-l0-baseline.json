@@ -1,0 +1,647 @@
+{
+  "timestamp": "2026-07-12",
+  "corpus": "skills-corpus.json (70 personal skills, frontmatter descriptor)",
+  "router": "L0 keyword, weighted-coverage + idf, CJK bigram, descriptor=description+triggers+name",
+  "testsetSize": 20,
+  "sweep": [
+    {
+      "threshold": 0.05,
+      "precision": 0.2705128205128205,
+      "recall": 0.55,
+      "f1": 0.3265018315018315
+    },
+    {
+      "threshold": 0.1,
+      "precision": 0.3038461538461538,
+      "recall": 0.5,
+      "f1": 0.3488095238095238
+    },
+    {
+      "threshold": 0.15,
+      "precision": 0.2916666666666667,
+      "recall": 0.4,
+      "f1": 0.325
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.2,
+      "recall": 0.25,
+      "f1": 0.21666666666666665
+    },
+    {
+      "threshold": 0.25,
+      "precision": 0.225,
+      "recall": 0.25,
+      "f1": 0.2333333333333333
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.2,
+      "recall": 0.2,
+      "f1": 0.2
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.1,
+      "recall": 0.1,
+      "f1": 0.1
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.1,
+      "recall": 0.1,
+      "f1": 0.1
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.1,
+      "recall": 0.1,
+      "f1": 0.1
+    }
+  ],
+  "bestThreshold": 0.1,
+  "macroAtBest": {
+    "precision": 0.304,
+    "recall": 0.5,
+    "f1": 0.349
+  },
+  "detail": [
+    {
+      "query": "帮我做 pre-landing 的 PR review",
+      "expected": [
+        "review"
+      ],
+      "predicted": [
+        "review",
+        "ship",
+        "land-and-deploy",
+        "landing-report",
+        "autoplan",
+        "codex",
+        "cso",
+        "ios-design-review",
+        "plan-ceo-review",
+        "plan-design-review",
+        "plan-devex-review",
+        "plan-eng-review",
+        "visual-review"
+      ],
+      "precision": 0.07692307692307693,
+      "recall": 1,
+      "f1": 0.14285714285714288,
+      "tp": 1,
+      "fp": 12,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "review",
+          "conf": 0.445,
+          "hits": [
+            "pre-landing",
+            "pr",
+            "review"
+          ]
+        },
+        {
+          "path": "ship",
+          "conf": 0.26,
+          "hits": [
+            "pr",
+            "review"
+          ]
+        },
+        {
+          "path": "land-and-deploy",
+          "conf": 0.148,
+          "hits": [
+            "pr"
+          ]
+        },
+        {
+          "path": "landing-report",
+          "conf": 0.148,
+          "hits": [
+            "pr"
+          ]
+        },
+        {
+          "path": "autoplan",
+          "conf": 0.112,
+          "hits": [
+            "review"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "用无头浏览器打开网页看看",
+      "expected": [
+        "browse"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "visual-review",
+          "conf": 0.091,
+          "hits": [
+            "看看"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "QA 测试这个 web 应用并修 bug",
+      "expected": [
+        "qa"
+      ],
+      "predicted": [
+        "qa",
+        "investigate",
+        "ios-fix"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "qa",
+          "conf": 0.177,
+          "hits": [
+            "qa",
+            "web"
+          ]
+        },
+        {
+          "path": "investigate",
+          "conf": 0.109,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.109,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.09,
+          "hits": [
+            "web"
+          ]
+        },
+        {
+          "path": "scrape",
+          "conf": 0.09,
+          "hits": [
+            "web"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "保存当前工作上下文",
+      "expected": [
+        "context-save"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "恢复之前保存的上下文",
+      "expected": [
+        "context-restore"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "部署后做金丝雀监控",
+      "expected": [
+        "canary"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "对代码做安全审查 CSO 模式",
+      "expected": [
+        "cso"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "cso",
+          "conf": 0.074,
+          "hits": [
+            "cso"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "把 markdown 转成 PDF",
+      "expected": [
+        "make-pdf"
+      ],
+      "predicted": [
+        "make-pdf",
+        "pdf"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "make-pdf",
+          "conf": 0.489,
+          "hits": [
+            "markdown",
+            "pdf"
+          ]
+        },
+        {
+          "path": "pdf",
+          "conf": 0.233,
+          "hits": [
+            "pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "生成多个设计变体做对比",
+      "expected": [
+        "design-shotgun"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "把设计稿转成生产级 HTML CSS",
+      "expected": [
+        "design-html"
+      ],
+      "predicted": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "design-html",
+          "conf": 0.171,
+          "hits": [
+            "html",
+            "css"
+          ]
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.171,
+          "hits": [
+            "html",
+            "css"
+          ]
+        },
+        {
+          "path": "web-artifacts-builder",
+          "conf": 0.171,
+          "hits": [
+            "html",
+            "css"
+          ]
+        },
+        {
+          "path": "theme-factory",
+          "conf": 0.083,
+          "hits": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "系统排查 bug 根因",
+      "expected": [
+        "investigate"
+      ],
+      "predicted": [
+        "investigate",
+        "ios-fix"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "investigate",
+          "conf": 0.186,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.186,
+          "hits": [
+            "bug"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "写小说下一章 克苏鲁塔罗题材",
+      "expected": [
+        "novel-writing"
+      ],
+      "predicted": [
+        "novel-writing"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "novel-writing",
+          "conf": 0.355,
+          "hits": [
+            "小说",
+            "克苏",
+            "苏鲁",
+            "塔罗"
+          ]
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.078,
+          "hits": [
+            "小说"
+          ]
+        },
+        {
+          "path": "shenhai-writing",
+          "conf": 0.078,
+          "hits": [
+            "小说"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "写黑暗幻想小说 神骸世界",
+      "expected": [
+        "shenhai-writing"
+      ],
+      "predicted": [
+        "shenhai-writing"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "shenhai-writing",
+          "conf": 0.774,
+          "hits": [
+            "黑暗",
+            "暗幻",
+            "幻想",
+            "想小",
+            "小说",
+            "神骸",
+            "世界"
+          ]
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.096,
+          "hits": [
+            "小说"
+          ]
+        },
+        {
+          "path": "novel-writing",
+          "conf": 0.096,
+          "hits": [
+            "小说"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Godot 游戏开发 弹跳王",
+      "expected": [
+        "godot-game-dev"
+      ],
+      "predicted": [
+        "godot-game-dev"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "godot-game-dev",
+          "conf": 1,
+          "hits": [
+            "godot",
+            "游戏",
+            "戏开",
+            "开发",
+            "弹跳",
+            "跳王"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "检测性能回归",
+      "expected": [
+        "benchmark"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "代码质量仪表盘",
+      "expected": [
+        "health"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "周工程回顾",
+      "expected": [
+        "retro"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "把模糊想法变成精确 spec",
+      "expected": [
+        "spec"
+      ],
+      "predicted": [
+        "spec"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "spec",
+          "conf": 0.111,
+          "hits": [
+            "spec"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "冻结只允许编辑某个目录",
+      "expected": [
+        "freeze"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": []
+    },
+    {
+      "query": "审 CEO 视角的计划",
+      "expected": [
+        "plan-ceo-review"
+      ],
+      "predicted": [
+        "autoplan",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "autoplan",
+          "conf": 0.145,
+          "hits": [
+            "ceo"
+          ]
+        },
+        {
+          "path": "plan-ceo-review",
+          "conf": 0.145,
+          "hits": [
+            "ceo"
+          ]
+        },
+        {
+          "path": "plan-design-review",
+          "conf": 0.145,
+          "hits": [
+            "ceo"
+          ]
+        }
+      ]
+    }
+  ]
+}

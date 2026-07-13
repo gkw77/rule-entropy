@@ -1,0 +1,673 @@
+[
+  {
+    "name": "autoplan",
+    "dir": "autoplan",
+    "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+    "triggers": [
+      "run all reviews",
+      "automatic review pipeline",
+      "auto plan review"
+    ]
+  },
+  {
+    "name": "benchmark",
+    "dir": "benchmark",
+    "description": "Performance regression detection using the browse daemon. (gstack)",
+    "triggers": [
+      "performance benchmark",
+      "check page speed",
+      "detect performance regression"
+    ]
+  },
+  {
+    "name": "benchmark-models",
+    "dir": "benchmark-models",
+    "description": "Cross-model benchmark for gstack skills. (gstack)",
+    "triggers": [
+      "cross model benchmark",
+      "compare claude gpt gemini",
+      "benchmark skill across models",
+      "which model should I use"
+    ]
+  },
+  {
+    "name": "browse",
+    "dir": "browse",
+    "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+    "triggers": [
+      "browse a page",
+      "headless browser",
+      "take page screenshot"
+    ]
+  },
+  {
+    "name": "canary",
+    "dir": "canary",
+    "description": "Post-deploy canary monitoring. (gstack)",
+    "triggers": [
+      "monitor after deploy",
+      "canary check",
+      "watch for errors post-deploy"
+    ]
+  },
+  {
+    "name": "careful",
+    "dir": "careful",
+    "description": "Safety guardrails for destructive commands. (gstack)",
+    "triggers": [
+      "be careful",
+      "warn before destructive",
+      "safety mode"
+    ]
+  },
+  {
+    "name": "claude-api",
+    "dir": "claude-api",
+    "description": "\"Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.\"",
+    "triggers": []
+  },
+  {
+    "name": "codex",
+    "dir": "codex",
+    "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+    "triggers": [
+      "codex review",
+      "second opinion",
+      "outside voice challenge"
+    ]
+  },
+  {
+    "name": "context-restore",
+    "dir": "context-restore",
+    "description": "Restore working context saved earlier by /context-save. (gstack)",
+    "triggers": [
+      "resume where i left off",
+      "restore context",
+      "where was i",
+      "pick up where i left off",
+      "context restore"
+    ]
+  },
+  {
+    "name": "context-save",
+    "dir": "context-save",
+    "description": "Save working context. (gstack)",
+    "triggers": [
+      "save progress",
+      "save state",
+      "save my work",
+      "context save"
+    ]
+  },
+  {
+    "name": "continuity-check",
+    "dir": "continuity-check",
+    "description": "小说剧情连续性检查。写回指前文的句子时，先搜索原文确认事件的时间/地点/方式三要素一致。Use when writing or editing novel chapters that reference past events.",
+    "triggers": []
+  },
+  {
+    "name": "cso",
+    "dir": "cso",
+    "description": "Chief Security Officer mode. (gstack)",
+    "triggers": [
+      "security audit",
+      "check for vulnerabilities",
+      "owasp review"
+    ]
+  },
+  {
+    "name": "design-consultation",
+    "dir": "design-consultation",
+    "description": "\"Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)\"",
+    "triggers": [
+      "design system",
+      "create a brand",
+      "design from scratch"
+    ]
+  },
+  {
+    "name": "design-html",
+    "dir": "design-html",
+    "description": "\"Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)\"",
+    "triggers": [
+      "build the design",
+      "code the mockup",
+      "make design real"
+    ]
+  },
+  {
+    "name": "design-review",
+    "dir": "design-review",
+    "description": "\"Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)\"",
+    "triggers": [
+      "visual design audit",
+      "design qa",
+      "fix design issues"
+    ]
+  },
+  {
+    "name": "design-shotgun",
+    "dir": "design-shotgun",
+    "description": "\"Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)\"",
+    "triggers": [
+      "explore design variants",
+      "show me design options",
+      "visual design brainstorm"
+    ]
+  },
+  {
+    "name": "devex-review",
+    "dir": "devex-review",
+    "description": "Live developer experience audit. (gstack)",
+    "triggers": [
+      "live dx audit",
+      "test developer experience",
+      "measure onboarding time"
+    ]
+  },
+  {
+    "name": "diagram",
+    "dir": "diagram",
+    "description": "\"Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)\"",
+    "triggers": [
+      "make a diagram",
+      "draw a diagram",
+      "create a flowchart",
+      "diagram this",
+      "visualize this flow",
+      "architecture diagram"
+    ]
+  },
+  {
+    "name": "document-generate",
+    "dir": "document-generate",
+    "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+    "triggers": [
+      "write docs for this",
+      "generate documentation",
+      "document this feature",
+      "create a tutorial",
+      "write a how-to",
+      "explain this module",
+      "docs for this project"
+    ]
+  },
+  {
+    "name": "document-release",
+    "dir": "document-release",
+    "description": "Post-ship documentation update. (gstack)",
+    "triggers": [
+      "update docs after ship",
+      "document what changed",
+      "post-ship docs"
+    ]
+  },
+  {
+    "name": "freeze",
+    "dir": "freeze",
+    "description": "Restrict file edits to a specific directory for the session. (gstack)",
+    "triggers": [
+      "freeze edits to directory",
+      "lock editing scope",
+      "restrict file changes"
+    ]
+  },
+  {
+    "name": "frontend-design",
+    "dir": "frontend-design",
+    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+    "triggers": []
+  },
+  {
+    "name": "github-multi-repo",
+    "dir": "github-multi-repo",
+    "description": "Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration",
+    "triggers": []
+  },
+  {
+    "name": "github-project-management",
+    "dir": "github-project-management",
+    "description": "Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning",
+    "triggers": []
+  },
+  {
+    "name": "github-release-management",
+    "dir": "github-release-management",
+    "description": "Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management",
+    "triggers": []
+  },
+  {
+    "name": "github-workflow-automation",
+    "dir": "github-workflow-automation",
+    "description": "Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management",
+    "triggers": []
+  },
+  {
+    "name": "godot-game-dev",
+    "dir": "godot-game-dev",
+    "description": "Godot 4.x 游戏开发——弹跳王(无尽跳跃)/一杆闯天涯(物理攀爬), GDScript, 抖音小游戏适配",
+    "triggers": []
+  },
+  {
+    "name": "gstack-upgrade",
+    "dir": "gstack-upgrade",
+    "description": "Upgrade gstack to the latest version.",
+    "triggers": [
+      "upgrade gstack",
+      "update gstack version",
+      "get latest gstack"
+    ]
+  },
+  {
+    "name": "guard",
+    "dir": "guard",
+    "description": "\"Full safety mode: destructive command warnings + directory-scoped edits. (gstack)\"",
+    "triggers": [
+      "full safety mode",
+      "guard against mistakes",
+      "maximum safety"
+    ]
+  },
+  {
+    "name": "health",
+    "dir": "health",
+    "description": "Code quality dashboard. (gstack)",
+    "triggers": [
+      "code health check",
+      "quality dashboard",
+      "how healthy is codebase"
+    ]
+  },
+  {
+    "name": "investigate",
+    "dir": "investigate",
+    "description": "Systematic debugging with root cause investigation. (gstack)",
+    "triggers": [
+      "debug this",
+      "fix this bug",
+      "why is this broken",
+      "root cause analysis",
+      "investigate this error"
+    ]
+  },
+  {
+    "name": "ios-clean",
+    "dir": "ios-clean",
+    "description": "\"Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)\"",
+    "triggers": [
+      "clean the ios debug bridge",
+      "remove debugbridge",
+      "strip the gstack ios instrumentation"
+    ]
+  },
+  {
+    "name": "ios-design-review",
+    "dir": "ios-design-review",
+    "description": "Visual design audit for iOS apps on real hardware. (gstack)",
+    "triggers": [
+      "review the ios design",
+      "audit the iphone app visuals",
+      "design qa the ios app"
+    ]
+  },
+  {
+    "name": "ios-fix",
+    "dir": "ios-fix",
+    "description": "Autonomous iOS bug fixer. (gstack)",
+    "triggers": [
+      "fix this ios bug",
+      "patch the iphone app",
+      "auto-fix the ios issue"
+    ]
+  },
+  {
+    "name": "ios-qa",
+    "dir": "ios-qa",
+    "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
+    "triggers": [
+      "ios qa",
+      "test the iphone app",
+      "test my ios app",
+      "find bugs on the device",
+      "qa the ios app"
+    ]
+  },
+  {
+    "name": "ios-sync",
+    "dir": "ios-sync",
+    "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+    "triggers": [
+      "resync the ios debug bridge",
+      "regenerate ios accessors",
+      "update the gstack ios instrumentation"
+    ]
+  },
+  {
+    "name": "land-and-deploy",
+    "dir": "land-and-deploy",
+    "description": "Land and deploy workflow. (gstack)",
+    "triggers": [
+      "merge and deploy",
+      "land the pr",
+      "ship to production"
+    ]
+  },
+  {
+    "name": "landing-report",
+    "dir": "landing-report",
+    "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+    "triggers": [
+      "landing report",
+      "version queue",
+      "ship queue",
+      "what version comes next",
+      "show open PR versions"
+    ]
+  },
+  {
+    "name": "learn",
+    "dir": "learn",
+    "description": "Manage project learnings.",
+    "triggers": [
+      "show learnings",
+      "what have we learned",
+      "manage project learnings"
+    ]
+  },
+  {
+    "name": "make-pdf",
+    "dir": "make-pdf",
+    "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
+    "triggers": [
+      "markdown to pdf",
+      "generate pdf",
+      "make pdf",
+      "export pdf"
+    ]
+  },
+  {
+    "name": "mcp-builder",
+    "dir": "mcp-builder",
+    "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+    "triggers": []
+  },
+  {
+    "name": "novel-writing",
+    "dir": "novel-writing",
+    "description": "克苏鲁×塔罗小说《逆位猎人》写作——Cthulhu horror + Tarot collection, 紧贴主角直叙风格, 去AI味",
+    "triggers": []
+  },
+  {
+    "name": "office-hours",
+    "dir": "office-hours",
+    "description": "YC Office Hours — two modes. (gstack)",
+    "triggers": [
+      "brainstorm this",
+      "is this worth building",
+      "help me think through",
+      "office hours"
+    ]
+  },
+  {
+    "name": "open-gstack-browser",
+    "dir": "connect-chrome",
+    "description": "|",
+    "triggers": [
+      "open gstack browser",
+      "launch chromium",
+      "show me the browser"
+    ]
+  },
+  {
+    "name": "open-gstack-browser",
+    "dir": "open-gstack-browser",
+    "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+    "triggers": [
+      "open gstack browser",
+      "launch chromium",
+      "show me the browser"
+    ]
+  },
+  {
+    "name": "pair-agent",
+    "dir": "pair-agent",
+    "description": "Pair a remote AI agent with your browser. (gstack)",
+    "triggers": [
+      "pair with agent",
+      "connect remote agent",
+      "share my browser"
+    ]
+  },
+  {
+    "name": "pdf",
+    "dir": "pdf",
+    "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+    "triggers": []
+  },
+  {
+    "name": "plan-ceo-review",
+    "dir": "plan-ceo-review",
+    "description": "CEO/founder-mode plan review. (gstack)",
+    "triggers": [
+      "think bigger",
+      "expand scope",
+      "strategy review",
+      "rethink this plan"
+    ]
+  },
+  {
+    "name": "plan-design-review",
+    "dir": "plan-design-review",
+    "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+    "triggers": [
+      "design plan review",
+      "review ux plan",
+      "check design decisions"
+    ]
+  },
+  {
+    "name": "plan-devex-review",
+    "dir": "plan-devex-review",
+    "description": "Interactive developer experience plan review. (gstack)",
+    "triggers": [
+      "developer experience review",
+      "dx plan review",
+      "check developer onboarding"
+    ]
+  },
+  {
+    "name": "plan-eng-review",
+    "dir": "plan-eng-review",
+    "description": "Eng manager-mode plan review. (gstack)",
+    "triggers": [
+      "review architecture",
+      "eng plan review",
+      "check the implementation plan"
+    ]
+  },
+  {
+    "name": "plan-tune",
+    "dir": "plan-tune",
+    "description": "\"Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)\"",
+    "triggers": [
+      "tune questions",
+      "stop asking me that",
+      "too many questions",
+      "show my profile",
+      "show my vibe",
+      "developer profile",
+      "turn off question tuning"
+    ]
+  },
+  {
+    "name": "qa",
+    "dir": "qa",
+    "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+    "triggers": [
+      "qa test this",
+      "find bugs on site",
+      "test the site"
+    ]
+  },
+  {
+    "name": "qa-only",
+    "dir": "qa-only",
+    "description": "Report-only QA testing. (gstack)",
+    "triggers": [
+      "qa report only",
+      "just report bugs",
+      "test but dont fix"
+    ]
+  },
+  {
+    "name": "retro",
+    "dir": "retro",
+    "description": "Weekly engineering retrospective. (gstack)",
+    "triggers": [
+      "weekly retro",
+      "what did we ship",
+      "engineering retrospective"
+    ]
+  },
+  {
+    "name": "review",
+    "dir": "review",
+    "description": "Pre-landing PR review. (gstack)",
+    "triggers": [
+      "review this pr",
+      "code review",
+      "check my diff",
+      "pre-landing review"
+    ]
+  },
+  {
+    "name": "scrape",
+    "dir": "scrape",
+    "description": "Pull data from a web page. (gstack)",
+    "triggers": [
+      "scrape this page",
+      "get data from",
+      "pull from",
+      "extract from",
+      "what is on"
+    ]
+  },
+  {
+    "name": "setup-browser-cookies",
+    "dir": "setup-browser-cookies",
+    "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+    "triggers": [
+      "import browser cookies",
+      "login to test site",
+      "setup authenticated session"
+    ]
+  },
+  {
+    "name": "setup-deploy",
+    "dir": "setup-deploy",
+    "description": "Configure deployment settings for /land-and-deploy.",
+    "triggers": [
+      "configure deploy",
+      "setup deployment",
+      "set deploy platform"
+    ]
+  },
+  {
+    "name": "setup-gbrain",
+    "dir": "setup-gbrain",
+    "description": "\"Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)\"",
+    "triggers": [
+      "setup gbrain",
+      "install gbrain",
+      "connect gbrain",
+      "start gbrain",
+      "configure gbrain"
+    ]
+  },
+  {
+    "name": "shenhai-writing",
+    "dir": "shenhai-writing",
+    "description": "黑暗幻想小说《走在神的尸骸上》写作——永夜世界、神骸体系、父亲烧城送子、墟行者追寻壁画、裂缝终结",
+    "triggers": []
+  },
+  {
+    "name": "ship",
+    "dir": "ship",
+    "description": "\"Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)\"",
+    "triggers": [
+      "ship it",
+      "create a pr",
+      "push to main",
+      "deploy this"
+    ]
+  },
+  {
+    "name": "skillify",
+    "dir": "skillify",
+    "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+    "triggers": [
+      "skillify",
+      "codify this scrape",
+      "save this scrape",
+      "make this permanent"
+    ]
+  },
+  {
+    "name": "spec",
+    "dir": "spec",
+    "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+    "triggers": [
+      "spec this out",
+      "file an issue",
+      "write up a ticket",
+      "turn this into an issue",
+      "make this a github issue",
+      "turn this into a backlog item"
+    ]
+  },
+  {
+    "name": "sync-gbrain",
+    "dir": "sync-gbrain",
+    "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+    "triggers": [
+      "sync gbrain",
+      "refresh gbrain",
+      "reindex repo",
+      "update gbrain"
+    ]
+  },
+  {
+    "name": "theme-factory",
+    "dir": "theme-factory",
+    "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+    "triggers": []
+  },
+  {
+    "name": "unfreeze",
+    "dir": "unfreeze",
+    "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+    "triggers": [
+      "unfreeze edits",
+      "unlock all directories",
+      "remove edit restrictions"
+    ]
+  },
+  {
+    "name": "visual-review",
+    "dir": "visual-review",
+    "description": "Use when you need to review rendered images, game screenshots, 3D model previews, UI mockups, or any visual output. Triggers on keywords like \"看看效果\", \"截图\", \"渲染\", \"preview\", \"screenshot\", \"视觉效果\", \"建模\".",
+    "triggers": []
+  },
+  {
+    "name": "web-artifacts-builder",
+    "dir": "web-artifacts-builder",
+    "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+    "triggers": []
+  },
+  {
+    "name": "webapp-testing",
+    "dir": "webapp-testing",
+    "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+    "triggers": []
+  }
+]

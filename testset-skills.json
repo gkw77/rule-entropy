@@ -1,0 +1,22 @@
+[
+  { "query": "帮我做 pre-landing 的 PR review", "expected": ["review"] },
+  { "query": "用无头浏览器打开网页看看", "expected": ["browse"] },
+  { "query": "QA 测试这个 web 应用并修 bug", "expected": ["qa"] },
+  { "query": "保存当前工作上下文", "expected": ["context-save"] },
+  { "query": "恢复之前保存的上下文", "expected": ["context-restore"] },
+  { "query": "部署后做金丝雀监控", "expected": ["canary"] },
+  { "query": "对代码做安全审查 CSO 模式", "expected": ["cso"] },
+  { "query": "把 markdown 转成 PDF", "expected": ["make-pdf"] },
+  { "query": "生成多个设计变体做对比", "expected": ["design-shotgun"] },
+  { "query": "把设计稿转成生产级 HTML CSS", "expected": ["design-html"] },
+  { "query": "系统排查 bug 根因", "expected": ["investigate"] },
+  { "query": "写小说下一章 克苏鲁塔罗题材", "expected": ["novel-writing"] },
+  { "query": "写黑暗幻想小说 神骸世界", "expected": ["shenhai-writing"] },
+  { "query": "Godot 游戏开发 弹跳王", "expected": ["godot-game-dev"] },
+  { "query": "检测性能回归", "expected": ["benchmark"] },
+  { "query": "代码质量仪表盘", "expected": ["health"] },
+  { "query": "周工程回顾", "expected": ["retro"] },
+  { "query": "把模糊想法变成精确 spec", "expected": ["spec"] },
+  { "query": "冻结只允许编辑某个目录", "expected": ["freeze"] },
+  { "query": "审 CEO 视角的计划", "expected": ["plan-ceo-review"] }
+]
