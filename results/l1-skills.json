@@ -1,0 +1,766 @@
+{
+  "timestamp": "2026-07-14",
+  "corpus": "skills-corpus.json (70 personal skills, frontmatter descriptor)",
+  "router": "L1 two-stage (judge + semantic-retrieve), glm-5.2 via ARK",
+  "testsetSize": 20,
+  "l0Threshold": 0.05,
+  "macro": {
+    "precision": 0.785,
+    "recall": 1,
+    "f1": 0.842
+  },
+  "l0BaselineMacro": {
+    "precision": 0.304,
+    "recall": 0.5,
+    "f1": 0.349
+  },
+  "delta": {
+    "precision": 0.481,
+    "recall": 0.5,
+    "f1": 0.493
+  },
+  "llmJudgeCalls": 46,
+  "llmRetrieveCalls": 9,
+  "note": "两阶段：L0候选 judge 过滤(precision) + 零匹配/滤空时语义检索补召回(recall, 跨语言)",
+  "detail": [
+    {
+      "query": "帮我做 pre-landing 的 PR review",
+      "expected": [
+        "review"
+      ],
+      "predicted": [
+        "review",
+        "autoplan",
+        "codex"
+      ],
+      "mode": "judge",
+      "reason": "13 候选 -> 3 载",
+      "l0Candidates": [
+        "review",
+        "ship",
+        "land-and-deploy",
+        "landing-report",
+        "autoplan",
+        "codex",
+        "cso",
+        "ios-design-review",
+        "plan-ceo-review",
+        "plan-design-review",
+        "plan-devex-review",
+        "plan-eng-review",
+        "visual-review"
+      ],
+      "judged": [
+        {
+          "path": "review",
+          "conf": 0.445,
+          "verdict": "yes",
+          "reason": "问题直接请求进行 pre-landing 的 PR review，与候选规则的核心内容和关键术语完全匹配。"
+        },
+        {
+          "path": "ship",
+          "conf": 0.26,
+          "verdict": "no",
+          "reason": "问题是审查已有 PR，而 ship 规则的核心是创建并提交 PR 的完整发布流程，并非 PR 审查本身。"
+        },
+        {
+          "path": "land-and-deploy",
+          "conf": 0.148,
+          "verdict": "no",
+          "reason": "问题关注的是合并前的代码审查（PR review），而规则核心是合并与部署的工作流，核心内容不匹配。"
+        },
+        {
+          "path": "landing-report",
+          "conf": 0.148,
+          "verdict": "no",
+          "reason": "用户请求执行 PR 代码审查，而候选规则是用于查看发布队列和版本状态的只读仪表盘，无法用于指导代码审查。"
+        },
+        {
+          "path": "autoplan",
+          "conf": 0.112,
+          "verdict": "yes",
+          "reason": "用户请求执行 pre-landing PR review，autoplan 规则正是自动运行全部 review（eng、design、DX 等）的流水线，核心直接适用。"
+        },
+        {
+          "path": "codex",
+          "conf": 0.112,
+          "verdict": "yes",
+          "reason": "规则包含 codex review 模式，专门用于代码审查和获取 second opinion，与 pre-landing PR review 的需求直接匹配。"
+        },
+        {
+          "path": "cso",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "问题是通用的 pre-landing PR review 请求，并未指定安全审计或漏洞检查，而 cso 规则核心是安全官模式的安全专项审查，核心不匹配。"
+        },
+        {
+          "path": "ios-design-review",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "问题请求的是通用的 pre-landing PR review，而候选规则专门针对 iOS 应用的视觉设计审计，核心内容不匹配。"
+        },
+        {
+          "path": "plan-ceo-review",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "问题要求的是技术层面的 PR 代码审查，而规则是关于 CEO/创始人视角的战略性计划审查，核心完全不同"
+        },
+        {
+          "path": "plan-design-review",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "问题请求的是代码 PR review（pre-landing），而该规则核心是设计/UX plan review，两者虽都含「review」但审查对象不同。"
+        },
+        {
+          "path": "plan-devex-review",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "问题要求的是代码 PR 的 pre-landing review，而该规则核心是审查开发者体验计划文档，两者审查对象不同"
+        },
+        {
+          "path": "plan-eng-review",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "问题要求对代码进行 pre-landing 的 PR review，而该规则核心是针对工程实现计划或架构的 plan review，核心不匹配。"
+        },
+        {
+          "path": "visual-review",
+          "conf": 0.112,
+          "verdict": "no",
+          "reason": "PR review 通常是代码审查，而该规则用于审查渲染图像或 UI 模型等视觉输出，核心不匹配。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "用无头浏览器打开网页看看",
+      "expected": [
+        "browse"
+      ],
+      "predicted": [
+        "browse"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "1 候选全被 LLM 滤，检索补 1 个",
+      "l0Candidates": [
+        "visual-review"
+      ],
+      "judged": [
+        {
+          "path": "visual-review",
+          "conf": 0.091,
+          "verdict": "no",
+          "reason": "问题核心是执行无头浏览器自动化操作，而非对渲染图像或UI进行视觉审查。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "QA 测试这个 web 应用并修 bug",
+      "expected": [
+        "qa"
+      ],
+      "predicted": [
+        "qa",
+        "investigate",
+        "webapp-testing",
+        "browse",
+        "qa-only"
+      ],
+      "mode": "judge",
+      "reason": "12 候选 -> 5 载",
+      "l0Candidates": [
+        "qa",
+        "investigate",
+        "ios-fix",
+        "frontend-design",
+        "scrape",
+        "web-artifacts-builder",
+        "webapp-testing",
+        "browse",
+        "design-review",
+        "ios-design-review",
+        "ios-qa",
+        "qa-only"
+      ],
+      "judged": [
+        {
+          "path": "qa",
+          "conf": 0.177,
+          "verdict": "yes",
+          "reason": "问题明确要求对 web 应用进行 QA 测试和修 bug，与候选规则的核心内容完全一致。"
+        },
+        {
+          "path": "investigate",
+          "conf": 0.109,
+          "verdict": "yes",
+          "reason": "问题明确要求修复bug，与规则核心内容系统化调试和根因分析完全匹配。"
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.109,
+          "verdict": "no",
+          "reason": "问题是针对web应用的bug修复，而规则专门用于iOS/iphone应用的bug修复，平台不匹配"
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.09,
+          "verdict": "no",
+          "reason": "问题的核心是QA测试和修复bug，而该规则的核心是前端界面的设计与构建，核心诉求不匹配。"
+        },
+        {
+          "path": "scrape",
+          "conf": 0.09,
+          "verdict": "no",
+          "reason": "问题是关于Web应用的QA测试和修bug，而规则核心是从网页提取数据，两者任务不匹配。"
+        },
+        {
+          "path": "web-artifacts-builder",
+          "conf": 0.09,
+          "verdict": "no",
+          "reason": "该规则核心是创建/构建复杂的前端 HTML artifacts，而非对 web 应用进行 QA 测试和修复 bug，虽然都涉及 web，但核心用途不同。"
+        },
+        {
+          "path": "webapp-testing",
+          "conf": 0.09,
+          "verdict": "yes",
+          "reason": "问题要求QA测试web应用并修bug，规则提供了使用Playwright测试和调试web应用的工具包，核心内容完全适用。"
+        },
+        {
+          "path": "browse",
+          "conf": 0.086,
+          "verdict": "yes",
+          "reason": "问题要求QA测试web应用，候选规则提供了用于QA测试的无头浏览器工具，核心内容适用。"
+        },
+        {
+          "path": "design-review",
+          "conf": 0.086,
+          "verdict": "no",
+          "reason": "问题指普遍的QA测试和bug修复，而候选规则专注重视觉设计审查与修复，虽均含QA字眼但核心不匹配。"
+        },
+        {
+          "path": "ios-design-review",
+          "conf": 0.086,
+          "verdict": "no",
+          "reason": "问题针对的是web应用的QA测试和修bug，而规则核心是iOS应用的视觉设计审查，平台与核心任务均不匹配。"
+        },
+        {
+          "path": "ios-qa",
+          "conf": 0.086,
+          "verdict": "no",
+          "reason": "问题要求测试的是 web 应用，而候选规则的核心是针对 iOS/SwiftUI 应用的真机测试，平台不匹配。"
+        },
+        {
+          "path": "qa-only",
+          "conf": 0.086,
+          "verdict": "yes",
+          "reason": "用户要求测试并修 bug，而规则核心明确要求仅报告 bug 而不修复，回答必须遵循该规则的约束。"
+        }
+      ],
+      "precision": 0.2,
+      "recall": 1,
+      "f1": 0.333,
+      "tp": 1,
+      "fp": 4,
+      "fn": 0
+    },
+    {
+      "query": "保存当前工作上下文",
+      "expected": [
+        "context-save"
+      ],
+      "predicted": [
+        "context-save"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "恢复之前保存的上下文",
+      "expected": [
+        "context-restore"
+      ],
+      "predicted": [
+        "context-restore"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "部署后做金丝雀监控",
+      "expected": [
+        "canary"
+      ],
+      "predicted": [
+        "canary"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "对代码做安全审查 CSO 模式",
+      "expected": [
+        "cso"
+      ],
+      "predicted": [
+        "cso"
+      ],
+      "mode": "judge",
+      "reason": "1 候选 -> 1 载",
+      "l0Candidates": [
+        "cso"
+      ],
+      "judged": [
+        {
+          "path": "cso",
+          "conf": 0.074,
+          "verdict": "yes",
+          "reason": "问题明确要求以 CSO 模式进行代码安全审查，与候选规则的核心内容完全一致。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把 markdown 转成 PDF",
+      "expected": [
+        "make-pdf"
+      ],
+      "predicted": [
+        "make-pdf",
+        "pdf"
+      ],
+      "mode": "judge",
+      "reason": "2 候选 -> 2 载",
+      "l0Candidates": [
+        "make-pdf",
+        "pdf"
+      ],
+      "judged": [
+        {
+          "path": "make-pdf",
+          "conf": 0.489,
+          "verdict": "yes",
+          "reason": "问题明确要求将 markdown 转为 PDF，与候选规则的核心功能完全匹配。"
+        },
+        {
+          "path": "pdf",
+          "conf": 0.233,
+          "verdict": "yes",
+          "reason": "将 markdown 转成 PDF 属于创建/生成 PDF 文件的操作，符合该规则的核心适用场景。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "生成多个设计变体做对比",
+      "expected": [
+        "design-shotgun"
+      ],
+      "predicted": [
+        "design-shotgun"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把设计稿转成生产级 HTML CSS",
+      "expected": [
+        "design-html"
+      ],
+      "predicted": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder"
+      ],
+      "mode": "judge",
+      "reason": "4 候选 -> 3 载",
+      "l0Candidates": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder",
+        "theme-factory"
+      ],
+      "judged": [
+        {
+          "path": "design-html",
+          "conf": 0.171,
+          "verdict": "yes",
+          "reason": "问题要求将设计稿转为生产级 HTML/CSS，正是该规则的核心用途。"
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.171,
+          "verdict": "yes",
+          "reason": "问题要求将设计稿转为生产级 HTML/CSS，与规则中创建生产级前端界面和 HTML/CSS 布局的核心完全匹配。"
+        },
+        {
+          "path": "web-artifacts-builder",
+          "conf": 0.171,
+          "verdict": "yes",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "theme-factory",
+          "conf": 0.083,
+          "verdict": "no",
+          "reason": "问题要求将具体设计稿转换为生产级HTML/CSS代码，而规则核心是为已有制品应用预设或生成的主题样式，两者核心不匹配。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "系统排查 bug 根因",
+      "expected": [
+        "investigate"
+      ],
+      "predicted": [
+        "investigate"
+      ],
+      "mode": "judge",
+      "reason": "2 候选 -> 1 载",
+      "l0Candidates": [
+        "investigate",
+        "ios-fix"
+      ],
+      "judged": [
+        {
+          "path": "investigate",
+          "conf": 0.186,
+          "verdict": "yes",
+          "reason": "问题要求排查bug根因，与规则的系统性调试和根因分析核心完全一致。"
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.186,
+          "verdict": "no",
+          "reason": "问题问的是通用的系统排查 bug 根因方法论，而候选规则是针对 iOS 的自动化 bug 修复工具，核心不适用。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "写小说下一章 克苏鲁塔罗题材",
+      "expected": [
+        "novel-writing"
+      ],
+      "predicted": [
+        "novel-writing",
+        "continuity-check"
+      ],
+      "mode": "judge",
+      "reason": "3 候选 -> 2 载",
+      "l0Candidates": [
+        "novel-writing",
+        "continuity-check",
+        "shenhai-writing"
+      ],
+      "judged": [
+        {
+          "path": "novel-writing",
+          "conf": 0.355,
+          "verdict": "yes",
+          "reason": "问题要求写克苏鲁塔罗题材的小说下一章，与候选规则的核心内容（克苏鲁×塔罗小说写作指导）完全匹配。"
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.078,
+          "verdict": "yes",
+          "reason": "写小说下一章必然涉及剧情连贯性和前文设定的延续，适用剧情连续性检查规则。"
+        },
+        {
+          "path": "shenhai-writing",
+          "conf": 0.078,
+          "verdict": "no",
+          "reason": "问题是要求写克苏鲁塔罗题材的小说章节，而候选规则是特定小说《走在神的尸骸上》的专属设定与剧情，核心不适用。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "写黑暗幻想小说 神骸世界",
+      "expected": [
+        "shenhai-writing"
+      ],
+      "predicted": [
+        "shenhai-writing",
+        "continuity-check"
+      ],
+      "mode": "judge",
+      "reason": "3 候选 -> 2 载",
+      "l0Candidates": [
+        "shenhai-writing",
+        "continuity-check",
+        "novel-writing"
+      ],
+      "judged": [
+        {
+          "path": "shenhai-writing",
+          "conf": 0.774,
+          "verdict": "yes",
+          "reason": "问题要求写黑暗幻想小说神骸世界，与规则中《走在神的尸骸上》的黑暗幻想、神骸体系等核心内容完全对应。"
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.096,
+          "verdict": "yes",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "novel-writing",
+          "conf": 0.096,
+          "verdict": "no",
+          "reason": "规则核心是针对特定小说《逆位猎人》（克苏鲁×塔罗主题）的写作指南，与问题要求的黑暗幻想小说《神骸世界》在题材和项目上不匹配"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "Godot 游戏开发 弹跳王",
+      "expected": [
+        "godot-game-dev"
+      ],
+      "predicted": [
+        "godot-game-dev"
+      ],
+      "mode": "judge",
+      "reason": "1 候选 -> 1 载",
+      "l0Candidates": [
+        "godot-game-dev"
+      ],
+      "judged": [
+        {
+          "path": "godot-game-dev",
+          "conf": 1,
+          "verdict": "yes",
+          "reason": "问题直接询问Godot游戏开发中的弹跳王，与候选规则的核心主题完全匹配。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "检测性能回归",
+      "expected": [
+        "benchmark"
+      ],
+      "predicted": [
+        "benchmark"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "代码质量仪表盘",
+      "expected": [
+        "health"
+      ],
+      "predicted": [
+        "health"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "周工程回顾",
+      "expected": [
+        "retro"
+      ],
+      "predicted": [
+        "retro"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把模糊想法变成精确 spec",
+      "expected": [
+        "spec"
+      ],
+      "predicted": [
+        "spec"
+      ],
+      "mode": "judge",
+      "reason": "1 候选 -> 1 载",
+      "l0Candidates": [
+        "spec"
+      ],
+      "judged": [
+        {
+          "path": "spec",
+          "conf": 0.111,
+          "verdict": "yes",
+          "reason": "问题要求将模糊想法变成精确 spec，与候选规则核心内容完全一致。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "冻结只允许编辑某个目录",
+      "expected": [
+        "freeze"
+      ],
+      "predicted": [
+        "freeze"
+      ],
+      "mode": "semantic-retrieve",
+      "reason": "L0 零匹配，LLM 检索 1 个",
+      "l0Candidates": [],
+      "judged": [],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "审 CEO 视角的计划",
+      "expected": [
+        "plan-ceo-review"
+      ],
+      "predicted": [
+        "autoplan",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "mode": "judge",
+      "reason": "3 候选 -> 3 载",
+      "l0Candidates": [
+        "autoplan",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "judged": [
+        {
+          "path": "autoplan",
+          "conf": 0.145,
+          "verdict": "yes",
+          "reason": "该规则正是用于执行包含CEO视角在内的计划自动审查流水线，核心完全匹配。"
+        },
+        {
+          "path": "plan-ceo-review",
+          "conf": 0.145,
+          "verdict": "yes",
+          "reason": "问题要求从CEO视角审计划，与规则的CEO/founder-mode plan review核心完全匹配。"
+        },
+        {
+          "path": "plan-design-review",
+          "conf": 0.145,
+          "verdict": "yes",
+          "reason": "问题要求以CEO视角审计划，规则正是关于互动式计划评审（类似CEO与工程评审），核心适用。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    }
+  ]
+}

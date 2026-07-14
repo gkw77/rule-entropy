@@ -1,0 +1,1369 @@
+{
+  "timestamp": "2026-07-14",
+  "corpus": "corpus/*.md (13 files)",
+  "router": "L1+recall (LLM 提名 L0 漏的 + L1 judge), glm-5.2 via ARK coding",
+  "testsetSize": 18,
+  "macro": {
+    "precision": 0.557,
+    "recall": 0.944,
+    "f1": 0.647
+  },
+  "l1OnlyMacro": {
+    "precision": 0.62,
+    "recall": 0.944,
+    "f1": 0.7
+  },
+  "delta": {
+    "precision": -0.063,
+    "recall": 0,
+    "f1": -0.053
+  },
+  "llmCalls": 134,
+  "note": "recall 切片：LLM 提名补 L0 漏召回，再 L1 judge 滤 precision",
+  "detail": [
+    {
+      "query": "我的代码有SQL注入风险，怎么防",
+      "expected": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "predicted": [
+        "01-security"
+      ],
+      "l0Candidates": [
+        "06-verify",
+        "02-context",
+        "04-planning",
+        "01-security",
+        "A1-memory",
+        "A2-skill-design"
+      ],
+      "nominated": [
+        "05-execute",
+        "06a-security-audit"
+      ],
+      "judged": [
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题核心是寻求防御SQL注入的具体编码方案，而候选规则的核心是验证阶段的流程、测试与审查质量门，并非提供安全漏洞的具体防御方法。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于代码安全（SQL注入防护），候选规则是关于AI上下文管理/Token效率，两者核心无关。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是在询问SQL注入防护的具体技术方案，而非如何规划/执行开发任务，规则核心不适用。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "SQL注入防御属于安全范畴，规则中输入验证、deny-by-default、安全审查等核心内容直接适用于回答该问题。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题关于防范SQL注入的技术方案，而规则是关于Agent记忆系统的配置与策略，核心不相关。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是SQL注入防护，属于安全编码实践，而规则A2是关于AI Skill设计模式的元规范，两者毫无关联"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题询问的是防御SQL注入的安全编码方法，而候选规则是关于执行阶段的调查、编辑和并发控制流程规范，核心不适用。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "规则核心是安全审计流程与漏洞验证机制，而用户问的是如何防御SQL注入，属于修复/防御方案而非审计流程。"
+        }
+      ],
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "query": "API key不小心硬编码到源码里了",
+      "expected": [
+        "01-security"
+      ],
+      "predicted": [
+        "01-security",
+        "06-verify",
+        "06a-security-audit"
+      ],
+      "l0Candidates": [
+        "01-security",
+        "06-verify",
+        "A2-skill-design",
+        "A3-rule-craft",
+        "06a-security-audit"
+      ],
+      "nominated": [
+        "05-execute",
+        "07-output",
+        "A1-memory"
+      ],
+      "judged": [
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "API key 硬编码到源码属于典型的 Secret 泄露问题，规则的 Secret 检测、Secret 管理、gitignore 覆盖等核心内容直接适用。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "该规则包含安全检查清单、安全审计pipeline和安全响应协议，直接适用于处理API key硬编码这一安全问题。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题关于API key硬编码的安全隐患处理，规则核心是AI Skill设计模式与结构规范，两者完全无关。"
+        },
+        {
+          "path": "A3-rule-craft",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是「如何编写规则」的技巧，虽提及「API和认证规则」但只是规则编写的一个示例场景，无法解决硬编码密钥的实际安全问题。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "硬编码 API key 是典型的安全漏洞 finding，该规则定义了安全审计 pipeline、severity 分级、secret 处理纪律及验证测试流程，正是处理此类问题的核心规范。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题是关于硬编码密钥的安全修复，核心是密钥移除与轮换策略，而非05-execute规则的'编辑前调查/并行执行门控'等执行流程规范。"
+        },
+        {
+          "path": "07-output",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题是关于API key硬编码的安全风险，与07-output规则中提交格式、PR流程等输出纪律无关。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题是关于API key硬编码泄露的安全处理，与记忆系统的置信度评分、遗忘曲线等核心机制无关。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "处理用户隐私数据如邮件病历时怎么保护不泄露",
+      "expected": [
+        "01-security"
+      ],
+      "predicted": [
+        "01-security"
+      ],
+      "l0Candidates": [
+        "01-security",
+        "06-verify"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心覆盖敏感数据隐私工程链（pseudonymization、leakage-resistant split、never print raw、deny-by-default 权限隔离等），直接适用于邮件病历等隐私数据的防泄露处理。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是隐私数据保护的具体措施（如加密、脱敏、访问控制），而该规则核心是开发流程中的验证/质量门/代码审查/测试体系，虽含'安全检查清单'等术语但核心是流程验证而非数据保护方法。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "对话上下文快满了模型变笨怎么办",
+      "expected": [
+        "02-context"
+      ],
+      "predicted": [
+        "02-context",
+        "A2-skill-design",
+        "03-routing",
+        "A1-memory"
+      ],
+      "l0Candidates": [
+        "02-context",
+        "04-planning",
+        "06-verify",
+        "01-security",
+        "00-pipeline",
+        "A2-skill-design",
+        "A4-rule-measurement"
+      ],
+      "nominated": [
+        "03-routing",
+        "A1-memory"
+      ],
+      "judged": [
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题询问上下文快满时模型变笨的应对方法，该规则提供了上下文管理、压缩、交接等核心策略直接解答。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是对话上下文管理策略，而规则核心是项目规划与任务拆解的工程流程，两者不匹配。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是上下文管理策略，而规则核心是代码验证与质量门审查，两者领域不同。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题关于上下文管理与模型性能退化，与安全规则的核心内容（密钥检测、权限控制、deny-by-default 等）无关。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问上下文满时的应对策略，而候选规则是关于中间件管道执行和按需加载辅助模块的架构规范，核心不适用。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "A4-rule-measurement",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于上下文窗口管理策略，与A4规则核心（规则测量与验证方法论）无关。"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "yes",
+          "source": "nominate",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "yes",
+          "source": "nominate",
+          "reason": "上下文满时需要通过记忆系统提取、压缩关键信息并过滤读取，A1-memory 的记忆提取、读取过滤、遗忘调度等核心机制正是解决此问题的方法。"
+        }
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "压缩上下文后怎么避免重复执行旧任务",
+      "expected": [
+        "02-context"
+      ],
+      "predicted": [
+        "02-context",
+        "04-planning",
+        "A1-memory",
+        "00-pipeline",
+        "05-execute",
+        "07-output"
+      ],
+      "l0Candidates": [
+        "02-context",
+        "04-planning",
+        "A1-memory",
+        "06-verify",
+        "00-pipeline",
+        "06a-security-audit",
+        "A2-skill-design",
+        "05-execute"
+      ],
+      "nominated": [
+        "07-output"
+      ],
+      "judged": [
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中明确包含「Session 摘要防重放」「防重放规则」「Post-compact 规则重注入」等内容，直接回答了压缩上下文后避免重复执行旧任务的问题。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中包含 Plan Handoff Contract（零上下文执行）、持久状态作脊柱、TodoWrite 进度跟踪和 Drift check，这些正是压缩上下文后避免重复执行旧任务的核心机制。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题核心是上下文压缩后如何避免重复执行旧任务，A1记忆系统正是为此设计——通过记忆读取过滤、失败考古register、查已发生事件等机制，在压缩后仍能获知已完成的任务。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "该规则核心是验证与质量门（测试、审查、安全），而问题核心是上下文压缩后的状态管理与任务去重，两者不匹配。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题涉及压缩上下文后避免重复执行旧任务，核心是pipeline执行顺序与状态跟踪，正是该规则所管辖的内容。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于上下文压缩后避免重复执行任务，而规则核心是安全审计流水线的阶段纪律与findings校验，两者主题不相关。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于上下文压缩后的任务去重/状态管理，而该规则核心是Skill文档结构设计模式，虽提及context: fork隔离但不涉及压缩后避免重复执行任务的机制"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中 GateGuard 缺口明确列出「长任务/compact 后」场景，Perception-before-action 原则直接指导 compact 后如何先感知当前状态再行动，正是避免重复执行旧任务的核心依据。"
+        },
+        {
+          "path": "07-output",
+          "verdict": "yes",
+          "source": "nominate",
+          "reason": "规则中包含的“记忆更新”、“core-rules.md同步”及“任务完成了吗”分两问机制，正是上下文压缩后防止重复执行旧任务的核心手段。"
+        }
+      ],
+      "precision": 0.167,
+      "recall": 1,
+      "f1": 0.286,
+      "tp": 1,
+      "fp": 5,
+      "fn": 0
+    },
+    {
+      "query": "这个功能该用哪个agent，选Haiku还是Opus",
+      "expected": [
+        "03-routing"
+      ],
+      "predicted": [
+        "03-routing",
+        "A4-rule-measurement"
+      ],
+      "l0Candidates": [
+        "03-routing",
+        "A4-rule-measurement",
+        "04-planning",
+        "06-verify",
+        "05-execute"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "03-routing",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题核心是模型选择（Haiku vs Opus），正是该路由规则的「模型选择策略」所覆盖的内容。"
+        },
+        {
+          "path": "A4-rule-measurement",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心包含「验证胜过模型规模」「最便宜的模型+验证CLI in-loop ship了最正确的app」等直接指导Haiku vs Opus选型的论据。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是在询问模型/Agent路由选择（Haiku或Opus），而候选规则是关于实现规划、任务拆分、TDD和循环运维的，核心不适用。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于模型/agent选型（Haiku vs Opus），而规则核心是验证流程、质量门、测试和代码审查，两者不匹配。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是代码执行与文件编辑流程（GateGuard、并发控制等），与选择模型（Haiku或Opus）无关。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "MCP工具太多占了太多context怎么精简",
+      "expected": [
+        "03-routing"
+      ],
+      "predicted": [
+        "03-routing",
+        "02-context"
+      ],
+      "l0Candidates": [
+        "A2-skill-design",
+        "03-routing",
+        "02-context",
+        "04-planning",
+        "00-pipeline",
+        "05-execute"
+      ],
+      "nominated": [
+        "A3-rule-craft"
+      ],
+      "judged": [
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题核心是MCP工具占用context的精简策略，候选规则核心是Skill设计模式（SKILL.md结构、frontmatter、四段式等），两者虽都涉及context但核心主题不同。"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心包含 MCP 工具数量审计、每个工具 schema 约占 ~500 tokens 及黄线/红线阈值，直接回答了如何精简 MCP 工具以减少 context 占用的问题。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题询问如何精简被MCP工具占据的context，而候选规则的核心正是上下文管理、Token效率与压缩精简策略。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于工具管理与上下文优化，而规则核心是软件开发流程的规划与TDD执行，核心不匹配。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题核心是MCP工具管理和上下文精简策略，而规则核心是中间件流水线执行顺序和按需加载，两者核心不匹配。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于MCP工具占用context的精简策略，候选规则是关于代码执行/编辑流程的感知-行动原则，核心不相关。"
+        },
+        {
+          "path": "A3-rule-craft",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题关注的是如何精简MCP工具占用的上下文，而候选规则核心是关于规则编写技巧及规则文件的懒加载，两者核心不同。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "新功能怎么拆分成可测试的切片",
+      "expected": [
+        "04-planning"
+      ],
+      "predicted": [
+        "04-planning"
+      ],
+      "l0Candidates": [
+        "04-planning",
+        "06-verify",
+        "02-context",
+        "03-routing"
+      ],
+      "nominated": [
+        "05-execute",
+        "07-output"
+      ],
+      "judged": [
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心内容正是关于如何将功能拆分为垂直切片、在哪切 task、以及如何保证切片可独立验证和测试，与问题直接对应。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是如何将新功能拆分成可测试的切片，属于设计/分解策略，而规则核心是验证阶段的质量门和审查流程，不是功能拆分方法。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于功能拆分与测试策略的工程方法论，候选规则核心是AI agent会话中的上下文/Token管理与压缩，两者领域完全不同。"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于软件工程中功能拆分为可测试切片的方法论，而该规则的核心是 AI agent 系统内的模型路由与成本优化策略，二者领域完全不同。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题是关于功能拆分策略的规划/设计，而该规则核心是执行阶段的文件编辑纪律、并发控制和感知-行动范式，两者关注点不同。"
+        },
+        {
+          "path": "07-output",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "该规则关注输出阶段的提交、同步与确认纪律，不涉及新功能拆分与测试切片的设计逻辑。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "写代码前要做哪些调研和搜索",
+      "expected": [
+        "04-planning"
+      ],
+      "predicted": [
+        "04-planning",
+        "05-execute"
+      ],
+      "l0Candidates": [
+        "04-planning",
+        "02-context",
+        "00-pipeline",
+        "05-execute"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题问的就是写代码前做哪些调研和搜索，规则中 Step 0 正是强制要求的 Web Research 搜索清单及深度指南。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是AI会话内的上下文压缩、token效率与缓存管理，而问题问的是写代码前应做哪些调研和搜索的方法论，两者核心不匹配。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是写代码前的调研和搜索方法，而规则内容是关于中间件管道的执行顺序和模块组织，核心不相关。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心明确规定了写代码（编辑）前必须进行的调查清单与感知行动原则，完全切中问题所需。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "首次编辑文件前要先调查什么",
+      "expected": [
+        "05-execute"
+      ],
+      "predicted": [
+        "05-execute",
+        "04-planning"
+      ],
+      "l0Candidates": [
+        "05-execute",
+        "06a-security-audit",
+        "02-context",
+        "A2-skill-design",
+        "A1-memory"
+      ],
+      "nominated": [
+        "04-planning"
+      ],
+      "judged": [
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心包含「首次编辑前调查清单」，与问题直接对应。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于编辑文件前的通用调查步骤，而规则核心是安全审计的6阶段pipeline流程，两者主题不匹配。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是上下文窗口管理与压缩策略，虽零星提到'grep before read'等操作细节，但并非系统性地回答'编辑文件前应调查什么'的指导。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是文件编辑前置工作流，规则核心是 Skill 设计模式、SKILL.md 文件结构，完全不是同一主题。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是记忆系统的存储/评分/调度机制，而非编辑文件前的调查流程，虽有'回顾已有章节''git history'等零散相关项，但核心不匹配。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "source": "nominate",
+          "reason": "规则核心包含「Step 0: Web Research（强制，任何新实现前）」及「Docs-first 自检」等前置调查要求，直接回答了首次编辑文件前应调查什么。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "并行跑多个agent怎么避免landing冲突",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "predicted": [
+        "05-execute",
+        "06-verify",
+        "04-planning"
+      ],
+      "l0Candidates": [
+        "05-execute",
+        "06-verify",
+        "04-planning",
+        "02-context",
+        "A3-rule-craft",
+        "06a-security-audit",
+        "A2-skill-design",
+        "03-routing",
+        "01-security"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中明确包含「并行 landing 门」「执行可全并行，landing 必须排队」等内容，直接回答了并行 agent 如何避免 landing 冲突的问题。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中明确包含「序列化 landing 阶段」「并行下的 flaky 多半是共享资源碰撞」「先查并发共享资源」等内容，直接回答了并行 agent landing 冲突的避免方法。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心包含「Wavefront 并行」「Task 间显式契约」和「依赖图」，正是解决并行agent冲突与编排问题的关键指导。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": ""
+        },
+        {
+          "path": "A3-rule-craft",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是关于如何编写和管理AI助手的规则文件，而问题是关于多Agent并发执行时的冲突避免，核心不匹配。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是多agent并行时的landing冲突协调，规则核心是安全审计pipeline的6阶段流程与findings schema，虽都涉及agent但核心完全不相关。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于多agent并行执行时的运行时冲突解决，而候选规则核心是静态的Skill文件设计与结构规范，不涉及并行冲突避免。"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于并行多agent执行时的落地冲突避免（并发协调），而规则03-routing核心是模型/agent路由选择与成本优化策略，不涉及并行执行冲突管理。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题关注的是并行执行时的资源或状态冲突（landing冲突），而规则核心是安全、密钥管理和权限控制，两者核心不匹配。"
+        }
+      ],
+      "precision": 0.667,
+      "recall": 1,
+      "f1": 0.8,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "代码写完了要过哪些质量门和审查",
+      "expected": [
+        "06-verify",
+        "04-planning"
+      ],
+      "predicted": [
+        "06-verify",
+        "05-execute",
+        "01-security",
+        "07-output"
+      ],
+      "l0Candidates": [
+        "06-verify",
+        "04-planning",
+        "00-pipeline",
+        "05-execute",
+        "03-routing",
+        "A2-skill-design"
+      ],
+      "nominated": [
+        "01-security",
+        "06a-security-audit",
+        "07-output"
+      ],
+      "judged": [
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题直接问代码完成后的质量门和审查，该规则核心正是 Verify 阶段的质量门体系与代码审查流程，完全匹配。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是代码写完后的质量门和审查，属于验证阶段，而该规则的核心是实现前的规划阶段（Plan First），虽含计划质量门但针对的是规划而非代码审查。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是中间件管道的执行顺序与文件组织，与代码提交前的质量门和审查流程无关。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "该规则明确包含GateGuard、landing门、跑测试/部署前等质量门和审查要求，直接回答了代码写完后的质量门问题。"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "该规则核心是 agent 系统的模型路由与成本优化策略，并非代码完成后的质量门和审查流程指南"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于软件开发中的代码质量门和审查流程，而候选规则是关于AI Agent的Skill设计模式与文件结构规范，核心内容完全不相关。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "source": "nominate",
+          "reason": "代码写完后的质量门与审查中，安全审查是核心环节之一，该规则覆盖了安全门、审查触发器、供应链检测等安全质量门内容。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题问的是代码完成后应过哪些质量门和审查的概览，而该规则核心是安全审计pipeline的具体执行方法论，过于特化且不直接回答「有哪些门」的列举性问题。"
+        },
+        {
+          "path": "07-output",
+          "verdict": "yes",
+          "source": "nominate",
+          "reason": "规则核心包含提交信息格式、PR工作流及完成确认等输出阶段规范，正是代码写完后需遵循的质量与审查要求。"
+        }
+      ],
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.333,
+      "tp": 1,
+      "fp": 3,
+      "fn": 1
+    },
+    {
+      "query": "怎么对代码库做完整的安全审计",
+      "expected": [
+        "06a-security-audit",
+        "01-security"
+      ],
+      "predicted": [
+        "06-verify",
+        "06a-security-audit",
+        "01-security",
+        "00-pipeline"
+      ],
+      "l0Candidates": [
+        "06-verify",
+        "06a-security-audit",
+        "04-planning",
+        "01-security",
+        "A2-skill-design",
+        "02-context",
+        "00-pipeline",
+        "03-routing"
+      ],
+      "nominated": [
+        "05-execute",
+        "07-output"
+      ],
+      "judged": [
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题问的就是如何对代码库做完整安全审计，而该规则定义了完整的安全审计 pipeline 流程、纪律和输出规范，核心完全适用。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是代码实现前的工程规划（如TDD、垂直切片、任务依赖图等），而问题询问的是安全审计的方法论，两者核心不匹配。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "代码库安全审计的核心内容——Secret检测、输入验证、权限控制、供应链攻击检测、安全审查流程等——正是该规则的核心覆盖范围。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是代码库安全审计的方法，而候选规则是关于AI Skill设计的规范，核心内容完全无关。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于代码库安全审计的方法论，而该规则的核心是AI会话中的上下文管理、Token效率与Session交接纪律，两者核心领域不匹配。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "03-routing",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是代码库安全审计的具体方法，而候选规则是关于Agent模型路由与成本控制的架构策略，核心内容不相关。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "问题是在询问如何进行代码库的安全审计方法论，而候选规则是关于代码修改/执行阶段的操作规范（如先调查再编辑、并发控制），核心不适用。"
+        },
+        {
+          "path": "07-output",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "规则核心是输出格式与工作流纪律（提交信息、PR流程、记忆同步等），与安全审计方法论无关"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "提交代码的commit message格式是什么",
+      "expected": [
+        "07-output"
+      ],
+      "predicted": [
+        "07-output"
+      ],
+      "l0Candidates": [
+        "07-output",
+        "06-verify",
+        "04-planning",
+        "A1-memory",
+        "05-execute",
+        "01-security",
+        "A4-rule-measurement",
+        "02-context",
+        "06a-security-audit"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "07-output",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "该规则摘要明确包含Commit Message Format，正是回答commit message格式所需遵循的规则。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是commit message的文本格式，而规则06-verify的核心是代码提交前的质量门检查与验证流程，两者虽都涉及\"提交\"但核心内容不同。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题只是询问commit message的格式约定，而规则核心是项目规划与任务分解流程，两者虽都涉及开发流程但核心完全不同。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "该规则是关于Agent记忆系统和行为策略治理的，与git commit message格式无关"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是执行阶段的代码编辑与并发控制，与commit message格式无关。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是 commit message 格式，而候选规则核心是安全、密钥检测和权限控制，两者核心不匹配。"
+        },
+        {
+          "path": "A4-rule-measurement",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是commit message格式规范，而候选规则核心是规则的测量与验证方法论，两者核心内容不匹配。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "该规则核心是上下文管理与Token效率，与commit message格式规范无关"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是 commit message 格式，候选规则是安全审计流水线，两者核心内容完全无关。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "规则写了怎么验证它真的有效不是信仰",
+      "expected": [
+        "A4-rule-measurement"
+      ],
+      "predicted": [
+        "06a-security-audit",
+        "06-verify",
+        "A1-memory",
+        "A2-skill-design",
+        "A4-rule-measurement"
+      ],
+      "l0Candidates": [
+        "04-planning",
+        "06a-security-audit",
+        "06-verify",
+        "A1-memory",
+        "A2-skill-design",
+        "A4-rule-measurement",
+        "02-context",
+        "01-security"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于如何验证规则本身的有效性（meta-level的规则评估），而04-planning的核心是执行规划流程，非规则有效性验证。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则强调通过5个验证测试和独立验证“不从直觉推理”，正好回答了如何实证验证而非信仰。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题探讨如何客观验证有效性而非盲信，规则核心正是通过结构化质量门、测试审查和机器可查的门判定规则来实现非主观的验证。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题问的是规则如何验证自身有效性而非诉诸信仰，A2 规则核心包含自测 receipt、双关卡校验 19/19(100%)、verification 认知能力等验证机制，正是回答此问题所需。"
+        },
+        {
+          "path": "A4-rule-measurement",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题核心是「如何验证规则真正有效而非盲目信仰」，与A4规则的「必须测量、无对照无法声称改进、不测就不知道规则好坏」完全对应。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于如何验证规则本身是否有效（元层面的规则验证方法论），而候选规则核心是上下文管理、压缩与缓存策略，虽含'验证器''Trust nothing blindly'等术语但核心不匹配。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是如何验证规则本身有效性（元层面的验证方法论），而该规则核心是安全控制与策略执行，并非关于规则有效性的验证方法。"
+        }
+      ],
+      "precision": 0.2,
+      "recall": 1,
+      "f1": 0.333,
+      "tp": 1,
+      "fp": 4,
+      "fn": 0
+    },
+    {
+      "query": "skill怎么设计，description该怎么写",
+      "expected": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "predicted": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "l0Candidates": [
+        "A2-skill-design",
+        "04-planning",
+        "A3-rule-craft",
+        "06-verify",
+        "03-routing",
+        "02-context",
+        "00-pipeline",
+        "06a-security-audit"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "A2-skill-design",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题直接询问 skill 设计和 description 写法，该规则核心内容正是 Skill 设计模式与 description 触发器写法，完全匹配。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是skill的设计与description写法，而候选规则核心是开发任务的任务规划、TDD和循环运维，核心不适用。"
+        },
+        {
+          "path": "A3-rule-craft",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中明确包含「Skill description 是触发器」等内容，直接回答了问题中关于 skill 设计和 description 写法的核心需求。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题关注skill设计和description编写，而候选规则核心是验证/质量门/测试审查流程，两者主题不匹配"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是 skill 本身的设计与 description 写法，而规则 03-routing 的核心是路由策略、模型选择和 skill 激活机制，不包含 skill 设计或 description 编写指导。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于skill的设计与description写法，候选规则核心是上下文管理（压缩、交接、缓存稳定性等），两者主题不同。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "候选规则是关于中间件流水线和执行顺序的，与问题核心的skill设计和description编写不相关。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问如何设计skill及编写description，而候选规则是关于安全审计pipeline的执行流程与规范，核心内容完全不相关。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "CLAUDE.md文件太长怎么拆分和懒加载",
+      "expected": [
+        "A3-rule-craft"
+      ],
+      "predicted": [
+        "A3-rule-craft",
+        "00-pipeline",
+        "A2-skill-design"
+      ],
+      "l0Candidates": [
+        "A3-rule-craft",
+        "00-pipeline",
+        "04-planning",
+        "A2-skill-design",
+        "02-context",
+        "06-verify",
+        "01-security"
+      ],
+      "nominated": [
+        "03-routing"
+      ],
+      "judged": [
+        {
+          "path": "A3-rule-craft",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心内容涵盖文件大小管理、`paths:` frontmatter 规则懒加载及 CLAUDE.md 拆分策略，直接回答了该问题。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则中的「辅助模块（按需加载）」和「文件索引」正好解决了文件过长时的拆分与懒加载问题。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于Claude配置文件的拆分与懒加载机制，而规则核心是关于代码实现前的任务规划、依赖图和TDD流程，两者核心不匹配。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则核心涵盖渐进披露、目录即 Skill 及 pointer-to-local-docs，正是解决长文件拆分与懒加载的直接方法论。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于CLAUDE.md文件的物理拆分与懒加载策略（文件组织/模块化），而规则核心是运行时上下文管理（压缩信号、session handoff、token效率、缓存稳定性），两者虽都涉及「上下文」但核心不同。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于CLAUDE.md文件拆分与懒加载的配置管理，而规则06-verify的核心是代码验证质量门、测试覆盖率和安全审查，两者主题完全无关。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题是关于CLAUDE.md文件的拆分和懒加载策略，与安全规则中的密钥检测、权限控制、deny-by-default等核心内容无关。"
+        },
+        {
+          "path": "03-routing",
+          "verdict": "no",
+          "source": "nominate",
+          "reason": "fallback: {\"verdict\":\"no"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "agent的记忆怎么管理，置信度怎么定",
+      "expected": [
+        "A1-memory"
+      ],
+      "predicted": [
+        "07-output",
+        "A1-memory",
+        "02-context"
+      ],
+      "l0Candidates": [
+        "07-output",
+        "A1-memory",
+        "04-planning",
+        "00-pipeline",
+        "A2-skill-design",
+        "01-security",
+        "02-context",
+        "06-verify",
+        "05-execute"
+      ],
+      "nominated": [],
+      "judged": [
+        {
+          "path": "07-output",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "该规则明确包含「记忆更新」和「Next-action 置信度门」，直接对应问题中关于agent记忆管理和置信度如何确定的核心需求。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "问题直接询问agent的记忆管理与置信度制定，候选规则A1的核心正是记忆系统管理与置信度评分规则。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是Agent记忆管理与置信度设定，而规则核心是任务规划、TDD与循环工作流，主题不匹配。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题询问的是agent的记忆与置信度管理机制，而候选规则是关于中间件管道和工程文件索引，核心内容不匹配。"
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题关心 agent 记忆管理与置信度设定，候选规则核心是 Skill 设计模式，仅在认知能力审计 taxonomy 里列出 memory 一词，未涉及记忆管理或置信度定义"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "问题问的是agent记忆管理与置信度设定，候选规则核心是安全策略与密钥检测，两者无直接关联。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "source": "l0",
+          "reason": "规则的核心内容是上下文/记忆管理机制，直接适用于回答问题中关于agent记忆管理的部分。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是验证质量门、测试覆盖与代码审查，与agent记忆管理及置信度设定无直接关系。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "no",
+          "source": "l0",
+          "reason": "规则核心是执行阶段的文件编辑/并发控制规范，不涉及agent记忆管理和置信度定义。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    }
+  ]
+}
