@@ -2,7 +2,7 @@
 
 > **这不是又一篇文章，是一个能跑的东西。** 一个规则路由器（输入问题 -> 输出该用哪些规则 + 置信度 + 理由），加上它**给自己的 receipt**：一个测试集，跑出真实的 precision / recall。
 >
-> 状态：MVP（L0 关键词路由器 + 18 题测试集 + 阈值扫描）。clone 即跑，一条命令出数字。
+> 状态：MVP（L0 关键词路由器 + L1 语义判定 + 18 题测试集）。clone 即跑。L0 零依赖；L1 复用终端 LLM 环境变量。
 
 ## 一句话核心
 
@@ -27,37 +27,65 @@
 ```bash
 git clone <this-repo>
 cd <repo>
-# 路由一个单题
+# L0 路由一个单题（零依赖）
 node router/router.js "我的代码有SQL注入风险，怎么防"
 
-# 跑全测试集，出 precision / recall receipt
+# L1 语义路由单题（需终端 LLM 环境变量）
+node router/l1.js "提交代码前要做哪些质量检查"
+
+# 跑全测试集，出 L0 precision/recall receipt
 node router/eval.js
+
+# 跑 L1 评估，出 L1 receipt（对比 L0）
+node router/eval-l1.js
 ```
 
-零依赖，纯 Node。输出一个阈值扫描表 + 每题明细 + `results/l0-baseline.json`。
+L0 零依赖纯 Node。L1 需 `ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` / `ANTHROPIC_MODEL` 环境变量（火山方舟 ARK glm-5.2），key 不进代码。
 
-## 第一个 receipt（真实数字，不 game）
+## 第一个 receipt：L0 关键词层（真实数字，不 game）
 
-L0 关键词路由器，18 题测试集，macro 指标：
+L0 关键词路由器，18 题测试集，macro 指标（v2 multilabel 标注）：
 
 | 阈值 | Precision | Recall | F1 |
 |------|-----------|--------|------|
-| 0.05 | 0.179 | **0.972** | 0.293 |
-| **0.10** | **0.451** | **0.917** | **0.570** |
-| 0.15 | 0.491 | 0.611 | 0.528 |
-| 0.20 | 0.306 | 0.333 | 0.315 |
+| 0.05 | 0.208 | **0.972** | 0.334 |
+| **0.10** | **0.511** | **0.917** | **0.631** |
+| 0.15 | 0.491 | 0.500 | 0.476 |
+| 0.20 | 0.306 | 0.278 | 0.287 |
 | 0.30 | 0.056 | 0.056 | 0.056 |
 
-最佳 F1 在阈值 0.10：**P=0.451, R=0.917, F1=0.570**。
+最佳 F1 在阈值 0.10：**P=0.511, R=0.917, F1=0.631**。
 
 **诚实解读**（这本身就是 receipt 三分的示范--先测，不预设有效）：
 
 - **Recall 91.7%**：正确的规则文件几乎总在候选集里。L0 关键词做"召回"很便宜。
-- **Precision 45.1%**：每题多载 2-4 个交叉引用文件。`04-planning` 和 `06-verify` 是"什么都提一句"的枢纽文件，成为慢性误报。
+- **Precision 51.1%**：每题多载 2-4 个交叉引用文件。`04-planning` 和 `06-verify` 是"什么都提一句"的枢纽文件，成为慢性误报；同形词（"提交"=质量门 vs =commit 格式）关键词层分不开。
 - **1 题完全漏召回**："规则怎么验证有效"期望 `A4-rule-measurement`，但 query 词汇没命中 A4 的"度量/receipt"术语 -> L0 关键词层的天花板，语义判别要靠 L1。
-- 阈值扫描呈典型 P/R 权衡：低阈值全召回但 precision 崩；高阈值 precision 升但 recall 断崖。**没有"再加一条规则"式的免费午餐**。
+- v1 single-label 标注时 P=0.451；重标成 multilabel（一到多合理多载）后 P=0.511--**标注低估了一到多**，这本身是个 receipt 发现。
 
-这 45% 不是失败，是**测量本身**：它精确指出了 L0 关键词层的边界在哪--recall 便宜、precision 贵。下一片切片（L1 便宜 LLM 按描述分类，或给枢纽文件加 ownership 标签）就该冲这个 precision 缺口。**没测之前不知道缺口在这**--这就是为什么路由需要 receipt。
+这 51% 不是失败，是**测量本身**：它精确指出 L0 关键词层的边界--recall 便宜、precision 贵，同形词/枢纽文件是天花板。下一片切片（L1 语义判定）就该冲这个 precision 缺口。**没测之前不知道缺口在这**--这就是为什么路由需要 receipt。
+
+## 第二个 receipt：L1 语义判定（冲 precision 缺口）
+
+L1 在 L0 候选上逐条调便宜 LLM 判 yes/no（白盒带理由），过滤误报。复用终端环境变量（`ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` / `ANTHROPIC_MODEL`，火山方舟 ARK glm-5.2），key 不进代码。
+
+同测试集 18 题，L0 候选阈值 0.05（保 recall 让 L1 滤）：
+
+| 层 | Precision | Recall | F1 |
+|---|---|---|---|
+| L0 baseline | 0.511 | 0.917 | 0.631 |
+| **L1 LLM judge** | **0.620** | **0.944** | **0.700** |
+| Δ | +0.109 | +0.027 | +0.069 |
+
+**诚实解读**：
+
+- **Precision +10.9 点**：语义过滤有效。典型案例--"commit message 格式" L0 同时命中 06-verify（提交质量门）和 07-output（commit 格式），L1 只留 07-output（reason：06-verify 核心是质量检查非格式）。同形词被语义判定分开。
+- **Recall 不降反升 +2.7 点**：失败 fallback=yes（保守不滤，漏比多严重）起效；L1 没伤召回。
+- **116 次 LLM 调用**，glm-5.2，成本可忽略。
+- **但只有 5/18 全对**：precision 仍非 1.0，两个原因交织--(a) expected 标注偏窄（如"API key 硬编码" L1 载 01-security+06-verify+06a-security-audit 都沾边，但 expected 只标 01，这是一到多被低估，和 v2 同理）；(b) L1 部分真过载（LLM 对沾边即判 yes）。
+- **设计限制**：L1 只在 L0 候选上判，无法补 L0 漏召回（那 1 题语义漏 L1 救不了）。这是"先 precision 过滤"切片；recall 补充（LLM 提名 L0 漏的）留后续。
+
+L1 把 precision 从关键词层天花板（51%）推进到 62%，recall 不降反升--**语义层确实冲了缺口**。但 precision 的"真"天花板被 expected 标注宽度卡住：要公平评 L1 的"一到多"，测试集可能需再重标（像 v1->v2 那样）。这本身又是下一个 receipt 要回答的。
 
 ## 熵增定律（核心类比）
 
@@ -99,8 +127,8 @@ L0 关键词路由器，18 题测试集，macro 指标：
 
 | 层 | 状态 |
 |---|---|
-| L0 关键词（spine 文件级） | **已验**（P=0.451 / R=0.917，18 题） |
-| L1 便宜 LLM 按描述分类 | 待验（冲 precision 缺口） |
+| L0 关键词（spine 文件级） | **已验**（P=0.511 / R=0.917，18 题） |
+| L1 便宜 LLM 按描述分类 | **已验**（P=0.620 / R=0.944，18 题；冲 precision 缺口 +10.9 点，recall 不降反升） |
 | facets 横切标签（security / parallel / ...） | 待验（设计，未建索引） |
 | 退一格（叶子拿不准载父节点） | 待验（设计，未实现） |
 
@@ -116,7 +144,7 @@ L0 关键词路由器，18 题测试集，macro 指标：
 
 举例：作者复现 agent-chief 的 96%/75%/70%（逐字吻合），但这只证明"agent-chief 的 demo 跑得出这些数"，**不证明**"我的 pipeline 用了值得性升级门就削减 75% LLM 调用"。后者需独立测。社区大量"我验证了 X 规则有效"实际只是复现了 X 的来源数字--**citation 验证被误当 efficacy 验证**。
 
-**本 repo 的 P=0.451/R=0.917 是哪种？** 是第一种（独立 rig）--作者自己设计的测试集、自己跑自己的路由器、测的是"我的路由规则"的 efficacy，不是复现别人的数字。所以它是真 receipt，不是 citation 验证。这是本项目相对"复现别人 demo"的进阶：测的是自己的规则，不是别人的。
+**本 repo 的 L0 P=0.511/R=0.917、L1 P=0.620/R=0.944 是哪种？** 是第一种（独立 rig）--作者自己设计的测试集、自己跑自己的路由器、测的是"我的路由规则"的 efficacy，不是复现别人的数字。所以它是真 receipt，不是 citation 验证。这是本项目相对"复现别人 demo"的进阶：测的是自己的规则，不是别人的。
 
 ## claim × receipt 框架（让"该测哪些"可机器判定）
 
@@ -153,16 +181,19 @@ L0 关键词路由器，18 题测试集，macro 指标：
 ```
 corpus/              13 个规则文件（快照自 ~/.claude/rules/common/，被路由的语料）
 router/router.js     L0 关键词路由器：建带权倒排索引，route(query) -> matched + loaded
-router/eval.js       评估器：跑测试集 + 阈值扫描，输出 precision/recall receipt
+router/llm.js        L1 LLM judge：复用终端 env vars，judgeRelevance(query,rule) -> {verdict,reason}
+router/l1.js         L1 路由：L0 候选 -> 逐个 LLM 判 -> 过滤误报
+router/eval.js       L0 评估器：跑测试集 + 阈值扫描，输出 precision/recall receipt
+router/eval-l1.js    L1 评估器：跑测试集，L0 候选 -> LLM 判 -> P/R/F1 对比 L0
 testset.json         18 题 (query, expected) 测试集
-results/             receipt 归档（l0-baseline.json）
+results/             receipt 归档（l0-v2-multilabel.json / l1-llm.json / ...）
 ```
 
 路由器设计：描述符从 H1/H2/H3 标题 + `**bold**` 术语 + 正文抽（位置加权 H1=3/H2=2/正文=1），CJK 走 bigram 不依赖分词库，打分 = 带 IDF 的加权查询覆盖率，白盒可解释（每题明细打印命中 token）。
 
 ## 待续
 
-- [ ] **L1 切片**：便宜 LLM 按穷举触发面 description 分类，仅歧义时介入，冲 precision 缺口（L0 留下的 45% -> ?）
+- [x] **L1 切片**：LLM 语义判定过滤 L0 候选，冲 precision 缺口（51% -> 62%，recall 不降反升 92% -> 94%）。见上方第二个 receipt
 - [ ] **ownership 标签**：给枢纽文件（04-planning / 06-verify）标" owns X / references X"，让"提到"和"拥有"可区分
 - [ ] **facets 标签**：security / parallel / subagent / ctx-stress 横切索引，测横跨多阶段 query
 - [ ] **退一格**：叶子拿不准载父节点（00-pipeline 作树根）
@@ -188,4 +219,4 @@ results/             receipt 归档（l0-baseline.json）
 
 - v2：「我做了 A4 度量闭环」（操作复盘，个人化）+「agent 规则系统处于前科学阶段，claim×receipt 让它可证伪」
 - v3（旧）：核心升维到「减熵」--双做功两柱（结构性路由 + 证据性验证并列）
-- **本版（v4）**：自指论证后收敛为**单核路由 + 其 receipt**--验证不是并列另一柱，是路由自身必须配的 receipt。路由器已建，P=0.451/R=0.917 是真实测出来的第一个 receipt，不是框架空谈。
+- **本版（v4）**：自指论证后收敛为**单核路由 + 其 receipt**--验证不是并列另一柱，是路由自身必须配的 receipt。路由器已建，L0 P=0.511/R=0.917、L1 P=0.620/R=0.944 是真实测出来的 receipt，不是框架空谈。
