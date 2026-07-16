@@ -1,0 +1,414 @@
+{
+  "timestamp": "2026-07-16",
+  "method": "dedup-verify 16 组确认重复 -> 每组两两 LLM 合并描述(并集去重不丢信息) + triggers 并集 -> 16 合并 skill",
+  "mergeCalls": 22,
+  "groupsMerged": 16,
+  "originalSkillCount": 38,
+  "mergedSkillCount": 16,
+  "foldedCount": 22,
+  "note": "合并非剔除：22 冗余 skill 合并入 16 canonical（无损，并集描述）。只产出合并描述，不部署 ~/.claude（破坏性交人）",
+  "merged": [
+    {
+      "name": "mcp-builder",
+      "canonicalScore": 0.761,
+      "mergedFrom": [
+        "mcp-builder",
+        "build-mcp-server"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "mcp-builder",
+          "desc": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact wi"
+        },
+        {
+          "name": "build-mcp-server",
+          "desc": "This skill should be used when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP"
+        }
+      ],
+      "mergedDescription": "Guide for building high-quality MCP (Model Context Protocol) servers and integrations. Use when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP integration/app\", \"wrap/expose an API for Claude\", or integrate external APIs/services in Python (FastMCP) or Node/TypeScript (MCP SDK). As the entry point for MCP development, it interrogates the user about their use case, determines the right deployment model (remote HTTP, MCPB, local stdio), picks a tool-design pattern, and hands off to specialized skills.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "skill-creator",
+      "canonicalScore": 0.724,
+      "mergedFrom": [
+        "skill-creator",
+        "write-a-skill",
+        "skill-development"
+      ],
+      "foldedCount": 2,
+      "originalDescriptions": [
+        {
+          "name": "skill-creator",
+          "desc": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users"
+        },
+        {
+          "name": "write-a-skill",
+          "desc": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use wh"
+        },
+        {
+          "name": "skill-development",
+          "desc": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a"
+        }
+      ],
+      "mergedDescription": "Use when users want to create, write, or build a new skill, add a skill to a Claude Code plugin, modify or optimize an existing skill, improve a skill's description for better triggering accuracy, organize skill content, or run evals, benchmark performance with variance analysis, and apply development best practices. It provides guidance on proper skill structure, progressive disclosure, and bundled resources from scratch.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "review",
+      "canonicalScore": 0.844,
+      "mergedFrom": [
+        "review",
+        "code-review-and-quality"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "review",
+          "desc": "Pre-landing PR review. (gstack)"
+        },
+        {
+          "name": "code-review-and-quality",
+          "desc": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by y"
+        }
+      ],
+      "mergedDescription": "Pre-landing (pre-merge) PR review (gstack). Conducts multi-axis code review to assess code quality across multiple dimensions before any change enters the main branch. Use when reviewing code written by yourself, another agent, or a human.",
+      "mergedTriggers": [
+        "review this pr",
+        "code review",
+        "check my diff",
+        "pre-landing review"
+      ]
+    },
+    {
+      "name": "frontend-design",
+      "canonicalScore": 0.76,
+      "mergedFrom": [
+        "frontend-design",
+        "frontend-ui-engineering"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "frontend-design",
+          "desc": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill wh"
+        },
+        {
+          "name": "frontend-ui-engineering",
+          "desc": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creat"
+        }
+      ],
+      "mergedDescription": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build, modify, or style/beautify user-facing web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, managing state, or implementing any web UI). Generates creative, polished code and UI design that achieves a production-quality look and feel while avoiding generic AI aesthetics.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "continuous-learning-v2",
+      "canonicalScore": 0.885,
+      "mergedFrom": [
+        "continuous-learning-v2",
+        "continuous-learning"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "continuous-learning-v2",
+          "desc": "フックを介してセッションを観察し、信頼度スコアリング付きのアトミックなインスティンクトを作成し、スキル/コマンド/エージェントに進化させるインスティンクトベースの学習システム。"
+        },
+        {
+          "name": "continuous-learning",
+          "desc": "Claude Codeセッションから再利用可能なパターンを自動的に抽出し、将来の使用のために学習済みスキルとして保存します。"
+        }
+      ],
+      "mergedDescription": "Claude Codeセッションをフックを介して観察・分析して再利用可能なパターンを自動的に抽出し、信頼度スコアリング付きのアトミックなインスティンクトとして作成・保存して、将来の使用のためにスキル/コマンド/エージェントへと進化させるインスティンクトベースの継続的学習システム。",
+      "mergedTriggers": []
+    },
+    {
+      "name": "office-hours",
+      "canonicalScore": 0.928,
+      "mergedFrom": [
+        "office-hours",
+        "gstack-openclaw-office-hours"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "office-hours",
+          "desc": "YC Office Hours — two modes. (gstack)"
+        },
+        {
+          "name": "gstack-openclaw-office-hours",
+          "desc": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think"
+        }
+      ],
+      "mergedDescription": "YC Office Hours - two modes (gstack). Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
+      "mergedTriggers": [
+        "brainstorm this",
+        "is this worth building",
+        "help me think through",
+        "office hours"
+      ]
+    },
+    {
+      "name": "retro",
+      "canonicalScore": 0.898,
+      "mergedFrom": [
+        "retro",
+        "gstack-openclaw-retro"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "retro",
+          "desc": "Weekly engineering retrospective. (gstack)"
+        },
+        {
+          "name": "gstack-openclaw-retro",
+          "desc": "\"Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics "
+        }
+      ],
+      "mergedDescription": "\"Weekly engineering retrospective (gstack-openclaw-retro). Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.\"",
+      "mergedTriggers": [
+        "weekly retro",
+        "what did we ship",
+        "engineering retrospective"
+      ]
+    },
+    {
+      "name": "investigate",
+      "canonicalScore": 0.884,
+      "mergedFrom": [
+        "investigate",
+        "gstack-openclaw-investigate"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "investigate",
+          "desc": "Systematic debugging with root cause investigation. (gstack)"
+        },
+        {
+          "name": "gstack-openclaw-investigate",
+          "desc": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users "
+        }
+      ],
+      "mergedDescription": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working. Systematic debugging with root cause investigation (gstack).",
+      "mergedTriggers": [
+        "debug this",
+        "fix this bug",
+        "why is this broken",
+        "root cause analysis",
+        "investigate this error"
+      ]
+    },
+    {
+      "name": "plan-ceo-review",
+      "canonicalScore": 0.864,
+      "mergedFrom": [
+        "plan-ceo-review",
+        "gstack-openclaw-ceo-review"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "plan-ceo-review",
+          "desc": "CEO/founder-mode plan review. (gstack)"
+        },
+        {
+          "name": "gstack-openclaw-ceo-review",
+          "desc": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, "
+        }
+      ],
+      "mergedDescription": "Use when asked to run a CEO/founder-mode plan review (gstack), challenge a proposal, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
+      "mergedTriggers": [
+        "think bigger",
+        "expand scope",
+        "strategy review",
+        "rethink this plan"
+      ]
+    },
+    {
+      "name": "github-project-management",
+      "canonicalScore": 0.769,
+      "mergedFrom": [
+        "github-project-management",
+        "github-ops"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "github-project-management",
+          "desc": "Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automat"
+        },
+        {
+          "name": "github-ops",
+          "desc": "GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operati"
+        }
+      ],
+      "mergedDescription": "Comprehensive GitHub project management and repository operations via swarm coordination and the gh CLI. Covers project board automation, sprint planning, issue triage, PR management, CI/CD operations, release management, security monitoring, contributors, and stale items. Use when the user wants to manage GitHub issues, PRs, CI status, releases, or any GitHub operational task beyond simple git commands.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "interview-me",
+      "canonicalScore": 0.765,
+      "mergedFrom": [
+        "interview-me",
+        "grill-with-docs",
+        "grill-me"
+      ],
+      "foldedCount": 2,
+      "originalDescriptions": [
+        {
+          "name": "interview-me",
+          "desc": "Extracts what the user actually wants instead of what they think they should want. Achieves this thr"
+        },
+        {
+          "name": "grill-with-docs",
+          "desc": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, "
+        },
+        {
+          "name": "grill-me",
+          "desc": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolvin"
+        }
+      ],
+      "mergedDescription": "Conducts relentless, one-question-at-a-time interviews to extract what the user actually wants (vs. what they think they should want) and resolve each branch of the decision tree, until reaching shared understanding and ~95% confidence about the underlying intent. Runs grilling sessions that stress-test plans and designs against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when the user wants to stress-test a plan/design against their project's language and documented decisions, when they explicitly invoke (\"interview me\", \"grill me\", \"are we sure?\", \"stress-test my thinking\"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "spec",
+      "canonicalScore": 0.893,
+      "mergedFrom": [
+        "spec",
+        "spec-driven-development"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "spec",
+          "desc": "Turn vague intent into a precise, executable spec in five phases. (gstack)"
+        },
+        {
+          "name": "spec-driven-development",
+          "desc": "Creates specs before coding. Use when starting a new project, feature, or significant change and no "
+        }
+      ],
+      "mergedDescription": "Transform vague, ambiguous, or unclear ideas into precise, executable specs before coding through a five-phase process. Use when starting a new project, feature, or significant change and no specification exists yet.",
+      "mergedTriggers": [
+        "spec this out",
+        "file an issue",
+        "write up a ticket",
+        "turn this into an issue",
+        "make this a github issue",
+        "turn this into a backlog item"
+      ]
+    },
+    {
+      "name": "browse",
+      "canonicalScore": 0.848,
+      "mergedFrom": [
+        "browse",
+        "webapp-testing",
+        "gstack",
+        "browser-testing-with-devtools",
+        "browser-qa"
+      ],
+      "foldedCount": 4,
+      "originalDescriptions": [
+        {
+          "name": "browse",
+          "desc": "Fast headless browser for QA testing and site dogfooding. (gstack)"
+        },
+        {
+          "name": "webapp-testing",
+          "desc": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying"
+        },
+        {
+          "name": "gstack",
+          "desc": "Fast headless browser for QA testing and site dogfooding. Navigate pages, interact with\nelements, ve"
+        },
+        {
+          "name": "browser-testing-with-devtools",
+          "desc": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in"
+        },
+        {
+          "name": "browser-qa",
+          "desc": ""
+        }
+      ],
+      "mergedDescription": "Fast headless and real browser testing toolkit (Playwright/gstack and Chrome DevTools MCP). Use when building, debugging, or testing anything that runs in a browser (e.g., QA testing, site dogfooding, verifying deployments, or opening local web apps). Navigate pages, interact with elements, inspect the DOM, verify state and frontend functionality, diff before/after, and capture browser logs. Test responsive layouts, forms, uploads, and dialogs. Analyze network requests, profile performance, and verify visual output with real runtime data. Supports capturing annotated screenshots as bug evidence for filing bugs. Requires the chrome-devtools MCP server to be configured for DevTools features.",
+      "mergedTriggers": [
+        "browse a page",
+        "headless browser",
+        "take page screenshot"
+      ]
+    },
+    {
+      "name": "tdd-workflow",
+      "canonicalScore": 0.724,
+      "mergedFrom": [
+        "tdd-workflow",
+        "test-driven-development",
+        "tdd"
+      ],
+      "foldedCount": 2,
+      "originalDescriptions": [
+        {
+          "name": "tdd-workflow",
+          "desc": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven dev"
+        },
+        {
+          "name": "test-driven-development",
+          "desc": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any beha"
+        },
+        {
+          "name": "tdd",
+          "desc": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix b"
+        }
+      ],
+      "mergedDescription": "Use this skill when writing new features, implementing logic, fixing bugs, refactoring code, changing behavior, or modifying existing functionality. It enforces test-driven development (including bug reports) with 80%+ coverage across unit, integration, and E2E tests. Explicitly trigger this when the user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, asks for test-first development, or needs to prove code works through tests.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "writing-hookify-rules",
+      "canonicalScore": 0.724,
+      "mergedFrom": [
+        "writing-hookify-rules",
+        "hookify-rules"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "writing-hookify-rules",
+          "desc": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"confi"
+        },
+        {
+          "name": "hookify-rules",
+          "desc": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure "
+        }
+      ],
+      "mergedDescription": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
+      "mergedTriggers": []
+    },
+    {
+      "name": "everything-claude-code",
+      "canonicalScore": 0.733,
+      "mergedFrom": [
+        "everything-claude-code",
+        "everything-claude-code-conventions"
+      ],
+      "foldedCount": 1,
+      "originalDescriptions": [
+        {
+          "name": "everything-claude-code",
+          "desc": "Development conventions and patterns for everything-claude-code. JavaScript project with conventiona"
+        },
+        {
+          "name": "everything-claude-code-conventions",
+          "desc": "Development conventions and patterns for everything-claude-code. JavaScript project with conventiona"
+        }
+      ],
+      "mergedDescription": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
+      "mergedTriggers": []
+    }
+  ]
+}
