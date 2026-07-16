@@ -1,0 +1,776 @@
+{
+  "timestamp": "2026-07-16",
+  "method": "scalefix union（R=1.000 P=0.577）-> 严 judge 重判（只直接核心/近义重复 yes）-> strict-yes",
+  "llmCalls": 58,
+  "macro": {
+    "precision": 0.65,
+    "recall": 1,
+    "f1": 0.736
+  },
+  "scalefixBaselineMacro": {
+    "precision": 0.577,
+    "recall": 1,
+    "f1": 0.673
+  },
+  "delta": {
+    "precision": 0.073,
+    "recall": 0,
+    "f1": 0.063
+  },
+  "note": "严 judge 治 precision 规模退化。失败保守判 no（不载）",
+  "detail": [
+    {
+      "query": "帮我做 pre-landing 的 PR review",
+      "expected": [
+        "review"
+      ],
+      "union": [
+        "review",
+        "springboot-verification",
+        "django-verification",
+        "github-ops",
+        "autoplan",
+        "code-review-and-quality",
+        "codex",
+        "coding-standards",
+        "doubt-driven-development",
+        "santa-method"
+      ],
+      "strictYes": [
+        "review",
+        "django-verification",
+        "autoplan",
+        "code-review-and-quality",
+        "codex",
+        "coding-standards",
+        "doubt-driven-development"
+      ],
+      "judged": [
+        {
+          "name": "review",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "springboot-verification",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "django-verification",
+          "verdict": "yes",
+          "reason": "Pre-landing PR review在Django语境下正是该skill的用途（部署前/PR的验证检查）。"
+        },
+        {
+          "name": "github-ops",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "autoplan",
+          "verdict": "yes",
+          "reason": "问题要求做 pre-landing 的 PR review，该 skill 是自动执行包含 eng review 在内的全套 review pipeline 的核心工具。"
+        },
+        {
+          "name": "code-review-and-quality",
+          "verdict": "yes",
+          "reason": "pre-landing 的 PR review 直接对应在代码合入主分支前的多维度代码质量审查。"
+        },
+        {
+          "name": "codex",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "coding-standards",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "doubt-driven-development",
+          "verdict": "yes",
+          "reason": "对 PR 进行 pre-landing review 正是描述中在最终确认前进行对抗性审查以验证正确性的核心应用场景。"
+        },
+        {
+          "name": "santa-method",
+          "verdict": "no",
+          "reason": "PR review 不直接等同于多智能体对抗验证机制，santa-method 提供的是特定验证流程而非通用 review 功能。"
+        }
+      ],
+      "precision": 0.143,
+      "recall": 1,
+      "f1": 0.25,
+      "tp": 1,
+      "fp": 6,
+      "fn": 0
+    },
+    {
+      "query": "用无头浏览器打开网页看看",
+      "expected": [
+        "browse"
+      ],
+      "union": [
+        "browse"
+      ],
+      "strictYes": [
+        "browse"
+      ],
+      "judged": [
+        {
+          "name": "browse",
+          "verdict": "yes",
+          "reason": "问题明确要求用无头浏览器打开网页，与候选skill的核心功能完全一致。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "QA 测试这个 web 应用并修 bug",
+      "expected": [
+        "qa"
+      ],
+      "union": [
+        "qa",
+        "ai-regression-testing",
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "test-driven-development",
+        "browse",
+        "qa-only",
+        "context-mode",
+        "webapp-testing"
+      ],
+      "strictYes": [
+        "qa",
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "browse",
+        "webapp-testing"
+      ],
+      "judged": [
+        {
+          "name": "qa",
+          "verdict": "yes",
+          "reason": "问题要求QA测试web应用并修bug，与候选skill的描述及测试用例完全直接对应。"
+        },
+        {
+          "name": "ai-regression-testing",
+          "verdict": "no",
+          "reason": "修bug不直接需要回归测试，且回归测试是QA的一个特定子集而非泛指QA测试。"
+        },
+        {
+          "name": "diagnose",
+          "verdict": "yes",
+          "reason": "QA测试应用并修bug直接需要复现、定位、修复和回归测试这一诊断循环。"
+        },
+        {
+          "name": "gstack-openclaw-investigate",
+          "verdict": "yes",
+          "reason": "问题明确要求“修 bug”，与 skill 描述中的 debug, fix a bug, root cause analysis 核心功能完全一致。"
+        },
+        {
+          "name": "investigate",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "test-driven-development",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "browse",
+          "verdict": "yes",
+          "reason": "问题明确要求对 web 应用进行 QA 测试，而该 skill 提供的无头浏览器正是执行此 QA 测试和修 bug 的直接核心工具。"
+        },
+        {
+          "name": "qa-only",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "context-mode",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "webapp-testing",
+          "verdict": "yes",
+          "reason": "问题要求 QA 测试 web 应用，与该 skill 用于测试本地 Web 应用的功能直接匹配。"
+        }
+      ],
+      "precision": 0.2,
+      "recall": 1,
+      "f1": 0.333,
+      "tp": 1,
+      "fp": 4,
+      "fn": 0
+    },
+    {
+      "query": "保存当前工作上下文",
+      "expected": [
+        "context-save"
+      ],
+      "union": [
+        "context-save"
+      ],
+      "strictYes": [
+        "context-save"
+      ],
+      "judged": [
+        {
+          "name": "context-save",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "恢复之前保存的上下文",
+      "expected": [
+        "context-restore"
+      ],
+      "union": [
+        "continuous-agent-loop",
+        "context-restore"
+      ],
+      "strictYes": [
+        "continuous-agent-loop",
+        "context-restore"
+      ],
+      "judged": [
+        {
+          "name": "continuous-agent-loop",
+          "verdict": "yes",
+          "reason": "恢复上下文是该 skill 描述中\"恢复控制\"功能的核心操作。"
+        },
+        {
+          "name": "context-restore",
+          "verdict": "yes",
+          "reason": "用户意图是恢复之前保存的上下文，完全匹配 context-restore 的核心功能及触发词。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "部署后做金丝雀监控",
+      "expected": [
+        "canary"
+      ],
+      "union": [
+        "canary",
+        "canary-watch"
+      ],
+      "strictYes": [
+        "canary",
+        "canary-watch"
+      ],
+      "judged": [
+        {
+          "name": "canary",
+          "verdict": "yes",
+          "reason": "问题明确要求部署后的金丝雀监控，与skill描述的Post-deploy canary monitoring及canary check完全对应。"
+        },
+        {
+          "name": "canary-watch",
+          "verdict": "yes",
+          "reason": "问题要求部署后做金丝雀监控，候选 skill 正是用于在部署后监控 URL 是否出现回归的工具，完全匹配。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "对代码做安全审查 CSO 模式",
+      "expected": [
+        "cso"
+      ],
+      "union": [
+        "nuxt4-patterns",
+        "cso"
+      ],
+      "strictYes": [
+        "cso"
+      ],
+      "judged": [
+        {
+          "name": "nuxt4-patterns",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "cso",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把 markdown 转成 PDF",
+      "expected": [
+        "make-pdf"
+      ],
+      "union": [
+        "make-pdf",
+        "nutrient-document-processing",
+        "pdf"
+      ],
+      "strictYes": [
+        "make-pdf",
+        "pdf"
+      ],
+      "judged": [
+        {
+          "name": "make-pdf",
+          "verdict": "yes",
+          "reason": "用户需要将 markdown 转换为 PDF，直接命中 make-pdf skill 的核心功能。"
+        },
+        {
+          "name": "nutrient-document-processing",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "name": "pdf",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "生成多个设计变体做对比",
+      "expected": [
+        "design-shotgun"
+      ],
+      "union": [
+        "design-shotgun"
+      ],
+      "strictYes": [
+        "design-shotgun"
+      ],
+      "judged": [
+        {
+          "name": "design-shotgun",
+          "verdict": "yes",
+          "reason": "问题要求生成多个设计变体做对比，这与skill描述的生成多个AI设计变体并打开对比板的功能完全一致。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把设计稿转成生产级 HTML CSS",
+      "expected": [
+        "design-html"
+      ],
+      "union": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder",
+        "frontend-ui-engineering"
+      ],
+      "strictYes": [
+        "design-html",
+        "frontend-design",
+        "frontend-ui-engineering"
+      ],
+      "judged": [
+        {
+          "name": "design-html",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "frontend-design",
+          "verdict": "yes",
+          "reason": "问题要求将设计稿转为生产级HTML/CSS，与skill描述中构建HTML/CSS布局和生产级前端界面的核心功能完全匹配。"
+        },
+        {
+          "name": "web-artifacts-builder",
+          "verdict": "no",
+          "reason": "问题需要生产级 HTML/CSS，而该 skill 专用于构建 claude.ai 的 React/Tailwind artifacts，功能不匹配。"
+        },
+        {
+          "name": "frontend-ui-engineering",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "系统排查 bug 根因",
+      "expected": [
+        "investigate"
+      ],
+      "union": [
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "debugging-and-error-recovery"
+      ],
+      "strictYes": [
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "debugging-and-error-recovery"
+      ],
+      "judged": [
+        {
+          "name": "diagnose",
+          "verdict": "yes",
+          "reason": "排查系统 bug 根因直接对应 skill 的 debug/bug 诊断与根因分析功能"
+        },
+        {
+          "name": "gstack-openclaw-investigate",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "investigate",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "debugging-and-error-recovery",
+          "verdict": "yes",
+          "reason": "系统排查 bug 根因正是该 skill 指导系统性根因调试的核心应用场景。"
+        }
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "写小说下一章 克苏鲁塔罗题材",
+      "expected": [
+        "novel-writing"
+      ],
+      "union": [
+        "novel-writing",
+        "continuity-check"
+      ],
+      "strictYes": [
+        "novel-writing"
+      ],
+      "judged": [
+        {
+          "name": "novel-writing",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "continuity-check",
+          "verdict": "no",
+          "reason": "写小说下一章是内容生成，剧情连续性检查是写作过程中的校验工具，功能不同。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "写黑暗幻想小说 神骸世界",
+      "expected": [
+        "shenhai-writing"
+      ],
+      "union": [
+        "shenhai-writing"
+      ],
+      "strictYes": [
+        "shenhai-writing"
+      ],
+      "judged": [
+        {
+          "name": "shenhai-writing",
+          "verdict": "yes",
+          "reason": "问题为写黑暗幻想小说《神骸世界》，候选skill正是用于写作黑暗幻想小说《走在神的尸骸上》（即神骸世界），为同一核心写作需求。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "Godot 游戏开发 弹跳王",
+      "expected": [
+        "godot-game-dev"
+      ],
+      "union": [
+        "godot-game-dev"
+      ],
+      "strictYes": [
+        "godot-game-dev"
+      ],
+      "judged": [
+        {
+          "name": "godot-game-dev",
+          "verdict": "yes",
+          "reason": "问题直接指向开发Godot弹跳王游戏，与该skill的核心描述完全匹配。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "检测性能回归",
+      "expected": [
+        "benchmark"
+      ],
+      "union": [
+        "flutter-dart-code-review",
+        "benchmark",
+        "performance-optimization",
+        "diagnose"
+      ],
+      "strictYes": [
+        "benchmark",
+        "performance-optimization",
+        "diagnose"
+      ],
+      "judged": [
+        {
+          "name": "flutter-dart-code-review",
+          "verdict": "no",
+          "reason": "检测性能回归通常指执行性能基准测试，而非人工代码审查清单"
+        },
+        {
+          "name": "benchmark",
+          "verdict": "yes",
+          "reason": "问题‘检测性能回归’与skill描述的核心功能完全一致。"
+        },
+        {
+          "name": "performance-optimization",
+          "verdict": "yes",
+          "reason": "skill 描述明确指出在怀疑性能回归时使用。"
+        },
+        {
+          "name": "diagnose",
+          "verdict": "yes",
+          "reason": "问题明确要求检测性能回归，而 skill 描述指明专门用于处理 performance regressions，属于直接对应。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "代码质量仪表盘",
+      "expected": [
+        "health"
+      ],
+      "union": [
+        "health"
+      ],
+      "strictYes": [
+        "health"
+      ],
+      "judged": [
+        {
+          "name": "health",
+          "verdict": "yes",
+          "reason": "问题就是\"代码质量仪表盘\"，与候选 skill 描述及触发词完全一致。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "周工程回顾",
+      "expected": [
+        "retro"
+      ],
+      "union": [
+        "retro",
+        "gstack-openclaw-retro"
+      ],
+      "strictYes": [
+        "retro",
+        "gstack-openclaw-retro"
+      ],
+      "judged": [
+        {
+          "name": "retro",
+          "verdict": "yes",
+          "reason": "“周工程回顾”是候选 skill 描述中 “Weekly engineering retrospective” 的直接中文翻译。"
+        },
+        {
+          "name": "gstack-openclaw-retro",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "把模糊想法变成精确 spec",
+      "expected": [
+        "spec"
+      ],
+      "union": [
+        "interview-me",
+        "spec"
+      ],
+      "strictYes": [
+        "interview-me",
+        "spec"
+      ],
+      "judged": [
+        {
+          "name": "interview-me",
+          "verdict": "yes",
+          "reason": "通过提问澄清不明确的请求，正是为了把模糊想法变成精确 spec 的核心工具。"
+        },
+        {
+          "name": "spec",
+          "verdict": "yes",
+          "reason": "问题与 skill 描述及别名完全一致，均为将模糊想法转化为精确 spec。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "冻结只允许编辑某个目录",
+      "expected": [
+        "freeze"
+      ],
+      "union": [
+        "freeze"
+      ],
+      "strictYes": [
+        "freeze"
+      ],
+      "judged": [
+        {
+          "name": "freeze",
+          "verdict": "yes",
+          "reason": "问题意图与 skill 描述完全一致，均为限制文件编辑范围至特定目录。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "审 CEO 视角的计划",
+      "expected": [
+        "plan-ceo-review"
+      ],
+      "union": [
+        "autoplan",
+        "gstack-openclaw-ceo-review",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "strictYes": [
+        "autoplan",
+        "gstack-openclaw-ceo-review",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "judged": [
+        {
+          "name": "autoplan",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "gstack-openclaw-ceo-review",
+          "verdict": "yes",
+          "reason": "问题直接要求审阅 CEO 视角的计划，与 skill 描述中的 run a CEO review 和 review a plan 完全对应。"
+        },
+        {
+          "name": "plan-ceo-review",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "name": "plan-design-review",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    }
+  ]
+}

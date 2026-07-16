@@ -2,7 +2,7 @@
 
 > **这不是又一篇文章，是一个能跑的东西。** 一个规则路由器（输入问题 -> 输出该用哪些规则 + 置信度 + 理由），加上它**给自己的 receipt**：一个测试集，跑出真实的 precision / recall。
 >
-> 状态：MVP（L0 关键词 + L1 语义判定，rule & skill 双语料已验，含 70->325 规模效应 + 规模悬崖修法 + skill 评分去重 receipt）。clone 即跑。L0 零依赖；L1 复用终端 LLM 环境变量。
+> 状态：MVP（L0 关键词 + L1 语义判定，rule & skill 双语料已验，含 70->325 规模效应 + recall悬崖/precision退化双修法 + skill 评分去重 receipt）。clone 即跑。L0 零依赖；L1 复用终端 LLM 环境变量。
 
 ## 一句话核心
 
@@ -173,7 +173,7 @@ L1 rule 只在 L0 候选上判，补不了 L0 漏召回（那 1 题"规则怎么
 
 **省成本验证**：judge verdict 已存在 `l1-skills-full.json`（每题 judged 数组带 verdict），复用之，只新跑 20 次 retrieve（9K-token prompt 各一），不重跑 201 次 judge。诚实计数：完整跑 always-retrieve-union = 201 judge + 20 retrieve = 221 调用（vs L1-full 208，+13 调用、+~180K tokens）。325 规模下可接受；更大语料下 retrieve-every-query 本身有规模问题（每题塞全量 skill 进 prompt），那是下一个规模悬崖，留后续。
 
-**修法的边界（诚实）**：修法修好 **recall 的规模悬崖**（R 1.000 追平 L1-70），但 **precision 仍随规模退化**（0.577 vs L1-70 的 0.785）--这是独立问题：325 里有更多堂兄弟 skill，judge"沾边即 yes"放大。修 recall 不修 precision。precision 的规模退化要靠更严的 judge（留后续）。详见 `results/l1-skills-scalefix.json`。
+**修法的边界（诚实）**：修法修好 **recall 的规模悬崖**（R 1.000 追平 L1-70），但 **precision 仍随规模退化**（0.577 vs L1-70 的 0.785）--这是独立问题：325 里有更多堂兄弟 skill，judge"沾边即 yes"放大。修 recall 不修 precision。precision 的规模退化由严 judge 修（见第八个 receipt，部分修复）。详见 `results/l1-skills-scalefix.json`。
 
 ## 第七个 receipt：skill 评分 + 语义去重（赘余性减熵）
 
@@ -207,6 +207,27 @@ L1 rule 只在 L0 候选上判，补不了 L0 漏召回（那 1 题"规则怎么
 **边界（augment-not-automate）**：只**识别**剪枝候选（receipt），不自动剪 `~/.claude`（动你环境是破坏性的，交人拍板）。片 2.5 后的 22 个高置信冗余 + 片 1 的 3 个破损 = 25 个剪枝候选，真删前人逐个确认（pairwise 仍可能误判）。
 
 **这条 receipt 的自指**：路由器前六个 receipt 都在"调出正确 skill"；这一个转向"哪些 skill 本身是赘余该剪"。两条减熵做功都有了：结构性（路由不全载）+ 赘余性（评分去重剪重复）。详见 `results/skills-scored.json` + `results/skills-dedup.json`。
+
+## 第八个 receipt：precision 规模退化修法（严 judge）
+
+第六个 receipt（scalefix）修了 recall 规模悬崖（R->1.000）但留了边界：precision 仍随规模退化（0.577 vs L1-70 的 0.785）--judge"沾边即 yes"放大，325 里有更多堂兄弟 skill 被判 yes（review+springboot-verification、QA+ai-regression-testing、make-pdf+nutrient-document-processing）。这一片修 precision 那半。
+
+**修法**：更严的 judge--只对"问题直接要用的核心工具 / 近义重复"判 yes，沾边/同领域不同功能判 no（宁可漏判 no，不可沾边 yes）。例：问题"做 PR review"-> review=yes，springboot-verification=no。
+
+**省成本**：scalefix 的 union（judgeYes ∪ retrieved，R=1.000 P=0.577）已存 JSON，FP 就是 union 里的堂兄弟。对 union 成员（58 个）用严 judge 重判，只留 strict-yes，不重跑 201 judge + 20 retrieve。
+
+| | P | R | F1 |
+|---|---|---|---|
+| scalefix（recall 修法后，precision 未修） | 0.577 | 1.000 | 0.673 |
+| + 严 judge（precision 修法） | **0.650** | **1.000** | **0.736** |
+| Δ | +0.073 | 0 | +0.063 |
+| （参照 L1-70） | 0.785 | 1.000 | 0.842 |
+
+**recall 全守**（20 题期望 skill 都在 strict-yes 里），**precision 升**--每题过滤掉一些堂兄弟（review 10->7、qa 10->5、make-pdf 滤掉 nutrient-document-processing、design-html 4->3）。
+
+**诚实边界**：严 judge 是**部分修复**，没完全闭合到 L1-70 的 0.785。review 那题严 judge 仍对 7 个判 yes（django-verification / autoplan / code-review-and-quality / codex / coding-standards / doubt-driven-development--近亲难分）。剩余 gap（0.650 vs 0.785）是**规模下堂兄弟更多、judge 难全分的不可消惩罚**，不是 prompt 能完全治的。
+
+**325-scale 完整修法故事**：scalefix（always-retrieve-union）修 recall 悬崖（0.850->1.000）+ 严 judge 修 precision（0.497->0.650），F1 0.580->0.736，逼近但未达 L1-70 的 0.842。规模退化的两半（recall 悬崖 + precision 退化）各有修法、各有边界，都配 receipt。详见 `results/l1-skills-strictjudge.json`。
 
 ## 熵增定律（核心类比）
 
@@ -279,7 +300,7 @@ L1 rule 只在 L0 候选上判，补不了 L0 漏召回（那 1 题"规则怎么
 
 只有 claim（声称度量改进）的规则才欠 evidence；behavior 不要求。这是"evidence 覆盖率"--像代码测试覆盖率，但针对规则。
 
-**自指示范**：作者审自己的 177 个规则块，89% behavior（N/A），剩 ~19 metric-adjacent **全部 secondhand/faith，0 真自测**。建仪器后破 2 个 P0（gzh 双关卡独立 rig、agent-chief 数字复现），路由器是**第 3 个 receipt**--且是唯一测"自己规则"而非"别人数字"的那个。路由器自身现已积累 12 个独立 rig receipt（L0 baseline/v2/v3证伪、L1 rule、L1 skill、L1 recall证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认），正负皆有。
+**自指示范**：作者审自己的 177 个规则块，89% behavior（N/A），剩 ~19 metric-adjacent **全部 secondhand/faith，0 真自测**。建仪器后破 2 个 P0（gzh 双关卡独立 rig、agent-chief 数字复现），路由器是**第 3 个 receipt**--且是唯一测"自己规则"而非"别人数字"的那个。路由器自身现已积累 13 个独立 rig receipt（L0 baseline/v2/v3证伪、L1 rule、L1 skill、L1 recall证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法），正负皆有。
 
 ## 验证 > 模型规模（投入重定向）
 
@@ -319,6 +340,7 @@ router/eval-l1-skills-scalefix.js  规模悬崖修法评估器：always-retrieve
 router/skill-scorer.js   skill 评分器（零 LLM）：完整性+独特性+新鲜度 -> 复合分，识别低质剪枝候选
 router/skill-dedup.js    skill 语义去重（LLM 关 thinking 一次性分组 325 skill）-> 重复簇，簇内选 canonical
 router/skill-dedup-verify.js  去重逐对确认（粗分组 -> pairwise dup-judge -> 连通分量），修过并，产出高置信剪枝候选
+router/eval-l1-skills-strictjudge.js  严 judge 修 precision 规模退化（复用 scalefix union，严 judge 重判）
 skills-corpus.json       70 个个人 skill manifest（baseline）
 skills-corpus-full.json  325 个去重 skill manifest（1181 raw -> 325 unique，带 source 字段）
 testset.json         18 题 (query, expected) 测试集（rule 语料）
@@ -338,7 +360,7 @@ results/             receipt 归档（l0-v2-multilabel.json / l1-llm.json / skil
 - [x] **规模救援触发器重设计**：retrieve 与零匹配解耦（always-retrieve-union），R 0.850->1.000 追平 L1-70，P 也升 0.497->0.577。见上方第六个 receipt
 - [x] **skill 评分 + 语义去重**：赘余性减熵。评分 325 skill（3 真·破损，freshness 本快照不区分）；LLM 去重 18 组/32 冗余候选(9.8%)，有过度合并需人审。见上方第七个 receipt
 - [x] **去重逐对确认（修过并）**：粗分组 + pairwise dup-judge，64 对（27 dup/37 distinct），过并修正 office-hours 8 元组散成 4 二元组，22 高置信冗余(6.8%)。见上方第七个 receipt 片 2.5
-- [ ] **judge 沾边问题**：试更严的 judge prompt 或两段 judge（先沾边再核心）治规模下 precision 退化（0.577 vs L1-70 的 0.785，独立于 recall 悬崖）
+- [x] **precision 规模退化修法（严 judge）**：scalefix union + 严 judge 重判，P 0.577->0.650（R 守 1.000），部分修复（未达 L1-70 的 0.785，剩余 gap 是规模不可消惩罚）。见上方第八个 receipt
 - [ ] **ownership 标签**：给枢纽文件（04-planning / 06-verify）标" owns X / references X"，让"提到"和"拥有"可区分
 - [ ] **facets 标签**：security / parallel / subagent / ctx-stress 横切索引，测横跨多阶段 query
 - [ ] **退一格**：叶子拿不准载父节点（00-pipeline 作树根）
