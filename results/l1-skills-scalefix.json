@@ -1,0 +1,510 @@
+{
+  "timestamp": "2026-07-16",
+  "corpus": "skills-corpus-full.json (325 unique skills)",
+  "router": "always-retrieve-union: 每题跑 semanticRetrieve + 复用 L1-full 的 judge-yes 取并集",
+  "testsetSize": 20,
+  "newRetrieveCalls": 20,
+  "macro": {
+    "precision": 0.577,
+    "recall": 1,
+    "f1": 0.673
+  },
+  "l1FullBaselineMacro": {
+    "precision": 0.497,
+    "recall": 0.85,
+    "f1": 0.58
+  },
+  "delta": {
+    "precision": 0.08,
+    "recall": 0.15,
+    "f1": 0.093
+  },
+  "note": "规模悬崖修法：retrieve 与零匹配信号解耦，每题必跑。复用 L1-full judge verdict，只新跑 20 次 retrieve",
+  "detail": [
+    {
+      "query": "帮我做 pre-landing 的 PR review",
+      "expected": [
+        "review"
+      ],
+      "judgeYes": [
+        "review",
+        "springboot-verification",
+        "django-verification",
+        "github-ops",
+        "autoplan",
+        "code-review-and-quality",
+        "codex",
+        "coding-standards",
+        "doubt-driven-development",
+        "santa-method"
+      ],
+      "retrieved": [
+        "review"
+      ],
+      "union": [
+        "review",
+        "springboot-verification",
+        "django-verification",
+        "github-ops",
+        "autoplan",
+        "code-review-and-quality",
+        "codex",
+        "coding-standards",
+        "doubt-driven-development",
+        "santa-method"
+      ],
+      "precision": 0.1,
+      "recall": 1,
+      "f1": 0.182,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0
+    },
+    {
+      "query": "用无头浏览器打开网页看看",
+      "expected": [
+        "browse"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "browse"
+      ],
+      "union": [
+        "browse"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "QA 测试这个 web 应用并修 bug",
+      "expected": [
+        "qa"
+      ],
+      "judgeYes": [
+        "qa",
+        "ai-regression-testing",
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "test-driven-development",
+        "browse",
+        "qa-only",
+        "context-mode",
+        "webapp-testing"
+      ],
+      "retrieved": [
+        "qa"
+      ],
+      "union": [
+        "qa",
+        "ai-regression-testing",
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "test-driven-development",
+        "browse",
+        "qa-only",
+        "context-mode",
+        "webapp-testing"
+      ],
+      "precision": 0.1,
+      "recall": 1,
+      "f1": 0.182,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0
+    },
+    {
+      "query": "保存当前工作上下文",
+      "expected": [
+        "context-save"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "context-save"
+      ],
+      "union": [
+        "context-save"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "恢复之前保存的上下文",
+      "expected": [
+        "context-restore"
+      ],
+      "judgeYes": [
+        "continuous-agent-loop"
+      ],
+      "retrieved": [
+        "context-restore"
+      ],
+      "union": [
+        "continuous-agent-loop",
+        "context-restore"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "部署后做金丝雀监控",
+      "expected": [
+        "canary"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "canary",
+        "canary-watch"
+      ],
+      "union": [
+        "canary",
+        "canary-watch"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "对代码做安全审查 CSO 模式",
+      "expected": [
+        "cso"
+      ],
+      "judgeYes": [
+        "nuxt4-patterns",
+        "cso"
+      ],
+      "retrieved": [
+        "cso"
+      ],
+      "union": [
+        "nuxt4-patterns",
+        "cso"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "把 markdown 转成 PDF",
+      "expected": [
+        "make-pdf"
+      ],
+      "judgeYes": [
+        "make-pdf",
+        "nutrient-document-processing",
+        "pdf"
+      ],
+      "retrieved": [
+        "make-pdf"
+      ],
+      "union": [
+        "make-pdf",
+        "nutrient-document-processing",
+        "pdf"
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "生成多个设计变体做对比",
+      "expected": [
+        "design-shotgun"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "design-shotgun"
+      ],
+      "union": [
+        "design-shotgun"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把设计稿转成生产级 HTML CSS",
+      "expected": [
+        "design-html"
+      ],
+      "judgeYes": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder"
+      ],
+      "retrieved": [
+        "frontend-design",
+        "frontend-ui-engineering"
+      ],
+      "union": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder",
+        "frontend-ui-engineering"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "系统排查 bug 根因",
+      "expected": [
+        "investigate"
+      ],
+      "judgeYes": [
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate"
+      ],
+      "retrieved": [
+        "debugging-and-error-recovery",
+        "diagnose",
+        "investigate",
+        "gstack-openclaw-investigate"
+      ],
+      "union": [
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "debugging-and-error-recovery"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "写小说下一章 克苏鲁塔罗题材",
+      "expected": [
+        "novel-writing"
+      ],
+      "judgeYes": [
+        "novel-writing",
+        "continuity-check"
+      ],
+      "retrieved": [
+        "novel-writing",
+        "continuity-check"
+      ],
+      "union": [
+        "novel-writing",
+        "continuity-check"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "写黑暗幻想小说 神骸世界",
+      "expected": [
+        "shenhai-writing"
+      ],
+      "judgeYes": [
+        "shenhai-writing"
+      ],
+      "retrieved": [
+        "shenhai-writing"
+      ],
+      "union": [
+        "shenhai-writing"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "Godot 游戏开发 弹跳王",
+      "expected": [
+        "godot-game-dev"
+      ],
+      "judgeYes": [
+        "godot-game-dev"
+      ],
+      "retrieved": [
+        "godot-game-dev"
+      ],
+      "union": [
+        "godot-game-dev"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "检测性能回归",
+      "expected": [
+        "benchmark"
+      ],
+      "judgeYes": [
+        "flutter-dart-code-review"
+      ],
+      "retrieved": [
+        "benchmark",
+        "performance-optimization",
+        "diagnose"
+      ],
+      "union": [
+        "flutter-dart-code-review",
+        "benchmark",
+        "performance-optimization",
+        "diagnose"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "代码质量仪表盘",
+      "expected": [
+        "health"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "health"
+      ],
+      "union": [
+        "health"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "周工程回顾",
+      "expected": [
+        "retro"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "retro",
+        "gstack-openclaw-retro"
+      ],
+      "union": [
+        "retro",
+        "gstack-openclaw-retro"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "把模糊想法变成精确 spec",
+      "expected": [
+        "spec"
+      ],
+      "judgeYes": [
+        "interview-me",
+        "spec"
+      ],
+      "retrieved": [
+        "spec"
+      ],
+      "union": [
+        "interview-me",
+        "spec"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "冻结只允许编辑某个目录",
+      "expected": [
+        "freeze"
+      ],
+      "judgeYes": [],
+      "retrieved": [
+        "freeze"
+      ],
+      "union": [
+        "freeze"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "审 CEO 视角的计划",
+      "expected": [
+        "plan-ceo-review"
+      ],
+      "judgeYes": [
+        "autoplan",
+        "gstack-openclaw-ceo-review",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "retrieved": [
+        "plan-ceo-review",
+        "gstack-openclaw-ceo-review"
+      ],
+      "union": [
+        "autoplan",
+        "gstack-openclaw-ceo-review",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    }
+  ],
+  "reusedJudgeCalls": 201
+}
