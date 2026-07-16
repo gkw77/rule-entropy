@@ -1,0 +1,583 @@
+{
+  "timestamp": "2026-07-16",
+  "method": "片2 粗分组 -> 逐对 pairwise dup-judge (关 thinking) -> 确认的对取连通分量重组成组",
+  "inputGroups": 18,
+  "inputRedundant": 32,
+  "pairsJudged": 64,
+  "pairsDup": 27,
+  "pairsDistinct": 37,
+  "refinedGroupCount": 16,
+  "refinedRedundant": 22,
+  "refinedRate": 0.068,
+  "note": "逐对确认修过并：失败保守判 distinct（不过并）。连通分量=确认 dup 对的传递闭包",
+  "refinedGroups": [
+    {
+      "canonical": "mcp-builder",
+      "canonicalScore": 0.761,
+      "redundant": [
+        "build-mcp-server"
+      ]
+    },
+    {
+      "canonical": "skill-creator",
+      "canonicalScore": 0.724,
+      "redundant": [
+        "write-a-skill",
+        "skill-development"
+      ]
+    },
+    {
+      "canonical": "review",
+      "canonicalScore": 0.844,
+      "redundant": [
+        "code-review-and-quality"
+      ]
+    },
+    {
+      "canonical": "frontend-design",
+      "canonicalScore": 0.76,
+      "redundant": [
+        "frontend-ui-engineering"
+      ]
+    },
+    {
+      "canonical": "continuous-learning-v2",
+      "canonicalScore": 0.885,
+      "redundant": [
+        "continuous-learning"
+      ]
+    },
+    {
+      "canonical": "office-hours",
+      "canonicalScore": 0.928,
+      "redundant": [
+        "gstack-openclaw-office-hours"
+      ]
+    },
+    {
+      "canonical": "retro",
+      "canonicalScore": 0.898,
+      "redundant": [
+        "gstack-openclaw-retro"
+      ]
+    },
+    {
+      "canonical": "investigate",
+      "canonicalScore": 0.884,
+      "redundant": [
+        "gstack-openclaw-investigate"
+      ]
+    },
+    {
+      "canonical": "plan-ceo-review",
+      "canonicalScore": 0.864,
+      "redundant": [
+        "gstack-openclaw-ceo-review"
+      ]
+    },
+    {
+      "canonical": "github-project-management",
+      "canonicalScore": 0.769,
+      "redundant": [
+        "github-ops"
+      ]
+    },
+    {
+      "canonical": "interview-me",
+      "canonicalScore": 0.765,
+      "redundant": [
+        "grill-with-docs",
+        "grill-me"
+      ]
+    },
+    {
+      "canonical": "spec",
+      "canonicalScore": 0.893,
+      "redundant": [
+        "spec-driven-development"
+      ]
+    },
+    {
+      "canonical": "browse",
+      "canonicalScore": 0.848,
+      "redundant": [
+        "webapp-testing",
+        "gstack",
+        "browser-testing-with-devtools",
+        "browser-qa"
+      ]
+    },
+    {
+      "canonical": "tdd-workflow",
+      "canonicalScore": 0.724,
+      "redundant": [
+        "test-driven-development",
+        "tdd"
+      ]
+    },
+    {
+      "canonical": "writing-hookify-rules",
+      "canonicalScore": 0.724,
+      "redundant": [
+        "hookify-rules"
+      ]
+    },
+    {
+      "canonical": "everything-claude-code",
+      "canonicalScore": 0.733,
+      "redundant": [
+        "everything-claude-code-conventions"
+      ]
+    }
+  ],
+  "pairResults": [
+    {
+      "group": 0,
+      "a": "mcp-builder",
+      "b": "build-mcp-server",
+      "verdict": "dup",
+      "reason": "两者核心功能均为指导/构建MCP服务器，B的描述仅为更详细的触发场景和流程细化，属同一功能的变体，保留其一即可覆盖。"
+    },
+    {
+      "group": 1,
+      "a": "mcp-integration",
+      "b": "build-mcp-app",
+      "verdict": "distinct",
+      "reason": "A专注于MCP服务器的底层配置与网络协议集成，B专注于在MCP基础上构建带有交互式UI和组件的前端应用。"
+    },
+    {
+      "group": 2,
+      "a": "skill-creator",
+      "b": "write-a-skill",
+      "verdict": "distinct",
+      "reason": "前者侧重全生命周期管理（创建、编辑、评测和优化），后者仅聚焦于从零创建新技能时的结构规范与资源打包。"
+    },
+    {
+      "group": 2,
+      "a": "skill-creator",
+      "b": "skill-development",
+      "verdict": "dup",
+      "reason": "两者都围绕创建、修改和优化技能及技能描述提供指导，核心功能高度重合，保留一个即可覆盖需求。"
+    },
+    {
+      "group": 2,
+      "a": "write-a-skill",
+      "b": "skill-development",
+      "verdict": "dup",
+      "reason": "核心功能均为创建新 skill 并提供结构/progressive disclosure 等开发指导，B 涵盖了 A 的功能且范围更广。"
+    },
+    {
+      "group": 3,
+      "a": "review",
+      "b": "code-simplification",
+      "verdict": "distinct",
+      "reason": "A是针对PR的整体着陆前审查流程，B是专注于代码简化和重构的具体代码优化操作。"
+    },
+    {
+      "group": 3,
+      "a": "review",
+      "b": "code-review-and-quality",
+      "verdict": "dup",
+      "reason": "两者均用于在代码合并前进行PR/代码审查，核心功能完全相同，保留一个即可覆盖需求。"
+    },
+    {
+      "group": 3,
+      "a": "code-simplification",
+      "b": "code-review-and-quality",
+      "verdict": "distinct",
+      "reason": "前者专注重构以消除复杂度并提升清晰度，后者则侧重于合并前的多维度代码审查与质量评估。"
+    },
+    {
+      "group": 4,
+      "a": "article-writing",
+      "b": "brand-voice",
+      "verdict": "distinct",
+      "reason": "A的核心功能是基于已有风格生成具体的文章内容，B的核心功能是从素材中提取并构建风格画像供跨场景复用，二者属“产出内容”与“提取风格”的不同环节。"
+    },
+    {
+      "group": 5,
+      "a": "content-engine",
+      "b": "crosspost",
+      "verdict": "distinct",
+      "reason": "content-engine 侧重从零创建多平台内容素材与系统，crosspost 侧重将已有内容分发并适配至各社交平台，属于'创作'与'分发'的不同环节。"
+    },
+    {
+      "group": 6,
+      "a": "frontend-design",
+      "b": "frontend-ui-engineering",
+      "verdict": "dup",
+      "reason": "两者均用于创建生产级、避免AI生成感的高质量前端UI与组件，核心功能完全一致。"
+    },
+    {
+      "group": 7,
+      "a": "continuous-learning-v2",
+      "b": "continuous-learning",
+      "verdict": "dup",
+      "reason": "B是A的旧版或子集实现，两者核心功能均为从会话中提取模式并保存为技能，A已通过更复杂的机制（Hooks、评分、进化）完全覆盖B的功能。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "retro",
+      "verdict": "distinct",
+      "reason": "A 用于模拟 YC 办公时间进行头脑风暴与指导，B 用于每周工程复盘总结，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "investigate",
+      "verdict": "distinct",
+      "reason": "A用于模拟YC办公室时间提供商业建议，B用于系统性代码调试和根因分析，两者核心功能完全不同。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "plan-ceo-review",
+      "verdict": "distinct",
+      "reason": "A侧重于模拟YC风格的Office Hours咨询反馈，B侧重于以CEO/创始人模式审视业务计划，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "gstack-openclaw-retro",
+      "verdict": "distinct",
+      "reason": "A侧重于YC式的办公时间头脑风暴与咨询，B侧重于基于代码提交历史的工程回顾复盘，功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "gstack-openclaw-investigate",
+      "verdict": "distinct",
+      "reason": "A 是模拟 YC 办公时间提供创业建议，B 是用于代码调试和报错根因分析，核心功能完全不同。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "gstack-openclaw-office-hours",
+      "verdict": "dup",
+      "reason": "两者均提供基于gstack的YC Office Hours功能，用于评估想法和产品设计前的头脑风暴，核心功能完全一致。"
+    },
+    {
+      "group": 8,
+      "a": "office-hours",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "distinct",
+      "reason": ""
+    },
+    {
+      "group": 8,
+      "a": "retro",
+      "b": "investigate",
+      "verdict": "distinct",
+      "reason": "A用于定期的工程回顾总结，B用于系统化调试和根因分析，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "retro",
+      "b": "plan-ceo-review",
+      "verdict": "distinct",
+      "reason": "一个是针对工程团队的周回顾，另一个是针对CEO/创始人的计划审查，视角和核心功能完全不同。"
+    },
+    {
+      "group": 8,
+      "a": "retro",
+      "b": "gstack-openclaw-retro",
+      "verdict": "dup",
+      "reason": "B是A的增强版（同一周报回顾功能，仅增加了提交历史分析和团队感知等细化指标），保留B即可覆盖A的核心功能。"
+    },
+    {
+      "group": 8,
+      "a": "retro",
+      "b": "gstack-openclaw-investigate",
+      "verdict": "distinct",
+      "reason": "A用于定期工程回顾，B用于排障和根因分析，两者的核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "retro",
+      "b": "gstack-openclaw-office-hours",
+      "verdict": "distinct",
+      "reason": "一个是针对已完成工程的周度回顾，另一个是针对未写代码前的头脑风暴与构思评估，功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "retro",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "distinct",
+      "reason": "A 专注于每周工程回顾，B 侧重于审查计划、挑战方案等高阶业务与决策审查，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "investigate",
+      "b": "plan-ceo-review",
+      "verdict": "distinct",
+      "reason": "A侧重技术层面的系统调试与根因排查，B侧重业务层面的CEO/创始人模式计划审查，核心功能完全不同。"
+    },
+    {
+      "group": 8,
+      "a": "investigate",
+      "b": "gstack-openclaw-retro",
+      "verdict": "distinct",
+      "reason": "A 专注于系统性根因分析和调试，B 专注于基于历史记录的周工程回顾与团队表现追踪，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "investigate",
+      "b": "gstack-openclaw-investigate",
+      "verdict": "dup",
+      "reason": "两者核心功能均为系统调试和根因分析，B是A的更详细触发场景描述版，保留一个即可。"
+    },
+    {
+      "group": 8,
+      "a": "investigate",
+      "b": "gstack-openclaw-office-hours",
+      "verdict": "distinct",
+      "reason": "前者是写代码后的系统性调试排障，后者是写代码前头脑风暴与评估想法，属于开发生命周期的不同阶段。"
+    },
+    {
+      "group": 8,
+      "a": "investigate",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "distinct",
+      "reason": "A用于系统化的底层代码调试与根因分析，B用于从业务和高层视角审查计划或挑战方案，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "plan-ceo-review",
+      "b": "gstack-openclaw-retro",
+      "verdict": "distinct",
+      "reason": "A 用于审查和指导产品/项目规划，B 用于基于代码提交历史的工程回顾，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "plan-ceo-review",
+      "b": "gstack-openclaw-investigate",
+      "verdict": "distinct",
+      "reason": "前者用于以CEO视角审查计划，后者用于调查和调试程序错误，核心功能完全不同。"
+    },
+    {
+      "group": 8,
+      "a": "plan-ceo-review",
+      "b": "gstack-openclaw-office-hours",
+      "verdict": "distinct",
+      "reason": "A 偏向对现有计划进行 CEO 视角的评审，B 偏向在写代码前进行头脑风暴和想法验证"
+    },
+    {
+      "group": 8,
+      "a": "plan-ceo-review",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "dup",
+      "reason": "两者的核心功能都是作为CEO/创始人视角审查和挑战计划，B仅是对A的功能描述更详细的版本"
+    },
+    {
+      "group": 8,
+      "a": "gstack-openclaw-retro",
+      "b": "gstack-openclaw-investigate",
+      "verdict": "distinct",
+      "reason": "前者是定期工程回顾与团队表现分析，后者是针对具体错误的调试与根因分析，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "gstack-openclaw-retro",
+      "b": "gstack-openclaw-office-hours",
+      "verdict": "distinct",
+      "reason": "Skill A 侧重于基于代码提交历史的工程回顾与趋势分析，Skill B 侧重于写代码前的新想法头脑风暴与评估，功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "gstack-openclaw-retro",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "distinct",
+      "reason": "前者是对本周工程开发历史与代码质量的回顾，后者是对未来计划或提案的高层战略评审，核心功能不同。"
+    },
+    {
+      "group": 8,
+      "a": "gstack-openclaw-investigate",
+      "b": "gstack-openclaw-office-hours",
+      "verdict": "distinct",
+      "reason": "A 专注代码层面的故障排查与修复，B 专注编码前期的产品创意头脑风暴与评估，两者生命周期阶段不同。"
+    },
+    {
+      "group": 8,
+      "a": "gstack-openclaw-investigate",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "distinct",
+      "reason": "前者聚焦代码错误调试与根因分析，后者聚焦计划审查与策略挑战，核心功能完全不同。"
+    },
+    {
+      "group": 8,
+      "a": "gstack-openclaw-office-hours",
+      "b": "gstack-openclaw-ceo-review",
+      "verdict": "distinct",
+      "reason": "A聚焦于编码前的早期创意头脑风暴与可行性评估，B聚焦于对既有计划方案进行批判性审查和范围调整，属于产品生命周期的不同阶段。"
+    },
+    {
+      "group": 9,
+      "a": "github-project-management",
+      "b": "github-ops",
+      "verdict": "dup",
+      "reason": "两者核心功能重叠，都涵盖GitHub仓库的issue、PR及项目看板等日常管理与自动化操作。"
+    },
+    {
+      "group": 10,
+      "a": "context-restore",
+      "b": "context-save",
+      "verdict": "distinct",
+      "reason": "一个是保存上下文，另一个是恢复已保存的上下文，属于反向操作，两者皆需保留"
+    },
+    {
+      "group": 10,
+      "a": "context-restore",
+      "b": "ck",
+      "verdict": "distinct",
+      "reason": "A侧重于通过命令手动保存和恢复即时工作上下文，B是写入原生记忆并随git活动自动加载的持久化项目记忆库。"
+    },
+    {
+      "group": 10,
+      "a": "context-save",
+      "b": "ck",
+      "verdict": "distinct",
+      "reason": "A 侧重临时工作上下文的保存，B 侧重基于 Git 活动的持久化项目记忆与自动加载，核心机制与用途不同。"
+    },
+    {
+      "group": 11,
+      "a": "to-issues",
+      "b": "triage",
+      "verdict": "distinct",
+      "reason": "A的核心功能是将计划拆解为具体的实施issue，B的核心功能是对现有issue进行分类、审查和状态流转管理。"
+    },
+    {
+      "group": 12,
+      "a": "interview-me",
+      "b": "grill-with-docs",
+      "verdict": "distinct",
+      "reason": "A用于在项目初期通过逐一提问澄清模糊的用户意图，B用于在已有计划后对照领域模型和文档进行压力测试并更新文档"
+    },
+    {
+      "group": 12,
+      "a": "interview-me",
+      "b": "grill-me",
+      "verdict": "dup",
+      "reason": "核心功能均为通过一问一答的访谈逼问用户以消除需求模糊性，且触发词高度重合，删一个不影响覆盖。"
+    },
+    {
+      "group": 12,
+      "a": "grill-with-docs",
+      "b": "grill-me",
+      "verdict": "dup",
+      "reason": "两者均通过盘问来压力测试计划并达成共识，A仅附加了在过程中更新文档的流程，并非不可替代的核心差异。"
+    },
+    {
+      "group": 13,
+      "a": "spec",
+      "b": "spec-driven-development",
+      "verdict": "dup",
+      "reason": "两者核心功能均是将模糊意图转化为精确的规范说明以指导后续开发，功能高度重合"
+    },
+    {
+      "group": 14,
+      "a": "browse",
+      "b": "webapp-testing",
+      "verdict": "dup",
+      "reason": "两者均使用无头浏览器进行QA测试、UI验证及网站交互，核心功能重叠。"
+    },
+    {
+      "group": 14,
+      "a": "browse",
+      "b": "gstack",
+      "verdict": "dup",
+      "reason": "B是A的详细扩展版，两者的核心功能与调用场景完全相同，保留B即可完全覆盖A的功能。"
+    },
+    {
+      "group": 14,
+      "a": "browse",
+      "b": "browser-testing-with-devtools",
+      "verdict": "distinct",
+      "reason": "A侧重无头浏览器下的QA与快速测试，B依赖Chrome DevTools侧重有头环境下的DOM检查、网络分析和性能调试等深度排查。"
+    },
+    {
+      "group": 14,
+      "a": "browse",
+      "b": "browser-qa",
+      "verdict": "dup",
+      "reason": "均用于 QA 测试的浏览器技能，browser-qa 可视为 browse 的改名版或副本。"
+    },
+    {
+      "group": 14,
+      "a": "webapp-testing",
+      "b": "gstack",
+      "verdict": "dup",
+      "reason": "两者均为基于无头浏览器的网页前端测试工具，均支持页面导航、元素交互、状态验证与截图等相同核心功能。"
+    },
+    {
+      "group": 14,
+      "a": "webapp-testing",
+      "b": "browser-testing-with-devtools",
+      "verdict": "dup",
+      "reason": "两者的核心功能都是通过真实浏览器对 Web 应用进行测试、调试 UI/DOM、捕获日志和截图，功能高度重叠。"
+    },
+    {
+      "group": 14,
+      "a": "webapp-testing",
+      "b": "browser-qa",
+      "verdict": "dup",
+      "reason": "A的本地Web应用UI测试功能与B的browser-qa（浏览器QA测试）核心功能高度重合，属于同一领域的赘余。"
+    },
+    {
+      "group": 14,
+      "a": "gstack",
+      "b": "browser-testing-with-devtools",
+      "verdict": "distinct",
+      "reason": "A侧重于无头浏览器的QA测试、UI交互与截图取证，B侧重于通过DevTools进行深度运行时调试、网络分析与性能剖析。"
+    },
+    {
+      "group": 14,
+      "a": "gstack",
+      "b": "browser-qa",
+      "verdict": "dup",
+      "reason": "两者名称均为browser-qa的变体/同类，且B无描述不影响A对无头浏览器QA测试功能的完全覆盖"
+    },
+    {
+      "group": 14,
+      "a": "browser-testing-with-devtools",
+      "b": "browser-qa",
+      "verdict": "dup",
+      "reason": "A是浏览器测试与调试的详细版，B虽无描述但从命名(browser-qa)看核心功能相同，保留A即可覆盖。"
+    },
+    {
+      "group": 15,
+      "a": "tdd-workflow",
+      "b": "test-driven-development",
+      "verdict": "dup",
+      "reason": "核心功能均为通过测试驱动开发来编写新功能或修复Bug，保留其一即可覆盖相关场景。"
+    },
+    {
+      "group": 15,
+      "a": "tdd-workflow",
+      "b": "tdd",
+      "verdict": "dup",
+      "reason": "两者都针对编写新功能或修复bug提供TDD测试驱动开发工作流，核心功能完全重叠。"
+    },
+    {
+      "group": 15,
+      "a": "test-driven-development",
+      "b": "tdd",
+      "verdict": "dup",
+      "reason": "两者均提供测试驱动开发(TDD)的触发与流程指导，B在A的基础上仅补充了特定术语和测试类型，属于同一功能的变体。"
+    },
+    {
+      "group": 16,
+      "a": "writing-hookify-rules",
+      "b": "hookify-rules",
+      "verdict": "dup",
+      "reason": "两者的触发条件和核心功能描述完全一致，属于同一功能的改名副本。"
+    },
+    {
+      "group": 17,
+      "a": "everything-claude-code",
+      "b": "everything-claude-code-conventions",
+      "verdict": "dup",
+      "reason": "描述完全相同，B仅是A的命名加长了conventions后缀的改名版本，核心功能一致。"
+    }
+  ]
+}

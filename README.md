@@ -197,7 +197,14 @@ L1 rule 只在 L0 候选上判，补不了 L0 漏召回（那 1 题"规则怎么
 - **过度合并（假阳性，诚实标）**：office-hours 组把 retro / investigate / plan-ceo-review 4 个**不同** skill 和它们的 openclaw 变体全并成 8 元组--应是 4 个二元组。LLM 去重会过并，**receipt 非权威，需人审**。
 - 簇内按片 1 composite 选 canonical（最高分），余为剔除候选。
 
-**边界（augment-not-automate）**：只**识别**剪枝候选（receipt），不自动剪 `~/.claude`（动你环境是破坏性的，交人拍板）。去重 receipt 是起点非权威--LLM 会过并，真删前人要逐组确认。
+**片 2.5：逐对确认（修过并，让去重可信）** -- 片 2 的粗分组会过并，receipt 标了"非权威需人审"。修法用项目一贯模式（L0 粗候选 -> L1 judge 过滤）：每组内每对 skill 跑 pairwise dup-judge（关 thinking），确认 dup 的对取连通分量重组成组，跨功能对被拒、过并组散开。
+- **64 对判断：27 dup / 37 distinct**。精炼后 **16 组 / 22 冗余（6.8%，从 9.8% 降）**。
+- **过并修正成功**：office-hours 8 元组正确散成 4 个二元组（office-hours+openclaw-office-hours / retro+openclaw-retro / investigate+openclaw-investigate / plan-ceo-review+openclaw-ceo-review），跨功能对（retro-investigate 等）被拒为 distinct。review 组丢了 code-simplification（正确，它不是 review 的重复）。
+- **诚实标（precision 换 recall）**：逐对确认修了过并，但可能过度过滤--build-mcp-app / build-mcpb 这类真重复可能被判 distinct 漏掉。net 32->22 冗余，更保守更可信。22 个冗余现在是**高置信**剪枝候选（每个经逐对确认）。
+- 失败保守判 distinct（不过并）：judge 出错时宁可拆组不误并。
+- 详见 `results/skills-dedup-verified.json`。
+
+**边界（augment-not-automate）**：只**识别**剪枝候选（receipt），不自动剪 `~/.claude`（动你环境是破坏性的，交人拍板）。片 2.5 后的 22 个高置信冗余 + 片 1 的 3 个破损 = 25 个剪枝候选，真删前人逐个确认（pairwise 仍可能误判）。
 
 **这条 receipt 的自指**：路由器前六个 receipt 都在"调出正确 skill"；这一个转向"哪些 skill 本身是赘余该剪"。两条减熵做功都有了：结构性（路由不全载）+ 赘余性（评分去重剪重复）。详见 `results/skills-scored.json` + `results/skills-dedup.json`。
 
@@ -272,7 +279,7 @@ L1 rule 只在 L0 候选上判，补不了 L0 漏召回（那 1 题"规则怎么
 
 只有 claim（声称度量改进）的规则才欠 evidence；behavior 不要求。这是"evidence 覆盖率"--像代码测试覆盖率，但针对规则。
 
-**自指示范**：作者审自己的 177 个规则块，89% behavior（N/A），剩 ~19 metric-adjacent **全部 secondhand/faith，0 真自测**。建仪器后破 2 个 P0（gzh 双关卡独立 rig、agent-chief 数字复现），路由器是**第 3 个 receipt**--且是唯一测"自己规则"而非"别人数字"的那个。路由器自身现已积累 11 个独立 rig receipt（L0 baseline/v2/v3证伪、L1 rule、L1 skill、L1 recall证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重），正负皆有。
+**自指示范**：作者审自己的 177 个规则块，89% behavior（N/A），剩 ~19 metric-adjacent **全部 secondhand/faith，0 真自测**。建仪器后破 2 个 P0（gzh 双关卡独立 rig、agent-chief 数字复现），路由器是**第 3 个 receipt**--且是唯一测"自己规则"而非"别人数字"的那个。路由器自身现已积累 12 个独立 rig receipt（L0 baseline/v2/v3证伪、L1 rule、L1 skill、L1 recall证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认），正负皆有。
 
 ## 验证 > 模型规模（投入重定向）
 
@@ -311,6 +318,7 @@ router/eval-l1-skills-coverage.js  L1 覆盖度评估器（同上但走 L1；325
 router/eval-l1-skills-scalefix.js  规模悬崖修法评估器：always-retrieve-union（复用 L1-full judge verdict，只新跑 20 次 retrieve）
 router/skill-scorer.js   skill 评分器（零 LLM）：完整性+独特性+新鲜度 -> 复合分，识别低质剪枝候选
 router/skill-dedup.js    skill 语义去重（LLM 关 thinking 一次性分组 325 skill）-> 重复簇，簇内选 canonical
+router/skill-dedup-verify.js  去重逐对确认（粗分组 -> pairwise dup-judge -> 连通分量），修过并，产出高置信剪枝候选
 skills-corpus.json       70 个个人 skill manifest（baseline）
 skills-corpus-full.json  325 个去重 skill manifest（1181 raw -> 325 unique，带 source 字段）
 testset.json         18 题 (query, expected) 测试集（rule 语料）
@@ -329,6 +337,7 @@ results/             receipt 归档（l0-v2-multilabel.json / l1-llm.json / skil
 - [x] **规模效应切片**：skill 语料 70 -> 325（4.6x），L0 不 scale（F1 0.349->0.250），L1 仍救 L0（0.250->0.580）但自身退化（0.842->0.580）；零匹配救援路径随规模消失是规模悬崖。见上方第五个 receipt
 - [x] **规模救援触发器重设计**：retrieve 与零匹配解耦（always-retrieve-union），R 0.850->1.000 追平 L1-70，P 也升 0.497->0.577。见上方第六个 receipt
 - [x] **skill 评分 + 语义去重**：赘余性减熵。评分 325 skill（3 真·破损，freshness 本快照不区分）；LLM 去重 18 组/32 冗余候选(9.8%)，有过度合并需人审。见上方第七个 receipt
+- [x] **去重逐对确认（修过并）**：粗分组 + pairwise dup-judge，64 对（27 dup/37 distinct），过并修正 office-hours 8 元组散成 4 二元组，22 高置信冗余(6.8%)。见上方第七个 receipt 片 2.5
 - [ ] **judge 沾边问题**：试更严的 judge prompt 或两段 judge（先沾边再核心）治规模下 precision 退化（0.577 vs L1-70 的 0.785，独立于 recall 悬崖）
 - [ ] **ownership 标签**：给枢纽文件（04-planning / 06-verify）标" owns X / references X"，让"提到"和"拥有"可区分
 - [ ] **facets 标签**：security / parallel / subagent / ctx-stress 横切索引，测横跨多阶段 query
