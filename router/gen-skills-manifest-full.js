@@ -28,6 +28,24 @@ function parseFrontmatter(content) {
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
+    // YAML 块标量：field: | 或 > （多行，gstack/ctx-* 用这格式，之前误把 | 当描述）
+    const blockMatch = line.match(/^(name|description):\s*([|>])-?\s*$/);
+    if (blockMatch) {
+      const field = blockMatch[1];
+      const folded = blockMatch[2] === '>';
+      i++;
+      const blockLines = [];
+      while (i < lines.length) {
+        const l = lines[i];
+        if (l === '') { i++; continue; }
+        if (/^\s+/.test(l)) { blockLines.push(l.replace(/^\s+/, '')); i++; continue; }
+        break;
+      }
+      const val = blockLines.join(folded ? ' ' : '\n').replace(/\n{3,}/g, '\n\n').trim();
+      if (field === 'name') result.name = val;
+      else result.description = val;
+      continue;
+    }
     const nameMatch = line.match(/^name:\s*(.+)$/);
     const descMatch = line.match(/^description:\s*(.+)$/);
     if (nameMatch) result.name = nameMatch[1].trim();
@@ -110,7 +128,9 @@ function main() {
     const desc = fm.description || '';
     const triggers = fm.triggers || [];
     if (!desc && triggers.length === 0) noDesc++;
-    manifest.push({ name, dir: f.dir, source: f.source, description: desc, triggers });
+    let mtime = null;
+    try { mtime = fs.statSync(f.file).mtime.toISOString(); } catch {}
+    manifest.push({ name, dir: f.dir, source: f.source, description: desc, triggers, file: f.file, mtime });
     perSource[f.source] = (perSource[f.source] || 0) + 1;
   }
 

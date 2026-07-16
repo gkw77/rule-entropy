@@ -1,0 +1,506 @@
+{
+  "timestamp": "2026-07-16",
+  "corpus": "skills-corpus-full.json (325 skills)",
+  "method": "LLM (glm-5.2) 一次性分组 325 skill，找功能重复组；簇内按片1 composite 分选 canonical",
+  "dupGroupCount": 18,
+  "totalRedundantSkills": 32,
+  "pruneCandidateRate": 0.098,
+  "note": "只识别剪枝候选，不自动剪。canonical=簇内最高分，redundant=其余（剔除候选）。LLM 分组可能有漏召/误并，作参考非权威",
+  "groups": [
+    {
+      "canonical": "mcp-builder",
+      "canonicalScore": 0.761,
+      "redundant": [
+        "build-mcp-server"
+      ],
+      "redundantScores": [
+        0.732
+      ],
+      "all": [
+        {
+          "name": "mcp-builder",
+          "composite": 0.761,
+          "source": "personal"
+        },
+        {
+          "name": "build-mcp-server",
+          "composite": 0.732,
+          "source": "cache"
+        }
+      ]
+    },
+    {
+      "canonical": "mcp-integration",
+      "canonicalScore": 0.743,
+      "redundant": [
+        "build-mcp-app"
+      ],
+      "redundantScores": [
+        0.728
+      ],
+      "all": [
+        {
+          "name": "mcp-integration",
+          "composite": 0.743,
+          "source": "cache"
+        },
+        {
+          "name": "build-mcp-app",
+          "composite": 0.728,
+          "source": "cache"
+        }
+      ]
+    },
+    {
+      "canonical": "skill-creator",
+      "canonicalScore": 0.724,
+      "redundant": [
+        "write-a-skill",
+        "skill-development"
+      ],
+      "redundantScores": [
+        0.71,
+        0.694
+      ],
+      "all": [
+        {
+          "name": "skill-creator",
+          "composite": 0.724,
+          "source": "cache"
+        },
+        {
+          "name": "write-a-skill",
+          "composite": 0.71,
+          "source": "personal"
+        },
+        {
+          "name": "skill-development",
+          "composite": 0.694,
+          "source": "cache"
+        }
+      ]
+    },
+    {
+      "canonical": "review",
+      "canonicalScore": 0.844,
+      "redundant": [
+        "code-simplification",
+        "code-review-and-quality"
+      ],
+      "redundantScores": [
+        0.74,
+        0.737
+      ],
+      "all": [
+        {
+          "name": "review",
+          "composite": 0.844,
+          "source": "personal"
+        },
+        {
+          "name": "code-simplification",
+          "composite": 0.74,
+          "source": "personal"
+        },
+        {
+          "name": "code-review-and-quality",
+          "composite": 0.737,
+          "source": "personal"
+        }
+      ]
+    },
+    {
+      "canonical": "article-writing",
+      "canonicalScore": 0.763,
+      "redundant": [
+        "brand-voice"
+      ],
+      "redundantScores": [
+        0.756
+      ],
+      "all": [
+        {
+          "name": "article-writing",
+          "composite": 0.763,
+          "source": "marketplace"
+        },
+        {
+          "name": "brand-voice",
+          "composite": 0.756,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "content-engine",
+      "canonicalScore": 0.769,
+      "redundant": [
+        "crosspost"
+      ],
+      "redundantScores": [
+        0.763
+      ],
+      "all": [
+        {
+          "name": "content-engine",
+          "composite": 0.769,
+          "source": "marketplace"
+        },
+        {
+          "name": "crosspost",
+          "composite": 0.763,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "frontend-design",
+      "canonicalScore": 0.76,
+      "redundant": [
+        "frontend-ui-engineering"
+      ],
+      "redundantScores": [
+        0.746
+      ],
+      "all": [
+        {
+          "name": "frontend-design",
+          "composite": 0.76,
+          "source": "personal"
+        },
+        {
+          "name": "frontend-ui-engineering",
+          "composite": 0.746,
+          "source": "personal"
+        }
+      ]
+    },
+    {
+      "canonical": "continuous-learning-v2",
+      "canonicalScore": 0.885,
+      "redundant": [
+        "continuous-learning"
+      ],
+      "redundantScores": [
+        0.838
+      ],
+      "all": [
+        {
+          "name": "continuous-learning-v2",
+          "composite": 0.885,
+          "source": "marketplace"
+        },
+        {
+          "name": "continuous-learning",
+          "composite": 0.838,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "office-hours",
+      "canonicalScore": 0.928,
+      "redundant": [
+        "retro",
+        "investigate",
+        "plan-ceo-review",
+        "gstack-openclaw-retro",
+        "gstack-openclaw-investigate",
+        "gstack-openclaw-office-hours",
+        "gstack-openclaw-ceo-review"
+      ],
+      "redundantScores": [
+        0.898,
+        0.884,
+        0.864,
+        0.773,
+        0.75,
+        0.74,
+        0.733
+      ],
+      "all": [
+        {
+          "name": "office-hours",
+          "composite": 0.928,
+          "source": "personal"
+        },
+        {
+          "name": "retro",
+          "composite": 0.898,
+          "source": "personal"
+        },
+        {
+          "name": "investigate",
+          "composite": 0.884,
+          "source": "personal"
+        },
+        {
+          "name": "plan-ceo-review",
+          "composite": 0.864,
+          "source": "personal"
+        },
+        {
+          "name": "gstack-openclaw-retro",
+          "composite": 0.773,
+          "source": "gstack"
+        },
+        {
+          "name": "gstack-openclaw-investigate",
+          "composite": 0.75,
+          "source": "gstack"
+        },
+        {
+          "name": "gstack-openclaw-office-hours",
+          "composite": 0.74,
+          "source": "gstack"
+        },
+        {
+          "name": "gstack-openclaw-ceo-review",
+          "composite": 0.733,
+          "source": "gstack"
+        }
+      ]
+    },
+    {
+      "canonical": "github-project-management",
+      "canonicalScore": 0.769,
+      "redundant": [
+        "github-ops"
+      ],
+      "redundantScores": [
+        0.756
+      ],
+      "all": [
+        {
+          "name": "github-project-management",
+          "composite": 0.769,
+          "source": "personal"
+        },
+        {
+          "name": "github-ops",
+          "composite": 0.756,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "context-restore",
+      "canonicalScore": 0.903,
+      "redundant": [
+        "context-save",
+        "ck"
+      ],
+      "redundantScores": [
+        0.832,
+        0.769
+      ],
+      "all": [
+        {
+          "name": "context-restore",
+          "composite": 0.903,
+          "source": "personal"
+        },
+        {
+          "name": "context-save",
+          "composite": 0.832,
+          "source": "personal"
+        },
+        {
+          "name": "ck",
+          "composite": 0.769,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "to-issues",
+      "canonicalScore": 0.742,
+      "redundant": [
+        "triage"
+      ],
+      "redundantScores": [
+        0.739
+      ],
+      "all": [
+        {
+          "name": "to-issues",
+          "composite": 0.742,
+          "source": "personal"
+        },
+        {
+          "name": "triage",
+          "composite": 0.739,
+          "source": "personal"
+        }
+      ]
+    },
+    {
+      "canonical": "interview-me",
+      "canonicalScore": 0.765,
+      "redundant": [
+        "grill-with-docs",
+        "grill-me"
+      ],
+      "redundantScores": [
+        0.759,
+        0.742
+      ],
+      "all": [
+        {
+          "name": "interview-me",
+          "composite": 0.765,
+          "source": "personal"
+        },
+        {
+          "name": "grill-with-docs",
+          "composite": 0.759,
+          "source": "personal"
+        },
+        {
+          "name": "grill-me",
+          "composite": 0.742,
+          "source": "personal"
+        }
+      ]
+    },
+    {
+      "canonical": "spec",
+      "canonicalScore": 0.893,
+      "redundant": [
+        "spec-driven-development"
+      ],
+      "redundantScores": [
+        0.758
+      ],
+      "all": [
+        {
+          "name": "spec",
+          "composite": 0.893,
+          "source": "personal"
+        },
+        {
+          "name": "spec-driven-development",
+          "composite": 0.758,
+          "source": "personal"
+        }
+      ]
+    },
+    {
+      "canonical": "browse",
+      "canonicalScore": 0.848,
+      "redundant": [
+        "webapp-testing",
+        "gstack",
+        "browser-testing-with-devtools",
+        "browser-qa"
+      ],
+      "redundantScores": [
+        0.784,
+        0.767,
+        0.751,
+        0.133
+      ],
+      "all": [
+        {
+          "name": "browse",
+          "composite": 0.848,
+          "source": "personal"
+        },
+        {
+          "name": "webapp-testing",
+          "composite": 0.784,
+          "source": "personal"
+        },
+        {
+          "name": "gstack",
+          "composite": 0.767,
+          "source": "gstack"
+        },
+        {
+          "name": "browser-testing-with-devtools",
+          "composite": 0.751,
+          "source": "personal"
+        },
+        {
+          "name": "browser-qa",
+          "composite": 0.133,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "tdd-workflow",
+      "canonicalScore": 0.724,
+      "redundant": [
+        "test-driven-development",
+        "tdd"
+      ],
+      "redundantScores": [
+        0.72,
+        0.713
+      ],
+      "all": [
+        {
+          "name": "tdd-workflow",
+          "composite": 0.724,
+          "source": "marketplace"
+        },
+        {
+          "name": "test-driven-development",
+          "composite": 0.72,
+          "source": "personal"
+        },
+        {
+          "name": "tdd",
+          "composite": 0.713,
+          "source": "personal"
+        }
+      ]
+    },
+    {
+      "canonical": "writing-hookify-rules",
+      "canonicalScore": 0.724,
+      "redundant": [
+        "hookify-rules"
+      ],
+      "redundantScores": [
+        0.723
+      ],
+      "all": [
+        {
+          "name": "writing-hookify-rules",
+          "composite": 0.724,
+          "source": "cache"
+        },
+        {
+          "name": "hookify-rules",
+          "composite": 0.723,
+          "source": "marketplace"
+        }
+      ]
+    },
+    {
+      "canonical": "everything-claude-code",
+      "canonicalScore": 0.733,
+      "redundant": [
+        "everything-claude-code-conventions"
+      ],
+      "redundantScores": [
+        0.733
+      ],
+      "all": [
+        {
+          "name": "everything-claude-code",
+          "composite": 0.733,
+          "source": "marketplace"
+        },
+        {
+          "name": "everything-claude-code-conventions",
+          "composite": 0.733,
+          "source": "marketplace"
+        }
+      ]
+    }
+  ],
+  "rawLLMResponse": "[\n  [\"build-mcp-server\", \"mcp-builder\"],\n  [\"build-mcp-app\", \"mcp-integration\"],\n  [\"write-a-skill\", \"skill-development\", \"skill-creator\"],\n  [\"code-review-and-quality\", \"review\", \"code-simplification\"],\n  [\"article-writing\", \"brand-voice\"],\n  [\"crosspost\", \"content-engine\"],\n  [\"frontend-design\", \"frontend-ui-engineering\"],\n  [\"continuous-learning\", \"continuous-learning-v2\"],\n  [\"gstack-openclaw-ceo-review\", \"plan-ceo-review\", \"gstack-openclaw-investigate\", \"investigate\", \"gstack-openclaw-office-hours\", \"office-hours\", \"gstack-openclaw-retro\", \"retro\"],\n  [\"github-project-management\", \"github-ops\"],\n  [\"context-save\", \"context-restore\", \"ck\"],\n  [\"to-issues\", \"triage\"],\n  [\"grill-me\", \"grill-with-docs\", \"interview-me\"],\n  [\"spec\", \"spec-driven-development\"],\n  [\"browse\", \"gstack\", \"browser-qa\", \"browser-testing-with-devtools\", \"webapp-testing\"],\n  [\"tdd\", \"tdd-workflow\", \"test-driven-development\"],\n  [\"hookify-rules\", \"writing-hookify-rules\"],\n  [\"everything-claude-code\", \"everything-claude-code-conventions\"]\n]"
+}
