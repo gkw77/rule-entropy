@@ -1,0 +1,1266 @@
+{
+  "timestamp": "2026-07-16",
+  "corpus": "skills-corpus-full.json (325 unique skills: 108 personal + 7 gstack + 193 marketplace + 17 cache, frontmatter descriptor)",
+  "corpusNote": "1181 raw SKILL.md files -> 325 unique after name-dedup (agent-format copies in .agents/.cursor/.factory etc collapsed)",
+  "router": "L0 keyword, weighted-coverage + idf, CJK bigram, descriptor=description+triggers+name (与 70-skill baseline 同路由器)",
+  "testsetSize": 20,
+  "corpusSize": 325,
+  "sweep": [
+    {
+      "threshold": 0.05,
+      "precision": 0.08888968894009215,
+      "recall": 0.55,
+      "f1": 0.14359106619187265
+    },
+    {
+      "threshold": 0.1,
+      "precision": 0.15464285714285714,
+      "recall": 0.45,
+      "f1": 0.19035242982823627
+    },
+    {
+      "threshold": 0.15,
+      "precision": 0.20666666666666664,
+      "recall": 0.4,
+      "f1": 0.24004329004329
+    },
+    {
+      "threshold": 0.2,
+      "precision": 0.175,
+      "recall": 0.25,
+      "f1": 0.18928571428571428
+    },
+    {
+      "threshold": 0.25,
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25
+    },
+    {
+      "threshold": 0.3,
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.2,
+      "recall": 0.2,
+      "f1": 0.2
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.1,
+      "recall": 0.1,
+      "f1": 0.1
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.1,
+      "recall": 0.1,
+      "f1": 0.1
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.1,
+      "recall": 0.1,
+      "f1": 0.1
+    }
+  ],
+  "bestThreshold": 0.25,
+  "macroAtBest": {
+    "precision": 0.25,
+    "recall": 0.25,
+    "f1": 0.25
+  },
+  "baseline70": {
+    "precision": 0.304,
+    "recall": 0.5,
+    "f1": 0.349
+  },
+  "delta": {
+    "precision": -0.054,
+    "recall": -0.25,
+    "f1": -0.099
+  },
+  "detail": [
+    {
+      "query": "帮我做 pre-landing 的 PR review",
+      "expected": [
+        "review"
+      ],
+      "predicted": [
+        "review"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "review",
+          "conf": 0.436,
+          "hits": [
+            "pre-landing",
+            "pr",
+            "review"
+          ]
+        },
+        {
+          "path": "ship",
+          "conf": 0.248,
+          "hits": [
+            "pr",
+            "review"
+          ]
+        },
+        {
+          "path": "springboot-verification",
+          "conf": 0.248,
+          "hits": [
+            "pr",
+            "review"
+          ]
+        },
+        {
+          "path": "cpp-coding-standards",
+          "conf": 0.188,
+          "hits": [
+            "的"
+          ]
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.188,
+          "hits": [
+            "帮我"
+          ]
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.133,
+          "hits": [
+            "pr"
+          ]
+        },
+        {
+          "path": "code-tour",
+          "conf": 0.133,
+          "hits": [
+            "pr"
+          ]
+        },
+        {
+          "path": "django-verification",
+          "conf": 0.133,
+          "hits": [
+            "pr"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "用无头浏览器打开网页看看",
+      "expected": [
+        "browse"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "guizang-ppt-skill",
+          "conf": 0.091,
+          "hits": [
+            "网页"
+          ]
+        },
+        {
+          "path": "visual-review",
+          "conf": 0.091,
+          "hits": [
+            "看看"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "QA 测试这个 web 应用并修 bug",
+      "expected": [
+        "qa"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "qa",
+          "conf": 0.184,
+          "hits": [
+            "qa",
+            "web"
+          ]
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.125,
+          "hits": [
+            "这个"
+          ]
+        },
+        {
+          "path": "customs-trade-compliance",
+          "conf": 0.111,
+          "hits": [
+            "应用"
+          ]
+        },
+        {
+          "path": "nuxt4-patterns",
+          "conf": 0.111,
+          "hits": [
+            "应用"
+          ]
+        },
+        {
+          "path": "perl-patterns",
+          "conf": 0.111,
+          "hits": [
+            "应用"
+          ]
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.102,
+          "hits": [
+            "测试"
+          ]
+        },
+        {
+          "path": "diagnose",
+          "conf": 0.102,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "gstack-openclaw-investigate",
+          "conf": 0.102,
+          "hits": [
+            "bug"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "保存当前工作上下文",
+      "expected": [
+        "context-save"
+      ],
+      "predicted": [
+        "architecture-decision-records",
+        "blueprint"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.359,
+          "hits": [
+            "当前",
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.335,
+          "hits": [
+            "工作",
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "context-budget",
+          "conf": 0.226,
+          "hits": [
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "videodb",
+          "conf": 0.226,
+          "hits": [
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "continuous-learning",
+          "conf": 0.133,
+          "hits": [
+            "保存"
+          ]
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.109,
+          "hits": [
+            "工作"
+          ]
+        },
+        {
+          "path": "claude-devfleet",
+          "conf": 0.109,
+          "hits": [
+            "工作"
+          ]
+        },
+        {
+          "path": "enterprise-agent-ops",
+          "conf": 0.109,
+          "hits": [
+            "工作"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "恢复之前保存的上下文",
+      "expected": [
+        "context-restore"
+      ],
+      "predicted": [
+        "blueprint"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "blueprint",
+          "conf": 0.31,
+          "hits": [
+            "的上",
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.195,
+          "hits": [
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "context-budget",
+          "conf": 0.195,
+          "hits": [
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "videodb",
+          "conf": 0.195,
+          "hits": [
+            "上下",
+            "下文"
+          ]
+        },
+        {
+          "path": "continuous-agent-loop",
+          "conf": 0.115,
+          "hits": [
+            "恢复"
+          ]
+        },
+        {
+          "path": "continuous-learning",
+          "conf": 0.115,
+          "hits": [
+            "保存"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "部署后做金丝雀监控",
+      "expected": [
+        "canary"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "claude-devfleet",
+          "conf": 0.118,
+          "hits": [
+            "监控"
+          ]
+        },
+        {
+          "path": "data-scraper-agent",
+          "conf": 0.118,
+          "hits": [
+            "监控"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "对代码做安全审查 CSO 模式",
+      "expected": [
+        "cso"
+      ],
+      "predicted": [
+        "flutter-dart-code-review",
+        "cpp-coding-standards",
+        "ai-regression-testing"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 3,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "flutter-dart-code-review",
+          "conf": 0.37,
+          "hits": [
+            "代码",
+            "安全",
+            "审查",
+            "模式"
+          ]
+        },
+        {
+          "path": "cpp-coding-standards",
+          "conf": 0.293,
+          "hits": [
+            "代码",
+            "安全",
+            "审查"
+          ]
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.273,
+          "hits": [
+            "代码",
+            "审查",
+            "模式"
+          ]
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.181,
+          "hits": [
+            "审查",
+            "模式"
+          ]
+        },
+        {
+          "path": "nuxt4-patterns",
+          "conf": 0.175,
+          "hits": [
+            "安全",
+            "模式"
+          ]
+        },
+        {
+          "path": "perl-security",
+          "conf": 0.175,
+          "hits": [
+            "安全",
+            "模式"
+          ]
+        },
+        {
+          "path": "autonomous-loops",
+          "conf": 0.17,
+          "hits": [
+            "代码",
+            "模式"
+          ]
+        },
+        {
+          "path": "carrier-relationship-management",
+          "conf": 0.103,
+          "hits": [
+            "审查"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "把 markdown 转成 PDF",
+      "expected": [
+        "make-pdf"
+      ],
+      "predicted": [
+        "make-pdf"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "make-pdf",
+          "conf": 0.465,
+          "hits": [
+            "markdown",
+            "pdf"
+          ]
+        },
+        {
+          "path": "plugin-settings",
+          "conf": 0.237,
+          "hits": [
+            "markdown"
+          ]
+        },
+        {
+          "path": "setup-matt-pocock-skills",
+          "conf": 0.237,
+          "hits": [
+            "markdown"
+          ]
+        },
+        {
+          "path": "nutrient-document-processing",
+          "conf": 0.227,
+          "hits": [
+            "pdf"
+          ]
+        },
+        {
+          "path": "pdf",
+          "conf": 0.227,
+          "hits": [
+            "pdf"
+          ]
+        },
+        {
+          "path": "visa-doc-translate",
+          "conf": 0.227,
+          "hits": [
+            "pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "生成多个设计变体做对比",
+      "expected": [
+        "design-shotgun"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "blueprint",
+          "conf": 0.103,
+          "hits": [
+            "多个"
+          ]
+        },
+        {
+          "path": "agent-harness-construction",
+          "conf": 0.091,
+          "hits": [
+            "设计"
+          ]
+        },
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.091,
+          "hits": [
+            "设计"
+          ]
+        },
+        {
+          "path": "swift-actor-persistence",
+          "conf": 0.091,
+          "hits": [
+            "设计"
+          ]
+        },
+        {
+          "path": "ai-first-engineering",
+          "conf": 0.084,
+          "hits": [
+            "生成"
+          ]
+        },
+        {
+          "path": "codebase-onboarding",
+          "conf": 0.084,
+          "hits": [
+            "生成"
+          ]
+        },
+        {
+          "path": "foundation-models-on-device",
+          "conf": 0.084,
+          "hits": [
+            "生成"
+          ]
+        },
+        {
+          "path": "guizang-ppt-skill",
+          "conf": 0.084,
+          "hits": [
+            "生成"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "把设计稿转成生产级 HTML CSS",
+      "expected": [
+        "design-html"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "design-html",
+          "conf": 0.169,
+          "hits": [
+            "html",
+            "css"
+          ]
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.169,
+          "hits": [
+            "html",
+            "css"
+          ]
+        },
+        {
+          "path": "web-artifacts-builder",
+          "conf": 0.169,
+          "hits": [
+            "html",
+            "css"
+          ]
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.105,
+          "hits": [
+            "生产"
+          ]
+        },
+        {
+          "path": "agent-harness-construction",
+          "conf": 0.093,
+          "hits": [
+            "设计"
+          ]
+        },
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.093,
+          "hits": [
+            "设计"
+          ]
+        },
+        {
+          "path": "swift-actor-persistence",
+          "conf": 0.093,
+          "hits": [
+            "设计"
+          ]
+        },
+        {
+          "path": "frontend-slides",
+          "conf": 0.076,
+          "hits": [
+            "html"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "系统排查 bug 根因",
+      "expected": [
+        "investigate"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "autonomous-loops",
+          "conf": 0.177,
+          "hits": [
+            "系统"
+          ]
+        },
+        {
+          "path": "diagnose",
+          "conf": 0.177,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "gstack-openclaw-investigate",
+          "conf": 0.177,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "investigate",
+          "conf": 0.177,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.177,
+          "hits": [
+            "bug"
+          ]
+        },
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.177,
+          "hits": [
+            "系统"
+          ]
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.177,
+          "hits": [
+            "系统"
+          ]
+        },
+        {
+          "path": "quality-nonconformance",
+          "conf": 0.177,
+          "hits": [
+            "系统"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "写小说下一章 克苏鲁塔罗题材",
+      "expected": [
+        "novel-writing"
+      ],
+      "predicted": [
+        "novel-writing"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "novel-writing",
+          "conf": 0.357,
+          "hits": [
+            "小说",
+            "克苏",
+            "苏鲁",
+            "塔罗"
+          ]
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.081,
+          "hits": [
+            "小说"
+          ]
+        },
+        {
+          "path": "shenhai-writing",
+          "conf": 0.081,
+          "hits": [
+            "小说"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "写黑暗幻想小说 神骸世界",
+      "expected": [
+        "shenhai-writing"
+      ],
+      "predicted": [
+        "shenhai-writing"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "shenhai-writing",
+          "conf": 0.775,
+          "hits": [
+            "黑暗",
+            "暗幻",
+            "幻想",
+            "想小",
+            "小说",
+            "神骸",
+            "世界"
+          ]
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.1,
+          "hits": [
+            "小说"
+          ]
+        },
+        {
+          "path": "novel-writing",
+          "conf": 0.1,
+          "hits": [
+            "小说"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Godot 游戏开发 弹跳王",
+      "expected": [
+        "godot-game-dev"
+      ],
+      "predicted": [
+        "godot-game-dev"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matchedTop": [
+        {
+          "path": "godot-game-dev",
+          "conf": 1,
+          "hits": [
+            "godot",
+            "游戏",
+            "戏开",
+            "开发",
+            "弹跳",
+            "跳王"
+          ]
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.151,
+          "hits": [
+            "开发"
+          ]
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.151,
+          "hits": [
+            "开发"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "检测性能回归",
+      "expected": [
+        "benchmark"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.212,
+          "hits": [
+            "回归"
+          ]
+        },
+        {
+          "path": "enterprise-agent-ops",
+          "conf": 0.212,
+          "hits": [
+            "测性"
+          ]
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.188,
+          "hits": [
+            "检测"
+          ]
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.188,
+          "hits": [
+            "检测"
+          ]
+        },
+        {
+          "path": "returns-reverse-logistics",
+          "conf": 0.188,
+          "hits": [
+            "检测"
+          ]
+        },
+        {
+          "path": "compose-multiplatform-patterns",
+          "conf": 0.174,
+          "hits": [
+            "性能"
+          ]
+        },
+        {
+          "path": "flutter-dart-code-review",
+          "conf": 0.174,
+          "hits": [
+            "性能"
+          ]
+        },
+        {
+          "path": "nuxt4-patterns",
+          "conf": 0.174,
+          "hits": [
+            "性能"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "代码质量仪表盘",
+      "expected": [
+        "health"
+      ],
+      "predicted": [
+        "plankton-code-quality",
+        "prompt-optimizer"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "plankton-code-quality",
+          "conf": 0.458,
+          "hits": [
+            "代码",
+            "码质",
+            "质量"
+          ]
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.277,
+          "hits": [
+            "代码",
+            "质量"
+          ]
+        },
+        {
+          "path": "continuous-agent-loop",
+          "conf": 0.144,
+          "hits": [
+            "质量"
+          ]
+        },
+        {
+          "path": "quality-nonconformance",
+          "conf": 0.144,
+          "hits": [
+            "质量"
+          ]
+        },
+        {
+          "path": "ralphinho-rfc-pipeline",
+          "conf": 0.144,
+          "hits": [
+            "质量"
+          ]
+        },
+        {
+          "path": "skill-stocktake",
+          "conf": 0.144,
+          "hits": [
+            "质量"
+          ]
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.133,
+          "hits": [
+            "代码"
+          ]
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.133,
+          "hits": [
+            "代码"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "周工程回顾",
+      "expected": [
+        "retro"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "ai-first-engineering",
+          "conf": 0.228,
+          "hits": [
+            "工程"
+          ]
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.228,
+          "hits": [
+            "工程"
+          ]
+        },
+        {
+          "path": "quality-nonconformance",
+          "conf": 0.228,
+          "hits": [
+            "工程"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "把模糊想法变成精确 spec",
+      "expected": [
+        "spec"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.113,
+          "hits": [
+            "模糊"
+          ]
+        },
+        {
+          "path": "interview-me",
+          "conf": 0.096,
+          "hits": [
+            "spec"
+          ]
+        },
+        {
+          "path": "planning-and-task-breakdown",
+          "conf": 0.096,
+          "hits": [
+            "spec"
+          ]
+        },
+        {
+          "path": "spec",
+          "conf": 0.096,
+          "hits": [
+            "spec"
+          ]
+        },
+        {
+          "path": "to-issues",
+          "conf": 0.096,
+          "hits": [
+            "spec"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "冻结只允许编辑某个目录",
+      "expected": [
+        "freeze"
+      ],
+      "predicted": [],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "blueprint",
+          "conf": 0.101,
+          "hits": [
+            "目录"
+          ]
+        },
+        {
+          "path": "plankton-code-quality",
+          "conf": 0.094,
+          "hits": [
+            "编辑"
+          ]
+        },
+        {
+          "path": "videodb",
+          "conf": 0.094,
+          "hits": [
+            "编辑"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "审 CEO 视角的计划",
+      "expected": [
+        "plan-ceo-review"
+      ],
+      "predicted": [
+        "blueprint"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "matchedTop": [
+        {
+          "path": "blueprint",
+          "conf": 0.329,
+          "hits": [
+            "的计",
+            "计划"
+          ]
+        },
+        {
+          "path": "data-scraper-agent",
+          "conf": 0.155,
+          "hits": [
+            "计划"
+          ]
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.155,
+          "hits": [
+            "计划"
+          ]
+        },
+        {
+          "path": "autoplan",
+          "conf": 0.148,
+          "hits": [
+            "ceo"
+          ]
+        },
+        {
+          "path": "gstack-openclaw-ceo-review",
+          "conf": 0.148,
+          "hits": [
+            "ceo"
+          ]
+        },
+        {
+          "path": "plan-ceo-review",
+          "conf": 0.148,
+          "hits": [
+            "ceo"
+          ]
+        },
+        {
+          "path": "plan-design-review",
+          "conf": 0.148,
+          "hits": [
+            "ceo"
+          ]
+        }
+      ]
+    }
+  ]
+}

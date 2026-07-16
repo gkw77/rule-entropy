@@ -1,0 +1,1665 @@
+{
+  "timestamp": "2026-07-16",
+  "corpus": "skills-corpus-full.json (325 unique skills: 108 personal + 7 gstack + 193 marketplace + 17 cache)",
+  "router": "L1 two-stage (judge + semantic-retrieve), glm-5.2 via ARK -- 路由逻辑与 70-skill L1 完全相同",
+  "testsetSize": 20,
+  "corpusSize": 325,
+  "l0Threshold": 0.05,
+  "l0ZeroMatchQueries": 0,
+  "macro": {
+    "precision": 0.497,
+    "recall": 0.85,
+    "f1": 0.58
+  },
+  "l0FullBaselineMacro": {
+    "precision": 0.25,
+    "recall": 0.25,
+    "f1": 0.25
+  },
+  "delta": {
+    "precision": 0.247,
+    "recall": 0.6,
+    "f1": 0.33
+  },
+  "llmJudgeCalls": 201,
+  "llmRetrieveCalls": 7,
+  "note": "325-scale: L0 零匹配题=0（70-skill 时=10）。每题都有候选 -> 走 judge；跨语言题候选全被滤 -> judge+retrieve 兜底",
+  "detail": [
+    {
+      "query": "帮我做 pre-landing 的 PR review",
+      "expected": [
+        "review"
+      ],
+      "predicted": [
+        "review",
+        "springboot-verification",
+        "django-verification",
+        "github-ops",
+        "autoplan",
+        "code-review-and-quality",
+        "codex",
+        "coding-standards",
+        "doubt-driven-development",
+        "santa-method"
+      ],
+      "mode": "judge",
+      "reason": "30 候选 -> 10 载",
+      "l0CandidateCount": 30,
+      "judged": [
+        {
+          "path": "review",
+          "conf": 0.436,
+          "verdict": "yes",
+          "reason": "问题直接请求进行 pre-landing 的 PR review，与规则核心内容完全匹配。"
+        },
+        {
+          "path": "ship",
+          "conf": 0.248,
+          "verdict": "no",
+          "reason": "问题要求的是对已有 PR 进行 pre-landing 代码审查，而 ship 规则的核心是完整的发布工作流（合并基分支、提版本、更新日志、创建PR等），两者核心不同。"
+        },
+        {
+          "path": "springboot-verification",
+          "conf": 0.248,
+          "verdict": "yes",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "cpp-coding-standards",
+          "conf": 0.188,
+          "verdict": "no",
+          "reason": "问题未指明审查的是 C++ 代码，而该规则核心是特定的 C++ 编码标准，不适用于通用的 PR review 请求。"
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.188,
+          "verdict": "no",
+          "reason": "用户请求执行 pre-landing PR review，是代码审查任务而非提示词优化，与 prompt-optimizer 的核心功能无关"
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题请求的是对单个PR进行代码审查，而规则核心是将目标转化为多会话多代理项目的分步构建计划，两者用途完全不同。"
+        },
+        {
+          "path": "code-tour",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题需要的是对 PR 代码变更进行质量评审和反馈，而规则核心是创建引导式 `.tour` 文件做逐步讲解，二者虽然都涉及 PR 但核心任务不同。"
+        },
+        {
+          "path": "django-verification",
+          "conf": 0.133,
+          "verdict": "yes",
+          "reason": "pre-landing 的 PR review 正需要执行包含迁移、测试、linting及安全扫描等部署就绪检查的验证流程。"
+        },
+        {
+          "path": "ecc-tools-cost-audit",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题请求常规的 pre-landing PR review，而候选规则专用于 ECC Tools 仓库的成本和账单审计，核心不匹配。"
+        },
+        {
+          "path": "github-ops",
+          "conf": 0.133,
+          "verdict": "yes",
+          "reason": "问题请求进行 pre-landing 的 PR review，属于 PR management 和 GitHub operational task 范畴，与 github-ops 规则的核心内容直接相关。"
+        },
+        {
+          "path": "land-and-deploy",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题询问的是代码合并前的 PR 审查，而规则核心是合并与部署的工作流，两者虽含'land'但核心不同。"
+        },
+        {
+          "path": "landing-report",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "该规则是只读的 PR 版本队列展示，核心不是进行 PR review"
+        },
+        {
+          "path": "project-flow-ops",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题请求的是对 PR 代码进行 pre-landing review，而该规则核心是 GitHub 与 Linear 之间的流程协调与 PR triage 管理，并非代码审查本身。"
+        },
+        {
+          "path": "agent-sort",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题请求的是 pre-landing PR review（代码审查），而规则核心是构建 ECC 安装计划并按 DAILY/LIBRARY 分类技能与配置，两者毫无关联。"
+        },
+        {
+          "path": "autoplan",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "问题请求进行 pre-landing 的 PR review，而该规则正是用于自动执行所有 review 的流水线，核心完全匹配。"
+        },
+        {
+          "path": "code-review-and-quality",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "问题明确要求做 pre-landing 的 PR review，与规则核心（合并前多维度代码审查）完全匹配。"
+        },
+        {
+          "path": "codex",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "规则核心是使用 Codex CLI 进行代码审查（codex review），与问题中请求的 pre-landing PR review 直接匹配。"
+        },
+        {
+          "path": "coding-standards",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "PR review 本质上是代码质量审查，而该规则正提供了用于代码质量审查的基础编码规范和约定。"
+        },
+        {
+          "path": "cso",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "PR review 是常规代码审查，而 cso 规则专门针对安全审计和漏洞检查，核心不匹配。"
+        },
+        {
+          "path": "design-system",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题请求的是通用的 pre-landing PR review，而该规则核心专注于设计系统、视觉一致性和样式相关的 PR 审查，问题的范围并未限定在这些领域。"
+        },
+        {
+          "path": "doubt-driven-development",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "PR review 是在代码 land 前进行的审查，正好适用 doubt-driven-development 要求的 adversarial review before it stands。"
+        },
+        {
+          "path": "gstack-openclaw-ceo-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题要求的是技术层面的代码 PR 审查，而该规则核心是针对项目计划/提案进行高管层面的战略审查与挑战，两者核心不同。"
+        },
+        {
+          "path": "ios-design-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题请求的是通用的 pre-landing PR review，而该规则专门针对 iOS 应用的视觉设计审查，问题未提及 iOS 或设计相关内容，核心不适用。"
+        },
+        {
+          "path": "plan-ceo-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题请求的是技术性的PR代码审查，而规则关注的是高层战略计划的CEO视角审查，核心内容不匹配。"
+        },
+        {
+          "path": "plan-design-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题要求的是针对代码层面的 PR review，而候选规则的核心是针对设计计划或 UX 计划的审查。"
+        },
+        {
+          "path": "plan-devex-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题请求的是 PR pre-landing 代码审查，而规则核心是开发者体验（DX）计划审查，二者主题不同。"
+        },
+        {
+          "path": "plan-eng-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题要求对 pre-landing 的 PR（代码变更）进行 review，而规则核心是工程实现计划（plan）的审查，审查对象不同。"
+        },
+        {
+          "path": "santa-method",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "PR review 是发布前的检查，规则提供的多智能体对抗验证和收敛循环机制正是用于审查和发布的质量门禁。"
+        },
+        {
+          "path": "triage",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "PR review 是对代码变更进行审查，而 triage 规则的核心是 issue 状态机管理与工作流分类，二者虽都含 review 但核心不同。"
+        },
+        {
+          "path": "visual-review",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题是请求常规的代码合并前审查（PR review），而候选规则专门用于审查渲染图像或UI截图等视觉输出，核心不匹配。"
+        }
+      ],
+      "precision": 0.1,
+      "recall": 1,
+      "f1": 0.182,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0
+    },
+    {
+      "query": "用无头浏览器打开网页看看",
+      "expected": [
+        "browse"
+      ],
+      "predicted": [
+        "browse"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "2 候选全被 LLM 滤，检索补 1 个",
+      "l0CandidateCount": 2,
+      "judged": [
+        {
+          "path": "guizang-ppt-skill",
+          "conf": 0.091,
+          "verdict": "no",
+          "reason": "问题核心是用无头浏览器打开网页，与生成杂志风网页PPT的规则完全无关。"
+        },
+        {
+          "path": "visual-review",
+          "conf": 0.091,
+          "verdict": "no",
+          "reason": "问题核心是使用无头浏览器执行自动化操作，而非直接审查或评估视觉输出效果。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "QA 测试这个 web 应用并修 bug",
+      "expected": [
+        "qa"
+      ],
+      "predicted": [
+        "qa",
+        "ai-regression-testing",
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate",
+        "test-driven-development",
+        "browse",
+        "qa-only",
+        "context-mode",
+        "webapp-testing"
+      ],
+      "mode": "judge",
+      "reason": "32 候选 -> 10 载",
+      "l0CandidateCount": 32,
+      "judged": [
+        {
+          "path": "qa",
+          "conf": 0.184,
+          "verdict": "yes",
+          "reason": "问题明确要求进行 QA 测试并修复 web 应用 bug，与规则核心内容完全匹配。"
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.125,
+          "verdict": "no",
+          "reason": "用户要求直接执行QA测试和修bug任务，而非优化提示词，规则明确不适用于直接执行任务的场景。"
+        },
+        {
+          "path": "customs-trade-compliance",
+          "conf": 0.111,
+          "verdict": "no",
+          "reason": "问题是关于软件QA测试和修bug，而规则是关于海关贸易合规的，两者核心内容完全不相关。"
+        },
+        {
+          "path": "nuxt4-patterns",
+          "conf": 0.111,
+          "verdict": "no",
+          "reason": "问题仅提及通用的QA测试和修复bug，未明确说明是基于Nuxt 4框架的Web应用，规则核心内容不一定适用。"
+        },
+        {
+          "path": "perl-patterns",
+          "conf": 0.111,
+          "verdict": "no",
+          "reason": "问题是关于 Web 应用的 QA 测试和修 bug，未涉及 Perl，与 Perl 编程惯用法和最佳实践无关。"
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.102,
+          "verdict": "yes",
+          "reason": "问题要求AI进行QA测试和修bug，候选规则提供的AI辅助回归测试与缺陷检查工作流程正是完成该任务所需遵循的核心策略。"
+        },
+        {
+          "path": "diagnose",
+          "conf": 0.102,
+          "verdict": "yes",
+          "reason": "问题明确要求“修 bug”，这属于规则中提到的 debug/fix bug 场景，规则核心的诊断与修复流程适用。"
+        },
+        {
+          "path": "gstack-openclaw-investigate",
+          "conf": 0.102,
+          "verdict": "yes",
+          "reason": "问题明确要求修 bug，完全符合规则中用于修复 bug 或调试的适用场景。"
+        },
+        {
+          "path": "investigate",
+          "conf": 0.102,
+          "verdict": "yes",
+          "reason": "问题要求修 bug，而规则的核心正是系统性地调试和根因分析来修复 bug。"
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.102,
+          "verdict": "no",
+          "reason": "问题针对的是web应用的bug修复，而候选规则专门用于iOS/iPhone应用的bug修复，平台不匹配。"
+        },
+        {
+          "path": "kotlin-coroutines-flows",
+          "conf": 0.102,
+          "verdict": "no",
+          "reason": "问题针对的是web应用的QA测试和修复bug，未涉及Kotlin协程或Flow，规则核心不适用。"
+        },
+        {
+          "path": "kotlin-ktor-patterns",
+          "conf": 0.102,
+          "verdict": "no",
+          "reason": "问题泛指测试 web 应用并修 bug，未明确涉及 Ktor 框架，规则核心不必然适用。"
+        },
+        {
+          "path": "perl-testing",
+          "conf": 0.102,
+          "verdict": "no",
+          "reason": "问题要求对 web 应用进行通用 QA 测试并修 bug，并未指定使用 Perl，该规则核心是 Perl 专用的测试框架与方法，不适用。"
+        },
+        {
+          "path": "swift-protocol-di-testing",
+          "conf": 0.102,
+          "verdict": "no",
+          "reason": "问题是对 web 应用进行 QA 测试和修 bug，与规则核心（Swift 协议依赖注入测试技术）不匹配，技术栈和测试层面均不同。"
+        },
+        {
+          "path": "test-driven-development",
+          "conf": 0.102,
+          "verdict": "yes",
+          "reason": "问题明确包含「修 bug」，而该规则核心覆盖「fixing any bug / when a bug report arrives」，修 bug 时应遵循 TDD 流程（写失败测试→修复→验证）。"
+        },
+        {
+          "path": "browse",
+          "conf": 0.099,
+          "verdict": "yes",
+          "reason": "问题的核心是QA测试web应用，而候选规则正是提供用于QA测试的无头浏览器工具。"
+        },
+        {
+          "path": "design-review",
+          "conf": 0.099,
+          "verdict": "no",
+          "reason": "问题只提到一般的 QA 测试和修 bug，未明确指向设计审查或视觉问题，规则核心不适用。"
+        },
+        {
+          "path": "ios-design-review",
+          "conf": 0.099,
+          "verdict": "no",
+          "reason": "问题针对web应用的测试和修bug，而规则核心是针对iOS应用的视觉设计审查，平台和核心目的均不匹配。"
+        },
+        {
+          "path": "ios-qa",
+          "conf": 0.099,
+          "verdict": "no",
+          "reason": "问题要求测试 web 应用，而该规则是针对 iOS (SwiftUI) 应用的真机 QA 测试，平台不匹配。"
+        },
+        {
+          "path": "qa-only",
+          "conf": 0.099,
+          "verdict": "yes",
+          "reason": "问题涉及 QA 测试任务，虽然用户要求修 bug，但回答必须遵循该规则的核心限制（仅报告 bug 而不修复）来明确边界。"
+        },
+        {
+          "path": "context-mode",
+          "conf": 0.085,
+          "verdict": "yes",
+          "reason": "QA测试和修bug需要探索代码库、读取分析文件和搜索定位问题，符合context-mode的核心使用场景。"
+        },
+        {
+          "path": "deep-research",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题是要求执行实际的QA测试和修复bug，而该规则是用于网络搜索和生成研究报告，核心不适用。"
+        },
+        {
+          "path": "exa-search",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题是要求执行 QA 测试和修 bug，不需要使用 Exa 搜索引擎进行网络检索。"
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题核心是测试web应用和修复bug，而不是创建或美化前端界面设计。"
+        },
+        {
+          "path": "frontend-slides",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题是关于 QA 测试 web 应用并修 bug，与创建 HTML 演示文稿/转换 PPT 的规则核心完全无关。"
+        },
+        {
+          "path": "performance-optimization",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题要求进行通用的QA测试和bug修复，未明确涉及性能优化、瓶颈分析或Core Web Vitals等性能相关需求。"
+        },
+        {
+          "path": "perl-security",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题只是泛泛地要求测试web应用并修bug，未指定语言为Perl或涉及安全漏洞，而规则核心是Perl安全指南，故不适用。"
+        },
+        {
+          "path": "scrape",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题的核心是进行QA测试和修复Bug，而规则的核心是从网页抓取/提取数据，两者目的和内容不匹配。"
+        },
+        {
+          "path": "seo",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题核心是QA测试和修复Bug，而候选规则是关于SEO优化和搜索引擎可见性，两者核心不匹配。"
+        },
+        {
+          "path": "ui-demo",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题要求QA测试和修bug，而候选规则是用于录制UI演示视频，核心内容完全不匹配。"
+        },
+        {
+          "path": "web-artifacts-builder",
+          "conf": 0.085,
+          "verdict": "no",
+          "reason": "问题的核心是测试与修复 bug，而该规则的核心是指导如何使用特定前端技术栈创建复杂的 artifacts，两者核心不匹配。"
+        },
+        {
+          "path": "webapp-testing",
+          "conf": 0.085,
+          "verdict": "yes",
+          "reason": "规则提供了使用 Playwright 测试 web 应用、调试 UI 及查看日志的工具包，正是 QA 测试和修 bug 所需的。"
+        }
+      ],
+      "precision": 0.1,
+      "recall": 1,
+      "f1": 0.182,
+      "tp": 1,
+      "fp": 9,
+      "fn": 0
+    },
+    {
+      "query": "保存当前工作上下文",
+      "expected": [
+        "context-save"
+      ],
+      "predicted": [
+        "context-save"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "9 候选全被 LLM 滤，检索补 1 个",
+      "l0CandidateCount": 9,
+      "judged": [
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.359,
+          "verdict": "no",
+          "reason": "问题是通用的保存工作上下文，与ADR规则核心（捕获架构决策记录）无关。"
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.335,
+          "verdict": "no",
+          "reason": "问题是关于保存当前工作上下文的简单操作请求，与blueprint规则核心的多会话多代理工程项目规划无关。"
+        },
+        {
+          "path": "context-budget",
+          "conf": 0.226,
+          "verdict": "no",
+          "reason": "问题是保存工作上下文状态，而规则核心是审计和优化上下文窗口的令牌消耗，两者虽含'上下文'但核心不同。"
+        },
+        {
+          "path": "videodb",
+          "conf": 0.226,
+          "verdict": "no",
+          "reason": "问题要求保存当前工作上下文，属于通用上下文管理，与VideoDB处理视频/音频的核心功能无关。"
+        },
+        {
+          "path": "continuous-learning",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题是保存当前工作上下文以恢复状态，而规则核心是从会话中提取可复用的模式作为技能保存，两者的“保存”核心目的不同。"
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.109,
+          "verdict": "no",
+          "reason": "问题要求保存当前工作上下文，与AI回归测试策略无关"
+        },
+        {
+          "path": "claude-devfleet",
+          "conf": 0.109,
+          "verdict": "no",
+          "reason": "问题是关于保存当前工作上下文，而规则核心是多智能体编码任务的协调与调度，两者核心不匹配。"
+        },
+        {
+          "path": "enterprise-agent-ops",
+          "conf": 0.109,
+          "verdict": "no",
+          "reason": "该规则核心是代理的可观测性、安全与生命周期管理，与单纯的保存工作上下文操作不直接相关。"
+        },
+        {
+          "path": "ralphinho-rfc-pipeline",
+          "conf": 0.109,
+          "verdict": "no",
+          "reason": "问题只是要求保存当前工作上下文，而候选规则是关于RFC驱动的多智能体DAG流水线，核心不相关。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "恢复之前保存的上下文",
+      "expected": [
+        "context-restore"
+      ],
+      "predicted": [
+        "continuous-agent-loop"
+      ],
+      "mode": "judge",
+      "reason": "6 候选 -> 1 载",
+      "l0CandidateCount": 6,
+      "judged": [
+        {
+          "path": "blueprint",
+          "conf": 0.31,
+          "verdict": "no",
+          "reason": "问题是关于恢复已保存的上下文，而规则核心是将目标转化为多会话工程项目的分步构建计划，两者无关。"
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.195,
+          "verdict": "no",
+          "reason": "问题是关于恢复之前保存的会话上下文，而规则核心是记录架构决策（ADR），两者目的和核心内容完全不同。"
+        },
+        {
+          "path": "context-budget",
+          "conf": 0.195,
+          "verdict": "no",
+          "reason": "问题是要恢复之前保存的上下文（会话恢复），而规则是关于审核上下文窗口令牌消耗和优化建议，核心不同。"
+        },
+        {
+          "path": "videodb",
+          "conf": 0.195,
+          "verdict": "no",
+          "reason": "问题是关于恢复保存的上下文，与videodb的视频/音频处理核心功能无关。"
+        },
+        {
+          "path": "continuous-agent-loop",
+          "conf": 0.115,
+          "verdict": "yes",
+          "reason": "问题「恢复之前保存的上下文」本质上是一种恢复操作，而候选规则的核心正是包含恢复控制的连续代理循环模式，恢复上下文是该模式中恢复控制环节的具体应用。"
+        },
+        {
+          "path": "continuous-learning",
+          "conf": 0.115,
+          "verdict": "no",
+          "reason": "问题是关于恢复之前保存的上下文（会话状态恢复），而规则核心是自动提取可复用模式并保存为学习技能，两者虽都涉及「保存」但核心功能不同。"
+        }
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "query": "部署后做金丝雀监控",
+      "expected": [
+        "canary"
+      ],
+      "predicted": [
+        "canary",
+        "canary-watch"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "2 候选全被 LLM 滤，检索补 2 个",
+      "l0CandidateCount": 2,
+      "judged": [
+        {
+          "path": "claude-devfleet",
+          "conf": 0.118,
+          "verdict": "no",
+          "reason": "问题问的是部署后的金丝雀发布监控，而规则核心是协调多智能体编码任务，虽都涉及'监控'但核心不同"
+        },
+        {
+          "path": "data-scraper-agent",
+          "conf": 0.118,
+          "verdict": "no",
+          "reason": "问题关注的是软件部署后的金丝雀发布监控，而候选规则是关于构建AI驱动的数据抓取代理，两者核心完全无关。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "对代码做安全审查 CSO 模式",
+      "expected": [
+        "cso"
+      ],
+      "predicted": [
+        "nuxt4-patterns",
+        "cso"
+      ],
+      "mode": "judge",
+      "reason": "31 候选 -> 2 载",
+      "l0CandidateCount": 31,
+      "judged": [
+        {
+          "path": "flutter-dart-code-review",
+          "conf": 0.37,
+          "verdict": "no",
+          "reason": "问题是关于通用的或特定CSO模式的安全审查，未指定Flutter/Dart语言，而候选规则核心是Flutter/Dart的代码审查，虽包含安全性但核心不匹配。"
+        },
+        {
+          "path": "cpp-coding-standards",
+          "conf": 0.293,
+          "verdict": "no",
+          "reason": "问题未指定代码语言为C++，且提及的“CSO模式”非C++编码标准范畴"
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.273,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而候选规则核心是AI辅助开发的回归测试策略，两者核心主题不匹配。"
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.181,
+          "verdict": "no",
+          "reason": "代码安全审查通常不需要转化为多会话、多代理的大型工程项目蓝图或构建计划。"
+        },
+        {
+          "path": "nuxt4-patterns",
+          "conf": 0.175,
+          "verdict": "yes",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "perl-security",
+          "conf": 0.175,
+          "verdict": "no",
+          "reason": "问题未指定编程语言为Perl，而候选规则是Perl专属的安全指南，核心不适用于通用的代码安全审查请求。"
+        },
+        {
+          "path": "autonomous-loops",
+          "conf": 0.17,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查CSO模式，而规则核心是自主Claude代码循环的架构与模式，两者核心内容不匹配。"
+        },
+        {
+          "path": "carrier-relationship-management",
+          "conf": 0.103,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查（CSO模式），而规则核心是物流承运商关系管理，两者领域完全无关。"
+        },
+        {
+          "path": "enterprise-agent-ops",
+          "conf": 0.097,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而规则核心是关于长期运行的代理工作负载的运维管理，两者核心不匹配。"
+        },
+        {
+          "path": "inventory-demand-planning",
+          "conf": 0.097,
+          "verdict": "no",
+          "reason": "问题涉及代码安全审查，而候选规则是关于库存需求规划与安全库存优化，两者核心完全不相关。"
+        },
+        {
+          "path": "swift-actor-persistence",
+          "conf": 0.097,
+          "verdict": "no",
+          "reason": "问题关注的是代码安全审查模式（如CSO模式），而候选规则核心是Swift中利用actor实现数据持久化的具体技术，两者核心不匹配。"
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而规则核心是捕获和记录架构决策（ADR），两者核心不相关。"
+        },
+        {
+          "path": "codebase-onboarding",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而规则核心是生成代码库入门指南，两者虽都涉及代码分析但目的和内容完全不同。"
+        },
+        {
+          "path": "plankton-code-quality",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而规则核心是编写时的代码质量自动格式化和检查，两者核心目的不同。"
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题要求直接执行代码安全审查任务，而非优化提示词，不符合该规则的触发条件。"
+        },
+        {
+          "path": "swift-protocol-di-testing",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题关注的是安全审查（CSO模式），而规则核心是Swift的依赖注入与单元测试，两者领域和目的完全不同。"
+        },
+        {
+          "path": "cso",
+          "conf": 0.084,
+          "verdict": "yes",
+          "reason": "问题要求以CSO模式对代码进行安全审查，与候选规则的核心内容（Chief Security Officer mode及安全审查流程）完全匹配。"
+        },
+        {
+          "path": "android-clean-architecture",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查(CSO模式)，而候选规则是关于Android Clean Architecture架构模式，两者核心内容完全不同。"
+        },
+        {
+          "path": "compose-multiplatform-patterns",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是安全审查的CSO模式，而候选规则是关于Compose Multiplatform的前端架构与UI模式，核心不适用。"
+        },
+        {
+          "path": "continuous-agent-loop",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是代码安全审查的CSO模式，而候选规则是关于自主代理的连续循环模式，核心内容不匹配。"
+        },
+        {
+          "path": "cost-aware-llm-pipeline",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而候选规则是关于LLM API成本优化，两者核心内容无关。"
+        },
+        {
+          "path": "kotlin-coroutines-flows",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是代码安全审查 CSO 模式，而候选规则核心是 Kotlin 协程与 Flow 的开发模式，两者无关联。"
+        },
+        {
+          "path": "kotlin-exposed-patterns",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是代码安全审查的 CSO 模式，而候选规则是关于 Kotlin Exposed ORM 的具体开发模式，两者核心内容不相关。"
+        },
+        {
+          "path": "kotlin-ktor-patterns",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是通用的代码安全审查CSO模式，与Ktor服务器开发模式的核心内容不匹配。"
+        },
+        {
+          "path": "perl-testing",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是代码安全审查，而候选规则核心是Perl测试框架和TDD方法，两者核心领域不匹配。"
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查，而候选规则是关于制造业生产调度，两者领域完全无关。"
+        },
+        {
+          "path": "pytorch-patterns",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关于代码安全审查（CSO模式），而规则是关于PyTorch深度学习模式与最佳实践，两者核心完全不相关。"
+        },
+        {
+          "path": "ralphinho-rfc-pipeline",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题是关于代码安全审查的具体方法，而规则核心是RFC驱动的多智能体开发流程，核心内容不匹配。"
+        },
+        {
+          "path": "returns-reverse-logistics",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关于代码安全审查，而规则核心是退货逆向物流业务，两者完全不相关。"
+        },
+        {
+          "path": "skill-stocktake",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "该规则用于审计Claude技能和命令的质量，而非对代码进行安全审查。"
+        },
+        {
+          "path": "swiftui-patterns",
+          "conf": 0.077,
+          "verdict": "no",
+          "reason": "问题关注的是代码安全审查，而候选规则是关于SwiftUI架构和UI开发最佳实践，两者核心内容完全不相关。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "把 markdown 转成 PDF",
+      "expected": [
+        "make-pdf"
+      ],
+      "predicted": [
+        "make-pdf",
+        "nutrient-document-processing",
+        "pdf"
+      ],
+      "mode": "judge",
+      "reason": "6 候选 -> 3 载",
+      "l0CandidateCount": 6,
+      "judged": [
+        {
+          "path": "make-pdf",
+          "conf": 0.465,
+          "verdict": "yes",
+          "reason": "问题需要将markdown转为PDF，候选规则正是处理markdown生成PDF的工具。"
+        },
+        {
+          "path": "plugin-settings",
+          "conf": 0.237,
+          "verdict": "no",
+          "reason": "问题是关于格式转换，规则核心是插件配置存储，两者不相关。"
+        },
+        {
+          "path": "setup-matt-pocock-skills",
+          "conf": 0.237,
+          "verdict": "no",
+          "reason": "问题是关于文档格式转换的技术操作，与设置工程 agent skills 及 issue tracker 上下文的规则完全无关。"
+        },
+        {
+          "path": "nutrient-document-processing",
+          "conf": 0.227,
+          "verdict": "yes",
+          "reason": "该问题需要将文档进行格式转换，而该规则核心正是使用 Nutrient API 进行文档处理与转换（支持PDF等格式），核心适用。"
+        },
+        {
+          "path": "pdf",
+          "conf": 0.227,
+          "verdict": "yes",
+          "reason": "问题要求生成PDF文件，符合候选规则中关于创建或生成PDF文件的适用场景。"
+        },
+        {
+          "path": "visa-doc-translate",
+          "conf": 0.227,
+          "verdict": "no",
+          "reason": "问题要求将Markdown文本转为PDF，而候选规则是专门处理签证申请文件（图片）翻译并生成双语PDF，核心功能不符。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "生成多个设计变体做对比",
+      "expected": [
+        "design-shotgun"
+      ],
+      "predicted": [
+        "design-shotgun"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "9 候选全被 LLM 滤，检索补 1 个",
+      "l0CandidateCount": 9,
+      "judged": [
+        {
+          "path": "blueprint",
+          "conf": 0.103,
+          "verdict": "no",
+          "reason": "问题是生成设计变体做对比，属于设计探索任务，而blueprint规则核心是多会话多代理工程项目计划拆分，两者核心不匹配。"
+        },
+        {
+          "path": "agent-harness-construction",
+          "conf": 0.091,
+          "verdict": "no",
+          "reason": "问题泛指生成设计变体进行对比，与规则核心“设计和优化AI代理的动作空间、工具定义和观察格式”无关。"
+        },
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.091,
+          "verdict": "no",
+          "reason": "问题是通用的设计变体生成与对比，并未明确指定需要使用 iOS 26 液态玻璃设计系统规范，规则核心不适用。"
+        },
+        {
+          "path": "swift-actor-persistence",
+          "conf": 0.091,
+          "verdict": "no",
+          "reason": "问题要求生成多个设计变体做对比，与 Swift 中基于 actor 的数据持久化规则核心内容无关。"
+        },
+        {
+          "path": "ai-first-engineering",
+          "conf": 0.084,
+          "verdict": "no",
+          "reason": "问题是关于生成设计变体做对比的通用设计实践，与ai-first-engineering这一工程运营模型的核心内容无关。"
+        },
+        {
+          "path": "codebase-onboarding",
+          "conf": 0.084,
+          "verdict": "no",
+          "reason": "问题关于生成设计变体做对比，与规则核心（陌生代码库入门指南）完全无关。"
+        },
+        {
+          "path": "foundation-models-on-device",
+          "conf": 0.084,
+          "verdict": "no",
+          "reason": "问题泛指生成设计变体进行对比，未提及或限定使用苹果FoundationModels框架。"
+        },
+        {
+          "path": "guizang-ppt-skill",
+          "conf": 0.084,
+          "verdict": "no",
+          "reason": "问题是通用的设计变体对比，未涉及网页PPT、杂志风格或横向翻页演示等该规则的核心场景。"
+        },
+        {
+          "path": "videodb",
+          "conf": 0.084,
+          "verdict": "no",
+          "reason": "问题是关于生成和对比设计变体，而候选规则的核心是视频和音频的获取、理解与编辑处理，两者完全不相关。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "把设计稿转成生产级 HTML CSS",
+      "expected": [
+        "design-html"
+      ],
+      "predicted": [
+        "design-html",
+        "frontend-design",
+        "web-artifacts-builder"
+      ],
+      "mode": "judge",
+      "reason": "14 候选 -> 3 载",
+      "l0CandidateCount": 14,
+      "judged": [
+        {
+          "path": "design-html",
+          "conf": 0.169,
+          "verdict": "yes",
+          "reason": "问题询问如何将设计稿转为生产级HTML/CSS，与候选规则中生成生产级HTML/CSS及实现设计稿的核心内容完全一致。"
+        },
+        {
+          "path": "frontend-design",
+          "conf": 0.169,
+          "verdict": "yes",
+          "reason": "问题要求将设计稿转换为生产级 HTML/CSS，完全符合 frontend-design 规则中构建 HTML/CSS 布局和生产级前端界面的核心用途。"
+        },
+        {
+          "path": "web-artifacts-builder",
+          "conf": 0.169,
+          "verdict": "yes",
+          "reason": "将设计稿转为生产级前端代码正是该规则的核心用途，它提供了基于 React、Tailwind 和 shadcn/ui 构建复杂前端组件与页面的工具和方法。"
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.105,
+          "verdict": "no",
+          "reason": "问题属于前端开发（将设计稿转为生产级HTML/CSS），而规则核心是制造业的生产调度与产线排程，两者仅因'生产'一词表面相关但核心领域完全不同。"
+        },
+        {
+          "path": "agent-harness-construction",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题关于将设计稿转换为生产级HTML/CSS，属于前端开发任务，与AI代理动作空间、工具定义和观察格式的设计优化无关。"
+        },
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题要求的是转换为 HTML/CSS，而规则核心是 iOS 原生（SwiftUI/UIKit/WidgetKit）的液态玻璃设计系统，技术栈和核心内容不匹配。"
+        },
+        {
+          "path": "swift-actor-persistence",
+          "conf": 0.093,
+          "verdict": "no",
+          "reason": "问题是前端HTML/CSS转换，候选规则是Swift线程安全持久化，完全无关。"
+        },
+        {
+          "path": "frontend-slides",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "规则核心是制作演示文稿（slides），而问题需求是将设计稿转换为生产级网页代码，目标产物与适用场景不同。"
+        },
+        {
+          "path": "guizang-ppt-skill",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "问题是通用设计稿还原，规则核心是生成特定风格的网页PPT，核心不适用"
+        },
+        {
+          "path": "nutrient-document-processing",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "该规则是使用特定API进行文档格式转换和OCR，无法用于将UI设计稿编写成生产级HTML/CSS前端代码的任务。"
+        },
+        {
+          "path": "playground",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "问题是要求将设计稿转换为生产级代码，而规则的核心是创建可交互的 HTML 探索器/游乐场工具，两者核心目的不同。"
+        },
+        {
+          "path": "repo-scan",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "问题是关于将设计稿生成HTML/CSS代码，而repo-scan规则的核心是对已有源码仓库进行审计和分类，二者核心任务不同。"
+        },
+        {
+          "path": "session-report",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "规则是关于生成 Claude Code 会话使用报告，与将设计稿转为生产级 HTML/CSS 完全无关"
+        },
+        {
+          "path": "theme-factory",
+          "conf": 0.076,
+          "verdict": "no",
+          "reason": "问题核心是将设计稿转换为生产级HTML/CSS的编码实现，而规则核心是为已有制品（幻灯片、文档、落地页等）应用主题样式，两者虽都涉及HTML/CSS但关注点不同。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "系统排查 bug 根因",
+      "expected": [
+        "investigate"
+      ],
+      "predicted": [
+        "diagnose",
+        "gstack-openclaw-investigate",
+        "investigate"
+      ],
+      "mode": "judge",
+      "reason": "10 候选 -> 3 载",
+      "l0CandidateCount": 10,
+      "judged": [
+        {
+          "path": "autonomous-loops",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题关注的是排查bug根因的方法论，而规则核心是自主代码循环的架构模式，两者核心内容不匹配。"
+        },
+        {
+          "path": "diagnose",
+          "conf": 0.177,
+          "verdict": "yes",
+          "reason": "问题就是系统排查 bug 根因，与规则的诊断循环（复现→最小化→假设→插桩→修复→回归测试）核心完全一致。"
+        },
+        {
+          "path": "gstack-openclaw-investigate",
+          "conf": 0.177,
+          "verdict": "yes",
+          "reason": "问题就是关于排查bug根因，与规则中investigate errors/root cause analysis的核心完全一致。"
+        },
+        {
+          "path": "investigate",
+          "conf": 0.177,
+          "verdict": "yes",
+          "reason": "问题明确询问系统排查bug根因，与候选规则中系统化调试和根因分析的核心内容完全一致。"
+        },
+        {
+          "path": "ios-fix",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题是通用的系统级 bug 根因排查，未涉及 iOS 平台，而该规则专门针对 iOS 应用的自动 bug 修复，核心不匹配。"
+        },
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题涉及软件系统的缺陷排查，与候选规则的 iOS 液态玻璃 UI 设计毫无关联。"
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题是关于软件系统排查bug根因，而规则核心是制造业的生产调度与瓶颈解决，领域完全不符。"
+        },
+        {
+          "path": "quality-nonconformance",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题指软件系统排查bug根因，而该规则核心是受监管制造业的不合格调查与根本原因分析，领域不匹配。"
+        },
+        {
+          "path": "swift-protocol-di-testing",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题是通用的系统bug根因排查，而规则核心是Swift语言的依赖注入与单元测试技术，两者核心不匹配。"
+        },
+        {
+          "path": "test-driven-development",
+          "conf": 0.177,
+          "verdict": "no",
+          "reason": "问题关注的是排查和定位 bug 的根本原因，而该规则的核心是用测试来驱动开发和验证修复，两者虽都涉及 bug 但核心目的不同。"
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "写小说下一章 克苏鲁塔罗题材",
+      "expected": [
+        "novel-writing"
+      ],
+      "predicted": [
+        "novel-writing",
+        "continuity-check"
+      ],
+      "mode": "judge",
+      "reason": "3 候选 -> 2 载",
+      "l0CandidateCount": 3,
+      "judged": [
+        {
+          "path": "novel-writing",
+          "conf": 0.357,
+          "verdict": "yes",
+          "reason": "问题要求写克苏鲁塔罗题材小说下一章，与规则中《逆位猎人》克苏鲁×塔罗写作风格及要求完全匹配。"
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.081,
+          "verdict": "yes",
+          "reason": "写小说下一章必然涉及与前文剧情的衔接，需要检查时间/地点/方式等要素的一致性，规则核心完全适用。"
+        },
+        {
+          "path": "shenhai-writing",
+          "conf": 0.081,
+          "verdict": "no",
+          "reason": "问题要求写克苏鲁塔罗题材的小说章节，而候选规则是特定小说《走在神的尸骸上》的世界观与剧情设定，二者题材和内容体系不匹配。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "写黑暗幻想小说 神骸世界",
+      "expected": [
+        "shenhai-writing"
+      ],
+      "predicted": [
+        "shenhai-writing"
+      ],
+      "mode": "judge",
+      "reason": "3 候选 -> 1 载",
+      "l0CandidateCount": 3,
+      "judged": [
+        {
+          "path": "shenhai-writing",
+          "conf": 0.775,
+          "verdict": "yes",
+          "reason": "问题要求创作关于“神骸世界”的黑暗幻想小说，与规则中指导《走在神的尸骸上》（包含神骸体系）的写作核心高度一致。"
+        },
+        {
+          "path": "continuity-check",
+          "conf": 0.1,
+          "verdict": "no",
+          "reason": "问题是宽泛的创意写作请求，未涉及回指前文事件或需要检查剧情连续性的场景。"
+        },
+        {
+          "path": "novel-writing",
+          "conf": 0.1,
+          "verdict": "no",
+          "reason": "规则核心是针对特定小说《逆位猎人》的克苏鲁×塔罗主题写作，与用户提出的'神骸世界'黑暗幻想小说并非同一项目，核心内容不直接适用。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "Godot 游戏开发 弹跳王",
+      "expected": [
+        "godot-game-dev"
+      ],
+      "predicted": [
+        "godot-game-dev"
+      ],
+      "mode": "judge",
+      "reason": "3 候选 -> 1 载",
+      "l0CandidateCount": 3,
+      "judged": [
+        {
+          "path": "godot-game-dev",
+          "conf": 1,
+          "verdict": "yes",
+          "reason": "问题直接询问Godot弹跳王开发，与候选规则的核心主题完全匹配。"
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.151,
+          "verdict": "no",
+          "reason": "问题询问的是Godot引擎的弹跳游戏开发，与候选规则关于AI辅助回归测试及缺陷检查的内容毫不相关。"
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.151,
+          "verdict": "no",
+          "reason": "问题是关于Godot弹跳王游戏开发的具体技术，而规则核心是记录架构决策（ADR），二者核心不匹配。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "检测性能回归",
+      "expected": [
+        "benchmark"
+      ],
+      "predicted": [
+        "flutter-dart-code-review"
+      ],
+      "mode": "judge",
+      "reason": "10 候选 -> 1 载",
+      "l0CandidateCount": 10,
+      "judged": [
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.212,
+          "verdict": "no",
+          "reason": "问题关注的是性能回归，而规则核心是AI辅助开发中的功能缺陷回归测试，两者侧重点不同。"
+        },
+        {
+          "path": "enterprise-agent-ops",
+          "conf": 0.212,
+          "verdict": "no",
+          "reason": "「检测性能回归」是通用软件工程问题，而该规则核心是长期运行代理工作负载的操作与管理，核心不匹配。"
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.188,
+          "verdict": "no",
+          "reason": "问题关注的是性能测试与回归检测，而规则核心是记录架构决策（ADR），两者核心内容不相关。"
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.188,
+          "verdict": "no",
+          "reason": "问题是关于性能回归检测的技术方法，而规则核心是多会话多代理工程项目的计划蓝图生成，两者不相关。"
+        },
+        {
+          "path": "returns-reverse-logistics",
+          "conf": 0.188,
+          "verdict": "no",
+          "reason": "问题关注的是软件性能回归测试，而规则核心是产品退货与逆向物流管理，两者完全无关。"
+        },
+        {
+          "path": "compose-multiplatform-patterns",
+          "conf": 0.174,
+          "verdict": "no",
+          "reason": "问题是关于检测性能回归的工程测试手段，而候选规则核心是Compose Multiplatform的UI开发模式与优化技巧，核心不匹配。"
+        },
+        {
+          "path": "flutter-dart-code-review",
+          "conf": 0.174,
+          "verdict": "yes",
+          "reason": "parse fail: "
+        },
+        {
+          "path": "nuxt4-patterns",
+          "conf": 0.174,
+          "verdict": "no",
+          "reason": "问题问的是如何检测性能回归（通用性能监控/测试概念），规则核心是Nuxt 4应用开发模式中的性能优化技巧，两者虽都涉及「性能」但核心不匹配。"
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.174,
+          "verdict": "no",
+          "reason": "问题是在问如何检测性能回归，属于性能测试/工程任务，与提示词优化无关，且规则明确排除性能优化类场景。"
+        },
+        {
+          "path": "swiftui-patterns",
+          "conf": 0.174,
+          "verdict": "no",
+          "reason": "问题关注的是检测性能回归的通用方法（如基准测试、CI监控），而规则核心是 SwiftUI 架构与代码层面的性能优化最佳实践，虽都涉及性能但核心不匹配。"
+        }
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "query": "代码质量仪表盘",
+      "expected": [
+        "health"
+      ],
+      "predicted": [],
+      "mode": "judge+retrieve",
+      "reason": "13 候选全被 LLM 滤，检索补 0 个",
+      "l0CandidateCount": 13,
+      "judged": [
+        {
+          "path": "plankton-code-quality",
+          "conf": 0.458,
+          "verdict": "no",
+          "reason": "问题问的是代码质量仪表盘（展示/可视化），而规则核心是编写时代码质量强制执行（钩子/格式化/检查），核心不适用。"
+        },
+        {
+          "path": "prompt-optimizer",
+          "conf": 0.277,
+          "verdict": "no",
+          "reason": "问题是关于“代码质量仪表盘”，与提示词优化无关，不满足prompt-optimizer的触发条件。"
+        },
+        {
+          "path": "continuous-agent-loop",
+          "conf": 0.144,
+          "verdict": "no",
+          "reason": "问题关注的是代码质量的可视化仪表盘，而规则核心是自主代理循环的执行架构，两者核心不同。"
+        },
+        {
+          "path": "quality-nonconformance",
+          "conf": 0.144,
+          "verdict": "no",
+          "reason": "问题问的是软件代码质量仪表盘，而候选规则是关于制造业受监管环境下的不合格品控制和CAPA，核心领域不匹配。"
+        },
+        {
+          "path": "ralphinho-rfc-pipeline",
+          "conf": 0.144,
+          "verdict": "no",
+          "reason": "问题关注代码质量指标的可视化展示，而规则核心是RFC驱动的多智能体执行流水线编排，核心不匹配。"
+        },
+        {
+          "path": "skill-stocktake",
+          "conf": 0.144,
+          "verdict": "no",
+          "reason": "问题是关于代码质量仪表盘，而规则是用于审计Claude技能和命令的质量，核心内容不匹配。"
+        },
+        {
+          "path": "ai-regression-testing",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题关于代码质量仪表盘的构建或展示，与候选规则的AI回归测试策略核心内容不相关。"
+        },
+        {
+          "path": "architecture-decision-records",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题是关于代码质量仪表盘的开发或设计，而规则核心是记录架构决策(ADR)，两者核心不匹配。"
+        },
+        {
+          "path": "autonomous-loops",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题关注的是代码质量指标的可视化展示，而规则核心是自主代码循环和多智能体架构，两者核心不匹配。"
+        },
+        {
+          "path": "codebase-onboarding",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题仅提到“代码质量仪表盘”这一孤立名词，与候选规则核心（分析陌生代码库生成入门指南）无直接关联。"
+        },
+        {
+          "path": "cpp-coding-standards",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题仅提及“代码质量仪表盘”，并未涉及C++代码的编写、审查或重构，规则核心不适用。"
+        },
+        {
+          "path": "flutter-dart-code-review",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题询问的是“代码质量仪表盘”这一概念或功能实现，而候选规则是针对Flutter/Dart的代码审查清单，核心内容不匹配。"
+        },
+        {
+          "path": "swift-protocol-di-testing",
+          "conf": 0.133,
+          "verdict": "no",
+          "reason": "问题询问的是代码质量仪表盘，而候选规则核心是Swift的依赖注入与测试，两者毫无关联。"
+        }
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "query": "周工程回顾",
+      "expected": [
+        "retro"
+      ],
+      "predicted": [
+        "gstack-openclaw-retro",
+        "retro"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "3 候选全被 LLM 滤，检索补 2 个",
+      "l0CandidateCount": 3,
+      "judged": [
+        {
+          "path": "ai-first-engineering",
+          "conf": 0.228,
+          "verdict": "no",
+          "reason": "「周工程回顾」是一个通用的工程管理活动，而候选规则核心是关于AI代理生成实施输出的运营模型，两者核心不匹配。"
+        },
+        {
+          "path": "blueprint",
+          "conf": 0.228,
+          "verdict": "no",
+          "reason": "「周工程回顾」是对过去工程工作的总结回顾，而非请求复杂多会话项目的构建计划或蓝图，规则核心不适用。"
+        },
+        {
+          "path": "quality-nonconformance",
+          "conf": 0.228,
+          "verdict": "no",
+          "reason": "「周工程回顾」是通用的工程进度回顾，未提及不合格品调查、根本原因分析或纠正措施等该规则的核心内容。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "把模糊想法变成精确 spec",
+      "expected": [
+        "spec"
+      ],
+      "predicted": [
+        "interview-me",
+        "spec"
+      ],
+      "mode": "judge",
+      "reason": "5 候选 -> 2 载",
+      "l0CandidateCount": 5,
+      "judged": [
+        {
+          "path": "liquid-glass-design",
+          "conf": 0.113,
+          "verdict": "no",
+          "reason": "问题核心是将模糊想法转化为精确规格的过程，而规则是关于 iOS 26 UI 设计系统，两者核心无关。"
+        },
+        {
+          "path": "interview-me",
+          "conf": 0.096,
+          "verdict": "yes",
+          "reason": "问题是将模糊想法变成精确 spec，这正是 interview-me 规则的核心用途——通过逐题访谈澄清模糊意图后再产出 spec。"
+        },
+        {
+          "path": "planning-and-task-breakdown",
+          "conf": 0.096,
+          "verdict": "no",
+          "reason": "规则核心是将已有的spec拆分为实现任务，而问题是把模糊想法变成spec，属于spec形成前的需求工程阶段。"
+        },
+        {
+          "path": "spec",
+          "conf": 0.096,
+          "verdict": "yes",
+          "reason": "问题的核心是把模糊想法变成精确 spec，与该规则的核心内容完全一致。"
+        },
+        {
+          "path": "to-issues",
+          "conf": 0.096,
+          "verdict": "no",
+          "reason": "问题是从模糊想法生成精确 spec，而规则核心是将已有的 spec/plan/PRD 分解为 issue，属于不同阶段。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "冻结只允许编辑某个目录",
+      "expected": [
+        "freeze"
+      ],
+      "predicted": [
+        "freeze"
+      ],
+      "mode": "judge+retrieve",
+      "reason": "3 候选全被 LLM 滤，检索补 1 个",
+      "l0CandidateCount": 3,
+      "judged": [
+        {
+          "path": "blueprint",
+          "conf": 0.101,
+          "verdict": "no",
+          "reason": "问题关于限制编辑权限至特定目录，与将目标转化为多会话多代理工程项目分步计划的blueprint规则核心无关。"
+        },
+        {
+          "path": "plankton-code-quality",
+          "conf": 0.094,
+          "verdict": "no",
+          "reason": "问题关注的是限制编辑目录的权限控制，而规则核心是代码质量检查与自动格式化，核心不匹配。"
+        },
+        {
+          "path": "videodb",
+          "conf": 0.094,
+          "verdict": "no",
+          "reason": "问题涉及文件系统或目录权限的冻结/锁定，与候选规则中视频和音频处理的核心内容无关。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "审 CEO 视角的计划",
+      "expected": [
+        "plan-ceo-review"
+      ],
+      "predicted": [
+        "autoplan",
+        "gstack-openclaw-ceo-review",
+        "plan-ceo-review",
+        "plan-design-review"
+      ],
+      "mode": "judge",
+      "reason": "7 候选 -> 4 载",
+      "l0CandidateCount": 7,
+      "judged": [
+        {
+          "path": "blueprint",
+          "conf": 0.329,
+          "verdict": "no",
+          "reason": "问题要求从CEO视角审查现有计划，而非将目标转化为多会话多代理的工程蓝图，规则核心不适用。"
+        },
+        {
+          "path": "data-scraper-agent",
+          "conf": 0.155,
+          "verdict": "no",
+          "reason": "问题关于审查CEO视角的计划，与构建数据抓取代理的规则核心内容无关。"
+        },
+        {
+          "path": "production-scheduling",
+          "conf": 0.155,
+          "verdict": "no",
+          "reason": "问题要求从CEO视角审查计划，属于通用商业战略或管理范畴，而候选规则专门针对制造业生产调度，核心内容不匹配。"
+        },
+        {
+          "path": "autoplan",
+          "conf": 0.148,
+          "verdict": "yes",
+          "reason": "问题要求从CEO视角审核计划，候选规则正是包含CEO视角的自动审核流程。"
+        },
+        {
+          "path": "gstack-openclaw-ceo-review",
+          "conf": 0.148,
+          "verdict": "yes",
+          "reason": "问题明确要求从CEO视角审核计划，与候选规则中“run a CEO review”及“review a plan”的核心场景完全匹配。"
+        },
+        {
+          "path": "plan-ceo-review",
+          "conf": 0.148,
+          "verdict": "yes",
+          "reason": "问题明确要求以CEO视角审查计划，与候选规则的核心内容（CEO模式计划审查、战略重估）完全一致。"
+        },
+        {
+          "path": "plan-design-review",
+          "conf": 0.148,
+          "verdict": "yes",
+          "reason": "规则描述中明确提到\"like CEO and Eng review\"，与问题中\"审 CEO 视角的计划\"核心匹配。"
+        }
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    }
+  ]
+}

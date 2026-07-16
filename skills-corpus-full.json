@@ -1,0 +1,2529 @@
+[
+  {
+    "name": "accessibility",
+    "dir": "accessibility",
+    "source": "marketplace",
+    "description": "Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA",
+    "triggers": []
+  },
+  {
+    "name": "agent-development",
+    "dir": "agent-development",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
+    "triggers": []
+  },
+  {
+    "name": "agent-eval",
+    "dir": "agent-eval",
+    "source": "marketplace",
+    "description": "编码代理（Claude Code、Aider、Codex等）在自定义任务上的直接比较，包含通过率、成本、时间和一致性指标",
+    "triggers": []
+  },
+  {
+    "name": "agent-harness-construction",
+    "dir": "agent-harness-construction",
+    "source": "marketplace",
+    "description": "设计和优化AI代理的动作空间、工具定义和观察格式，以提高完成率。",
+    "triggers": []
+  },
+  {
+    "name": "agent-introspection-debugging",
+    "dir": "agent-introspection-debugging",
+    "source": "marketplace",
+    "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+    "triggers": []
+  },
+  {
+    "name": "agent-payment-x402",
+    "dir": "agent-payment-x402",
+    "source": "marketplace",
+    "description": "Add x402 payment execution to AI agents — per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other agents.",
+    "triggers": []
+  },
+  {
+    "name": "agent-sort",
+    "dir": "agent-sort",
+    "source": "marketplace",
+    "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+    "triggers": []
+  },
+  {
+    "name": "agentic-engineering",
+    "dir": "agentic-engineering",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "ai-first-engineering",
+    "dir": "ai-first-engineering",
+    "source": "marketplace",
+    "description": "团队中人工智能代理生成大部分实施输出的工程运营模型。",
+    "triggers": []
+  },
+  {
+    "name": "ai-regression-testing",
+    "dir": "ai-regression-testing",
+    "source": "marketplace",
+    "description": "AI辅助开发的回归测试策略。沙盒模式API测试，无需依赖数据库，自动化的缺陷检查工作流程，以及捕捉AI盲点的模式，其中同一模型编写和审查代码。",
+    "triggers": []
+  },
+  {
+    "name": "android-clean-architecture",
+    "dir": "android-clean-architecture",
+    "source": "marketplace",
+    "description": "适用于Android和Kotlin多平台项目的Clean Architecture模式——模块结构、依赖规则、用例、仓库以及数据层模式。",
+    "triggers": []
+  },
+  {
+    "name": "api-and-interface-design",
+    "dir": "api-and-interface-design",
+    "source": "personal",
+    "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+    "triggers": []
+  },
+  {
+    "name": "api-connector-builder",
+    "dir": "api-connector-builder",
+    "source": "marketplace",
+    "description": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture.",
+    "triggers": []
+  },
+  {
+    "name": "api-design",
+    "dir": "api-design",
+    "source": "marketplace",
+    "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+    "triggers": []
+  },
+  {
+    "name": "architecture-decision-records",
+    "dir": "architecture-decision-records",
+    "source": "marketplace",
+    "description": "在Claude Code会话期间，将做出的架构决策捕获为结构化的架构决策记录（ADR）。自动检测决策时刻，记录上下文、考虑的替代方案和理由。维护一个ADR日志，以便未来的开发人员理解代码库为何以当前方式构建。",
+    "triggers": []
+  },
+  {
+    "name": "article-writing",
+    "dir": "article-writing",
+    "source": "marketplace",
+    "description": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
+    "triggers": []
+  },
+  {
+    "name": "automation-audit-ops",
+    "dir": "automation-audit-ops",
+    "source": "marketplace",
+    "description": "Evidence-first automation inventory and overlap audit workflow for ECC. Use when the user wants to know which jobs, hooks, connectors, MCP servers, or wrappers are live, broken, redundant, or missing before fixing anything.",
+    "triggers": []
+  },
+  {
+    "name": "autonomous-agent-harness",
+    "dir": "autonomous-agent-harness",
+    "source": "marketplace",
+    "description": "Transform Claude Code into a fully autonomous agent system with persistent memory, scheduled operations, computer use, and task queuing. Replaces standalone agent frameworks (Hermes, AutoGPT) by leveraging Claude Code's native crons, dispatch, MCP tools, and memory. Use when the user wants continuous autonomous operation, scheduled tasks, or a self-directing agent loop.",
+    "triggers": []
+  },
+  {
+    "name": "autonomous-loops",
+    "dir": "autonomous-loops",
+    "source": "marketplace",
+    "description": "\"自主Claude代码循环的模式与架构——从简单的顺序管道到基于RFC的多智能体有向无环图系统。\"",
+    "triggers": []
+  },
+  {
+    "name": "autoplan",
+    "dir": "autoplan",
+    "source": "personal",
+    "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+    "triggers": [
+      "run all reviews",
+      "automatic review pipeline",
+      "auto plan review"
+    ]
+  },
+  {
+    "name": "backend-patterns",
+    "dir": "backend-patterns",
+    "source": "marketplace",
+    "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+    "triggers": []
+  },
+  {
+    "name": "benchmark",
+    "dir": "benchmark",
+    "source": "personal",
+    "description": "Performance regression detection using the browse daemon. (gstack)",
+    "triggers": [
+      "performance benchmark",
+      "check page speed",
+      "detect performance regression"
+    ]
+  },
+  {
+    "name": "benchmark-models",
+    "dir": "benchmark-models",
+    "source": "personal",
+    "description": "Cross-model benchmark for gstack skills. (gstack)",
+    "triggers": [
+      "cross model benchmark",
+      "compare claude gpt gemini",
+      "benchmark skill across models",
+      "which model should I use"
+    ]
+  },
+  {
+    "name": "blueprint",
+    "dir": "blueprint",
+    "source": "marketplace",
+    "description": "将单行目标转化为多会话、多代理工程项目的分步构建计划。每个步骤包含独立的上下文简介，以便新代理能直接执行。包括对抗性审查门、依赖图、并行步骤检测、反模式目录和计划突变协议。触发条件：当用户请求复杂多PR任务的计划、蓝图或路线图，或描述需要多个会话的工作时。不触发条件：任务可在单个PR或少于3个工具调用中完成，或用户说“直接执行”时。origin: community",
+    "triggers": []
+  },
+  {
+    "name": "brand-voice",
+    "dir": "brand-voice",
+    "source": "marketplace",
+    "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
+    "triggers": []
+  },
+  {
+    "name": "browse",
+    "dir": "browse",
+    "source": "personal",
+    "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+    "triggers": [
+      "browse a page",
+      "headless browser",
+      "take page screenshot"
+    ]
+  },
+  {
+    "name": "browser-qa",
+    "dir": "browser-qa",
+    "source": "marketplace",
+    "description": "",
+    "triggers": []
+  },
+  {
+    "name": "browser-testing-with-devtools",
+    "dir": "browser-testing-with-devtools",
+    "source": "personal",
+    "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.",
+    "triggers": []
+  },
+  {
+    "name": "build-mcp-app",
+    "dir": "build-mcp-app",
+    "source": "cache",
+    "description": "This skill should be used when the user wants to build an \"MCP app\", add \"interactive UI\" or \"widgets\" to an MCP server, \"render components in chat\", build \"MCP UI resources\", make a tool that shows a \"form\", \"picker\", \"dashboard\" or \"confirmation dialog\" inline in the conversation, or mentions \"apps SDK\" in the context of MCP. Use AFTER the build-mcp-server skill has settled the deployment model, or when the user already knows they want UI widgets.",
+    "triggers": []
+  },
+  {
+    "name": "build-mcp-server",
+    "dir": "build-mcp-server",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP integration\", \"wrap an API for Claude\", \"expose tools to Claude\", \"make an MCP app\", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development — it interrogates the user about their use case, determines the right deployment model (remote HTTP, MCPB, local stdio), picks a tool-design pattern, and hands off to specialized skills.",
+    "triggers": []
+  },
+  {
+    "name": "build-mcpb",
+    "dir": "build-mcpb",
+    "source": "cache",
+    "description": "This skill should be used when the user wants to \"package an MCP server\", \"bundle an MCP\", \"make an MCPB\", \"ship a local MCP server\", \"distribute a local MCP\", discusses \".mcpb files\", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set up.",
+    "triggers": []
+  },
+  {
+    "name": "bun-runtime",
+    "dir": "bun-runtime",
+    "source": "marketplace",
+    "description": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
+    "triggers": []
+  },
+  {
+    "name": "canary",
+    "dir": "canary",
+    "source": "personal",
+    "description": "Post-deploy canary monitoring. (gstack)",
+    "triggers": [
+      "monitor after deploy",
+      "canary check",
+      "watch for errors post-deploy"
+    ]
+  },
+  {
+    "name": "canary-watch",
+    "dir": "canary-watch",
+    "source": "marketplace",
+    "description": "Use this skill to monitor a deployed URL for regressions after deploys, merges, or dependency upgrades.",
+    "triggers": []
+  },
+  {
+    "name": "careful",
+    "dir": "careful",
+    "source": "personal",
+    "description": "Safety guardrails for destructive commands. (gstack)",
+    "triggers": [
+      "be careful",
+      "warn before destructive",
+      "safety mode"
+    ]
+  },
+  {
+    "name": "carrier-relationship-management",
+    "dir": "carrier-relationship-management",
+    "source": "marketplace",
+    "description": "用于管理承运商组合、协商运费、跟踪承运商绩效、分配货运以及维护战略承运商关系的编码专业知识。基于拥有15年以上经验的运输经理提供的信息。包括记分卡框架、RFP流程、市场情报和合规性审查。适用于管理承运商、协商费率、评估承运商绩效或制定货运策略时使用。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "caveman",
+    "dir": "caveman",
+    "source": "personal",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "ci-cd-and-automation",
+    "dir": "ci-cd-and-automation",
+    "source": "personal",
+    "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.",
+    "triggers": []
+  },
+  {
+    "name": "ck",
+    "dir": "ck",
+    "source": "marketplace",
+    "description": "Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js scripts — behavior is consistent across model versions.",
+    "triggers": []
+  },
+  {
+    "name": "claude",
+    "dir": "gstack-claude",
+    "source": "gstack",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "claude-api",
+    "dir": "claude-api",
+    "source": "personal",
+    "description": "\"Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.\"",
+    "triggers": []
+  },
+  {
+    "name": "claude-automation-recommender",
+    "dir": "claude-automation-recommender",
+    "source": "cache",
+    "description": "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.",
+    "triggers": []
+  },
+  {
+    "name": "claude-devfleet",
+    "dir": "claude-devfleet",
+    "source": "marketplace",
+    "description": "通过Claude DevFleet协调多智能体编码任务——规划项目、在隔离的工作树中并行调度智能体、监控进度并读取结构化报告。",
+    "triggers": []
+  },
+  {
+    "name": "claude-md-improver",
+    "dir": "claude-md-improver",
+    "source": "cache",
+    "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintenance\" or \"project memory optimization\".",
+    "triggers": []
+  },
+  {
+    "name": "click-path-audit",
+    "dir": "click-path-audit",
+    "source": "marketplace",
+    "description": "\"Trace every user-facing button/touchpoint through its full state change sequence to find bugs where functions individually work but cancel each other out, produce wrong final state, or leave the UI in an inconsistent state. Use when: systematic debugging found no bugs but users report broken buttons, or after any major refactor touching shared state stores.\"",
+    "triggers": []
+  },
+  {
+    "name": "clickhouse-io",
+    "dir": "clickhouse-io",
+    "source": "marketplace",
+    "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
+    "triggers": []
+  },
+  {
+    "name": "code-review-and-quality",
+    "dir": "code-review-and-quality",
+    "source": "personal",
+    "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
+    "triggers": []
+  },
+  {
+    "name": "code-simplification",
+    "dir": "code-simplification",
+    "source": "personal",
+    "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.",
+    "triggers": []
+  },
+  {
+    "name": "code-tour",
+    "dir": "code-tour",
+    "source": "marketplace",
+    "description": "Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \"explain how this works\" requests.",
+    "triggers": []
+  },
+  {
+    "name": "codebase-onboarding",
+    "dir": "codebase-onboarding",
+    "source": "marketplace",
+    "description": "分析一个陌生的代码库，并生成一个结构化的入门指南，包括架构图、关键入口点、规范和一个起始的CLAUDE.md文件。适用于加入新项目或首次在代码仓库中设置Claude Code时。",
+    "triggers": []
+  },
+  {
+    "name": "codex",
+    "dir": "codex",
+    "source": "personal",
+    "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+    "triggers": [
+      "codex review",
+      "second opinion",
+      "outside voice challenge"
+    ]
+  },
+  {
+    "name": "coding-standards",
+    "dir": "coding-standards",
+    "source": "marketplace",
+    "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
+    "triggers": []
+  },
+  {
+    "name": "command-development",
+    "dir": "command-development",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code.",
+    "triggers": []
+  },
+  {
+    "name": "compose-multiplatform-patterns",
+    "dir": "compose-multiplatform-patterns",
+    "source": "marketplace",
+    "description": "KMP项目中的Compose Multiplatform和Jetpack Compose模式——状态管理、导航、主题化、性能优化和平台特定UI。",
+    "triggers": []
+  },
+  {
+    "name": "configure-ecc",
+    "dir": "configure-ecc",
+    "source": "marketplace",
+    "description": "Everything Claude Code のインタラクティブなインストーラー — スキルとルールの選択とインストールをユーザーレベルまたはプロジェクトレベルのディレクトリへガイドし、パスを検証し、必要に応じてインストールされたファイルを最適化します。",
+    "triggers": []
+  },
+  {
+    "name": "connections-optimizer",
+    "dir": "connections-optimizer",
+    "source": "marketplace",
+    "description": "Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-specific warm outreach drafted in the user's real voice. Use when the user wants to clean up following lists, grow toward current priorities, or rebalance a social graph around higher-signal relationships.",
+    "triggers": []
+  },
+  {
+    "name": "content-engine",
+    "dir": "content-engine",
+    "source": "marketplace",
+    "description": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scripts, content calendars, or one source asset adapted cleanly across platforms.",
+    "triggers": []
+  },
+  {
+    "name": "content-hash-cache-pattern",
+    "dir": "content-hash-cache-pattern",
+    "source": "marketplace",
+    "description": "使用SHA-256内容哈希缓存昂贵的文件处理结果——路径无关、自动失效、服务层分离。",
+    "triggers": []
+  },
+  {
+    "name": "context-budget",
+    "dir": "context-budget",
+    "source": "marketplace",
+    "description": "审核Claude Code上下文窗口在代理、技能、MCP服务器和规则中的消耗情况。识别膨胀、冗余组件，并提供优先的令牌节省建议。",
+    "triggers": []
+  },
+  {
+    "name": "context-engineering",
+    "dir": "context-engineering",
+    "source": "personal",
+    "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.",
+    "triggers": []
+  },
+  {
+    "name": "context-mode",
+    "dir": "context-mode",
+    "source": "marketplace",
+    "description": "Mandatory routing rules for Antigravity CLI. Invoke when exploring a codebase, reading files for analysis, listing context-mode tools, searching, parsing, counting, comparing, summarizing, fetching web content, or running data-heavy commands.",
+    "triggers": []
+  },
+  {
+    "name": "context-mode-ops",
+    "dir": "context-mode-ops",
+    "source": "marketplace",
+    "description": "Manage context-mode GitHub issues, PRs, releases, and marketing with parallel subagent army. Orchestrates 10-20 dynamic agents per task. Use when triaging issues, reviewing PRs, releasing versions, writing LinkedIn posts, announcing releases, fixing bugs, merging contributions, validating ENV vars, testing adapters, or syncing branches.",
+    "triggers": []
+  },
+  {
+    "name": "context-restore",
+    "dir": "context-restore",
+    "source": "personal",
+    "description": "Restore working context saved earlier by /context-save. (gstack)",
+    "triggers": [
+      "resume where i left off",
+      "restore context",
+      "where was i",
+      "pick up where i left off",
+      "context restore"
+    ]
+  },
+  {
+    "name": "context-save",
+    "dir": "context-save",
+    "source": "personal",
+    "description": "Save working context. (gstack)",
+    "triggers": [
+      "save progress",
+      "save state",
+      "save my work",
+      "context save"
+    ]
+  },
+  {
+    "name": "continuity-check",
+    "dir": "continuity-check",
+    "source": "personal",
+    "description": "小说剧情连续性检查。写回指前文的句子时，先搜索原文确认事件的时间/地点/方式三要素一致。Use when writing or editing novel chapters that reference past events.",
+    "triggers": []
+  },
+  {
+    "name": "continuous-agent-loop",
+    "dir": "continuous-agent-loop",
+    "source": "marketplace",
+    "description": "具有质量门、评估和恢复控制的连续自主代理循环模式。",
+    "triggers": []
+  },
+  {
+    "name": "continuous-learning",
+    "dir": "continuous-learning",
+    "source": "marketplace",
+    "description": "Claude Codeセッションから再利用可能なパターンを自動的に抽出し、将来の使用のために学習済みスキルとして保存します。",
+    "triggers": []
+  },
+  {
+    "name": "continuous-learning-v2",
+    "dir": "continuous-learning-v2",
+    "source": "marketplace",
+    "description": "フックを介してセッションを観察し、信頼度スコアリング付きのアトミックなインスティンクトを作成し、スキル/コマンド/エージェントに進化させるインスティンクトベースの学習システム。",
+    "triggers": []
+  },
+  {
+    "name": "cost-aware-llm-pipeline",
+    "dir": "cost-aware-llm-pipeline",
+    "source": "marketplace",
+    "description": "LLM API 使用成本优化模式 —— 基于任务复杂度的模型路由、预算跟踪、重试逻辑和提示缓存。",
+    "triggers": []
+  },
+  {
+    "name": "council",
+    "dir": "council",
+    "source": "marketplace",
+    "description": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing.",
+    "triggers": []
+  },
+  {
+    "name": "cpp-coding-standards",
+    "dir": "cpp-coding-standards",
+    "source": "marketplace",
+    "description": "基于C++核心指南（isocpp.github.io）的C++编码标准。在编写、审查或重构C++代码时使用，以强制实施现代、安全和惯用的实践。",
+    "triggers": []
+  },
+  {
+    "name": "cpp-testing",
+    "dir": "cpp-testing",
+    "source": "marketplace",
+    "description": "C++ テストの作成/更新/修正、GoogleTest/CTest の設定、失敗またはフレーキーなテストの診断、カバレッジ/サニタイザーの追加時にのみ使用します。",
+    "triggers": []
+  },
+  {
+    "name": "crosspost",
+    "dir": "crosspost",
+    "source": "marketplace",
+    "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.",
+    "triggers": []
+  },
+  {
+    "name": "csharp-testing",
+    "dir": "csharp-testing",
+    "source": "marketplace",
+    "description": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices.",
+    "triggers": []
+  },
+  {
+    "name": "cso",
+    "dir": "cso",
+    "source": "personal",
+    "description": "Chief Security Officer mode. (gstack)",
+    "triggers": [
+      "security audit",
+      "check for vulnerabilities",
+      "owasp review"
+    ]
+  },
+  {
+    "name": "ctx-doctor",
+    "dir": "ctx-doctor",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "ctx-index",
+    "dir": "ctx-index",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "ctx-insight",
+    "dir": "ctx-insight",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "ctx-purge",
+    "dir": "ctx-purge",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "ctx-search",
+    "dir": "ctx-search",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "ctx-stats",
+    "dir": "ctx-stats",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "ctx-upgrade",
+    "dir": "ctx-upgrade",
+    "source": "marketplace",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "customer-billing-ops",
+    "dir": "customer-billing-ops",
+    "source": "marketplace",
+    "description": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan analysis using connected billing tools like Stripe. Use when the user needs to help a customer, inspect subscription state, or manage revenue-impacting billing operations.",
+    "triggers": []
+  },
+  {
+    "name": "customs-trade-compliance",
+    "dir": "customs-trade-compliance",
+    "source": "marketplace",
+    "description": "海关文件、关税分类、关税优化、受限方筛查以及多司法管辖区法规合规的编码化专业知识。由拥有15年以上经验的贸易合规专家提供。包括HS分类逻辑、Incoterms应用、自贸协定利用以及罚款减免。适用于处理海关清关、关税分类、贸易合规、进出口文件或关税优化时使用。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "dart-flutter-patterns",
+    "dir": "dart-flutter-patterns",
+    "source": "marketplace",
+    "description": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Provider), GoRouter navigation, Dio networking, Freezed code generation, and clean architecture.",
+    "triggers": []
+  },
+  {
+    "name": "dashboard-builder",
+    "dir": "dashboard-builder",
+    "source": "marketplace",
+    "description": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms. Use when turning metrics into a working dashboard instead of a vanity board.",
+    "triggers": []
+  },
+  {
+    "name": "data-scraper-agent",
+    "dir": "data-scraper-agent",
+    "source": "marketplace",
+    "description": "构建一个全自动化的AI驱动数据收集代理，适用于任何公共来源——招聘网站、价格信息、新闻、GitHub、体育赛事等任何内容。按计划进行抓取，使用免费LLM（Gemini Flash）丰富数据，将结果存储在Notion/Sheets/Supabase中，并从用户反馈中学习。完全免费在GitHub Actions上运行。适用于用户希望自动监控、收集或跟踪任何公共数据的场景。",
+    "triggers": []
+  },
+  {
+    "name": "database-migrations",
+    "dir": "database-migrations",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "debugging-and-error-recovery",
+    "dir": "debugging-and-error-recovery",
+    "source": "personal",
+    "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.",
+    "triggers": []
+  },
+  {
+    "name": "deep-research",
+    "dir": "deep-research",
+    "source": "marketplace",
+    "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+    "triggers": []
+  },
+  {
+    "name": "defi-amm-security",
+    "dir": "defi-amm-security",
+    "source": "marketplace",
+    "description": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math.",
+    "triggers": []
+  },
+  {
+    "name": "deployment-patterns",
+    "dir": "deployment-patterns",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "deprecation-and-migration",
+    "dir": "deprecation-and-migration",
+    "source": "personal",
+    "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
+    "triggers": []
+  },
+  {
+    "name": "design-consultation",
+    "dir": "design-consultation",
+    "source": "personal",
+    "description": "\"Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)\"",
+    "triggers": [
+      "design system",
+      "create a brand",
+      "design from scratch"
+    ]
+  },
+  {
+    "name": "design-html",
+    "dir": "design-html",
+    "source": "personal",
+    "description": "\"Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)\"",
+    "triggers": [
+      "build the design",
+      "code the mockup",
+      "make design real"
+    ]
+  },
+  {
+    "name": "design-review",
+    "dir": "design-review",
+    "source": "personal",
+    "description": "\"Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)\"",
+    "triggers": [
+      "visual design audit",
+      "design qa",
+      "fix design issues"
+    ]
+  },
+  {
+    "name": "design-shotgun",
+    "dir": "design-shotgun",
+    "source": "personal",
+    "description": "\"Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)\"",
+    "triggers": [
+      "explore design variants",
+      "show me design options",
+      "visual design brainstorm"
+    ]
+  },
+  {
+    "name": "design-system",
+    "dir": "design-system",
+    "source": "marketplace",
+    "description": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
+    "triggers": []
+  },
+  {
+    "name": "devex-review",
+    "dir": "devex-review",
+    "source": "personal",
+    "description": "Live developer experience audit. (gstack)",
+    "triggers": [
+      "live dx audit",
+      "test developer experience",
+      "measure onboarding time"
+    ]
+  },
+  {
+    "name": "diagnose",
+    "dir": "diagnose",
+    "source": "personal",
+    "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
+    "triggers": []
+  },
+  {
+    "name": "diagram",
+    "dir": "diagram",
+    "source": "personal",
+    "description": "\"Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)\"",
+    "triggers": [
+      "make a diagram",
+      "draw a diagram",
+      "create a flowchart",
+      "diagram this",
+      "visualize this flow",
+      "architecture diagram"
+    ]
+  },
+  {
+    "name": "django-patterns",
+    "dir": "django-patterns",
+    "source": "marketplace",
+    "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.",
+    "triggers": []
+  },
+  {
+    "name": "django-security",
+    "dir": "django-security",
+    "source": "marketplace",
+    "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.",
+    "triggers": []
+  },
+  {
+    "name": "django-tdd",
+    "dir": "django-tdd",
+    "source": "marketplace",
+    "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.",
+    "triggers": []
+  },
+  {
+    "name": "django-verification",
+    "dir": "django-verification",
+    "source": "marketplace",
+    "description": "Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR.",
+    "triggers": []
+  },
+  {
+    "name": "dmux-workflows",
+    "dir": "dmux-workflows",
+    "source": "marketplace",
+    "description": "Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows.",
+    "triggers": []
+  },
+  {
+    "name": "docker-patterns",
+    "dir": "docker-patterns",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "document-generate",
+    "dir": "document-generate",
+    "source": "personal",
+    "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+    "triggers": [
+      "write docs for this",
+      "generate documentation",
+      "document this feature",
+      "create a tutorial",
+      "write a how-to",
+      "explain this module",
+      "docs for this project"
+    ]
+  },
+  {
+    "name": "document-release",
+    "dir": "document-release",
+    "source": "personal",
+    "description": "Post-ship documentation update. (gstack)",
+    "triggers": [
+      "update docs after ship",
+      "document what changed",
+      "post-ship docs"
+    ]
+  },
+  {
+    "name": "documentation-and-adrs",
+    "dir": "documentation-and-adrs",
+    "source": "personal",
+    "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
+    "triggers": []
+  },
+  {
+    "name": "documentation-lookup",
+    "dir": "documentation-lookup",
+    "source": "marketplace",
+    "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
+    "triggers": []
+  },
+  {
+    "name": "dotnet-patterns",
+    "dir": "dotnet-patterns",
+    "source": "marketplace",
+    "description": "Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications.",
+    "triggers": []
+  },
+  {
+    "name": "doubt-driven-development",
+    "dir": "doubt-driven-development",
+    "source": "personal",
+    "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.",
+    "triggers": []
+  },
+  {
+    "name": "e2e-testing",
+    "dir": "e2e-testing",
+    "source": "marketplace",
+    "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.",
+    "triggers": []
+  },
+  {
+    "name": "ecc-tools-cost-audit",
+    "dir": "ecc-tools-cost-audit",
+    "source": "marketplace",
+    "description": "Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the ECC Tools repo.",
+    "triggers": []
+  },
+  {
+    "name": "email-ops",
+    "dir": "email-ops",
+    "source": "marketplace",
+    "description": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC. Use when the user wants to organize email, draft or send through the real mail surface, or prove what landed in Sent.",
+    "triggers": []
+  },
+  {
+    "name": "energy-procurement",
+    "dir": "energy-procurement",
+    "source": "marketplace",
+    "description": "电力与燃气采购、电价优化、需量电费管理、可再生能源购电协议评估及多设施能源成本管理的编码化专业知识。基于能源采购经理在大型工商业用户中超过15年的经验。包括市场结构分析、对冲策略、负荷分析和可持续性报告框架。适用于采购能源、优化电价、管理需量电费、评估购电协议或制定能源策略时使用。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "enterprise-agent-ops",
+    "dir": "enterprise-agent-ops",
+    "source": "marketplace",
+    "description": "通过可观测性、安全边界和生命周期管理来操作长期运行的代理工作负载。",
+    "triggers": []
+  },
+  {
+    "name": "eval-harness",
+    "dir": "eval-harness",
+    "source": "marketplace",
+    "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+    "triggers": []
+  },
+  {
+    "name": "everything-claude-code",
+    "dir": "everything-claude-code",
+    "source": "marketplace",
+    "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
+    "triggers": []
+  },
+  {
+    "name": "everything-claude-code-conventions",
+    "dir": "everything-claude-code",
+    "source": "marketplace",
+    "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
+    "triggers": []
+  },
+  {
+    "name": "evm-token-decimals",
+    "dir": "evm-token-decimals",
+    "source": "marketplace",
+    "description": "Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboards, and DeFi tools.",
+    "triggers": []
+  },
+  {
+    "name": "exa-search",
+    "dir": "exa-search",
+    "source": "marketplace",
+    "description": "Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural search engine.",
+    "triggers": []
+  },
+  {
+    "name": "fal-ai-media",
+    "dir": "fal-ai-media",
+    "source": "marketplace",
+    "description": "Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.",
+    "triggers": []
+  },
+  {
+    "name": "finance-billing-ops",
+    "dir": "finance-billing-ops",
+    "source": "marketplace",
+    "description": "Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC. Use when the user wants a sales snapshot, pricing comparison, duplicate-charge diagnosis, or code-backed billing reality instead of generic payments advice.",
+    "triggers": []
+  },
+  {
+    "name": "find-skills",
+    "dir": "find-skills",
+    "source": "personal",
+    "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "triggers": []
+  },
+  {
+    "name": "flutter-dart-code-review",
+    "dir": "flutter-dart-code-review",
+    "source": "marketplace",
+    "description": "库无关的Flutter/Dart代码审查清单，涵盖Widget最佳实践、状态管理模式（BLoC、Riverpod、Provider、GetX、MobX、Signals）、Dart惯用法、性能、可访问性、安全性和整洁架构。",
+    "triggers": []
+  },
+  {
+    "name": "foundation-models-on-device",
+    "dir": "foundation-models-on-device",
+    "source": "marketplace",
+    "description": "苹果FoundationModels框架用于设备上的LLM——文本生成、使用@Generable进行引导生成、工具调用，以及在iOS 26+中的快照流。",
+    "triggers": []
+  },
+  {
+    "name": "freeze",
+    "dir": "freeze",
+    "source": "personal",
+    "description": "Restrict file edits to a specific directory for the session. (gstack)",
+    "triggers": [
+      "freeze edits to directory",
+      "lock editing scope",
+      "restrict file changes"
+    ]
+  },
+  {
+    "name": "frontend-design",
+    "dir": "frontend-design",
+    "source": "personal",
+    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+    "triggers": []
+  },
+  {
+    "name": "frontend-patterns",
+    "dir": "frontend-patterns",
+    "source": "marketplace",
+    "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+    "triggers": []
+  },
+  {
+    "name": "frontend-slides",
+    "dir": "frontend-slides",
+    "source": "marketplace",
+    "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
+    "triggers": []
+  },
+  {
+    "name": "frontend-ui-engineering",
+    "dir": "frontend-ui-engineering",
+    "source": "personal",
+    "description": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
+    "triggers": []
+  },
+  {
+    "name": "gan-style-harness",
+    "dir": "gan-style-harness",
+    "source": "marketplace",
+    "description": "\"GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper.\"",
+    "triggers": []
+  },
+  {
+    "name": "gateguard",
+    "dir": "gateguard",
+    "source": "marketplace",
+    "description": "Fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Measurably improves output quality by +2.25 points vs ungated agents.",
+    "triggers": []
+  },
+  {
+    "name": "git-workflow",
+    "dir": "git-workflow",
+    "source": "marketplace",
+    "description": "Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.",
+    "triggers": []
+  },
+  {
+    "name": "git-workflow-and-versioning",
+    "dir": "git-workflow-and-versioning",
+    "source": "personal",
+    "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
+    "triggers": []
+  },
+  {
+    "name": "github-multi-repo",
+    "dir": "github-multi-repo",
+    "source": "personal",
+    "description": "Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration",
+    "triggers": []
+  },
+  {
+    "name": "github-ops",
+    "dir": "github-ops",
+    "source": "marketplace",
+    "description": "GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI. Use when the user wants to manage GitHub issues, PRs, CI status, releases, contributors, stale items, or any GitHub operational task beyond simple git commands.",
+    "triggers": []
+  },
+  {
+    "name": "github-project-management",
+    "dir": "github-project-management",
+    "source": "personal",
+    "description": "Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning",
+    "triggers": []
+  },
+  {
+    "name": "github-release-management",
+    "dir": "github-release-management",
+    "source": "personal",
+    "description": "Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management",
+    "triggers": []
+  },
+  {
+    "name": "github-workflow-automation",
+    "dir": "github-workflow-automation",
+    "source": "personal",
+    "description": "Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management",
+    "triggers": []
+  },
+  {
+    "name": "godot-game-dev",
+    "dir": "godot-game-dev",
+    "source": "personal",
+    "description": "Godot 4.x 游戏开发——弹跳王(无尽跳跃)/一杆闯天涯(物理攀爬), GDScript, 抖音小游戏适配",
+    "triggers": []
+  },
+  {
+    "name": "golang-patterns",
+    "dir": "golang-patterns",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "golang-testing",
+    "dir": "golang-testing",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "google-workspace-ops",
+    "dir": "google-workspace-ops",
+    "source": "marketplace",
+    "description": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared documents. Use when the user needs to find, summarize, edit, migrate, or clean up Google Workspace assets without dropping to raw tool calls.",
+    "triggers": []
+  },
+  {
+    "name": "grill-me",
+    "dir": "grill-me",
+    "source": "personal",
+    "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+    "triggers": []
+  },
+  {
+    "name": "grill-with-docs",
+    "dir": "grill-with-docs",
+    "source": "personal",
+    "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
+    "triggers": []
+  },
+  {
+    "name": "gstack",
+    "dir": "gstack",
+    "source": "gstack",
+    "description": "|",
+    "triggers": []
+  },
+  {
+    "name": "gstack-openclaw-ceo-review",
+    "dir": "gstack-openclaw-ceo-review",
+    "source": "gstack",
+    "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
+    "triggers": []
+  },
+  {
+    "name": "gstack-openclaw-investigate",
+    "dir": "gstack-openclaw-investigate",
+    "source": "gstack",
+    "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
+    "triggers": []
+  },
+  {
+    "name": "gstack-openclaw-office-hours",
+    "dir": "gstack-openclaw-office-hours",
+    "source": "gstack",
+    "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
+    "triggers": []
+  },
+  {
+    "name": "gstack-openclaw-retro",
+    "dir": "gstack-openclaw-retro",
+    "source": "gstack",
+    "description": "\"Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.\"",
+    "triggers": []
+  },
+  {
+    "name": "gstack-upgrade",
+    "dir": "gstack-upgrade",
+    "source": "personal",
+    "description": "Upgrade gstack to the latest version.",
+    "triggers": [
+      "upgrade gstack",
+      "update gstack version",
+      "get latest gstack"
+    ]
+  },
+  {
+    "name": "guard",
+    "dir": "guard",
+    "source": "personal",
+    "description": "\"Full safety mode: destructive command warnings + directory-scoped edits. (gstack)\"",
+    "triggers": [
+      "full safety mode",
+      "guard against mistakes",
+      "maximum safety"
+    ]
+  },
+  {
+    "name": "guizang-ppt-skill",
+    "dir": "guizang-ppt-skill",
+    "source": "personal",
+    "description": "生成\"电子杂志 × 电子墨水\"风格的横向翻页网页 PPT（单 HTML 文件），含 WebGL 流体背景、衬线标题 + 非衬线正文、章节幕封、数据大字报、图片网格等模板。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到\"杂志风 PPT\"、\"horizontal swipe deck\"、\"editorial magazine\"、\"e-ink presentation\"时使用。",
+    "triggers": []
+  },
+  {
+    "name": "hackernews-frontpage",
+    "dir": "hackernews-frontpage",
+    "source": "gstack",
+    "description": "Scrape the Hacker News front page (titles, points, comment counts).",
+    "triggers": [
+      "scrape hacker news frontpage",
+      "scrape hn frontpage",
+      "get hn top stories",
+      "latest hacker news stories"
+    ]
+  },
+  {
+    "name": "handoff",
+    "dir": "handoff",
+    "source": "personal",
+    "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+    "triggers": []
+  },
+  {
+    "name": "health",
+    "dir": "health",
+    "source": "personal",
+    "description": "Code quality dashboard. (gstack)",
+    "triggers": [
+      "code health check",
+      "quality dashboard",
+      "how healthy is codebase"
+    ]
+  },
+  {
+    "name": "healthcare-cdss-patterns",
+    "dir": "healthcare-cdss-patterns",
+    "source": "marketplace",
+    "description": "Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR workflows.",
+    "triggers": []
+  },
+  {
+    "name": "healthcare-emr-patterns",
+    "dir": "healthcare-emr-patterns",
+    "source": "marketplace",
+    "description": "EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry.",
+    "triggers": []
+  },
+  {
+    "name": "healthcare-eval-harness",
+    "dir": "healthcare-eval-harness",
+    "source": "marketplace",
+    "description": "Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks deployments on safety failures.",
+    "triggers": []
+  },
+  {
+    "name": "healthcare-phi-compliance",
+    "dir": "healthcare-phi-compliance",
+    "source": "marketplace",
+    "description": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryption, and common leak vectors.",
+    "triggers": []
+  },
+  {
+    "name": "hermes-imports",
+    "dir": "hermes-imports",
+    "source": "marketplace",
+    "description": "Convert local Hermes operator workflows into sanitized ECC skills and release-pack artifacts. Use when preparing a Hermes workflow for public ECC reuse without leaking private workspace state, credentials, or local-only paths.",
+    "triggers": []
+  },
+  {
+    "name": "hexagonal-architecture",
+    "dir": "hexagonal-architecture",
+    "source": "marketplace",
+    "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
+    "triggers": []
+  },
+  {
+    "name": "hipaa-compliance",
+    "dir": "hipaa-compliance",
+    "source": "marketplace",
+    "description": "HIPAA-specific entrypoint for healthcare privacy and security work. Use when a task is explicitly framed around HIPAA, PHI handling, covered entities, BAAs, breach posture, or US healthcare compliance requirements.",
+    "triggers": []
+  },
+  {
+    "name": "hook-development",
+    "dir": "hook-development",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API.",
+    "triggers": []
+  },
+  {
+    "name": "hookify-rules",
+    "dir": "hookify-rules",
+    "source": "marketplace",
+    "description": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns.",
+    "triggers": []
+  },
+  {
+    "name": "idea-refine",
+    "dir": "idea-refine",
+    "source": "personal",
+    "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers on \"ideate\", \"refine this idea\", or \"stress-test my plan\".",
+    "triggers": []
+  },
+  {
+    "name": "improve-codebase-architecture",
+    "dir": "improve-codebase-architecture",
+    "source": "personal",
+    "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
+    "triggers": []
+  },
+  {
+    "name": "incremental-implementation",
+    "dir": "incremental-implementation",
+    "source": "personal",
+    "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
+    "triggers": []
+  },
+  {
+    "name": "interview-me",
+    "dir": "interview-me",
+    "source": "personal",
+    "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when the user explicitly invokes (\"interview me\", \"grill me\", \"are we sure?\", \"stress-test my thinking\"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.",
+    "triggers": []
+  },
+  {
+    "name": "inventory-demand-planning",
+    "dir": "inventory-demand-planning",
+    "source": "marketplace",
+    "description": "为多地点零售商提供需求预测、安全库存优化、补货规划及促销提升估算的编码化专业知识。基于拥有15年以上管理数百个SKU经验的需求规划师的专业知识。包括预测方法选择、ABC/XYZ分析、季节性过渡管理及供应商谈判框架。适用于预测需求、设定安全库存、规划补货、管理促销或优化库存水平时使用。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "investigate",
+    "dir": "investigate",
+    "source": "personal",
+    "description": "Systematic debugging with root cause investigation. (gstack)",
+    "triggers": [
+      "debug this",
+      "fix this bug",
+      "why is this broken",
+      "root cause analysis",
+      "investigate this error"
+    ]
+  },
+  {
+    "name": "investor-materials",
+    "dir": "investor-materials",
+    "source": "marketplace",
+    "description": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents, projections, use-of-funds tables, milestone plans, or materials that must stay internally consistent across multiple fundraising assets.",
+    "triggers": []
+  },
+  {
+    "name": "investor-outreach",
+    "dir": "investor-outreach",
+    "source": "marketplace",
+    "description": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors, or accelerators and needs concise, personalized, investor-facing messaging.",
+    "triggers": []
+  },
+  {
+    "name": "ios-clean",
+    "dir": "ios-clean",
+    "source": "personal",
+    "description": "\"Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)\"",
+    "triggers": [
+      "clean the ios debug bridge",
+      "remove debugbridge",
+      "strip the gstack ios instrumentation"
+    ]
+  },
+  {
+    "name": "ios-design-review",
+    "dir": "ios-design-review",
+    "source": "personal",
+    "description": "Visual design audit for iOS apps on real hardware. (gstack)",
+    "triggers": [
+      "review the ios design",
+      "audit the iphone app visuals",
+      "design qa the ios app"
+    ]
+  },
+  {
+    "name": "ios-fix",
+    "dir": "ios-fix",
+    "source": "personal",
+    "description": "Autonomous iOS bug fixer. (gstack)",
+    "triggers": [
+      "fix this ios bug",
+      "patch the iphone app",
+      "auto-fix the ios issue"
+    ]
+  },
+  {
+    "name": "ios-qa",
+    "dir": "ios-qa",
+    "source": "personal",
+    "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
+    "triggers": [
+      "ios qa",
+      "test the iphone app",
+      "test my ios app",
+      "find bugs on the device",
+      "qa the ios app"
+    ]
+  },
+  {
+    "name": "ios-sync",
+    "dir": "ios-sync",
+    "source": "personal",
+    "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+    "triggers": [
+      "resync the ios debug bridge",
+      "regenerate ios accessors",
+      "update the gstack ios instrumentation"
+    ]
+  },
+  {
+    "name": "iterative-retrieval",
+    "dir": "iterative-retrieval",
+    "source": "marketplace",
+    "description": "サブエージェントのコンテキスト問題を解決するために、コンテキスト取得を段階的に洗練するパターン",
+    "triggers": []
+  },
+  {
+    "name": "java-coding-standards",
+    "dir": "java-coding-standards",
+    "source": "marketplace",
+    "description": "Spring Bootサービス向けのJavaコーディング標準：命名、不変性、Optional使用、ストリーム、例外、ジェネリクス、プロジェクトレイアウト。",
+    "triggers": []
+  },
+  {
+    "name": "jira-integration",
+    "dir": "jira-integration",
+    "source": "marketplace",
+    "description": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.",
+    "triggers": []
+  },
+  {
+    "name": "jpa-patterns",
+    "dir": "jpa-patterns",
+    "source": "marketplace",
+    "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.",
+    "triggers": []
+  },
+  {
+    "name": "knowledge-ops",
+    "dir": "knowledge-ops",
+    "source": "marketplace",
+    "description": "Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, vector stores, Git repos). Use when the user wants to save, organize, sync, deduplicate, or search across their knowledge systems.",
+    "triggers": []
+  },
+  {
+    "name": "kotlin-coroutines-flows",
+    "dir": "kotlin-coroutines-flows",
+    "source": "marketplace",
+    "description": "Kotlin协程与Flow在Android和KMP中的模式——结构化并发、Flow操作符、StateFlow、错误处理和测试。",
+    "triggers": []
+  },
+  {
+    "name": "kotlin-exposed-patterns",
+    "dir": "kotlin-exposed-patterns",
+    "source": "marketplace",
+    "description": "JetBrains Exposed ORM 模式，包括 DSL 查询、DAO 模式、事务、HikariCP 连接池、Flyway 迁移和仓库模式。",
+    "triggers": []
+  },
+  {
+    "name": "kotlin-ktor-patterns",
+    "dir": "kotlin-ktor-patterns",
+    "source": "marketplace",
+    "description": "Ktor 服务器模式，包括路由 DSL、插件、身份验证、Koin DI、kotlinx.serialization、WebSockets 和 testApplication 测试。",
+    "triggers": []
+  },
+  {
+    "name": "kotlin-patterns",
+    "dir": "kotlin-patterns",
+    "source": "marketplace",
+    "description": "Coroutine'ler, null safety ve DSL builder'lar ile sağlam, verimli ve sürdürülebilir Kotlin uygulamaları oluşturmak için idiomatic Kotlin kalıpları, en iyi uygulamalar ve konvansiyonlar.",
+    "triggers": []
+  },
+  {
+    "name": "kotlin-testing",
+    "dir": "kotlin-testing",
+    "source": "marketplace",
+    "description": "Kotest, MockK, coroutine testi, property-based testing ve Kover coverage ile Kotlin test kalıpları. İdiomatic Kotlin uygulamalarıyla TDD metodolojisini takip eder.",
+    "triggers": []
+  },
+  {
+    "name": "land-and-deploy",
+    "dir": "land-and-deploy",
+    "source": "personal",
+    "description": "Land and deploy workflow. (gstack)",
+    "triggers": [
+      "merge and deploy",
+      "land the pr",
+      "ship to production"
+    ]
+  },
+  {
+    "name": "landing-report",
+    "dir": "landing-report",
+    "source": "personal",
+    "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+    "triggers": [
+      "landing report",
+      "version queue",
+      "ship queue",
+      "what version comes next",
+      "show open PR versions"
+    ]
+  },
+  {
+    "name": "laravel-patterns",
+    "dir": "laravel-patterns",
+    "source": "marketplace",
+    "description": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.",
+    "triggers": []
+  },
+  {
+    "name": "laravel-plugin-discovery",
+    "dir": "laravel-plugin-discovery",
+    "source": "marketplace",
+    "description": "Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility.",
+    "triggers": []
+  },
+  {
+    "name": "laravel-security",
+    "dir": "laravel-security",
+    "source": "marketplace",
+    "description": "Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limiting, and secure deployment.",
+    "triggers": []
+  },
+  {
+    "name": "laravel-tdd",
+    "dir": "laravel-tdd",
+    "source": "marketplace",
+    "description": "Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.",
+    "triggers": []
+  },
+  {
+    "name": "laravel-verification",
+    "dir": "laravel-verification",
+    "source": "marketplace",
+    "description": "Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness.",
+    "triggers": []
+  },
+  {
+    "name": "lead-intelligence",
+    "dir": "lead-intelligence",
+    "source": "marketplace",
+    "description": "AI-native lead intelligence and outreach pipeline. Replaces Apollo, Clay, and ZoomInfo with agent-powered signal scoring, mutual ranking, warm path discovery, source-derived voice modeling, and channel-specific outreach across email, LinkedIn, and X. Use when the user wants to find, qualify, and reach high-value contacts.",
+    "triggers": []
+  },
+  {
+    "name": "learn",
+    "dir": "learn",
+    "source": "personal",
+    "description": "Manage project learnings.",
+    "triggers": [
+      "show learnings",
+      "what have we learned",
+      "manage project learnings"
+    ]
+  },
+  {
+    "name": "liquid-glass-design",
+    "dir": "liquid-glass-design",
+    "source": "marketplace",
+    "description": "iOS 26 液态玻璃设计系统 — 适用于 SwiftUI、UIKit 和 WidgetKit 的动态玻璃材质，具有模糊、反射和交互式变形效果。",
+    "triggers": []
+  },
+  {
+    "name": "llm-trading-agent-security",
+    "dir": "llm-trading-agent-security",
+    "source": "marketplace",
+    "description": "Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection, and key handling.",
+    "triggers": []
+  },
+  {
+    "name": "logistics-exception-management",
+    "dir": "logistics-exception-management",
+    "source": "marketplace",
+    "description": "针对货运异常、货物延误、损坏、丢失和承运商纠纷的编码化专业知识，由拥有15年以上运营经验的物流专业人士提供。包括升级协议、承运商特定行为、索赔程序和判断框架。在处理运输异常、货运索赔、交付问题或承运商纠纷时使用。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "make-pdf",
+    "dir": "make-pdf",
+    "source": "personal",
+    "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
+    "triggers": [
+      "markdown to pdf",
+      "generate pdf",
+      "make pdf",
+      "export pdf"
+    ]
+  },
+  {
+    "name": "manim-video",
+    "dir": "manim-video",
+    "source": "marketplace",
+    "description": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand off to the wider ECC video stack if needed. Use when the user wants a clean animated explainer rather than a generic talking-head script.",
+    "triggers": []
+  },
+  {
+    "name": "market-research",
+    "dir": "market-research",
+    "source": "marketplace",
+    "description": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants market sizing, competitor comparisons, fund research, technology scans, or research that informs business decisions.",
+    "triggers": []
+  },
+  {
+    "name": "math-olympiad",
+    "dir": "math-olympiad",
+    "source": "cache",
+    "description": "",
+    "triggers": []
+  },
+  {
+    "name": "mcp-builder",
+    "dir": "mcp-builder",
+    "source": "personal",
+    "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+    "triggers": []
+  },
+  {
+    "name": "mcp-integration",
+    "dir": "mcp-integration",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
+    "triggers": []
+  },
+  {
+    "name": "mcp-server-patterns",
+    "dir": "mcp-server-patterns",
+    "source": "marketplace",
+    "description": "Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.",
+    "triggers": []
+  },
+  {
+    "name": "messages-ops",
+    "dir": "messages-ops",
+    "source": "marketplace",
+    "description": "Evidence-first live messaging workflow for ECC. Use when the user wants to read texts or DMs, recover a recent one-time code, inspect a thread before replying, or prove which message source was actually checked.",
+    "triggers": []
+  },
+  {
+    "name": "nanoclaw-repl",
+    "dir": "nanoclaw-repl",
+    "source": "marketplace",
+    "description": "操作并扩展NanoClaw v2，这是ECC基于claude -p构建的零依赖会话感知REPL。",
+    "triggers": []
+  },
+  {
+    "name": "nestjs-patterns",
+    "dir": "nestjs-patterns",
+    "source": "marketplace",
+    "description": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.",
+    "triggers": []
+  },
+  {
+    "name": "nextjs-turbopack",
+    "dir": "nextjs-turbopack",
+    "source": "marketplace",
+    "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+    "triggers": []
+  },
+  {
+    "name": "nodejs-keccak256",
+    "dir": "nodejs-keccak256",
+    "source": "marketplace",
+    "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation.",
+    "triggers": []
+  },
+  {
+    "name": "novel-writing",
+    "dir": "novel-writing",
+    "source": "personal",
+    "description": "克苏鲁×塔罗小说《逆位猎人》写作——Cthulhu horror + Tarot collection, 紧贴主角直叙风格, 去AI味",
+    "triggers": []
+  },
+  {
+    "name": "nutrient-document-processing",
+    "dir": "nutrient-document-processing",
+    "source": "marketplace",
+    "description": "Nutrient DWS API を使用してドキュメントの処理、変換、OCR、抽出、編集、署名、フォーム入力を行います。PDF、DOCX、XLSX、PPTX、HTML、画像に対応しています。",
+    "triggers": []
+  },
+  {
+    "name": "nuxt4-patterns",
+    "dir": "nuxt4-patterns",
+    "source": "marketplace",
+    "description": "Nuxt 4 应用模式，涵盖水合安全、性能优化、路由规则、懒加载，以及使用 useFetch 和 useAsyncData 进行 SSR 安全的数据获取。",
+    "triggers": []
+  },
+  {
+    "name": "office-hours",
+    "dir": "office-hours",
+    "source": "personal",
+    "description": "YC Office Hours — two modes. (gstack)",
+    "triggers": [
+      "brainstorm this",
+      "is this worth building",
+      "help me think through",
+      "office hours"
+    ]
+  },
+  {
+    "name": "open-gstack-browser",
+    "dir": "connect-chrome",
+    "source": "personal",
+    "description": "|",
+    "triggers": [
+      "open gstack browser",
+      "launch chromium",
+      "show me the browser"
+    ]
+  },
+  {
+    "name": "openclaw-persona-forge",
+    "dir": "openclaw-persona-forge",
+    "source": "marketplace",
+    "description": "|-",
+    "triggers": []
+  },
+  {
+    "name": "opensource-pipeline",
+    "dir": "opensource-pipeline",
+    "source": "marketplace",
+    "description": "\"Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for open source'.\"",
+    "triggers": []
+  },
+  {
+    "name": "pair-agent",
+    "dir": "pair-agent",
+    "source": "personal",
+    "description": "Pair a remote AI agent with your browser. (gstack)",
+    "triggers": [
+      "pair with agent",
+      "connect remote agent",
+      "share my browser"
+    ]
+  },
+  {
+    "name": "pdf",
+    "dir": "pdf",
+    "source": "personal",
+    "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+    "triggers": []
+  },
+  {
+    "name": "performance-optimization",
+    "dir": "performance-optimization",
+    "source": "personal",
+    "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
+    "triggers": []
+  },
+  {
+    "name": "perl-patterns",
+    "dir": "perl-patterns",
+    "source": "marketplace",
+    "description": "现代 Perl 5.36+ 的惯用法、最佳实践和约定，用于构建稳健、可维护的 Perl 应用程序。",
+    "triggers": []
+  },
+  {
+    "name": "perl-security",
+    "dir": "perl-security",
+    "source": "marketplace",
+    "description": "全面的Perl安全指南，涵盖污染模式、输入验证、安全进程执行、DBI参数化查询、Web安全（XSS/SQLi/CSRF）以及perlcritic安全策略。",
+    "triggers": []
+  },
+  {
+    "name": "perl-testing",
+    "dir": "perl-testing",
+    "source": "marketplace",
+    "description": "使用Test2::V0、Test::More、prove runner、模拟、Devel::Cover覆盖率和TDD方法的Perl测试模式。",
+    "triggers": []
+  },
+  {
+    "name": "plan-ceo-review",
+    "dir": "plan-ceo-review",
+    "source": "personal",
+    "description": "CEO/founder-mode plan review. (gstack)",
+    "triggers": [
+      "think bigger",
+      "expand scope",
+      "strategy review",
+      "rethink this plan"
+    ]
+  },
+  {
+    "name": "plan-design-review",
+    "dir": "plan-design-review",
+    "source": "personal",
+    "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+    "triggers": [
+      "design plan review",
+      "review ux plan",
+      "check design decisions"
+    ]
+  },
+  {
+    "name": "plan-devex-review",
+    "dir": "plan-devex-review",
+    "source": "personal",
+    "description": "Interactive developer experience plan review. (gstack)",
+    "triggers": [
+      "developer experience review",
+      "dx plan review",
+      "check developer onboarding"
+    ]
+  },
+  {
+    "name": "plan-eng-review",
+    "dir": "plan-eng-review",
+    "source": "personal",
+    "description": "Eng manager-mode plan review. (gstack)",
+    "triggers": [
+      "review architecture",
+      "eng plan review",
+      "check the implementation plan"
+    ]
+  },
+  {
+    "name": "plan-tune",
+    "dir": "plan-tune",
+    "source": "personal",
+    "description": "\"Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)\"",
+    "triggers": [
+      "tune questions",
+      "stop asking me that",
+      "too many questions",
+      "show my profile",
+      "show my vibe",
+      "developer profile",
+      "turn off question tuning"
+    ]
+  },
+  {
+    "name": "plankton-code-quality",
+    "dir": "plankton-code-quality",
+    "source": "marketplace",
+    "description": "\"使用Plankton进行编写时代码质量强制执行——通过钩子在每次文件编辑时自动格式化、代码检查和Claude驱动的修复。\"",
+    "triggers": []
+  },
+  {
+    "name": "planning-and-task-breakdown",
+    "dir": "planning-and-task-breakdown",
+    "source": "personal",
+    "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.",
+    "triggers": []
+  },
+  {
+    "name": "playground",
+    "dir": "playground",
+    "source": "cache",
+    "description": "Creates interactive HTML playgrounds — self-contained single-file explorers that let users configure something visually through controls, see a live preview, and copy out a prompt. Use when the user asks to make a playground, explorer, or interactive tool for a topic.",
+    "triggers": []
+  },
+  {
+    "name": "plugin-settings",
+    "dir": "plugin-settings",
+    "source": "cache",
+    "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.",
+    "triggers": []
+  },
+  {
+    "name": "plugin-structure",
+    "dir": "plugin-structure",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.",
+    "triggers": []
+  },
+  {
+    "name": "postgres-patterns",
+    "dir": "postgres-patterns",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "product-capability",
+    "dir": "product-capability",
+    "source": "marketplace",
+    "description": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions before multi-service work starts. Use when the user needs an ECC-native PRD-to-SRS lane instead of vague planning prose.",
+    "triggers": []
+  },
+  {
+    "name": "product-lens",
+    "dir": "product-lens",
+    "source": "marketplace",
+    "description": "Use this skill to validate the \"why\" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract.",
+    "triggers": []
+  },
+  {
+    "name": "production-scheduling",
+    "dir": "production-scheduling",
+    "source": "marketplace",
+    "description": "为离散和批量制造中的生产调度、作业排序、产线平衡、换模优化和瓶颈解决提供编码化专业知识。基于拥有15年以上经验的生产调度师的知识。包括约束理论/鼓-缓冲-绳、快速换模、设备综合效率分析、中断响应框架以及企业资源计划/制造执行系统交互模式。适用于调度生产、解决瓶颈、优化换模、应对中断或平衡制造产线时。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "project-flow-ops",
+    "dir": "project-flow-ops",
+    "source": "marketplace",
+    "description": "Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keeping GitHub public-facing while Linear remains the internal execution layer. Use when the user wants backlog control, PR triage, or GitHub-to-Linear coordination.",
+    "triggers": []
+  },
+  {
+    "name": "project-guidelines-example",
+    "dir": "project-guidelines-example",
+    "source": "marketplace",
+    "description": "",
+    "triggers": []
+  },
+  {
+    "name": "prompt-optimizer",
+    "dir": "prompt-optimizer",
+    "source": "marketplace",
+    "description": "分析原始提示，识别意图和差距，匹配ECC组件（技能/命令/代理/钩子），并输出一个可直接粘贴的优化提示。仅提供咨询角色——绝不自行执行任务。触发时机：当用户说“优化提示”、“改进我的提示”、“如何编写提示”、“帮我优化这个指令”或明确要求提高提示质量时。中文等效表达同样触发：“优化prompt”、“改进prompt”、“怎么写prompt”、“帮我优化这个指令”。不触发时机：当用户希望直接执行任务，或说“直接做”时。不触发时机：当用户说“优化代码”、“优化性能”、“optimize performance”、“optimize this code”时——这些是重构/性能优化任务，而非提示优化。",
+    "triggers": []
+  },
+  {
+    "name": "prototype",
+    "dir": "prototype",
+    "source": "personal",
+    "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
+    "triggers": []
+  },
+  {
+    "name": "python-patterns",
+    "dir": "python-patterns",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "python-testing",
+    "dir": "python-testing",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "pytorch-patterns",
+    "dir": "pytorch-patterns",
+    "source": "marketplace",
+    "description": "PyTorch深度学习模式与最佳实践，用于构建稳健、高效且可复现的训练流程、模型架构和数据加载。",
+    "triggers": []
+  },
+  {
+    "name": "qa",
+    "dir": "qa",
+    "source": "personal",
+    "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+    "triggers": [
+      "qa test this",
+      "find bugs on site",
+      "test the site"
+    ]
+  },
+  {
+    "name": "qa-only",
+    "dir": "qa-only",
+    "source": "personal",
+    "description": "Report-only QA testing. (gstack)",
+    "triggers": [
+      "qa report only",
+      "just report bugs",
+      "test but dont fix"
+    ]
+  },
+  {
+    "name": "quality-nonconformance",
+    "dir": "quality-nonconformance",
+    "source": "marketplace",
+    "description": "为受监管制造业中的质量控制、不合格调查、根本原因分析、纠正措施和供应商质量管理提供编码化专业知识。基于在FDA、IATF 16949和AS9100环境中拥有15年以上经验的质量工程师的见解。包括不合格报告生命周期管理、纠正与预防措施系统、统计过程控制解释和审核方法。适用于调查不合格、进行根本原因分析、管理纠正与预防措施、解释统计过程控制数据或处理供应商质量问题。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "ralphinho-rfc-pipeline",
+    "dir": "ralphinho-rfc-pipeline",
+    "source": "marketplace",
+    "description": "基于RFC驱动的多智能体DAG执行模式，包含质量门、合并队列和工作单元编排。",
+    "triggers": []
+  },
+  {
+    "name": "regex-vs-llm-structured-text",
+    "dir": "regex-vs-llm-structured-text",
+    "source": "marketplace",
+    "description": "选择在解析结构化文本时使用正则表达式还是大型语言模型的决策框架——从正则表达式开始，仅在低置信度的边缘情况下添加大型语言模型。",
+    "triggers": []
+  },
+  {
+    "name": "remotion-video-creation",
+    "dir": "remotion-video-creation",
+    "source": "marketplace",
+    "description": "Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more.",
+    "triggers": []
+  },
+  {
+    "name": "repo-scan",
+    "dir": "repo-scan",
+    "source": "marketplace",
+    "description": "Cross-stack source code asset audit — classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports.",
+    "triggers": []
+  },
+  {
+    "name": "research-ops",
+    "dir": "research-ops",
+    "source": "marketplace",
+    "description": "Evidence-first current-state research workflow for ECC. Use when the user wants fresh facts, comparisons, enrichment, or a recommendation built from current public evidence and any supplied local context.",
+    "triggers": []
+  },
+  {
+    "name": "retro",
+    "dir": "retro",
+    "source": "personal",
+    "description": "Weekly engineering retrospective. (gstack)",
+    "triggers": [
+      "weekly retro",
+      "what did we ship",
+      "engineering retrospective"
+    ]
+  },
+  {
+    "name": "returns-reverse-logistics",
+    "dir": "returns-reverse-logistics",
+    "source": "marketplace",
+    "description": "用于退货授权、接收与检验、处置决策、退款处理、欺诈检测以及保修索赔管理的标准化专业知识。基于拥有15年以上经验的退货运营经理的见解。包括分级框架、处置经济学、欺诈模式识别和供应商回收流程。适用于处理产品退货、逆向物流、退款决策、退货欺诈检测或保修索赔时使用。license: Apache-2.0",
+    "triggers": []
+  },
+  {
+    "name": "review",
+    "dir": "review",
+    "source": "personal",
+    "description": "Pre-landing PR review. (gstack)",
+    "triggers": [
+      "review this pr",
+      "code review",
+      "check my diff",
+      "pre-landing review"
+    ]
+  },
+  {
+    "name": "rules-distill",
+    "dir": "rules-distill",
+    "source": "marketplace",
+    "description": "\"扫描技能以提取跨领域原则并将其提炼为规则——追加、修订或创建新的规则文件\"",
+    "triggers": []
+  },
+  {
+    "name": "rust-patterns",
+    "dir": "rust-patterns",
+    "source": "marketplace",
+    "description": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.",
+    "triggers": []
+  },
+  {
+    "name": "rust-testing",
+    "dir": "rust-testing",
+    "source": "marketplace",
+    "description": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.",
+    "triggers": []
+  },
+  {
+    "name": "safety-guard",
+    "dir": "safety-guard",
+    "source": "marketplace",
+    "description": "Use this skill to prevent destructive operations when working on production systems or running agents autonomously.",
+    "triggers": []
+  },
+  {
+    "name": "santa-method",
+    "dir": "santa-method",
+    "source": "marketplace",
+    "description": "\"Multi-agent adversarial verification with convergence loop. Two independent review agents must both pass before output ships.\"",
+    "triggers": []
+  },
+  {
+    "name": "scrape",
+    "dir": "scrape",
+    "source": "personal",
+    "description": "Pull data from a web page. (gstack)",
+    "triggers": [
+      "scrape this page",
+      "get data from",
+      "pull from",
+      "extract from",
+      "what is on"
+    ]
+  },
+  {
+    "name": "search-first",
+    "dir": "search-first",
+    "source": "marketplace",
+    "description": ">",
+    "triggers": []
+  },
+  {
+    "name": "security-and-hardening",
+    "dir": "security-and-hardening",
+    "source": "personal",
+    "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
+    "triggers": []
+  },
+  {
+    "name": "security-bounty-hunter",
+    "dir": "security-bounty-hunter",
+    "source": "marketplace",
+    "description": "Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.",
+    "triggers": []
+  },
+  {
+    "name": "security-review",
+    "dir": "security-review",
+    "source": "marketplace",
+    "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+    "triggers": []
+  },
+  {
+    "name": "security-scan",
+    "dir": "security-scan",
+    "source": "marketplace",
+    "description": "AgentShield を使用して、Claude Code の設定（.claude/ ディレクトリ）のセキュリティ脆弱性、設定ミス、インジェクションリスクをスキャンします。CLAUDE.md、settings.json、MCP サーバー、フック、エージェント定義をチェックします。",
+    "triggers": []
+  },
+  {
+    "name": "seo",
+    "dir": "seo",
+    "source": "marketplace",
+    "description": "Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vitals, and content strategy. Use when the user wants better search visibility, SEO remediation, schema markup, sitemap/robots work, or keyword mapping.",
+    "triggers": []
+  },
+  {
+    "name": "session-report",
+    "dir": "session-report",
+    "source": "cache",
+    "description": "Generate an explorable HTML report of Claude Code session usage (tokens, cache, subagents, skills, expensive prompts) from ~/.claude/projects transcripts.",
+    "triggers": []
+  },
+  {
+    "name": "setup-browser-cookies",
+    "dir": "setup-browser-cookies",
+    "source": "personal",
+    "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+    "triggers": [
+      "import browser cookies",
+      "login to test site",
+      "setup authenticated session"
+    ]
+  },
+  {
+    "name": "setup-deploy",
+    "dir": "setup-deploy",
+    "source": "personal",
+    "description": "Configure deployment settings for /land-and-deploy.",
+    "triggers": [
+      "configure deploy",
+      "setup deployment",
+      "set deploy platform"
+    ]
+  },
+  {
+    "name": "setup-gbrain",
+    "dir": "setup-gbrain",
+    "source": "personal",
+    "description": "\"Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)\"",
+    "triggers": [
+      "setup gbrain",
+      "install gbrain",
+      "connect gbrain",
+      "start gbrain",
+      "configure gbrain"
+    ]
+  },
+  {
+    "name": "setup-matt-pocock-skills",
+    "dir": "setup-matt-pocock-skills",
+    "source": "personal",
+    "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.",
+    "triggers": []
+  },
+  {
+    "name": "shenhai-writing",
+    "dir": "shenhai-writing",
+    "source": "personal",
+    "description": "黑暗幻想小说《走在神的尸骸上》写作——永夜世界、神骸体系、父亲烧城送子、墟行者追寻壁画、裂缝终结",
+    "triggers": []
+  },
+  {
+    "name": "ship",
+    "dir": "ship",
+    "source": "personal",
+    "description": "\"Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)\"",
+    "triggers": [
+      "ship it",
+      "create a pr",
+      "push to main",
+      "deploy this"
+    ]
+  },
+  {
+    "name": "shipping-and-launch",
+    "dir": "shipping-and-launch",
+    "source": "personal",
+    "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
+    "triggers": []
+  },
+  {
+    "name": "skill-comply",
+    "dir": "skill-comply",
+    "source": "marketplace",
+    "description": "Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines",
+    "triggers": []
+  },
+  {
+    "name": "skill-creator",
+    "dir": "skill-creator",
+    "source": "cache",
+    "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+    "triggers": []
+  },
+  {
+    "name": "skill-development",
+    "dir": "skill-development",
+    "source": "cache",
+    "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
+    "triggers": []
+  },
+  {
+    "name": "skill-stocktake",
+    "dir": "skill-stocktake",
+    "source": "marketplace",
+    "description": "\"用于审计Claude技能和命令的质量。支持快速扫描（仅变更技能）和全面盘点模式，采用顺序子代理批量评估。\"",
+    "triggers": []
+  },
+  {
+    "name": "skillify",
+    "dir": "skillify",
+    "source": "personal",
+    "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+    "triggers": [
+      "skillify",
+      "codify this scrape",
+      "save this scrape",
+      "make this permanent"
+    ]
+  },
+  {
+    "name": "social-graph-ranker",
+    "dir": "social-graph-ranker",
+    "source": "marketplace",
+    "description": "Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn. Use when the user wants the reusable graph-ranking engine itself, not the broader outreach or network-maintenance workflow layered on top of it.",
+    "triggers": []
+  },
+  {
+    "name": "source-driven-development",
+    "dir": "source-driven-development",
+    "source": "personal",
+    "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
+    "triggers": []
+  },
+  {
+    "name": "spec",
+    "dir": "spec",
+    "source": "personal",
+    "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+    "triggers": [
+      "spec this out",
+      "file an issue",
+      "write up a ticket",
+      "turn this into an issue",
+      "make this a github issue",
+      "turn this into a backlog item"
+    ]
+  },
+  {
+    "name": "spec-driven-development",
+    "dir": "spec-driven-development",
+    "source": "personal",
+    "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
+    "triggers": []
+  },
+  {
+    "name": "springboot-patterns",
+    "dir": "springboot-patterns",
+    "source": "marketplace",
+    "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work.",
+    "triggers": []
+  },
+  {
+    "name": "springboot-security",
+    "dir": "springboot-security",
+    "source": "marketplace",
+    "description": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services.",
+    "triggers": []
+  },
+  {
+    "name": "springboot-tdd",
+    "dir": "springboot-tdd",
+    "source": "marketplace",
+    "description": "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring.",
+    "triggers": []
+  },
+  {
+    "name": "springboot-verification",
+    "dir": "springboot-verification",
+    "source": "marketplace",
+    "description": "Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR.",
+    "triggers": []
+  },
+  {
+    "name": "strategic-compact",
+    "dir": "strategic-compact",
+    "source": "marketplace",
+    "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+    "triggers": []
+  },
+  {
+    "name": "swift-actor-persistence",
+    "dir": "swift-actor-persistence",
+    "source": "marketplace",
+    "description": "在 Swift 中使用 actor 实现线程安全的数据持久化——基于内存缓存与文件支持的存储，通过设计消除数据竞争。",
+    "triggers": []
+  },
+  {
+    "name": "swift-concurrency-6-2",
+    "dir": "swift-concurrency-6-2",
+    "source": "marketplace",
+    "description": "Swift 6.2 可接近的并发性 — 默认单线程，@concurrent 用于显式后台卸载，隔离一致性用于主 actor 类型。",
+    "triggers": []
+  },
+  {
+    "name": "swift-protocol-di-testing",
+    "dir": "swift-protocol-di-testing",
+    "source": "marketplace",
+    "description": "基于协议的依赖注入，用于可测试的Swift代码——使用聚焦协议和Swift Testing模拟文件系统、网络和外部API。",
+    "triggers": []
+  },
+  {
+    "name": "swiftui-patterns",
+    "dir": "swiftui-patterns",
+    "source": "marketplace",
+    "description": "SwiftUI 架构模式，使用 @Observable 进行状态管理，视图组合，导航，性能优化，以及现代 iOS/macOS UI 最佳实践。",
+    "triggers": []
+  },
+  {
+    "name": "sync-gbrain",
+    "dir": "sync-gbrain",
+    "source": "personal",
+    "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+    "triggers": [
+      "sync gbrain",
+      "refresh gbrain",
+      "reindex repo",
+      "update gbrain"
+    ]
+  },
+  {
+    "name": "tdd",
+    "dir": "tdd",
+    "source": "personal",
+    "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
+    "triggers": []
+  },
+  {
+    "name": "tdd-workflow",
+    "dir": "tdd-workflow",
+    "source": "marketplace",
+    "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+    "triggers": []
+  },
+  {
+    "name": "team-builder",
+    "dir": "team-builder",
+    "source": "marketplace",
+    "description": "用于组合和派遣并行团队的交互式代理选择器",
+    "triggers": []
+  },
+  {
+    "name": "terminal-ops",
+    "dir": "terminal-ops",
+    "source": "marketplace",
+    "description": "Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what was executed and verified.",
+    "triggers": []
+  },
+  {
+    "name": "test-driven-development",
+    "dir": "test-driven-development",
+    "source": "personal",
+    "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
+    "triggers": []
+  },
+  {
+    "name": "theme-factory",
+    "dir": "theme-factory",
+    "source": "personal",
+    "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+    "triggers": []
+  },
+  {
+    "name": "to-issues",
+    "dir": "to-issues",
+    "source": "personal",
+    "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
+    "triggers": []
+  },
+  {
+    "name": "to-prd",
+    "dir": "to-prd",
+    "source": "personal",
+    "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
+    "triggers": []
+  },
+  {
+    "name": "token-budget-advisor",
+    "dir": "token-budget-advisor",
+    "source": "marketplace",
+    "description": ">-",
+    "triggers": []
+  },
+  {
+    "name": "triage",
+    "dir": "triage",
+    "source": "personal",
+    "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
+    "triggers": []
+  },
+  {
+    "name": "ui-demo",
+    "dir": "ui-demo",
+    "source": "marketplace",
+    "description": "Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. Produces WebM videos with visible cursor, natural pacing, and professional feel.",
+    "triggers": []
+  },
+  {
+    "name": "unfreeze",
+    "dir": "unfreeze",
+    "source": "personal",
+    "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+    "triggers": [
+      "unfreeze edits",
+      "unlock all directories",
+      "remove edit restrictions"
+    ]
+  },
+  {
+    "name": "unified-notifications-ops",
+    "dir": "unified-notifications-ops",
+    "source": "marketplace",
+    "description": "Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communication surfaces. Use when the real problem is alert routing, deduplication, escalation, or inbox collapse.",
+    "triggers": []
+  },
+  {
+    "name": "using-agent-skills",
+    "dir": "using-agent-skills",
+    "source": "personal",
+    "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.",
+    "triggers": []
+  },
+  {
+    "name": "verification-loop",
+    "dir": "verification-loop",
+    "source": "marketplace",
+    "description": "\"A comprehensive verification system for Claude Code sessions.\"",
+    "triggers": []
+  },
+  {
+    "name": "video-editing",
+    "dir": "video-editing",
+    "source": "marketplace",
+    "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
+    "triggers": []
+  },
+  {
+    "name": "videodb",
+    "dir": "videodb",
+    "source": "marketplace",
+    "description": "视频与音频的查看、理解与行动。查看：从本地文件、URL、RTSP/直播源或实时录制桌面获取内容；返回实时上下文和可播放流链接。理解：提取帧，构建视觉/语义/时间索引，并通过时间戳和自动剪辑搜索片段。行动：转码和标准化（编解码器、帧率、分辨率、宽高比），执行时间线编辑（字幕、文本/图像叠加、品牌化、音频叠加、配音、翻译），生成媒体资源（图像、音频、视频），并为直播流或桌面捕获的事件创建实时警报。",
+    "triggers": []
+  },
+  {
+    "name": "visa-doc-translate",
+    "dir": "visa-doc-translate",
+    "source": "marketplace",
+    "description": "将签证申请文件（图片）翻译成英文，并创建包含原文和译文的双语PDF",
+    "triggers": []
+  },
+  {
+    "name": "visual-review",
+    "dir": "visual-review",
+    "source": "personal",
+    "description": "Use when you need to review rendered images, game screenshots, 3D model previews, UI mockups, or any visual output. Triggers on keywords like \"看看效果\", \"截图\", \"渲染\", \"preview\", \"screenshot\", \"视觉效果\", \"建模\".",
+    "triggers": []
+  },
+  {
+    "name": "web-artifacts-builder",
+    "dir": "web-artifacts-builder",
+    "source": "personal",
+    "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+    "triggers": []
+  },
+  {
+    "name": "webapp-testing",
+    "dir": "webapp-testing",
+    "source": "personal",
+    "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+    "triggers": []
+  },
+  {
+    "name": "workspace-surface-audit",
+    "dir": "workspace-surface-audit",
+    "source": "marketplace",
+    "description": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment.",
+    "triggers": []
+  },
+  {
+    "name": "write-a-skill",
+    "dir": "write-a-skill",
+    "source": "personal",
+    "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
+    "triggers": []
+  },
+  {
+    "name": "writing-hookify-rules",
+    "dir": "writing-rules",
+    "source": "cache",
+    "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
+    "triggers": []
+  },
+  {
+    "name": "x-api",
+    "dir": "x-api",
+    "source": "marketplace",
+    "description": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.",
+    "triggers": []
+  },
+  {
+    "name": "zoom-out",
+    "dir": "zoom-out",
+    "source": "personal",
+    "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
+    "triggers": []
+  }
+]

@@ -1,0 +1,10 @@
+[
+  { "query": "审计并改进仓库的 CLAUDE.md 文件", "expected": ["claude-md-improver"] },
+  { "query": "构建一个 MCP server", "expected": ["build-mcp-server"] },
+  { "query": "做 WCAG 无障碍审计", "expected": ["accessibility"] },
+  { "query": "对比几个编码代理在任务上的表现", "expected": ["agent-eval"] },
+  { "query": "Android 项目设计 Clean Architecture 模块结构", "expected": ["android-clean-architecture"] },
+  { "query": "把架构决策记录成结构化 ADR", "expected": ["architecture-decision-records"] },
+  { "query": "给 AI agent 加 x402 支付和预算控制", "expected": ["agent-payment-x402"] },
+  { "query": "写技术博客和教程", "expected": ["article-writing"] }
+]

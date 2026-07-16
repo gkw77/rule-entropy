@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-07-16",
+  "corpus": "skills-corpus-full.json (325 unique skills)",
+  "testsetSize": 8,
+  "l0CoverageFound": 7,
+  "l0CoverageRecall": 0.875,
+  "note": "L0 任意 confidence 命中即算可检索。8 题 expected 都是 marketplace/cache skill，70-corpus 不索引 -> l070Hit 全 false。325 上 l0FullHit = 扩展覆盖价值",
+  "detail": [
+    {
+      "query": "审计并改进仓库的 CLAUDE.md 文件",
+      "expected": "claude-md-improver",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 3,
+      "l0FullConf": 0.144,
+      "l0FullTop": "codebase-onboarding",
+      "l070Hit": false
+    },
+    {
+      "query": "构建一个 MCP server",
+      "expected": "build-mcp-server",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 5,
+      "l0FullConf": 0.352,
+      "l0FullTop": "data-scraper-agent",
+      "l070Hit": false
+    },
+    {
+      "query": "做 WCAG 无障碍审计",
+      "expected": "accessibility",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 1,
+      "l0FullConf": 0.167,
+      "l0FullTop": "accessibility",
+      "l070Hit": false
+    },
+    {
+      "query": "对比几个编码代理在任务上的表现",
+      "expected": "agent-eval",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 1,
+      "l0FullConf": 0.393,
+      "l0FullTop": "agent-eval",
+      "l070Hit": false
+    },
+    {
+      "query": "Android 项目设计 Clean Architecture 模块结构",
+      "expected": "android-clean-architecture",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 1,
+      "l0FullConf": 0.76,
+      "l0FullTop": "android-clean-architecture",
+      "l070Hit": false
+    },
+    {
+      "query": "把架构决策记录成结构化 ADR",
+      "expected": "architecture-decision-records",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 1,
+      "l0FullConf": 0.706,
+      "l0FullTop": "architecture-decision-records",
+      "l070Hit": false
+    },
+    {
+      "query": "给 AI agent 加 x402 支付和预算控制",
+      "expected": "agent-payment-x402",
+      "in70Corpus": false,
+      "l0FullHit": true,
+      "l0FullRank": 1,
+      "l0FullConf": 0.16,
+      "l0FullTop": "agent-payment-x402",
+      "l070Hit": false
+    },
+    {
+      "query": "写技术博客和教程",
+      "expected": "article-writing",
+      "in70Corpus": false,
+      "l0FullHit": false,
+      "l0FullRank": null,
+      "l0FullConf": 0,
+      "l0FullTop": null,
+      "l070Hit": false
+    }
+  ]
+}
