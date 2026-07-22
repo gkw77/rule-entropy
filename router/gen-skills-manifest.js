@@ -3,9 +3,10 @@
 // 这就是路由器要索引的语料 -- frontmatter 本就是触发面。
 
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const SKILLS_DIR = process.env.SKILLS_DIR || 'C:/Users/ketwo/.claude/skills';
+const SKILLS_DIR = process.env.SKILLS_DIR || path.join(os.homedir(), '.claude', 'skills');
 const OUT = path.join(__dirname, '..', 'skills-corpus.json');
 
 function parseFrontmatter(content) {

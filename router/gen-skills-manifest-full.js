@@ -7,9 +7,10 @@
 // source 优先级 personal > gstack > marketplace > cache（同名去重保留高优先级）。
 
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 
-const CLAUDE = 'C:/Users/ketwo/.claude';
+const CLAUDE = process.env.CLAUDE_DIR || path.join(os.homedir(), '.claude');
 const ROOTS = [
   { source: 'personal', dir: `${CLAUDE}/skills`, direct: true }, // 仅直接子目录
   { source: 'gstack', dir: `${CLAUDE}/skills/gstack`, direct: false },
@@ -130,7 +131,7 @@ function main() {
     if (!desc && triggers.length === 0) noDesc++;
     let mtime = null;
     try { mtime = fs.statSync(f.file).mtime.toISOString(); } catch {}
-    manifest.push({ name, dir: f.dir, source: f.source, description: desc, triggers, file: f.file, mtime });
+    manifest.push({ name, dir: f.dir, source: f.source, description: desc, triggers, file: path.relative(CLAUDE, f.file).replace(/\\/g, '/'), mtime });
     perSource[f.source] = (perSource[f.source] || 0) + 1;
   }
 

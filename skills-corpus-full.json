@@ -5,7 +5,7 @@
     "source": "marketplace",
     "description": "Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\accessibility\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/accessibility/SKILL.md",
     "mtime": "2026-05-05T19:30:21.179Z"
   },
   {
@@ -14,7 +14,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\agent-development\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/agent-development/SKILL.md",
     "mtime": "2026-05-09T19:05:25.498Z"
   },
   {
@@ -23,7 +23,7 @@
     "source": "marketplace",
     "description": "编码代理（Claude Code、Aider、Codex等）在自定义任务上的直接比较，包含通过率、成本、时间和一致性指标",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\agent-eval\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/agent-eval/SKILL.md",
     "mtime": "2026-05-05T19:30:21.042Z"
   },
   {
@@ -32,7 +32,7 @@
     "source": "marketplace",
     "description": "设计和优化AI代理的动作空间、工具定义和观察格式，以提高完成率。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\agent-harness-construction\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/agent-harness-construction/SKILL.md",
     "mtime": "2026-05-05T19:30:21.042Z"
   },
   {
@@ -41,7 +41,7 @@
     "source": "marketplace",
     "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\agent-introspection-debugging\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/agent-introspection-debugging/SKILL.md",
     "mtime": "2026-05-05T19:30:20.673Z"
   },
   {
@@ -50,7 +50,7 @@
     "source": "marketplace",
     "description": "Add x402 payment execution to AI agents — per-task budgets, spending controls, and non-custodial wallets via MCP tools. Use when agents need to pay for APIs, services, or other agents.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\agent-payment-x402\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/agent-payment-x402/SKILL.md",
     "mtime": "2026-05-05T19:30:21.181Z"
   },
   {
@@ -59,7 +59,7 @@
     "source": "marketplace",
     "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\agent-sort\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/agent-sort/SKILL.md",
     "mtime": "2026-05-05T19:30:20.674Z"
   },
   {
@@ -68,7 +68,7 @@
     "source": "marketplace",
     "description": "Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing. Use when AI agents perform most implementation work and humans enforce quality and risk controls.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\agentic-engineering\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/agentic-engineering/SKILL.md",
     "mtime": "2026-05-05T19:30:20.733Z"
   },
   {
@@ -77,7 +77,7 @@
     "source": "marketplace",
     "description": "团队中人工智能代理生成大部分实施输出的工程运营模型。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\ai-first-engineering\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/ai-first-engineering/SKILL.md",
     "mtime": "2026-05-05T19:30:21.042Z"
   },
   {
@@ -86,7 +86,7 @@
     "source": "marketplace",
     "description": "AI辅助开发的回归测试策略。沙盒模式API测试，无需依赖数据库，自动化的缺陷检查工作流程，以及捕捉AI盲点的模式，其中同一模型编写和审查代码。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\ai-regression-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/ai-regression-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:21.042Z"
   },
   {
@@ -95,7 +95,7 @@
     "source": "marketplace",
     "description": "适用于Android和Kotlin多平台项目的Clean Architecture模式——模块结构、依赖规则、用例、仓库以及数据层模式。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\android-clean-architecture\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/android-clean-architecture/SKILL.md",
     "mtime": "2026-05-05T19:30:21.043Z"
   },
   {
@@ -104,7 +104,7 @@
     "source": "personal",
     "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\api-and-interface-design\\SKILL.md",
+    "file": "~/.claude/skills/api-and-interface-design/SKILL.md",
     "mtime": "2026-05-18T01:40:30.207Z"
   },
   {
@@ -113,7 +113,7 @@
     "source": "marketplace",
     "description": "Build a new API connector or provider by matching the target repo's existing integration pattern exactly. Use when adding one more integration without inventing a second architecture.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\api-connector-builder\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/api-connector-builder/SKILL.md",
     "mtime": "2026-05-05T19:30:21.182Z"
   },
   {
@@ -122,7 +122,7 @@
     "source": "marketplace",
     "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\api-design\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/api-design/SKILL.md",
     "mtime": "2026-05-05T19:30:20.675Z"
   },
   {
@@ -131,7 +131,7 @@
     "source": "marketplace",
     "description": "在Claude Code会话期间，将做出的架构决策捕获为结构化的架构决策记录（ADR）。自动检测决策时刻，记录上下文、考虑的替代方案和理由。维护一个ADR日志，以便未来的开发人员理解代码库为何以当前方式构建。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\architecture-decision-records\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/architecture-decision-records/SKILL.md",
     "mtime": "2026-05-05T19:30:21.043Z"
   },
   {
@@ -140,7 +140,7 @@
     "source": "marketplace",
     "description": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\article-writing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/article-writing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.675Z"
   },
   {
@@ -149,7 +149,7 @@
     "source": "marketplace",
     "description": "Evidence-first automation inventory and overlap audit workflow for ECC. Use when the user wants to know which jobs, hooks, connectors, MCP servers, or wrappers are live, broken, redundant, or missing before fixing anything.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\automation-audit-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/automation-audit-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.183Z"
   },
   {
@@ -158,7 +158,7 @@
     "source": "marketplace",
     "description": "Transform Claude Code into a fully autonomous agent system with persistent memory, scheduled operations, computer use, and task queuing. Replaces standalone agent frameworks (Hermes, AutoGPT) by leveraging Claude Code's native crons, dispatch, MCP tools, and memory. Use when the user wants continuous autonomous operation, scheduled tasks, or a self-directing agent loop.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\autonomous-agent-harness\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/autonomous-agent-harness/SKILL.md",
     "mtime": "2026-05-05T19:30:21.183Z"
   },
   {
@@ -167,7 +167,7 @@
     "source": "marketplace",
     "description": "\"自主Claude代码循环的模式与架构——从简单的顺序管道到基于RFC的多智能体有向无环图系统。\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\autonomous-loops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/autonomous-loops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.044Z"
   },
   {
@@ -180,7 +180,7 @@
       "automatic review pipeline",
       "auto plan review"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\autoplan\\SKILL.md",
+    "file": "~/.claude/skills/autoplan/SKILL.md",
     "mtime": "2026-06-18T10:14:13.343Z"
   },
   {
@@ -189,7 +189,7 @@
     "source": "marketplace",
     "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\backend-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/backend-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.676Z"
   },
   {
@@ -202,7 +202,7 @@
       "check page speed",
       "detect performance regression"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\benchmark\\SKILL.md",
+    "file": "~/.claude/skills/benchmark/SKILL.md",
     "mtime": "2026-06-18T10:14:13.365Z"
   },
   {
@@ -216,7 +216,7 @@
       "benchmark skill across models",
       "which model should I use"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\benchmark-models\\SKILL.md",
+    "file": "~/.claude/skills/benchmark-models/SKILL.md",
     "mtime": "2026-06-18T10:14:13.379Z"
   },
   {
@@ -225,7 +225,7 @@
     "source": "marketplace",
     "description": "将单行目标转化为多会话、多代理工程项目的分步构建计划。每个步骤包含独立的上下文简介，以便新代理能直接执行。包括对抗性审查门、依赖图、并行步骤检测、反模式目录和计划突变协议。触发条件：当用户请求复杂多PR任务的计划、蓝图或路线图，或描述需要多个会话的工作时。不触发条件：任务可在单个PR或少于3个工具调用中完成，或用户说“直接执行”时。origin: community",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\blueprint\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/blueprint/SKILL.md",
     "mtime": "2026-05-05T19:30:21.045Z"
   },
   {
@@ -234,7 +234,7 @@
     "source": "marketplace",
     "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\brand-voice\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/brand-voice/SKILL.md",
     "mtime": "2026-05-05T19:30:20.677Z"
   },
   {
@@ -247,7 +247,7 @@
       "headless browser",
       "take page screenshot"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\browse\\SKILL.md",
+    "file": "~/.claude/skills/browse/SKILL.md",
     "mtime": "2026-06-18T10:14:38.366Z"
   },
   {
@@ -256,7 +256,7 @@
     "source": "marketplace",
     "description": "",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\browser-qa\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/browser-qa/SKILL.md",
     "mtime": "2026-05-05T19:30:21.045Z"
   },
   {
@@ -265,7 +265,7 @@
     "source": "personal",
     "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\browser-testing-with-devtools\\SKILL.md",
+    "file": "~/.claude/skills/browser-testing-with-devtools/SKILL.md",
     "mtime": "2026-05-18T01:40:30.208Z"
   },
   {
@@ -274,7 +274,7 @@
     "source": "cache",
     "description": "This skill should be used when the user wants to build an \"MCP app\", add \"interactive UI\" or \"widgets\" to an MCP server, \"render components in chat\", build \"MCP UI resources\", make a tool that shows a \"form\", \"picker\", \"dashboard\" or \"confirmation dialog\" inline in the conversation, or mentions \"apps SDK\" in the context of MCP. Use AFTER the build-mcp-server skill has settled the deployment model, or when the user already knows they want UI widgets.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\mcp-server-dev\\06b291803d65\\skills\\build-mcp-app\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/mcp-server-dev/06b291803d65/skills/build-mcp-app/SKILL.md",
     "mtime": "2026-05-09T19:05:25.486Z"
   },
   {
@@ -283,7 +283,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP integration\", \"wrap an API for Claude\", \"expose tools to Claude\", \"make an MCP app\", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development — it interrogates the user about their use case, determines the right deployment model (remote HTTP, MCPB, local stdio), picks a tool-design pattern, and hands off to specialized skills.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\mcp-server-dev\\06b291803d65\\skills\\build-mcp-server\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/mcp-server-dev/06b291803d65/skills/build-mcp-server/SKILL.md",
     "mtime": "2026-05-09T19:05:25.488Z"
   },
   {
@@ -292,7 +292,7 @@
     "source": "cache",
     "description": "This skill should be used when the user wants to \"package an MCP server\", \"bundle an MCP\", \"make an MCPB\", \"ship a local MCP server\", \"distribute a local MCP\", discusses \".mcpb files\", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set up.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\mcp-server-dev\\06b291803d65\\skills\\build-mcpb\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/mcp-server-dev/06b291803d65/skills/build-mcpb/SKILL.md",
     "mtime": "2026-05-09T19:05:25.491Z"
   },
   {
@@ -301,7 +301,7 @@
     "source": "marketplace",
     "description": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\bun-runtime\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/bun-runtime/SKILL.md",
     "mtime": "2026-05-05T19:30:20.678Z"
   },
   {
@@ -314,7 +314,7 @@
       "canary check",
       "watch for errors post-deploy"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\canary\\SKILL.md",
+    "file": "~/.claude/skills/canary/SKILL.md",
     "mtime": "2026-06-18T10:14:13.411Z"
   },
   {
@@ -323,7 +323,7 @@
     "source": "marketplace",
     "description": "Use this skill to monitor a deployed URL for regressions after deploys, merges, or dependency upgrades.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\canary-watch\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/canary-watch/SKILL.md",
     "mtime": "2026-05-05T19:30:21.187Z"
   },
   {
@@ -336,7 +336,7 @@
       "warn before destructive",
       "safety mode"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\careful\\SKILL.md",
+    "file": "~/.claude/skills/careful/SKILL.md",
     "mtime": "2026-06-18T10:14:13.427Z"
   },
   {
@@ -345,7 +345,7 @@
     "source": "marketplace",
     "description": "用于管理承运商组合、协商运费、跟踪承运商绩效、分配货运以及维护战略承运商关系的编码专业知识。基于拥有15年以上经验的运输经理提供的信息。包括记分卡框架、RFP流程、市场情报和合规性审查。适用于管理承运商、协商费率、评估承运商绩效或制定货运策略时使用。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\carrier-relationship-management\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/carrier-relationship-management/SKILL.md",
     "mtime": "2026-05-05T19:30:21.046Z"
   },
   {
@@ -354,7 +354,7 @@
     "source": "personal",
     "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\caveman\\SKILL.md",
+    "file": "~/.claude/skills/caveman/SKILL.md",
     "mtime": "2026-05-18T01:35:22.171Z"
   },
   {
@@ -363,7 +363,7 @@
     "source": "personal",
     "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ci-cd-and-automation\\SKILL.md",
+    "file": "~/.claude/skills/ci-cd-and-automation/SKILL.md",
     "mtime": "2026-05-18T01:40:30.209Z"
   },
   {
@@ -372,7 +372,7 @@
     "source": "marketplace",
     "description": "Persistent per-project memory for Claude Code. Auto-loads project context on session start, tracks sessions with git activity, and writes to native memory. Commands run deterministic Node.js scripts — behavior is consistent across model versions.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\ck\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/ck/SKILL.md",
     "mtime": "2026-05-05T19:30:21.187Z"
   },
   {
@@ -381,7 +381,7 @@
     "source": "gstack",
     "description": "Claude Code CLI wrapper for non-Claude hosts - three modes. Review: independent\ndiff review via claude -p. Challenge: adversarial failure-mode review. Consult:\nask Claude about the repo with read-only file tools. Use when asked for \"claude\nreview\", \"claude challenge\", \"ask claude\", \"second opinion from claude\", or\n\"outside voice\". (gstack)",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\.agents\\skills\\gstack-claude\\SKILL.md",
+    "file": "~/.claude/skills/gstack/.agents/skills/gstack-claude/SKILL.md",
     "mtime": "2026-06-18T10:14:15.023Z"
   },
   {
@@ -390,7 +390,7 @@
     "source": "personal",
     "description": "\"Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (Opus/Sonnet/Haiku) in a file; questions about prompt caching / cache hit rate in an Anthropic SDK project. SKIP: file imports `openai`/other-provider SDK, filename like `*-openai.py`/`*-generic.py`, provider-neutral code, general programming/ML.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\claude-api\\SKILL.md",
+    "file": "~/.claude/skills/claude-api/SKILL.md",
     "mtime": "2026-05-25T09:12:07.234Z"
   },
   {
@@ -399,7 +399,7 @@
     "source": "cache",
     "description": "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\claude-code-setup\\1.0.0\\skills\\claude-automation-recommender\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0/skills/claude-automation-recommender/SKILL.md",
     "mtime": "2026-04-30T17:04:20.054Z"
   },
   {
@@ -408,7 +408,7 @@
     "source": "marketplace",
     "description": "通过Claude DevFleet协调多智能体编码任务——规划项目、在隔离的工作树中并行调度智能体、监控进度并读取结构化报告。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\claude-devfleet\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/claude-devfleet/SKILL.md",
     "mtime": "2026-05-05T19:30:21.047Z"
   },
   {
@@ -417,7 +417,7 @@
     "source": "cache",
     "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintenance\" or \"project memory optimization\".",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\claude-md-management\\1.0.0\\skills\\claude-md-improver\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0/skills/claude-md-improver/SKILL.md",
     "mtime": "2026-04-30T17:04:20.064Z"
   },
   {
@@ -426,7 +426,7 @@
     "source": "marketplace",
     "description": "\"Trace every user-facing button/touchpoint through its full state change sequence to find bugs where functions individually work but cancel each other out, produce wrong final state, or leave the UI in an inconsistent state. Use when: systematic debugging found no bugs but users report broken buttons, or after any major refactor touching shared state stores.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\click-path-audit\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/click-path-audit/SKILL.md",
     "mtime": "2026-05-05T19:30:21.190Z"
   },
   {
@@ -435,7 +435,7 @@
     "source": "marketplace",
     "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\clickhouse-io\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/clickhouse-io/SKILL.md",
     "mtime": "2026-05-05T19:30:20.919Z"
   },
   {
@@ -444,7 +444,7 @@
     "source": "personal",
     "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\code-review-and-quality\\SKILL.md",
+    "file": "~/.claude/skills/code-review-and-quality/SKILL.md",
     "mtime": "2026-05-18T01:40:30.209Z"
   },
   {
@@ -453,7 +453,7 @@
     "source": "personal",
     "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\code-simplification\\SKILL.md",
+    "file": "~/.claude/skills/code-simplification/SKILL.md",
     "mtime": "2026-05-18T01:40:30.210Z"
   },
   {
@@ -462,7 +462,7 @@
     "source": "marketplace",
     "description": "Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \"explain how this works\" requests.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\code-tour\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/code-tour/SKILL.md",
     "mtime": "2026-05-05T19:30:21.192Z"
   },
   {
@@ -471,7 +471,7 @@
     "source": "marketplace",
     "description": "分析一个陌生的代码库，并生成一个结构化的入门指南，包括架构图、关键入口点、规范和一个起始的CLAUDE.md文件。适用于加入新项目或首次在代码仓库中设置Claude Code时。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\codebase-onboarding\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/codebase-onboarding/SKILL.md",
     "mtime": "2026-05-05T19:30:21.047Z"
   },
   {
@@ -484,7 +484,7 @@
       "second opinion",
       "outside voice challenge"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\codex\\SKILL.md",
+    "file": "~/.claude/skills/codex/SKILL.md",
     "mtime": "2026-06-18T10:14:13.445Z"
   },
   {
@@ -493,7 +493,7 @@
     "source": "marketplace",
     "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\coding-standards\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/coding-standards/SKILL.md",
     "mtime": "2026-05-05T19:30:20.678Z"
   },
   {
@@ -502,7 +502,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\command-development\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/command-development/SKILL.md",
     "mtime": "2026-05-09T19:05:25.505Z"
   },
   {
@@ -511,7 +511,7 @@
     "source": "marketplace",
     "description": "KMP项目中的Compose Multiplatform和Jetpack Compose模式——状态管理、导航、主题化、性能优化和平台特定UI。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\compose-multiplatform-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/compose-multiplatform-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.048Z"
   },
   {
@@ -520,7 +520,7 @@
     "source": "marketplace",
     "description": "Everything Claude Code のインタラクティブなインストーラー — スキルとルールの選択とインストールをユーザーレベルまたはプロジェクトレベルのディレクトリへガイドし、パスを検証し、必要に応じてインストールされたファイルを最適化します。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\configure-ecc\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/configure-ecc/SKILL.md",
     "mtime": "2026-05-05T19:30:20.920Z"
   },
   {
@@ -529,7 +529,7 @@
     "source": "marketplace",
     "description": "Reorganize the user's X and LinkedIn network with review-first pruning, add/follow recommendations, and channel-specific warm outreach drafted in the user's real voice. Use when the user wants to clean up following lists, grow toward current priorities, or rebalance a social graph around higher-signal relationships.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\connections-optimizer\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/connections-optimizer/SKILL.md",
     "mtime": "2026-05-05T19:30:21.194Z"
   },
   {
@@ -538,7 +538,7 @@
     "source": "marketplace",
     "description": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scripts, content calendars, or one source asset adapted cleanly across platforms.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\content-engine\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/content-engine/SKILL.md",
     "mtime": "2026-05-05T19:30:20.679Z"
   },
   {
@@ -547,7 +547,7 @@
     "source": "marketplace",
     "description": "使用SHA-256内容哈希缓存昂贵的文件处理结果——路径无关、自动失效、服务层分离。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\content-hash-cache-pattern\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/content-hash-cache-pattern/SKILL.md",
     "mtime": "2026-05-05T19:30:21.049Z"
   },
   {
@@ -556,7 +556,7 @@
     "source": "marketplace",
     "description": "审核Claude Code上下文窗口在代理、技能、MCP服务器和规则中的消耗情况。识别膨胀、冗余组件，并提供优先的令牌节省建议。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\context-budget\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/context-budget/SKILL.md",
     "mtime": "2026-05-05T19:30:21.049Z"
   },
   {
@@ -565,7 +565,7 @@
     "source": "personal",
     "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\context-engineering\\SKILL.md",
+    "file": "~/.claude/skills/context-engineering/SKILL.md",
     "mtime": "2026-05-18T01:40:30.210Z"
   },
   {
@@ -574,7 +574,7 @@
     "source": "marketplace",
     "description": "Mandatory routing rules for Antigravity CLI. Invoke when exploring a codebase, reading files for analysis, listing context-mode tools, searching, parsing, counting, comparing, summarizing, fetching web content, or running data-heavy commands.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\configs\\antigravity-cli\\skills\\context-mode\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/configs/antigravity-cli/skills/context-mode/SKILL.md",
     "mtime": "2026-06-24T08:20:05.402Z"
   },
   {
@@ -583,7 +583,7 @@
     "source": "marketplace",
     "description": "Manage context-mode GitHub issues, PRs, releases, and marketing with parallel subagent army. Orchestrates 10-20 dynamic agents per task. Use when triaging issues, reviewing PRs, releasing versions, writing LinkedIn posts, announcing releases, fixing bugs, merging contributions, validating ENV vars, testing adapters, or syncing branches.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\.claude\\skills\\context-mode-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/.claude/skills/context-mode-ops/SKILL.md",
     "mtime": "2026-06-24T08:20:05.377Z"
   },
   {
@@ -598,7 +598,7 @@
       "pick up where i left off",
       "context restore"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\context-restore\\SKILL.md",
+    "file": "~/.claude/skills/context-restore/SKILL.md",
     "mtime": "2026-06-18T10:14:13.458Z"
   },
   {
@@ -612,7 +612,7 @@
       "save my work",
       "context save"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\context-save\\SKILL.md",
+    "file": "~/.claude/skills/context-save/SKILL.md",
     "mtime": "2026-06-18T10:14:13.476Z"
   },
   {
@@ -621,7 +621,7 @@
     "source": "personal",
     "description": "小说剧情连续性检查。写回指前文的句子时，先搜索原文确认事件的时间/地点/方式三要素一致。Use when writing or editing novel chapters that reference past events.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\continuity-check\\SKILL.md",
+    "file": "~/.claude/skills/continuity-check/SKILL.md",
     "mtime": "2026-05-22T09:16:00.585Z"
   },
   {
@@ -630,7 +630,7 @@
     "source": "marketplace",
     "description": "具有质量门、评估和恢复控制的连续自主代理循环模式。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\continuous-agent-loop\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/continuous-agent-loop/SKILL.md",
     "mtime": "2026-05-05T19:30:21.049Z"
   },
   {
@@ -639,7 +639,7 @@
     "source": "marketplace",
     "description": "Claude Codeセッションから再利用可能なパターンを自動的に抽出し、将来の使用のために学習済みスキルとして保存します。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\continuous-learning\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/continuous-learning/SKILL.md",
     "mtime": "2026-05-05T19:30:20.920Z"
   },
   {
@@ -648,7 +648,7 @@
     "source": "marketplace",
     "description": "フックを介してセッションを観察し、信頼度スコアリング付きのアトミックなインスティンクトを作成し、スキル/コマンド/エージェントに進化させるインスティンクトベースの学習システム。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\continuous-learning-v2\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/continuous-learning-v2/SKILL.md",
     "mtime": "2026-05-05T19:30:20.920Z"
   },
   {
@@ -657,7 +657,7 @@
     "source": "marketplace",
     "description": "LLM API 使用成本优化模式 —— 基于任务复杂度的模型路由、预算跟踪、重试逻辑和提示缓存。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\cost-aware-llm-pipeline\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/cost-aware-llm-pipeline/SKILL.md",
     "mtime": "2026-05-05T19:30:21.050Z"
   },
   {
@@ -666,7 +666,7 @@
     "source": "marketplace",
     "description": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\council\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/council/SKILL.md",
     "mtime": "2026-05-05T19:30:21.199Z"
   },
   {
@@ -675,7 +675,7 @@
     "source": "marketplace",
     "description": "基于C++核心指南（isocpp.github.io）的C++编码标准。在编写、审查或重构C++代码时使用，以强制实施现代、安全和惯用的实践。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\cpp-coding-standards\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/cpp-coding-standards/SKILL.md",
     "mtime": "2026-05-05T19:30:21.052Z"
   },
   {
@@ -684,7 +684,7 @@
     "source": "marketplace",
     "description": "C++ テストの作成/更新/修正、GoogleTest/CTest の設定、失敗またはフレーキーなテストの診断、カバレッジ/サニタイザーの追加時にのみ使用します。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\cpp-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/cpp-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.922Z"
   },
   {
@@ -693,7 +693,7 @@
     "source": "marketplace",
     "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\crosspost\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/crosspost/SKILL.md",
     "mtime": "2026-05-05T19:30:20.680Z"
   },
   {
@@ -702,7 +702,7 @@
     "source": "marketplace",
     "description": "C# and .NET testing patterns with xUnit, FluentAssertions, mocking, integration tests, and test organization best practices.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\csharp-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/csharp-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:21.202Z"
   },
   {
@@ -715,7 +715,7 @@
       "check for vulnerabilities",
       "owasp review"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\cso\\SKILL.md",
+    "file": "~/.claude/skills/cso/SKILL.md",
     "mtime": "2026-06-18T10:14:13.508Z"
   },
   {
@@ -724,7 +724,7 @@
     "source": "marketplace",
     "description": "Run context-mode diagnostics. Checks runtimes, hooks, FTS5,\nplugin registration, npm and marketplace versions.\nTrigger: /context-mode:ctx-doctor",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-doctor\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-doctor/SKILL.md",
     "mtime": "2026-06-24T08:20:05.453Z"
   },
   {
@@ -733,7 +733,7 @@
     "source": "marketplace",
     "description": "Index a local file or directory into context-mode's persistent FTS5 knowledge base\nso future ctx_search calls can retrieve focused snippets without rereading raw files.\nTrigger: /context-mode:ctx-index",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-index\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-index/SKILL.md",
     "mtime": "2026-06-24T08:20:05.454Z"
   },
   {
@@ -742,7 +742,7 @@
     "source": "marketplace",
     "description": "Open the context-mode Insight dashboard in your default browser.\nInsight is the hosted analytics layer for AI-assisted engineering teams —\nper-engineer productive rate, retry waste, blocker detection, role-narrowed views.\nTrigger: /context-mode:ctx-insight",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-insight\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-insight/SKILL.md",
     "mtime": "2026-06-24T08:20:05.454Z"
   },
   {
@@ -751,7 +751,7 @@
     "source": "marketplace",
     "description": "Purge the context-mode knowledge base. Permanently deletes all indexed content\nand resets session stats. This is destructive and cannot be undone.\nTrigger: /context-mode:ctx-purge",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-purge\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-purge/SKILL.md",
     "mtime": "2026-06-24T08:20:05.455Z"
   },
   {
@@ -760,7 +760,7 @@
     "source": "marketplace",
     "description": "Search context-mode's persistent FTS5 knowledge base for previously indexed\nlocal project content, documentation, or session memory.\nTrigger: /context-mode:ctx-search",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-search\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-search/SKILL.md",
     "mtime": "2026-06-24T08:20:05.455Z"
   },
   {
@@ -769,7 +769,7 @@
     "source": "marketplace",
     "description": "Show how much context window context-mode saved this session.\nDisplays token consumption, context savings ratio, and per-tool breakdown.\nRead-only — shows stats only, no reset capability.\nTo wipe the knowledge base entirely, use ctx_purge instead.\nTrigger: /context-mode:ctx-stats",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-stats\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-stats/SKILL.md",
     "mtime": "2026-06-24T08:20:05.455Z"
   },
   {
@@ -778,7 +778,7 @@
     "source": "marketplace",
     "description": "Update context-mode from GitHub and fix hooks/settings.\nPulls latest, builds, installs, updates npm global, configures hooks.\nTrigger: /context-mode:ctx-upgrade",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\context-mode\\skills\\ctx-upgrade\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/context-mode/skills/ctx-upgrade/SKILL.md",
     "mtime": "2026-06-24T08:20:05.456Z"
   },
   {
@@ -787,7 +787,7 @@
     "source": "marketplace",
     "description": "Operate customer billing workflows such as subscriptions, refunds, churn triage, billing-portal recovery, and plan analysis using connected billing tools like Stripe. Use when the user needs to help a customer, inspect subscription state, or manage revenue-impacting billing operations.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\customer-billing-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/customer-billing-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.203Z"
   },
   {
@@ -796,7 +796,7 @@
     "source": "marketplace",
     "description": "海关文件、关税分类、关税优化、受限方筛查以及多司法管辖区法规合规的编码化专业知识。由拥有15年以上经验的贸易合规专家提供。包括HS分类逻辑、Incoterms应用、自贸协定利用以及罚款减免。适用于处理海关清关、关税分类、贸易合规、进出口文件或关税优化时使用。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\customs-trade-compliance\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/customs-trade-compliance/SKILL.md",
     "mtime": "2026-05-05T19:30:21.053Z"
   },
   {
@@ -805,7 +805,7 @@
     "source": "marketplace",
     "description": "Production-ready Dart and Flutter patterns covering null safety, immutable state, async composition, widget architecture, popular state management frameworks (BLoC, Riverpod, Provider), GoRouter navigation, Dio networking, Freezed code generation, and clean architecture.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\dart-flutter-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/dart-flutter-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.204Z"
   },
   {
@@ -814,7 +814,7 @@
     "source": "marketplace",
     "description": "Build monitoring dashboards that answer real operator questions for Grafana, SigNoz, and similar platforms. Use when turning metrics into a working dashboard instead of a vanity board.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\dashboard-builder\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/dashboard-builder/SKILL.md",
     "mtime": "2026-05-05T19:30:21.204Z"
   },
   {
@@ -823,7 +823,7 @@
     "source": "marketplace",
     "description": "构建一个全自动化的AI驱动数据收集代理，适用于任何公共来源——招聘网站、价格信息、新闻、GitHub、体育赛事等任何内容。按计划进行抓取，使用免费LLM（Gemini Flash）丰富数据，将结果存储在Notion/Sheets/Supabase中，并从用户反馈中学习。完全免费在GitHub Actions上运行。适用于用户希望自动监控、收集或跟踪任何公共数据的场景。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\data-scraper-agent\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/data-scraper-agent/SKILL.md",
     "mtime": "2026-05-05T19:30:21.053Z"
   },
   {
@@ -832,7 +832,7 @@
     "source": "marketplace",
     "description": "Database migration best practices for schema changes, data migrations, rollbacks, and zero-downtime deployments across PostgreSQL, MySQL, and common ORMs (Prisma, Drizzle, Django, TypeORM, golang-migrate). Use when planning or implementing database schema changes.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\database-migrations\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/database-migrations/SKILL.md",
     "mtime": "2026-05-05T19:30:20.735Z"
   },
   {
@@ -841,7 +841,7 @@
     "source": "personal",
     "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\debugging-and-error-recovery\\SKILL.md",
+    "file": "~/.claude/skills/debugging-and-error-recovery/SKILL.md",
     "mtime": "2026-05-18T01:40:30.210Z"
   },
   {
@@ -850,7 +850,7 @@
     "source": "marketplace",
     "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\deep-research\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/deep-research/SKILL.md",
     "mtime": "2026-05-05T19:30:20.680Z"
   },
   {
@@ -859,7 +859,7 @@
     "source": "marketplace",
     "description": "Security checklist for Solidity AMM contracts, liquidity pools, and swap flows. Covers reentrancy, CEI ordering, donation or inflation attacks, oracle manipulation, slippage, admin controls, and integer math.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\defi-amm-security\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/defi-amm-security/SKILL.md",
     "mtime": "2026-05-05T19:30:21.206Z"
   },
   {
@@ -868,7 +868,7 @@
     "source": "marketplace",
     "description": "Deployment workflows, CI/CD pipeline patterns, Docker containerization, health checks, rollback strategies, and production readiness checklists for web applications. Use when setting up deployment infrastructure or planning releases.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\deployment-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/deployment-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.735Z"
   },
   {
@@ -877,7 +877,7 @@
     "source": "personal",
     "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\deprecation-and-migration\\SKILL.md",
+    "file": "~/.claude/skills/deprecation-and-migration/SKILL.md",
     "mtime": "2026-05-18T01:40:30.211Z"
   },
   {
@@ -890,7 +890,7 @@
       "create a brand",
       "design from scratch"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\design-consultation\\SKILL.md",
+    "file": "~/.claude/skills/design-consultation/SKILL.md",
     "mtime": "2026-06-18T10:14:13.546Z"
   },
   {
@@ -903,7 +903,7 @@
       "code the mockup",
       "make design real"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\design-html\\SKILL.md",
+    "file": "~/.claude/skills/design-html/SKILL.md",
     "mtime": "2026-06-18T10:14:13.572Z"
   },
   {
@@ -916,7 +916,7 @@
       "design qa",
       "fix design issues"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\design-review\\SKILL.md",
+    "file": "~/.claude/skills/design-review/SKILL.md",
     "mtime": "2026-06-18T10:14:13.598Z"
   },
   {
@@ -929,7 +929,7 @@
       "show me design options",
       "visual design brainstorm"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\design-shotgun\\SKILL.md",
+    "file": "~/.claude/skills/design-shotgun/SKILL.md",
     "mtime": "2026-06-18T10:14:13.629Z"
   },
   {
@@ -938,7 +938,7 @@
     "source": "marketplace",
     "description": "Use this skill to generate or audit design systems, check visual consistency, and review PRs that touch styling.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\design-system\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/design-system/SKILL.md",
     "mtime": "2026-05-05T19:30:21.207Z"
   },
   {
@@ -951,7 +951,7 @@
       "test developer experience",
       "measure onboarding time"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\devex-review\\SKILL.md",
+    "file": "~/.claude/skills/devex-review/SKILL.md",
     "mtime": "2026-06-18T10:14:13.653Z"
   },
   {
@@ -960,7 +960,7 @@
     "source": "personal",
     "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\diagnose\\SKILL.md",
+    "file": "~/.claude/skills/diagnose/SKILL.md",
     "mtime": "2026-05-18T01:35:22.156Z"
   },
   {
@@ -976,7 +976,7 @@
       "visualize this flow",
       "architecture diagram"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\diagram\\SKILL.md",
+    "file": "~/.claude/skills/diagram/SKILL.md",
     "mtime": "2026-06-18T10:14:13.700Z"
   },
   {
@@ -985,7 +985,7 @@
     "source": "marketplace",
     "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\django-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/django-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.922Z"
   },
   {
@@ -994,7 +994,7 @@
     "source": "marketplace",
     "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\django-security\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/django-security/SKILL.md",
     "mtime": "2026-05-05T19:30:20.923Z"
   },
   {
@@ -1003,7 +1003,7 @@
     "source": "marketplace",
     "description": "Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\django-tdd\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/django-tdd/SKILL.md",
     "mtime": "2026-05-05T19:30:20.923Z"
   },
   {
@@ -1012,7 +1012,7 @@
     "source": "marketplace",
     "description": "Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\django-verification\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/django-verification/SKILL.md",
     "mtime": "2026-05-05T19:30:20.923Z"
   },
   {
@@ -1021,7 +1021,7 @@
     "source": "marketplace",
     "description": "Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\dmux-workflows\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/dmux-workflows/SKILL.md",
     "mtime": "2026-05-05T19:30:20.681Z"
   },
   {
@@ -1030,7 +1030,7 @@
     "source": "marketplace",
     "description": "Docker and Docker Compose patterns for local development, container security, networking, volume strategies, and multi-service orchestration. Use when setting up containerized development environments or reviewing Docker configurations.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\docker-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/docker-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.736Z"
   },
   {
@@ -1047,7 +1047,7 @@
       "explain this module",
       "docs for this project"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\document-generate\\SKILL.md",
+    "file": "~/.claude/skills/document-generate/SKILL.md",
     "mtime": "2026-06-18T10:14:13.727Z"
   },
   {
@@ -1060,7 +1060,7 @@
       "document what changed",
       "post-ship docs"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\document-release\\SKILL.md",
+    "file": "~/.claude/skills/document-release/SKILL.md",
     "mtime": "2026-06-18T10:14:13.765Z"
   },
   {
@@ -1069,7 +1069,7 @@
     "source": "personal",
     "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\documentation-and-adrs\\SKILL.md",
+    "file": "~/.claude/skills/documentation-and-adrs/SKILL.md",
     "mtime": "2026-05-18T01:40:30.211Z"
   },
   {
@@ -1078,7 +1078,7 @@
     "source": "marketplace",
     "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\documentation-lookup\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/documentation-lookup/SKILL.md",
     "mtime": "2026-05-05T19:30:20.681Z"
   },
   {
@@ -1087,7 +1087,7 @@
     "source": "marketplace",
     "description": "Idiomatic C# and .NET patterns, conventions, dependency injection, async/await, and best practices for building robust, maintainable .NET applications.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\dotnet-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/dotnet-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.210Z"
   },
   {
@@ -1096,7 +1096,7 @@
     "source": "personal",
     "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\doubt-driven-development\\SKILL.md",
+    "file": "~/.claude/skills/doubt-driven-development/SKILL.md",
     "mtime": "2026-05-18T01:40:30.212Z"
   },
   {
@@ -1105,7 +1105,7 @@
     "source": "marketplace",
     "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\e2e-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/e2e-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.682Z"
   },
   {
@@ -1114,7 +1114,7 @@
     "source": "marketplace",
     "description": "Evidence-first ECC Tools burn and billing audit workflow. Use when investigating runaway PR creation, quota bypass, premium-model leakage, duplicate jobs, or GitHub App cost spikes in the ECC Tools repo.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\ecc-tools-cost-audit\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/ecc-tools-cost-audit/SKILL.md",
     "mtime": "2026-05-05T19:30:21.212Z"
   },
   {
@@ -1123,7 +1123,7 @@
     "source": "marketplace",
     "description": "Evidence-first mailbox triage, drafting, send verification, and sent-mail-safe follow-up workflow for ECC. Use when the user wants to organize email, draft or send through the real mail surface, or prove what landed in Sent.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\email-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/email-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.212Z"
   },
   {
@@ -1132,7 +1132,7 @@
     "source": "marketplace",
     "description": "电力与燃气采购、电价优化、需量电费管理、可再生能源购电协议评估及多设施能源成本管理的编码化专业知识。基于能源采购经理在大型工商业用户中超过15年的经验。包括市场结构分析、对冲策略、负荷分析和可持续性报告框架。适用于采购能源、优化电价、管理需量电费、评估购电协议或制定能源策略时使用。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\energy-procurement\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/energy-procurement/SKILL.md",
     "mtime": "2026-05-05T19:30:21.058Z"
   },
   {
@@ -1141,7 +1141,7 @@
     "source": "marketplace",
     "description": "通过可观测性、安全边界和生命周期管理来操作长期运行的代理工作负载。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\enterprise-agent-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/enterprise-agent-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.058Z"
   },
   {
@@ -1150,7 +1150,7 @@
     "source": "marketplace",
     "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\eval-harness\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/eval-harness/SKILL.md",
     "mtime": "2026-05-05T19:30:20.682Z"
   },
   {
@@ -1159,7 +1159,7 @@
     "source": "marketplace",
     "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\everything-claude-code\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/everything-claude-code/SKILL.md",
     "mtime": "2026-05-05T19:30:20.683Z"
   },
   {
@@ -1168,7 +1168,7 @@
     "source": "marketplace",
     "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.claude\\skills\\everything-claude-code\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.claude/skills/everything-claude-code/SKILL.md",
     "mtime": "2026-05-05T19:30:20.698Z"
   },
   {
@@ -1177,7 +1177,7 @@
     "source": "marketplace",
     "description": "Prevent silent decimal mismatch bugs across EVM chains. Covers runtime decimal lookup, chain-aware caching, bridged-token precision drift, and safe normalization for bots, dashboards, and DeFi tools.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\evm-token-decimals\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/evm-token-decimals/SKILL.md",
     "mtime": "2026-05-05T19:30:21.213Z"
   },
   {
@@ -1186,7 +1186,7 @@
     "source": "marketplace",
     "description": "Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural search engine.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\exa-search\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/exa-search/SKILL.md",
     "mtime": "2026-05-05T19:30:20.683Z"
   },
   {
@@ -1195,7 +1195,7 @@
     "source": "marketplace",
     "description": "Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\fal-ai-media\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/fal-ai-media/SKILL.md",
     "mtime": "2026-05-05T19:30:20.684Z"
   },
   {
@@ -1204,7 +1204,7 @@
     "source": "marketplace",
     "description": "Evidence-first revenue, pricing, refunds, team-billing, and billing-model truth workflow for ECC. Use when the user wants a sales snapshot, pricing comparison, duplicate-charge diagnosis, or code-backed billing reality instead of generic payments advice.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\finance-billing-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/finance-billing-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.215Z"
   },
   {
@@ -1213,7 +1213,7 @@
     "source": "personal",
     "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\find-skills\\SKILL.md",
+    "file": "~/.claude/skills/find-skills/SKILL.md",
     "mtime": "2026-05-04T12:06:43.019Z"
   },
   {
@@ -1222,7 +1222,7 @@
     "source": "marketplace",
     "description": "库无关的Flutter/Dart代码审查清单，涵盖Widget最佳实践、状态管理模式（BLoC、Riverpod、Provider、GetX、MobX、Signals）、Dart惯用法、性能、可访问性、安全性和整洁架构。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\flutter-dart-code-review\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/flutter-dart-code-review/SKILL.md",
     "mtime": "2026-05-05T19:30:21.059Z"
   },
   {
@@ -1231,7 +1231,7 @@
     "source": "marketplace",
     "description": "苹果FoundationModels框架用于设备上的LLM——文本生成、使用@Generable进行引导生成、工具调用，以及在iOS 26+中的快照流。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\foundation-models-on-device\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/foundation-models-on-device/SKILL.md",
     "mtime": "2026-05-05T19:30:21.059Z"
   },
   {
@@ -1244,7 +1244,7 @@
       "lock editing scope",
       "restrict file changes"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\freeze\\SKILL.md",
+    "file": "~/.claude/skills/freeze/SKILL.md",
     "mtime": "2026-06-18T10:14:13.780Z"
   },
   {
@@ -1253,7 +1253,7 @@
     "source": "personal",
     "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\frontend-design\\SKILL.md",
+    "file": "~/.claude/skills/frontend-design/SKILL.md",
     "mtime": "2026-05-25T09:12:29.659Z"
   },
   {
@@ -1262,7 +1262,7 @@
     "source": "marketplace",
     "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\frontend-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/frontend-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.685Z"
   },
   {
@@ -1271,7 +1271,7 @@
     "source": "marketplace",
     "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\frontend-slides\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/frontend-slides/SKILL.md",
     "mtime": "2026-05-05T19:30:20.685Z"
   },
   {
@@ -1280,7 +1280,7 @@
     "source": "personal",
     "description": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\frontend-ui-engineering\\SKILL.md",
+    "file": "~/.claude/skills/frontend-ui-engineering/SKILL.md",
     "mtime": "2026-05-18T01:40:30.213Z"
   },
   {
@@ -1289,7 +1289,7 @@
     "source": "marketplace",
     "description": "\"GAN-inspired Generator-Evaluator agent harness for building high-quality applications autonomously. Based on Anthropic's March 2026 harness design paper.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\gan-style-harness\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/gan-style-harness/SKILL.md",
     "mtime": "2026-05-05T19:30:21.217Z"
   },
   {
@@ -1298,7 +1298,7 @@
     "source": "marketplace",
     "description": "Fact-forcing gate that blocks Edit/Write/Bash (including MultiEdit) and demands concrete investigation (importers, data schemas, user instruction) before allowing the action. Measurably improves output quality by +2.25 points vs ungated agents.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\gateguard\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/gateguard/SKILL.md",
     "mtime": "2026-05-05T19:30:21.217Z"
   },
   {
@@ -1307,7 +1307,7 @@
     "source": "marketplace",
     "description": "Git workflow patterns including branching strategies, commit conventions, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\git-workflow\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/git-workflow/SKILL.md",
     "mtime": "2026-05-05T19:30:21.218Z"
   },
   {
@@ -1316,7 +1316,7 @@
     "source": "personal",
     "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\git-workflow-and-versioning\\SKILL.md",
+    "file": "~/.claude/skills/git-workflow-and-versioning/SKILL.md",
     "mtime": "2026-05-18T01:40:30.213Z"
   },
   {
@@ -1325,7 +1325,7 @@
     "source": "personal",
     "description": "Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\github-multi-repo\\SKILL.md",
+    "file": "~/.claude/skills/github-multi-repo/SKILL.md",
     "mtime": "2026-05-05T17:05:21.456Z"
   },
   {
@@ -1334,7 +1334,7 @@
     "source": "marketplace",
     "description": "GitHub repository operations, automation, and management. Issue triage, PR management, CI/CD operations, release management, and security monitoring using the gh CLI. Use when the user wants to manage GitHub issues, PRs, CI status, releases, contributors, stale items, or any GitHub operational task beyond simple git commands.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\github-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/github-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.218Z"
   },
   {
@@ -1343,7 +1343,7 @@
     "source": "personal",
     "description": "Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\github-project-management\\SKILL.md",
+    "file": "~/.claude/skills/github-project-management/SKILL.md",
     "mtime": "2026-05-05T17:05:21.457Z"
   },
   {
@@ -1352,7 +1352,7 @@
     "source": "personal",
     "description": "Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\github-release-management\\SKILL.md",
+    "file": "~/.claude/skills/github-release-management/SKILL.md",
     "mtime": "2026-05-05T17:05:21.459Z"
   },
   {
@@ -1361,7 +1361,7 @@
     "source": "personal",
     "description": "Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\github-workflow-automation\\SKILL.md",
+    "file": "~/.claude/skills/github-workflow-automation/SKILL.md",
     "mtime": "2026-05-05T17:05:21.461Z"
   },
   {
@@ -1370,7 +1370,7 @@
     "source": "personal",
     "description": "Godot 4.x 游戏开发——弹跳王(无尽跳跃)/一杆闯天涯(物理攀爬), GDScript, 抖音小游戏适配",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\godot-game-dev\\SKILL.md",
+    "file": "~/.claude/skills/godot-game-dev/SKILL.md",
     "mtime": "2026-05-18T01:42:43.669Z"
   },
   {
@@ -1379,7 +1379,7 @@
     "source": "marketplace",
     "description": "Go-specific design patterns and best practices including functional options, small interfaces, dependency injection, concurrency patterns, error handling, and package organization. Use when working with Go code to apply idiomatic Go patterns.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\golang-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/golang-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.737Z"
   },
   {
@@ -1388,7 +1388,7 @@
     "source": "marketplace",
     "description": "Go testing best practices including table-driven tests, test helpers, benchmarking, race detection, coverage analysis, and integration testing patterns. Use when writing or improving Go tests.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\golang-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/golang-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.737Z"
   },
   {
@@ -1397,7 +1397,7 @@
     "source": "marketplace",
     "description": "Operate across Google Drive, Docs, Sheets, and Slides as one workflow surface for plans, trackers, decks, and shared documents. Use when the user needs to find, summarize, edit, migrate, or clean up Google Workspace assets without dropping to raw tool calls.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\google-workspace-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/google-workspace-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.219Z"
   },
   {
@@ -1406,7 +1406,7 @@
     "source": "personal",
     "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\grill-me\\SKILL.md",
+    "file": "~/.claude/skills/grill-me/SKILL.md",
     "mtime": "2026-05-18T01:35:22.171Z"
   },
   {
@@ -1415,7 +1415,7 @@
     "source": "personal",
     "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\grill-with-docs\\SKILL.md",
+    "file": "~/.claude/skills/grill-with-docs/SKILL.md",
     "mtime": "2026-05-18T01:35:22.156Z"
   },
   {
@@ -1424,7 +1424,7 @@
     "source": "gstack",
     "description": "Fast headless browser for QA testing and site dogfooding. Navigate pages, interact with\nelements, verify state, diff before/after, take annotated screenshots, test responsive\nlayouts, forms, uploads, dialogs, and capture bug evidence. Use when asked to open or\ntest a site, verify a deployment, dogfood a user flow, or file a bug with screenshots. (gstack)",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\.agents\\skills\\gstack\\SKILL.md",
+    "file": "~/.claude/skills/gstack/.agents/skills/gstack/SKILL.md",
     "mtime": "2026-06-18T10:14:14.969Z"
   },
   {
@@ -1433,7 +1433,7 @@
     "source": "gstack",
     "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\openclaw\\skills\\gstack-openclaw-ceo-review\\SKILL.md",
+    "file": "~/.claude/skills/gstack/openclaw/skills/gstack-openclaw-ceo-review/SKILL.md",
     "mtime": "2026-05-07T11:06:09.566Z"
   },
   {
@@ -1442,7 +1442,7 @@
     "source": "gstack",
     "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\openclaw\\skills\\gstack-openclaw-investigate\\SKILL.md",
+    "file": "~/.claude/skills/gstack/openclaw/skills/gstack-openclaw-investigate/SKILL.md",
     "mtime": "2026-05-07T11:06:09.566Z"
   },
   {
@@ -1451,7 +1451,7 @@
     "source": "gstack",
     "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\openclaw\\skills\\gstack-openclaw-office-hours\\SKILL.md",
+    "file": "~/.claude/skills/gstack/openclaw/skills/gstack-openclaw-office-hours/SKILL.md",
     "mtime": "2026-05-07T11:06:09.567Z"
   },
   {
@@ -1460,7 +1460,7 @@
     "source": "gstack",
     "description": "\"Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\openclaw\\skills\\gstack-openclaw-retro\\SKILL.md",
+    "file": "~/.claude/skills/gstack/openclaw/skills/gstack-openclaw-retro/SKILL.md",
     "mtime": "2026-05-07T11:06:09.567Z"
   },
   {
@@ -1473,7 +1473,7 @@
       "update gstack version",
       "get latest gstack"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack-upgrade\\SKILL.md",
+    "file": "~/.claude/skills/gstack-upgrade/SKILL.md",
     "mtime": "2026-06-18T10:14:13.795Z"
   },
   {
@@ -1486,7 +1486,7 @@
       "guard against mistakes",
       "maximum safety"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\guard\\SKILL.md",
+    "file": "~/.claude/skills/guard/SKILL.md",
     "mtime": "2026-06-18T10:14:13.809Z"
   },
   {
@@ -1495,7 +1495,7 @@
     "source": "personal",
     "description": "生成\"电子杂志 × 电子墨水\"风格的横向翻页网页 PPT（单 HTML 文件），含 WebGL 流体背景、衬线标题 + 非衬线正文、章节幕封、数据大字报、图片网格等模板。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到\"杂志风 PPT\"、\"horizontal swipe deck\"、\"editorial magazine\"、\"e-ink presentation\"时使用。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\guizang-ppt-skill\\SKILL.md",
+    "file": "~/.claude/skills/guizang-ppt-skill/SKILL.md",
     "mtime": "2026-05-04T12:07:14.547Z"
   },
   {
@@ -1509,7 +1509,7 @@
       "get hn top stories",
       "latest hacker news stories"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\gstack\\browser-skills\\hackernews-frontpage\\SKILL.md",
+    "file": "~/.claude/skills/gstack/browser-skills/hackernews-frontpage/SKILL.md",
     "mtime": "2026-05-07T11:06:09.514Z"
   },
   {
@@ -1518,7 +1518,7 @@
     "source": "personal",
     "description": "Compact the current conversation into a handoff document for another agent to pick up.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\handoff\\SKILL.md",
+    "file": "~/.claude/skills/handoff/SKILL.md",
     "mtime": "2026-05-18T01:35:22.172Z"
   },
   {
@@ -1531,7 +1531,7 @@
       "quality dashboard",
       "how healthy is codebase"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\health\\SKILL.md",
+    "file": "~/.claude/skills/health/SKILL.md",
     "mtime": "2026-06-18T10:14:13.828Z"
   },
   {
@@ -1540,7 +1540,7 @@
     "source": "marketplace",
     "description": "Clinical Decision Support System (CDSS) development patterns. Drug interaction checking, dose validation, clinical scoring (NEWS2, qSOFA), alert severity classification, and integration into EMR workflows.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\healthcare-cdss-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/healthcare-cdss-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.219Z"
   },
   {
@@ -1549,7 +1549,7 @@
     "source": "marketplace",
     "description": "EMR/EHR development patterns for healthcare applications. Clinical safety, encounter workflows, prescription generation, clinical decision support integration, and accessibility-first UI for medical data entry.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\healthcare-emr-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/healthcare-emr-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.220Z"
   },
   {
@@ -1558,7 +1558,7 @@
     "source": "marketplace",
     "description": "Patient safety evaluation harness for healthcare application deployments. Automated test suites for CDSS accuracy, PHI exposure, clinical workflow integrity, and integration compliance. Blocks deployments on safety failures.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\healthcare-eval-harness\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/healthcare-eval-harness/SKILL.md",
     "mtime": "2026-05-05T19:30:21.220Z"
   },
   {
@@ -1567,7 +1567,7 @@
     "source": "marketplace",
     "description": "Protected Health Information (PHI) and Personally Identifiable Information (PII) compliance patterns for healthcare applications. Covers data classification, access control, audit trails, encryption, and common leak vectors.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\healthcare-phi-compliance\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/healthcare-phi-compliance/SKILL.md",
     "mtime": "2026-05-05T19:30:21.220Z"
   },
   {
@@ -1576,7 +1576,7 @@
     "source": "marketplace",
     "description": "Convert local Hermes operator workflows into sanitized ECC skills and release-pack artifacts. Use when preparing a Hermes workflow for public ECC reuse without leaking private workspace state, credentials, or local-only paths.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\hermes-imports\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/hermes-imports/SKILL.md",
     "mtime": "2026-05-05T19:30:21.221Z"
   },
   {
@@ -1585,7 +1585,7 @@
     "source": "marketplace",
     "description": "Design, implement, and refactor Ports & Adapters systems with clear domain boundaries, dependency inversion, and testable use-case orchestration across TypeScript, Java, Kotlin, and Go services.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\hexagonal-architecture\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/hexagonal-architecture/SKILL.md",
     "mtime": "2026-05-05T19:30:21.221Z"
   },
   {
@@ -1594,7 +1594,7 @@
     "source": "marketplace",
     "description": "HIPAA-specific entrypoint for healthcare privacy and security work. Use when a task is explicitly framed around HIPAA, PHI handling, covered entities, BAAs, breach posture, or US healthcare compliance requirements.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\hipaa-compliance\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/hipaa-compliance/SKILL.md",
     "mtime": "2026-05-05T19:30:21.221Z"
   },
   {
@@ -1603,7 +1603,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\hook-development\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/hook-development/SKILL.md",
     "mtime": "2026-05-09T19:05:25.509Z"
   },
   {
@@ -1612,7 +1612,7 @@
     "source": "marketplace",
     "description": "This skill should be used when the user asks to create a hookify rule, write a hook rule, configure hookify, add a hookify rule, or needs guidance on hookify rule syntax and patterns.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\hookify-rules\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/hookify-rules/SKILL.md",
     "mtime": "2026-05-05T19:30:21.222Z"
   },
   {
@@ -1621,7 +1621,7 @@
     "source": "personal",
     "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers on \"ideate\", \"refine this idea\", or \"stress-test my plan\".",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\idea-refine\\SKILL.md",
+    "file": "~/.claude/skills/idea-refine/SKILL.md",
     "mtime": "2026-05-18T01:40:30.213Z"
   },
   {
@@ -1630,7 +1630,7 @@
     "source": "personal",
     "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\improve-codebase-architecture\\SKILL.md",
+    "file": "~/.claude/skills/improve-codebase-architecture/SKILL.md",
     "mtime": "2026-05-18T01:35:22.159Z"
   },
   {
@@ -1639,7 +1639,7 @@
     "source": "personal",
     "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\incremental-implementation\\SKILL.md",
+    "file": "~/.claude/skills/incremental-implementation/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -1648,7 +1648,7 @@
     "source": "personal",
     "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when the user explicitly invokes (\"interview me\", \"grill me\", \"are we sure?\", \"stress-test my thinking\"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\interview-me\\SKILL.md",
+    "file": "~/.claude/skills/interview-me/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -1657,7 +1657,7 @@
     "source": "marketplace",
     "description": "为多地点零售商提供需求预测、安全库存优化、补货规划及促销提升估算的编码化专业知识。基于拥有15年以上管理数百个SKU经验的需求规划师的专业知识。包括预测方法选择、ABC/XYZ分析、季节性过渡管理及供应商谈判框架。适用于预测需求、设定安全库存、规划补货、管理促销或优化库存水平时使用。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\inventory-demand-planning\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/inventory-demand-planning/SKILL.md",
     "mtime": "2026-05-05T19:30:21.062Z"
   },
   {
@@ -1672,7 +1672,7 @@
       "root cause analysis",
       "investigate this error"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\investigate\\SKILL.md",
+    "file": "~/.claude/skills/investigate/SKILL.md",
     "mtime": "2026-06-18T10:14:13.849Z"
   },
   {
@@ -1681,7 +1681,7 @@
     "source": "marketplace",
     "description": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents, projections, use-of-funds tables, milestone plans, or materials that must stay internally consistent across multiple fundraising assets.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\investor-materials\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/investor-materials/SKILL.md",
     "mtime": "2026-05-05T19:30:20.686Z"
   },
   {
@@ -1690,7 +1690,7 @@
     "source": "marketplace",
     "description": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors, or accelerators and needs concise, personalized, investor-facing messaging.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\investor-outreach\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/investor-outreach/SKILL.md",
     "mtime": "2026-05-05T19:30:20.687Z"
   },
   {
@@ -1703,7 +1703,7 @@
       "remove debugbridge",
       "strip the gstack ios instrumentation"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ios-clean\\SKILL.md",
+    "file": "~/.claude/skills/ios-clean/SKILL.md",
     "mtime": "2026-06-18T10:14:13.866Z"
   },
   {
@@ -1716,7 +1716,7 @@
       "audit the iphone app visuals",
       "design qa the ios app"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ios-design-review\\SKILL.md",
+    "file": "~/.claude/skills/ios-design-review/SKILL.md",
     "mtime": "2026-06-18T10:14:13.885Z"
   },
   {
@@ -1729,7 +1729,7 @@
       "patch the iphone app",
       "auto-fix the ios issue"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ios-fix\\SKILL.md",
+    "file": "~/.claude/skills/ios-fix/SKILL.md",
     "mtime": "2026-06-18T10:14:13.904Z"
   },
   {
@@ -1744,7 +1744,7 @@
       "find bugs on the device",
       "qa the ios app"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ios-qa\\SKILL.md",
+    "file": "~/.claude/skills/ios-qa/SKILL.md",
     "mtime": "2026-06-18T10:14:13.928Z"
   },
   {
@@ -1757,7 +1757,7 @@
       "regenerate ios accessors",
       "update the gstack ios instrumentation"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ios-sync\\SKILL.md",
+    "file": "~/.claude/skills/ios-sync/SKILL.md",
     "mtime": "2026-06-18T10:14:13.951Z"
   },
   {
@@ -1766,7 +1766,7 @@
     "source": "marketplace",
     "description": "サブエージェントのコンテキスト問題を解決するために、コンテキスト取得を段階的に洗練するパターン",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\iterative-retrieval\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/iterative-retrieval/SKILL.md",
     "mtime": "2026-05-05T19:30:20.925Z"
   },
   {
@@ -1775,7 +1775,7 @@
     "source": "marketplace",
     "description": "Spring Bootサービス向けのJavaコーディング標準：命名、不変性、Optional使用、ストリーム、例外、ジェネリクス、プロジェクトレイアウト。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\java-coding-standards\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/java-coding-standards/SKILL.md",
     "mtime": "2026-05-05T19:30:20.926Z"
   },
   {
@@ -1784,7 +1784,7 @@
     "source": "marketplace",
     "description": "Use this skill when retrieving Jira tickets, analyzing requirements, updating ticket status, adding comments, or transitioning issues. Provides Jira API patterns via MCP or direct REST calls.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\jira-integration\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/jira-integration/SKILL.md",
     "mtime": "2026-05-05T19:30:21.223Z"
   },
   {
@@ -1793,7 +1793,7 @@
     "source": "marketplace",
     "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\jpa-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/jpa-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.926Z"
   },
   {
@@ -1802,7 +1802,7 @@
     "source": "marketplace",
     "description": "Knowledge base management, ingestion, sync, and retrieval across multiple storage layers (local files, MCP memory, vector stores, Git repos). Use when the user wants to save, organize, sync, deduplicate, or search across their knowledge systems.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\knowledge-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/knowledge-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.224Z"
   },
   {
@@ -1811,7 +1811,7 @@
     "source": "marketplace",
     "description": "Kotlin协程与Flow在Android和KMP中的模式——结构化并发、Flow操作符、StateFlow、错误处理和测试。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\kotlin-coroutines-flows\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/kotlin-coroutines-flows/SKILL.md",
     "mtime": "2026-05-05T19:30:21.063Z"
   },
   {
@@ -1820,7 +1820,7 @@
     "source": "marketplace",
     "description": "JetBrains Exposed ORM 模式，包括 DSL 查询、DAO 模式、事务、HikariCP 连接池、Flyway 迁移和仓库模式。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\kotlin-exposed-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/kotlin-exposed-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.063Z"
   },
   {
@@ -1829,7 +1829,7 @@
     "source": "marketplace",
     "description": "Ktor 服务器模式，包括路由 DSL、插件、身份验证、Koin DI、kotlinx.serialization、WebSockets 和 testApplication 测试。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\kotlin-ktor-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/kotlin-ktor-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.064Z"
   },
   {
@@ -1838,7 +1838,7 @@
     "source": "marketplace",
     "description": "Coroutine'ler, null safety ve DSL builder'lar ile sağlam, verimli ve sürdürülebilir Kotlin uygulamaları oluşturmak için idiomatic Kotlin kalıpları, en iyi uygulamalar ve konvansiyonlar.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\kotlin-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/kotlin-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.992Z"
   },
   {
@@ -1847,7 +1847,7 @@
     "source": "marketplace",
     "description": "Kotest, MockK, coroutine testi, property-based testing ve Kover coverage ile Kotlin test kalıpları. İdiomatic Kotlin uygulamalarıyla TDD metodolojisini takip eder.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\kotlin-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/kotlin-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.993Z"
   },
   {
@@ -1860,7 +1860,7 @@
       "land the pr",
       "ship to production"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\land-and-deploy\\SKILL.md",
+    "file": "~/.claude/skills/land-and-deploy/SKILL.md",
     "mtime": "2026-06-18T10:14:13.970Z"
   },
   {
@@ -1875,7 +1875,7 @@
       "what version comes next",
       "show open PR versions"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\landing-report\\SKILL.md",
+    "file": "~/.claude/skills/landing-report/SKILL.md",
     "mtime": "2026-06-18T10:14:13.988Z"
   },
   {
@@ -1884,7 +1884,7 @@
     "source": "marketplace",
     "description": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\laravel-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/laravel-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.993Z"
   },
   {
@@ -1893,7 +1893,7 @@
     "source": "marketplace",
     "description": "Discover and evaluate Laravel packages via LaraPlugins.io MCP. Use when the user wants to find plugins, check package health, or assess Laravel/PHP compatibility.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\laravel-plugin-discovery\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/laravel-plugin-discovery/SKILL.md",
     "mtime": "2026-05-05T19:30:21.226Z"
   },
   {
@@ -1902,7 +1902,7 @@
     "source": "marketplace",
     "description": "Laravel security best practices for authn/authz, validation, CSRF, mass assignment, file uploads, secrets, rate limiting, and secure deployment.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\laravel-security\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/laravel-security/SKILL.md",
     "mtime": "2026-05-05T19:30:20.994Z"
   },
   {
@@ -1911,7 +1911,7 @@
     "source": "marketplace",
     "description": "Test-driven development for Laravel with PHPUnit and Pest, factories, database testing, fakes, and coverage targets.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\laravel-tdd\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/laravel-tdd/SKILL.md",
     "mtime": "2026-05-05T19:30:20.994Z"
   },
   {
@@ -1920,7 +1920,7 @@
     "source": "marketplace",
     "description": "Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\laravel-verification\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/laravel-verification/SKILL.md",
     "mtime": "2026-05-05T19:30:20.994Z"
   },
   {
@@ -1929,7 +1929,7 @@
     "source": "marketplace",
     "description": "AI-native lead intelligence and outreach pipeline. Replaces Apollo, Clay, and ZoomInfo with agent-powered signal scoring, mutual ranking, warm path discovery, source-derived voice modeling, and channel-specific outreach across email, LinkedIn, and X. Use when the user wants to find, qualify, and reach high-value contacts.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\lead-intelligence\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/lead-intelligence/SKILL.md",
     "mtime": "2026-05-05T19:30:21.227Z"
   },
   {
@@ -1942,7 +1942,7 @@
       "what have we learned",
       "manage project learnings"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\learn\\SKILL.md",
+    "file": "~/.claude/skills/learn/SKILL.md",
     "mtime": "2026-06-18T10:14:14.012Z"
   },
   {
@@ -1951,7 +1951,7 @@
     "source": "marketplace",
     "description": "iOS 26 液态玻璃设计系统 — 适用于 SwiftUI、UIKit 和 WidgetKit 的动态玻璃材质，具有模糊、反射和交互式变形效果。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\liquid-glass-design\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/liquid-glass-design/SKILL.md",
     "mtime": "2026-05-05T19:30:21.066Z"
   },
   {
@@ -1960,7 +1960,7 @@
     "source": "marketplace",
     "description": "Security patterns for autonomous trading agents with wallet or transaction authority. Covers prompt injection, spend limits, pre-send simulation, circuit breakers, MEV protection, and key handling.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\llm-trading-agent-security\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/llm-trading-agent-security/SKILL.md",
     "mtime": "2026-05-05T19:30:21.229Z"
   },
   {
@@ -1969,7 +1969,7 @@
     "source": "marketplace",
     "description": "针对货运异常、货物延误、损坏、丢失和承运商纠纷的编码化专业知识，由拥有15年以上运营经验的物流专业人士提供。包括升级协议、承运商特定行为、索赔程序和判断框架。在处理运输异常、货运索赔、交付问题或承运商纠纷时使用。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\logistics-exception-management\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/logistics-exception-management/SKILL.md",
     "mtime": "2026-05-05T19:30:21.066Z"
   },
   {
@@ -1983,7 +1983,7 @@
       "make pdf",
       "export pdf"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\make-pdf\\SKILL.md",
+    "file": "~/.claude/skills/make-pdf/SKILL.md",
     "mtime": "2026-06-18T10:14:14.039Z"
   },
   {
@@ -1992,7 +1992,7 @@
     "source": "marketplace",
     "description": "Build reusable Manim explainers for technical concepts, graphs, system diagrams, and product walkthroughs, then hand off to the wider ECC video stack if needed. Use when the user wants a clean animated explainer rather than a generic talking-head script.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\manim-video\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/manim-video/SKILL.md",
     "mtime": "2026-05-05T19:30:21.230Z"
   },
   {
@@ -2001,7 +2001,7 @@
     "source": "marketplace",
     "description": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants market sizing, competitor comparisons, fund research, technology scans, or research that informs business decisions.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\market-research\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/market-research/SKILL.md",
     "mtime": "2026-05-05T19:30:20.687Z"
   },
   {
@@ -2010,7 +2010,7 @@
     "source": "cache",
     "description": "",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\math-olympiad\\06b291803d65\\skills\\math-olympiad\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/math-olympiad/06b291803d65/skills/math-olympiad/SKILL.md",
     "mtime": "2026-05-09T19:05:25.481Z"
   },
   {
@@ -2019,7 +2019,7 @@
     "source": "personal",
     "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\mcp-builder\\SKILL.md",
+    "file": "~/.claude/skills/mcp-builder/SKILL.md",
     "mtime": "2026-05-25T09:12:07.274Z"
   },
   {
@@ -2028,7 +2028,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\mcp-integration\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/mcp-integration/SKILL.md",
     "mtime": "2026-05-09T19:05:25.513Z"
   },
   {
@@ -2037,7 +2037,7 @@
     "source": "marketplace",
     "description": "Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\mcp-server-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/mcp-server-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.688Z"
   },
   {
@@ -2046,7 +2046,7 @@
     "source": "marketplace",
     "description": "Evidence-first live messaging workflow for ECC. Use when the user wants to read texts or DMs, recover a recent one-time code, inspect a thread before replying, or prove which message source was actually checked.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\messages-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/messages-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.232Z"
   },
   {
@@ -2055,7 +2055,7 @@
     "source": "marketplace",
     "description": "操作并扩展NanoClaw v2，这是ECC基于claude -p构建的零依赖会话感知REPL。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\nanoclaw-repl\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/nanoclaw-repl/SKILL.md",
     "mtime": "2026-05-05T19:30:21.067Z"
   },
   {
@@ -2064,7 +2064,7 @@
     "source": "marketplace",
     "description": "NestJS architecture patterns for modules, controllers, providers, DTO validation, guards, interceptors, config, and production-grade TypeScript backends.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\nestjs-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/nestjs-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.232Z"
   },
   {
@@ -2073,7 +2073,7 @@
     "source": "marketplace",
     "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\nextjs-turbopack\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/nextjs-turbopack/SKILL.md",
     "mtime": "2026-05-05T19:30:20.689Z"
   },
   {
@@ -2082,7 +2082,7 @@
     "source": "marketplace",
     "description": "Prevent Ethereum hashing bugs in JavaScript and TypeScript. Node's sha3-256 is NIST SHA3, not Ethereum Keccak-256, and silently breaks selectors, signatures, storage slots, and address derivation.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\nodejs-keccak256\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/nodejs-keccak256/SKILL.md",
     "mtime": "2026-05-05T19:30:21.233Z"
   },
   {
@@ -2091,7 +2091,7 @@
     "source": "personal",
     "description": "克苏鲁×塔罗小说《逆位猎人》写作——Cthulhu horror + Tarot collection, 紧贴主角直叙风格, 去AI味",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\novel-writing\\SKILL.md",
+    "file": "~/.claude/skills/novel-writing/SKILL.md",
     "mtime": "2026-06-05T23:12:31.364Z"
   },
   {
@@ -2100,7 +2100,7 @@
     "source": "marketplace",
     "description": "Nutrient DWS API を使用してドキュメントの処理、変換、OCR、抽出、編集、署名、フォーム入力を行います。PDF、DOCX、XLSX、PPTX、HTML、画像に対応しています。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\nutrient-document-processing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/nutrient-document-processing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.926Z"
   },
   {
@@ -2109,7 +2109,7 @@
     "source": "marketplace",
     "description": "Nuxt 4 应用模式，涵盖水合安全、性能优化、路由规则、懒加载，以及使用 useFetch 和 useAsyncData 进行 SSR 安全的数据获取。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\nuxt4-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/nuxt4-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.068Z"
   },
   {
@@ -2123,7 +2123,7 @@
       "help me think through",
       "office hours"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\office-hours\\SKILL.md",
+    "file": "~/.claude/skills/office-hours/SKILL.md",
     "mtime": "2026-06-18T10:14:14.078Z"
   },
   {
@@ -2136,7 +2136,7 @@
       "launch chromium",
       "show me the browser"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\connect-chrome\\SKILL.md",
+    "file": "~/.claude/skills/connect-chrome/SKILL.md",
     "mtime": "2026-05-07T11:07:46.976Z"
   },
   {
@@ -2145,7 +2145,7 @@
     "source": "marketplace",
     "description": "为 OpenClaw AI Agent 锻造完整的龙虾灵魂方案。根据用户偏好或随机抽卡，\n输出身份定位、灵魂描述(SOUL.md)、角色化底线规则、名字和头像生图提示词。\n如当前环境提供已审核的生图 skill，可自动生成统一风格头像图片。\n当用户需要创建、设计或定制 OpenClaw 龙虾灵魂时使用。\n不适用于：微调已有 SOUL.md、非 OpenClaw 平台的角色设计、纯工具型无性格 Agent。\n触发词：龙虾灵魂、虾魂、OpenClaw 灵魂、养虾灵魂、龙虾角色、龙虾定位、\n龙虾剧本杀角色、龙虾游戏角色、龙虾 NPC、龙虾性格、龙虾背景故事、\nlobster soul、lobster character、抽卡、随机龙虾、龙虾 SOUL、gacha。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\openclaw-persona-forge\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/openclaw-persona-forge/SKILL.md",
     "mtime": "2026-05-05T19:30:21.235Z"
   },
   {
@@ -2154,7 +2154,7 @@
     "source": "marketplace",
     "description": "\"Open-source pipeline: fork, sanitize, and package private projects for safe public release. Chains 3 agents (forker, sanitizer, packager). Triggers: '/opensource', 'open source this', 'make this public', 'prepare for open source'.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\opensource-pipeline\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/opensource-pipeline/SKILL.md",
     "mtime": "2026-05-05T19:30:21.237Z"
   },
   {
@@ -2167,7 +2167,7 @@
       "connect remote agent",
       "share my browser"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\pair-agent\\SKILL.md",
+    "file": "~/.claude/skills/pair-agent/SKILL.md",
     "mtime": "2026-06-18T10:14:14.119Z"
   },
   {
@@ -2176,7 +2176,7 @@
     "source": "personal",
     "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\pdf\\SKILL.md",
+    "file": "~/.claude/skills/pdf/SKILL.md",
     "mtime": "2026-05-25T09:12:29.674Z"
   },
   {
@@ -2185,7 +2185,7 @@
     "source": "personal",
     "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\performance-optimization\\SKILL.md",
+    "file": "~/.claude/skills/performance-optimization/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -2194,7 +2194,7 @@
     "source": "marketplace",
     "description": "现代 Perl 5.36+ 的惯用法、最佳实践和约定，用于构建稳健、可维护的 Perl 应用程序。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\perl-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/perl-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.069Z"
   },
   {
@@ -2203,7 +2203,7 @@
     "source": "marketplace",
     "description": "全面的Perl安全指南，涵盖污染模式、输入验证、安全进程执行、DBI参数化查询、Web安全（XSS/SQLi/CSRF）以及perlcritic安全策略。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\perl-security\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/perl-security/SKILL.md",
     "mtime": "2026-05-05T19:30:21.069Z"
   },
   {
@@ -2212,7 +2212,7 @@
     "source": "marketplace",
     "description": "使用Test2::V0、Test::More、prove runner、模拟、Devel::Cover覆盖率和TDD方法的Perl测试模式。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\perl-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/perl-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:21.070Z"
   },
   {
@@ -2226,7 +2226,7 @@
       "strategy review",
       "rethink this plan"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\plan-ceo-review\\SKILL.md",
+    "file": "~/.claude/skills/plan-ceo-review/SKILL.md",
     "mtime": "2026-06-18T10:14:14.150Z"
   },
   {
@@ -2239,7 +2239,7 @@
       "review ux plan",
       "check design decisions"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\plan-design-review\\SKILL.md",
+    "file": "~/.claude/skills/plan-design-review/SKILL.md",
     "mtime": "2026-06-18T10:14:14.190Z"
   },
   {
@@ -2252,7 +2252,7 @@
       "dx plan review",
       "check developer onboarding"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\plan-devex-review\\SKILL.md",
+    "file": "~/.claude/skills/plan-devex-review/SKILL.md",
     "mtime": "2026-06-18T10:14:14.232Z"
   },
   {
@@ -2265,7 +2265,7 @@
       "eng plan review",
       "check the implementation plan"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\plan-eng-review\\SKILL.md",
+    "file": "~/.claude/skills/plan-eng-review/SKILL.md",
     "mtime": "2026-06-18T10:14:14.264Z"
   },
   {
@@ -2282,7 +2282,7 @@
       "developer profile",
       "turn off question tuning"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\plan-tune\\SKILL.md",
+    "file": "~/.claude/skills/plan-tune/SKILL.md",
     "mtime": "2026-06-18T10:14:14.336Z"
   },
   {
@@ -2291,7 +2291,7 @@
     "source": "marketplace",
     "description": "\"使用Plankton进行编写时代码质量强制执行——通过钩子在每次文件编辑时自动格式化、代码检查和Claude驱动的修复。\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\plankton-code-quality\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/plankton-code-quality/SKILL.md",
     "mtime": "2026-05-05T19:30:21.070Z"
   },
   {
@@ -2300,7 +2300,7 @@
     "source": "personal",
     "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\planning-and-task-breakdown\\SKILL.md",
+    "file": "~/.claude/skills/planning-and-task-breakdown/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -2309,7 +2309,7 @@
     "source": "cache",
     "description": "Creates interactive HTML playgrounds — self-contained single-file explorers that let users configure something visually through controls, see a live preview, and copy out a prompt. Use when the user asks to make a playground, explorer, or interactive tool for a topic.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\playground\\06b291803d65\\skills\\playground\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/playground/06b291803d65/skills/playground/SKILL.md",
     "mtime": "2026-05-09T19:05:25.493Z"
   },
   {
@@ -2318,7 +2318,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\plugin-settings\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/plugin-settings/SKILL.md",
     "mtime": "2026-05-09T19:05:25.515Z"
   },
   {
@@ -2327,7 +2327,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\plugin-structure\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/plugin-structure/SKILL.md",
     "mtime": "2026-05-09T19:05:25.518Z"
   },
   {
@@ -2336,7 +2336,7 @@
     "source": "marketplace",
     "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Quick reference for common patterns, index types, data types, and anti-pattern detection. Based on Supabase best practices.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\postgres-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/postgres-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.737Z"
   },
   {
@@ -2345,7 +2345,7 @@
     "source": "marketplace",
     "description": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions before multi-service work starts. Use when the user needs an ECC-native PRD-to-SRS lane instead of vague planning prose.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\product-capability\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/product-capability/SKILL.md",
     "mtime": "2026-05-05T19:30:20.689Z"
   },
   {
@@ -2354,7 +2354,7 @@
     "source": "marketplace",
     "description": "Use this skill to validate the \"why\" before building, run product diagnostics, and pressure-test product direction before the request becomes an implementation contract.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\product-lens\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/product-lens/SKILL.md",
     "mtime": "2026-05-05T19:30:21.239Z"
   },
   {
@@ -2363,7 +2363,7 @@
     "source": "marketplace",
     "description": "为离散和批量制造中的生产调度、作业排序、产线平衡、换模优化和瓶颈解决提供编码化专业知识。基于拥有15年以上经验的生产调度师的知识。包括约束理论/鼓-缓冲-绳、快速换模、设备综合效率分析、中断响应框架以及企业资源计划/制造执行系统交互模式。适用于调度生产、解决瓶颈、优化换模、应对中断或平衡制造产线时。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\production-scheduling\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/production-scheduling/SKILL.md",
     "mtime": "2026-05-05T19:30:21.070Z"
   },
   {
@@ -2372,7 +2372,7 @@
     "source": "marketplace",
     "description": "Operate execution flow across GitHub and Linear by triaging issues and pull requests, linking active work, and keeping GitHub public-facing while Linear remains the internal execution layer. Use when the user wants backlog control, PR triage, or GitHub-to-Linear coordination.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\project-flow-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/project-flow-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.240Z"
   },
   {
@@ -2381,7 +2381,7 @@
     "source": "marketplace",
     "description": "",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\project-guidelines-example\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/project-guidelines-example/SKILL.md",
     "mtime": "2026-05-05T19:30:20.927Z"
   },
   {
@@ -2390,7 +2390,7 @@
     "source": "marketplace",
     "description": "分析原始提示，识别意图和差距，匹配ECC组件（技能/命令/代理/钩子），并输出一个可直接粘贴的优化提示。仅提供咨询角色——绝不自行执行任务。触发时机：当用户说“优化提示”、“改进我的提示”、“如何编写提示”、“帮我优化这个指令”或明确要求提高提示质量时。中文等效表达同样触发：“优化prompt”、“改进prompt”、“怎么写prompt”、“帮我优化这个指令”。不触发时机：当用户希望直接执行任务，或说“直接做”时。不触发时机：当用户说“优化代码”、“优化性能”、“optimize performance”、“optimize this code”时——这些是重构/性能优化任务，而非提示优化。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\prompt-optimizer\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/prompt-optimizer/SKILL.md",
     "mtime": "2026-05-05T19:30:21.072Z"
   },
   {
@@ -2399,7 +2399,7 @@
     "source": "personal",
     "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\prototype\\SKILL.md",
+    "file": "~/.claude/skills/prototype/SKILL.md",
     "mtime": "2026-05-18T01:35:22.159Z"
   },
   {
@@ -2408,7 +2408,7 @@
     "source": "marketplace",
     "description": "Python-specific design patterns and best practices including protocols, dataclasses, context managers, decorators, async/await, type hints, and package organization. Use when working with Python code to apply Pythonic patterns.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\python-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/python-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.738Z"
   },
   {
@@ -2417,7 +2417,7 @@
     "source": "marketplace",
     "description": "Python testing best practices using pytest including fixtures, parametrization, mocking, coverage analysis, async testing, and test organization. Use when writing or improving Python tests.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\python-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/python-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.738Z"
   },
   {
@@ -2426,7 +2426,7 @@
     "source": "marketplace",
     "description": "PyTorch深度学习模式与最佳实践，用于构建稳健、高效且可复现的训练流程、模型架构和数据加载。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\pytorch-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/pytorch-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.073Z"
   },
   {
@@ -2439,7 +2439,7 @@
       "find bugs on site",
       "test the site"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\qa\\SKILL.md",
+    "file": "~/.claude/skills/qa/SKILL.md",
     "mtime": "2026-06-18T10:14:14.364Z"
   },
   {
@@ -2452,7 +2452,7 @@
       "just report bugs",
       "test but dont fix"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\qa-only\\SKILL.md",
+    "file": "~/.claude/skills/qa-only/SKILL.md",
     "mtime": "2026-06-18T10:14:14.379Z"
   },
   {
@@ -2461,7 +2461,7 @@
     "source": "marketplace",
     "description": "为受监管制造业中的质量控制、不合格调查、根本原因分析、纠正措施和供应商质量管理提供编码化专业知识。基于在FDA、IATF 16949和AS9100环境中拥有15年以上经验的质量工程师的见解。包括不合格报告生命周期管理、纠正与预防措施系统、统计过程控制解释和审核方法。适用于调查不合格、进行根本原因分析、管理纠正与预防措施、解释统计过程控制数据或处理供应商质量问题。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\quality-nonconformance\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/quality-nonconformance/SKILL.md",
     "mtime": "2026-05-05T19:30:21.073Z"
   },
   {
@@ -2470,7 +2470,7 @@
     "source": "marketplace",
     "description": "基于RFC驱动的多智能体DAG执行模式，包含质量门、合并队列和工作单元编排。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\ralphinho-rfc-pipeline\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/ralphinho-rfc-pipeline/SKILL.md",
     "mtime": "2026-05-05T19:30:21.073Z"
   },
   {
@@ -2479,7 +2479,7 @@
     "source": "marketplace",
     "description": "选择在解析结构化文本时使用正则表达式还是大型语言模型的决策框架——从正则表达式开始，仅在低置信度的边缘情况下添加大型语言模型。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\regex-vs-llm-structured-text\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/regex-vs-llm-structured-text/SKILL.md",
     "mtime": "2026-05-05T19:30:21.074Z"
   },
   {
@@ -2488,7 +2488,7 @@
     "source": "marketplace",
     "description": "Best practices for Remotion - Video creation in React. 29 domain-specific rules covering 3D, animations, audio, captions, charts, transitions, and more.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\remotion-video-creation\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/remotion-video-creation/SKILL.md",
     "mtime": "2026-05-05T19:30:21.242Z"
   },
   {
@@ -2497,7 +2497,7 @@
     "source": "marketplace",
     "description": "Cross-stack source code asset audit — classifies every file, detects embedded third-party libraries, and delivers actionable four-level verdicts per module with interactive HTML reports.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\repo-scan\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/repo-scan/SKILL.md",
     "mtime": "2026-05-05T19:30:21.249Z"
   },
   {
@@ -2506,7 +2506,7 @@
     "source": "marketplace",
     "description": "Evidence-first current-state research workflow for ECC. Use when the user wants fresh facts, comparisons, enrichment, or a recommendation built from current public evidence and any supplied local context.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\research-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/research-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.250Z"
   },
   {
@@ -2519,7 +2519,7 @@
       "what did we ship",
       "engineering retrospective"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\retro\\SKILL.md",
+    "file": "~/.claude/skills/retro/SKILL.md",
     "mtime": "2026-06-18T10:14:14.396Z"
   },
   {
@@ -2528,7 +2528,7 @@
     "source": "marketplace",
     "description": "用于退货授权、接收与检验、处置决策、退款处理、欺诈检测以及保修索赔管理的标准化专业知识。基于拥有15年以上经验的退货运营经理的见解。包括分级框架、处置经济学、欺诈模式识别和供应商回收流程。适用于处理产品退货、逆向物流、退款决策、退货欺诈检测或保修索赔时使用。license: Apache-2.0",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\returns-reverse-logistics\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/returns-reverse-logistics/SKILL.md",
     "mtime": "2026-05-05T19:30:21.074Z"
   },
   {
@@ -2542,7 +2542,7 @@
       "check my diff",
       "pre-landing review"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\review\\SKILL.md",
+    "file": "~/.claude/skills/review/SKILL.md",
     "mtime": "2026-06-18T10:14:14.416Z"
   },
   {
@@ -2551,7 +2551,7 @@
     "source": "marketplace",
     "description": "\"扫描技能以提取跨领域原则并将其提炼为规则——追加、修订或创建新的规则文件\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\rules-distill\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/rules-distill/SKILL.md",
     "mtime": "2026-05-05T19:30:21.075Z"
   },
   {
@@ -2560,7 +2560,7 @@
     "source": "marketplace",
     "description": "Idiomatic Rust patterns, ownership, error handling, traits, concurrency, and best practices for building safe, performant applications.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\rust-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/rust-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.996Z"
   },
   {
@@ -2569,7 +2569,7 @@
     "source": "marketplace",
     "description": "Rust testing patterns including unit tests, integration tests, async testing, property-based testing, mocking, and coverage. Follows TDD methodology.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\tr\\skills\\rust-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/tr/skills/rust-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.997Z"
   },
   {
@@ -2578,7 +2578,7 @@
     "source": "marketplace",
     "description": "Use this skill to prevent destructive operations when working on production systems or running agents autonomously.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\safety-guard\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/safety-guard/SKILL.md",
     "mtime": "2026-05-05T19:30:21.252Z"
   },
   {
@@ -2587,7 +2587,7 @@
     "source": "marketplace",
     "description": "\"Multi-agent adversarial verification with convergence loop. Two independent review agents must both pass before output ships.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\santa-method\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/santa-method/SKILL.md",
     "mtime": "2026-05-05T19:30:21.253Z"
   },
   {
@@ -2602,7 +2602,7 @@
       "extract from",
       "what is on"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\scrape\\SKILL.md",
+    "file": "~/.claude/skills/scrape/SKILL.md",
     "mtime": "2026-06-18T10:14:14.433Z"
   },
   {
@@ -2611,7 +2611,7 @@
     "source": "marketplace",
     "description": "Research-before-coding workflow. Search for existing tools, libraries, and patterns before writing custom code. Systematizes the \"search for existing solutions before implementing\" approach. Use when starting new features or adding functionality.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.kiro\\skills\\search-first\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.kiro/skills/search-first/SKILL.md",
     "mtime": "2026-05-05T19:30:20.738Z"
   },
   {
@@ -2620,7 +2620,7 @@
     "source": "personal",
     "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\security-and-hardening\\SKILL.md",
+    "file": "~/.claude/skills/security-and-hardening/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -2629,7 +2629,7 @@
     "source": "marketplace",
     "description": "Hunt for exploitable, bounty-worthy security issues in repositories. Focuses on remotely reachable vulnerabilities that qualify for real reports instead of noisy local-only findings.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\security-bounty-hunter\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/security-bounty-hunter/SKILL.md",
     "mtime": "2026-05-05T19:30:21.253Z"
   },
   {
@@ -2638,7 +2638,7 @@
     "source": "marketplace",
     "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\security-review\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/security-review/SKILL.md",
     "mtime": "2026-05-05T19:30:20.690Z"
   },
   {
@@ -2647,7 +2647,7 @@
     "source": "marketplace",
     "description": "AgentShield を使用して、Claude Code の設定（.claude/ ディレクトリ）のセキュリティ脆弱性、設定ミス、インジェクションリスクをスキャンします。CLAUDE.md、settings.json、MCP サーバー、フック、エージェント定義をチェックします。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\security-scan\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/security-scan/SKILL.md",
     "mtime": "2026-05-05T19:30:20.929Z"
   },
   {
@@ -2656,7 +2656,7 @@
     "source": "marketplace",
     "description": "Audit, plan, and implement SEO improvements across technical SEO, on-page optimization, structured data, Core Web Vitals, and content strategy. Use when the user wants better search visibility, SEO remediation, schema markup, sitemap/robots work, or keyword mapping.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\seo\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/seo/SKILL.md",
     "mtime": "2026-05-05T19:30:21.255Z"
   },
   {
@@ -2665,7 +2665,7 @@
     "source": "cache",
     "description": "Generate an explorable HTML report of Claude Code session usage (tokens, cache, subagents, skills, expensive prompts) from ~/.claude/projects transcripts.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\session-report\\06b291803d65\\skills\\session-report\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/session-report/06b291803d65/skills/session-report/SKILL.md",
     "mtime": "2026-05-09T19:05:25.532Z"
   },
   {
@@ -2678,7 +2678,7 @@
       "login to test site",
       "setup authenticated session"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\setup-browser-cookies\\SKILL.md",
+    "file": "~/.claude/skills/setup-browser-cookies/SKILL.md",
     "mtime": "2026-06-18T10:14:14.450Z"
   },
   {
@@ -2691,7 +2691,7 @@
       "setup deployment",
       "set deploy platform"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\setup-deploy\\SKILL.md",
+    "file": "~/.claude/skills/setup-deploy/SKILL.md",
     "mtime": "2026-06-18T10:14:14.466Z"
   },
   {
@@ -2706,7 +2706,7 @@
       "start gbrain",
       "configure gbrain"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\setup-gbrain\\SKILL.md",
+    "file": "~/.claude/skills/setup-gbrain/SKILL.md",
     "mtime": "2026-06-18T10:14:14.483Z"
   },
   {
@@ -2715,7 +2715,7 @@
     "source": "personal",
     "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\setup-matt-pocock-skills\\SKILL.md",
+    "file": "~/.claude/skills/setup-matt-pocock-skills/SKILL.md",
     "mtime": "2026-05-18T01:35:22.161Z"
   },
   {
@@ -2724,7 +2724,7 @@
     "source": "personal",
     "description": "黑暗幻想小说《走在神的尸骸上》写作——永夜世界、神骸体系、父亲烧城送子、墟行者追寻壁画、裂缝终结",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\shenhai-writing\\SKILL.md",
+    "file": "~/.claude/skills/shenhai-writing/SKILL.md",
     "mtime": "2026-05-25T12:36:08.669Z"
   },
   {
@@ -2738,7 +2738,7 @@
       "push to main",
       "deploy this"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\ship\\SKILL.md",
+    "file": "~/.claude/skills/ship/SKILL.md",
     "mtime": "2026-06-18T10:14:14.521Z"
   },
   {
@@ -2747,7 +2747,7 @@
     "source": "personal",
     "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\shipping-and-launch\\SKILL.md",
+    "file": "~/.claude/skills/shipping-and-launch/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -2756,7 +2756,7 @@
     "source": "marketplace",
     "description": "Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\skill-comply\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/skill-comply/SKILL.md",
     "mtime": "2026-05-05T19:30:21.255Z"
   },
   {
@@ -2765,7 +2765,7 @@
     "source": "cache",
     "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\skill-creator\\06b291803d65\\skills\\skill-creator\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/skill-creator/06b291803d65/skills/skill-creator/SKILL.md",
     "mtime": "2026-05-09T19:05:25.534Z"
   },
   {
@@ -2774,7 +2774,7 @@
     "source": "cache",
     "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\plugin-dev\\06b291803d65\\skills\\skill-development\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/plugin-dev/06b291803d65/skills/skill-development/SKILL.md",
     "mtime": "2026-05-09T19:05:25.522Z"
   },
   {
@@ -2783,7 +2783,7 @@
     "source": "marketplace",
     "description": "\"用于审计Claude技能和命令的质量。支持快速扫描（仅变更技能）和全面盘点模式，采用顺序子代理批量评估。\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\skill-stocktake\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/skill-stocktake/SKILL.md",
     "mtime": "2026-05-05T19:30:21.078Z"
   },
   {
@@ -2797,7 +2797,7 @@
       "save this scrape",
       "make this permanent"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\skillify\\SKILL.md",
+    "file": "~/.claude/skills/skillify/SKILL.md",
     "mtime": "2026-06-18T10:14:14.549Z"
   },
   {
@@ -2806,7 +2806,7 @@
     "source": "marketplace",
     "description": "Weighted social-graph ranking for warm intro discovery, bridge scoring, and network gap analysis across X and LinkedIn. Use when the user wants the reusable graph-ranking engine itself, not the broader outreach or network-maintenance workflow layered on top of it.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\social-graph-ranker\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/social-graph-ranker/SKILL.md",
     "mtime": "2026-05-05T19:30:21.261Z"
   },
   {
@@ -2815,7 +2815,7 @@
     "source": "personal",
     "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\source-driven-development\\SKILL.md",
+    "file": "~/.claude/skills/source-driven-development/SKILL.md",
     "mtime": "2026-05-18T01:40:30.216Z"
   },
   {
@@ -2831,7 +2831,7 @@
       "make this a github issue",
       "turn this into a backlog item"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\spec\\SKILL.md",
+    "file": "~/.claude/skills/spec/SKILL.md",
     "mtime": "2026-06-18T10:14:14.568Z"
   },
   {
@@ -2840,7 +2840,7 @@
     "source": "personal",
     "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\spec-driven-development\\SKILL.md",
+    "file": "~/.claude/skills/spec-driven-development/SKILL.md",
     "mtime": "2026-05-18T01:40:30.219Z"
   },
   {
@@ -2849,7 +2849,7 @@
     "source": "marketplace",
     "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\springboot-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/springboot-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:20.929Z"
   },
   {
@@ -2858,7 +2858,7 @@
     "source": "marketplace",
     "description": "Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\springboot-security\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/springboot-security/SKILL.md",
     "mtime": "2026-05-05T19:30:20.929Z"
   },
   {
@@ -2867,7 +2867,7 @@
     "source": "marketplace",
     "description": "Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\springboot-tdd\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/springboot-tdd/SKILL.md",
     "mtime": "2026-05-05T19:30:20.930Z"
   },
   {
@@ -2876,7 +2876,7 @@
     "source": "marketplace",
     "description": "Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\ja-JP\\skills\\springboot-verification\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/ja-JP/skills/springboot-verification/SKILL.md",
     "mtime": "2026-05-05T19:30:20.930Z"
   },
   {
@@ -2885,7 +2885,7 @@
     "source": "marketplace",
     "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\strategic-compact\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/strategic-compact/SKILL.md",
     "mtime": "2026-05-05T19:30:20.690Z"
   },
   {
@@ -2894,7 +2894,7 @@
     "source": "marketplace",
     "description": "在 Swift 中使用 actor 实现线程安全的数据持久化——基于内存缓存与文件支持的存储，通过设计消除数据竞争。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\swift-actor-persistence\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/swift-actor-persistence/SKILL.md",
     "mtime": "2026-05-05T19:30:21.080Z"
   },
   {
@@ -2903,7 +2903,7 @@
     "source": "marketplace",
     "description": "Swift 6.2 可接近的并发性 — 默认单线程，@concurrent 用于显式后台卸载，隔离一致性用于主 actor 类型。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\swift-concurrency-6-2\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/swift-concurrency-6-2/SKILL.md",
     "mtime": "2026-05-05T19:30:21.080Z"
   },
   {
@@ -2912,7 +2912,7 @@
     "source": "marketplace",
     "description": "基于协议的依赖注入，用于可测试的Swift代码——使用聚焦协议和Swift Testing模拟文件系统、网络和外部API。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\swift-protocol-di-testing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/swift-protocol-di-testing/SKILL.md",
     "mtime": "2026-05-05T19:30:21.080Z"
   },
   {
@@ -2921,7 +2921,7 @@
     "source": "marketplace",
     "description": "SwiftUI 架构模式，使用 @Observable 进行状态管理，视图组合，导航，性能优化，以及现代 iOS/macOS UI 最佳实践。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\swiftui-patterns\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/swiftui-patterns/SKILL.md",
     "mtime": "2026-05-05T19:30:21.081Z"
   },
   {
@@ -2935,7 +2935,7 @@
       "reindex repo",
       "update gbrain"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\sync-gbrain\\SKILL.md",
+    "file": "~/.claude/skills/sync-gbrain/SKILL.md",
     "mtime": "2026-06-18T10:14:14.599Z"
   },
   {
@@ -2944,7 +2944,7 @@
     "source": "personal",
     "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\tdd\\SKILL.md",
+    "file": "~/.claude/skills/tdd/SKILL.md",
     "mtime": "2026-05-18T01:35:22.162Z"
   },
   {
@@ -2953,7 +2953,7 @@
     "source": "marketplace",
     "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\tdd-workflow\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/tdd-workflow/SKILL.md",
     "mtime": "2026-05-05T19:30:20.692Z"
   },
   {
@@ -2962,7 +2962,7 @@
     "source": "marketplace",
     "description": "用于组合和派遣并行团队的交互式代理选择器",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\team-builder\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/team-builder/SKILL.md",
     "mtime": "2026-05-05T19:30:21.082Z"
   },
   {
@@ -2971,7 +2971,7 @@
     "source": "marketplace",
     "description": "Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what was executed and verified.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\terminal-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/terminal-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.265Z"
   },
   {
@@ -2980,7 +2980,7 @@
     "source": "personal",
     "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\test-driven-development\\SKILL.md",
+    "file": "~/.claude/skills/test-driven-development/SKILL.md",
     "mtime": "2026-05-18T01:40:30.219Z"
   },
   {
@@ -2989,7 +2989,7 @@
     "source": "personal",
     "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\theme-factory\\SKILL.md",
+    "file": "~/.claude/skills/theme-factory/SKILL.md",
     "mtime": "2026-05-25T09:12:07.360Z"
   },
   {
@@ -2998,7 +2998,7 @@
     "source": "personal",
     "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\to-issues\\SKILL.md",
+    "file": "~/.claude/skills/to-issues/SKILL.md",
     "mtime": "2026-05-18T01:35:22.163Z"
   },
   {
@@ -3007,7 +3007,7 @@
     "source": "personal",
     "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\to-prd\\SKILL.md",
+    "file": "~/.claude/skills/to-prd/SKILL.md",
     "mtime": "2026-05-18T01:35:22.164Z"
   },
   {
@@ -3016,7 +3016,7 @@
     "source": "marketplace",
     "description": "Offers the user an informed choice about how much response depth to consume before answering. Use this skill when the user explicitly wants to control response length, depth, or token budget. TRIGGER when: \"token budget\", \"token count\", \"token usage\", \"token limit\", \"response length\", \"answer depth\", \"short version\", \"brief answer\", \"detailed answer\", \"exhaustive answer\", \"respuesta corta vs larga\", \"cuántos tokens\", \"ahorrar tokens\", \"responde al 50%\", \"dame la versión corta\", \"quiero controlar cuánto usas\", or clear variants where the user is explicitly asking to control answer size or depth. DO NOT TRIGGER when: user has already specified a level in the current session (maintain it), the request is clearly a one-word answer, or \"token\" refers to auth/session/payment tokens rather than response size.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\token-budget-advisor\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/token-budget-advisor/SKILL.md",
     "mtime": "2026-05-05T19:30:21.265Z"
   },
   {
@@ -3025,7 +3025,7 @@
     "source": "personal",
     "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\triage\\SKILL.md",
+    "file": "~/.claude/skills/triage/SKILL.md",
     "mtime": "2026-05-18T01:35:22.165Z"
   },
   {
@@ -3034,7 +3034,7 @@
     "source": "marketplace",
     "description": "Record polished UI demo videos using Playwright. Use when the user asks to create a demo, walkthrough, screen recording, or tutorial video of a web application. Produces WebM videos with visible cursor, natural pacing, and professional feel.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\ui-demo\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/ui-demo/SKILL.md",
     "mtime": "2026-05-05T19:30:21.266Z"
   },
   {
@@ -3047,7 +3047,7 @@
       "unlock all directories",
       "remove edit restrictions"
     ],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\unfreeze\\SKILL.md",
+    "file": "~/.claude/skills/unfreeze/SKILL.md",
     "mtime": "2026-06-18T10:14:14.612Z"
   },
   {
@@ -3056,7 +3056,7 @@
     "source": "marketplace",
     "description": "Operate notifications as one ECC-native workflow across GitHub, Linear, desktop alerts, hooks, and connected communication surfaces. Use when the real problem is alert routing, deduplication, escalation, or inbox collapse.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\unified-notifications-ops\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/unified-notifications-ops/SKILL.md",
     "mtime": "2026-05-05T19:30:21.266Z"
   },
   {
@@ -3065,7 +3065,7 @@
     "source": "personal",
     "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\using-agent-skills\\SKILL.md",
+    "file": "~/.claude/skills/using-agent-skills/SKILL.md",
     "mtime": "2026-05-18T01:40:30.219Z"
   },
   {
@@ -3074,7 +3074,7 @@
     "source": "marketplace",
     "description": "\"A comprehensive verification system for Claude Code sessions.\"",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\verification-loop\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/verification-loop/SKILL.md",
     "mtime": "2026-05-05T19:30:20.692Z"
   },
   {
@@ -3083,7 +3083,7 @@
     "source": "marketplace",
     "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\video-editing\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/video-editing/SKILL.md",
     "mtime": "2026-05-05T19:30:20.693Z"
   },
   {
@@ -3092,7 +3092,7 @@
     "source": "marketplace",
     "description": "视频与音频的查看、理解与行动。查看：从本地文件、URL、RTSP/直播源或实时录制桌面获取内容；返回实时上下文和可播放流链接。理解：提取帧，构建视觉/语义/时间索引，并通过时间戳和自动剪辑搜索片段。行动：转码和标准化（编解码器、帧率、分辨率、宽高比），执行时间线编辑（字幕、文本/图像叠加、品牌化、音频叠加、配音、翻译），生成媒体资源（图像、音频、视频），并为直播流或桌面捕获的事件创建实时警报。",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\videodb\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/videodb/SKILL.md",
     "mtime": "2026-05-05T19:30:21.083Z"
   },
   {
@@ -3101,7 +3101,7 @@
     "source": "marketplace",
     "description": "将签证申请文件（图片）翻译成英文，并创建包含原文和译文的双语PDF",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\docs\\zh-CN\\skills\\visa-doc-translate\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/docs/zh-CN/skills/visa-doc-translate/SKILL.md",
     "mtime": "2026-05-05T19:30:21.086Z"
   },
   {
@@ -3110,7 +3110,7 @@
     "source": "personal",
     "description": "Use when you need to review rendered images, game screenshots, 3D model previews, UI mockups, or any visual output. Triggers on keywords like \"看看效果\", \"截图\", \"渲染\", \"preview\", \"screenshot\", \"视觉效果\", \"建模\".",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\visual-review\\SKILL.md",
+    "file": "~/.claude/skills/visual-review/SKILL.md",
     "mtime": "2026-05-07T10:42:42.806Z"
   },
   {
@@ -3119,7 +3119,7 @@
     "source": "personal",
     "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\web-artifacts-builder\\SKILL.md",
+    "file": "~/.claude/skills/web-artifacts-builder/SKILL.md",
     "mtime": "2026-05-25T09:12:07.315Z"
   },
   {
@@ -3128,7 +3128,7 @@
     "source": "personal",
     "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\webapp-testing\\SKILL.md",
+    "file": "~/.claude/skills/webapp-testing/SKILL.md",
     "mtime": "2026-05-25T09:12:07.295Z"
   },
   {
@@ -3137,7 +3137,7 @@
     "source": "marketplace",
     "description": "Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\skills\\workspace-surface-audit\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/skills/workspace-surface-audit/SKILL.md",
     "mtime": "2026-05-05T19:30:21.270Z"
   },
   {
@@ -3146,7 +3146,7 @@
     "source": "personal",
     "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\write-a-skill\\SKILL.md",
+    "file": "~/.claude/skills/write-a-skill/SKILL.md",
     "mtime": "2026-05-18T01:35:22.172Z"
   },
   {
@@ -3155,7 +3155,7 @@
     "source": "cache",
     "description": "This skill should be used when the user asks to \"create a hookify rule\", \"write a hook rule\", \"configure hookify\", \"add a hookify rule\", or needs guidance on hookify rule syntax and patterns.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\cache\\claude-plugins-official\\hookify\\06b291803d65\\skills\\writing-rules\\SKILL.md",
+    "file": "~/.claude/plugins/cache/claude-plugins-official/hookify/06b291803d65/skills/writing-rules/SKILL.md",
     "mtime": "2026-05-09T19:05:25.476Z"
   },
   {
@@ -3164,7 +3164,7 @@
     "source": "marketplace",
     "description": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\plugins\\marketplaces\\everything-claude-code\\.agents\\skills\\x-api\\SKILL.md",
+    "file": "~/.claude/plugins/marketplaces/everything-claude-code/.agents/skills/x-api/SKILL.md",
     "mtime": "2026-05-05T19:30:20.693Z"
   },
   {
@@ -3173,7 +3173,7 @@
     "source": "personal",
     "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
     "triggers": [],
-    "file": "C:\\Users\\ketwo\\.claude\\skills\\zoom-out\\SKILL.md",
+    "file": "~/.claude/skills/zoom-out/SKILL.md",
     "mtime": "2026-05-18T01:35:22.165Z"
   }
 ]
