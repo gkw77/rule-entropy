@@ -25,8 +25,8 @@
 ## 跑起来（30 秒）
 
 ```bash
-git clone <this-repo>
-cd <repo>
+git clone https://github.com/gkw77/rule-entropy.git
+cd rule-entropy
 # L0 路由一个单题（零依赖）
 node router/router.js "我的代码有SQL注入风险，怎么防"
 
