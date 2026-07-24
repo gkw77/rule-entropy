@@ -1,0 +1,351 @@
+{
+  "timestamp": "2026-07-24",
+  "claim": "L1+facets: facets 补 L0 漏的候选 + LLM judge 滤沾边 -> 比 L1-only recall 升、precision 可控",
+  "testsetSize": 10,
+  "l1only": {
+    "precision": 0.639,
+    "recall": 0.9,
+    "f1": 0.698
+  },
+  "l1facets": {
+    "precision": 0.634,
+    "recall": 0.9,
+    "f1": 0.692
+  },
+  "delta": {
+    "precision": -0.005,
+    "recall": 0,
+    "f1": -0.007
+  },
+  "llmCalls": {
+    "size": 80
+  },
+  "detail": [
+    {
+      "query": "代码有注入风险想做完整安全审计",
+      "expected": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "tagHits": [
+        "security"
+      ],
+      "l1Predicted": [
+        "06-verify",
+        "01-security",
+        "04-planning",
+        "06a-security-audit"
+      ],
+      "l1FacetsPredicted": [
+        "06-verify",
+        "01-security",
+        "04-planning",
+        "06a-security-audit"
+      ],
+      "l1": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "l1f": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "facetsAdded": []
+    },
+    {
+      "query": "权限控制和供应链投毒怎么防",
+      "expected": [
+        "01-security"
+      ],
+      "tagHits": [
+        "security"
+      ],
+      "l1Predicted": [
+        "01-security"
+      ],
+      "l1FacetsPredicted": [
+        "01-security"
+      ],
+      "l1": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "l1f": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "facetsAdded": [
+        "06a-security-audit"
+      ]
+    },
+    {
+      "query": "并行push撞同一个DB怎么办",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "tagHits": [
+        "parallel"
+      ],
+      "l1Predicted": [
+        "06-verify",
+        "05-execute"
+      ],
+      "l1FacetsPredicted": [
+        "06-verify",
+        "05-execute"
+      ],
+      "l1": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "l1f": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "facetsAdded": []
+    },
+    {
+      "query": "多agent并发跑测试flaky是碰撞不是随机",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "tagHits": [
+        "parallel"
+      ],
+      "l1Predicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "l1FacetsPredicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "l1": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "l1f": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "facetsAdded": []
+    },
+    {
+      "query": "委托subagent干活怎么不让它越界",
+      "expected": [
+        "03-routing",
+        "05-execute"
+      ],
+      "tagHits": [
+        "subagent"
+      ],
+      "l1Predicted": [
+        "04-planning",
+        "06-verify",
+        "02-context",
+        "07-output"
+      ],
+      "l1FacetsPredicted": [
+        "04-planning",
+        "06-verify",
+        "02-context",
+        "07-output",
+        "A2-skill-design"
+      ],
+      "l1": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "l1f": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "facetsAdded": [
+        "05-execute",
+        "A2-skill-design"
+      ]
+    },
+    {
+      "query": "maker-checker要独立上下文验证",
+      "expected": [
+        "06-verify"
+      ],
+      "tagHits": [
+        "subagent",
+        "ctx-stress"
+      ],
+      "l1Predicted": [
+        "06-verify",
+        "02-context",
+        "A1-memory",
+        "01-security",
+        "06a-security-audit",
+        "03-routing",
+        "A2-skill-design"
+      ],
+      "l1FacetsPredicted": [
+        "06-verify",
+        "02-context",
+        "A1-memory",
+        "01-security",
+        "06a-security-audit",
+        "03-routing",
+        "A2-skill-design"
+      ],
+      "l1": {
+        "precision": 0.14285714285714285,
+        "recall": 1,
+        "f1": 0.25
+      },
+      "l1f": {
+        "precision": 0.14285714285714285,
+        "recall": 1,
+        "f1": 0.25
+      },
+      "facetsAdded": [
+        "A3-rule-craft"
+      ]
+    },
+    {
+      "query": "上下文满了委托给子agent处理",
+      "expected": [
+        "02-context",
+        "03-routing"
+      ],
+      "tagHits": [
+        "subagent",
+        "ctx-stress"
+      ],
+      "l1Predicted": [
+        "02-context",
+        "04-planning",
+        "03-routing",
+        "A2-skill-design"
+      ],
+      "l1FacetsPredicted": [
+        "02-context",
+        "04-planning",
+        "03-routing",
+        "A2-skill-design"
+      ],
+      "l1": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "l1f": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "facetsAdded": [
+        "A3-rule-craft"
+      ]
+    },
+    {
+      "query": "compact后规则怎么不丢",
+      "expected": [
+        "02-context"
+      ],
+      "tagHits": [
+        "ctx-stress"
+      ],
+      "l1Predicted": [
+        "02-context",
+        "00-pipeline",
+        "A3-rule-craft",
+        "07-output"
+      ],
+      "l1FacetsPredicted": [
+        "02-context",
+        "00-pipeline",
+        "A3-rule-craft",
+        "07-output",
+        "A1-memory"
+      ],
+      "l1": {
+        "precision": 0.25,
+        "recall": 1,
+        "f1": 0.4
+      },
+      "l1f": {
+        "precision": 0.2,
+        "recall": 1,
+        "f1": 0.33333333333333337
+      },
+      "facetsAdded": [
+        "A1-memory"
+      ]
+    },
+    {
+      "query": "同时推同分支landing冲突",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "tagHits": [
+        "parallel"
+      ],
+      "l1Predicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "l1FacetsPredicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "l1": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "l1f": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "facetsAdded": [
+        "03-routing",
+        "04-planning"
+      ]
+    },
+    {
+      "query": "并行agent改了文件我要重读吗",
+      "expected": [
+        "05-execute"
+      ],
+      "tagHits": [
+        "parallel"
+      ],
+      "l1Predicted": [
+        "05-execute"
+      ],
+      "l1FacetsPredicted": [
+        "05-execute"
+      ],
+      "l1": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "l1f": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "facetsAdded": []
+    }
+  ]
+}
