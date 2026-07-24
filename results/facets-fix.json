@@ -1,0 +1,314 @@
+{
+  "timestamp": "2026-07-24",
+  "claim": "facets 修法（降权+条件触发）保 recall 收 precision",
+  "testsetSize": 10,
+  "l0Baseline": {
+    "threshold": 0.15,
+    "precision": 0.664,
+    "recall": 0.8,
+    "f1": 0.695
+  },
+  "origFacets": {
+    "lowConfTrigger": 0,
+    "facetConf": 0.5,
+    "threshold": 0.25,
+    "precision": 0.436,
+    "recall": 1,
+    "f1": 0.576
+  },
+  "fixBest": {
+    "lowConfTrigger": 0,
+    "facetConf": 0.12,
+    "threshold": 0.15,
+    "precision": 0.664,
+    "recall": 0.8,
+    "f1": 0.695
+  },
+  "deltaFixVsL0": {
+    "precision": 0,
+    "recall": 0,
+    "f1": 0
+  },
+  "allCombos": [
+    {
+      "lowConfTrigger": 0,
+      "facetConf": 0.5,
+      "threshold": 0.25,
+      "P": 0.436,
+      "R": 1,
+      "F1": 0.576
+    },
+    {
+      "lowConfTrigger": 0,
+      "facetConf": 0.12,
+      "threshold": 0.15,
+      "P": 0.664,
+      "R": 0.8,
+      "F1": 0.695
+    },
+    {
+      "lowConfTrigger": 0,
+      "facetConf": 0.15,
+      "threshold": 0.15,
+      "P": 0.4,
+      "R": 1,
+      "F1": 0.552
+    },
+    {
+      "lowConfTrigger": 0.15,
+      "facetConf": 0.5,
+      "threshold": 0.15,
+      "P": 0.664,
+      "R": 0.8,
+      "F1": 0.695
+    },
+    {
+      "lowConfTrigger": 0.15,
+      "facetConf": 0.12,
+      "threshold": 0.15,
+      "P": 0.664,
+      "R": 0.8,
+      "F1": 0.695
+    },
+    {
+      "lowConfTrigger": 0.15,
+      "facetConf": 0.15,
+      "threshold": 0.15,
+      "P": 0.664,
+      "R": 0.8,
+      "F1": 0.695
+    },
+    {
+      "lowConfTrigger": 0.2,
+      "facetConf": 0.5,
+      "threshold": 0.15,
+      "P": 0.579,
+      "R": 0.95,
+      "F1": 0.672
+    },
+    {
+      "lowConfTrigger": 0.2,
+      "facetConf": 0.12,
+      "threshold": 0.15,
+      "P": 0.664,
+      "R": 0.8,
+      "F1": 0.695
+    },
+    {
+      "lowConfTrigger": 0.2,
+      "facetConf": 0.15,
+      "threshold": 0.15,
+      "P": 0.579,
+      "R": 0.95,
+      "F1": 0.672
+    },
+    {
+      "lowConfTrigger": 0.25,
+      "facetConf": 0.5,
+      "threshold": 0.25,
+      "P": 0.607,
+      "R": 0.95,
+      "F1": 0.67
+    },
+    {
+      "lowConfTrigger": 0.25,
+      "facetConf": 0.12,
+      "threshold": 0.15,
+      "P": 0.664,
+      "R": 0.8,
+      "F1": 0.695
+    },
+    {
+      "lowConfTrigger": 0.25,
+      "facetConf": 0.15,
+      "threshold": 0.15,
+      "P": 0.521,
+      "R": 1,
+      "F1": 0.639
+    }
+  ],
+  "detail": [
+    {
+      "query": "代码有注入风险想做完整安全审计",
+      "expected": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "security"
+      ],
+      "predicted": [
+        "06-verify",
+        "01-security"
+      ],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "query": "权限控制和供应链投毒怎么防",
+      "expected": [
+        "01-security"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "security"
+      ],
+      "predicted": [
+        "01-security"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "query": "并行push撞同一个DB怎么办",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "parallel"
+      ],
+      "predicted": [
+        "06-verify",
+        "05-execute",
+        "04-planning"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 1,
+      "f1": 0.8
+    },
+    {
+      "query": "多agent并发跑测试flaky是碰撞不是随机",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "parallel"
+      ],
+      "predicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "query": "委托subagent干活怎么不让它越界",
+      "expected": [
+        "03-routing",
+        "05-execute"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "subagent"
+      ],
+      "predicted": [
+        "04-planning",
+        "06-verify"
+      ],
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    {
+      "query": "maker-checker要独立上下文验证",
+      "expected": [
+        "06-verify"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "subagent",
+        "ctx-stress"
+      ],
+      "predicted": [
+        "06-verify",
+        "02-context",
+        "A1-memory",
+        "01-security",
+        "06a-security-audit",
+        "03-routing",
+        "04-planning"
+      ],
+      "precision": 0.14285714285714285,
+      "recall": 1,
+      "f1": 0.25
+    },
+    {
+      "query": "上下文满了委托给子agent处理",
+      "expected": [
+        "02-context",
+        "03-routing"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "subagent",
+        "ctx-stress"
+      ],
+      "predicted": [
+        "02-context",
+        "04-planning",
+        "06-verify"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4
+    },
+    {
+      "query": "compact后规则怎么不丢",
+      "expected": [
+        "02-context"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "ctx-stress"
+      ],
+      "predicted": [
+        "02-context"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "query": "同时推同分支landing冲突",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "parallel"
+      ],
+      "predicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    {
+      "query": "并行agent改了文件我要重读吗",
+      "expected": [
+        "05-execute"
+      ],
+      "facetsEnabled": true,
+      "tagHits": [
+        "parallel"
+      ],
+      "predicted": [
+        "05-execute"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  ]
+}

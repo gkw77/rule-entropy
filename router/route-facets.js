@@ -29,15 +29,22 @@ function matchTags(query, facets) {
 }
 
 // L0 ∪ facets 并集路由
-function routeWithFacets(query, index, facets, threshold = 0) {
+// opts.facetConf: facets 命中给的 confidence（默认 facets.facetConf 或 0.5）
+// opts.lowConfTrigger: >0 时仅当 L0 top conf < 该值才启用 facets（条件触发，强 L0 题不扰）
+function routeWithFacets(query, index, facets, threshold = 0, opts = {}) {
   const base = route(query, index, 0); // L0 全 matched（threshold=0 拿全候选）
-  const facetConf = facets.facetConf != null ? facets.facetConf : 0.5;
+  const facetConf = opts.facetConf != null ? opts.facetConf : (facets.facetConf != null ? facets.facetConf : 0.5);
+  const lowConfTrigger = opts.lowConfTrigger != null ? opts.lowConfTrigger : 0; // 0 = 无条件启用
 
   // byPath 并集：L0 命中 + facets 命中
   const byPath = new Map();
   for (const m of base.matched) byPath.set(m.path, { path: m.path, confidence: m.confidence, hits: m.hits, facetHits: [] });
 
-  const tagHits = matchTags(query, facets);
+  // 条件触发：lowConfTrigger>0 时，仅当 L0 top conf < lowConfTrigger 才启用 facets
+  const topConf = base.matched.length > 0 ? base.matched[0].confidence : 0;
+  const enableFacets = lowConfTrigger <= 0 || topConf < lowConfTrigger;
+
+  const tagHits = enableFacets ? matchTags(query, facets) : {};
   for (const [tag, kw] of Object.entries(tagHits)) {
     for (const file of facets.tags[tag].files) {
       if (!byPath.has(file)) byPath.set(file, { path: file, confidence: 0, hits: [], facetHits: [] });
@@ -52,7 +59,7 @@ function routeWithFacets(query, index, facets, threshold = 0) {
     .filter(m => m.confidence > 0)
     .sort((a, b) => b.confidence - a.confidence);
   const loaded = matched.filter(m => m.confidence >= threshold);
-  return { query, threshold, matched, loaded, tagHits: Object.keys(tagHits) };
+  return { query, threshold, matched, loaded, tagHits: Object.keys(tagHits), facetsEnabled: enableFacets };
 }
 
 module.exports = { loadFacets, matchTags, routeWithFacets };
