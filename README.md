@@ -54,7 +54,7 @@ L0 零依赖纯 Node。L1 需 `ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` / `A
 |---|---|
 | L0 关键词（文件级） | **已验**（P=0.511 / R=0.917，18 题） |
 | L1 便宜 LLM 按描述分类 | **已验**（P=0.620 / R=0.944，冲 precision +10.9 点，recall 不降反升） |
-| facets 横切标签 | **已验·证伪**（朴素 tag 匹配 F1≤L0，补召回真但 precision 崩，需 LLM judge 留后续） |
+| facets 横切标签 | **已验·证伪**（三连：L0 朴素 F1≤L0 / L0 降权 F1≤L0 / L1+facets Δ≈0；机制对但 tag 粗+judge 误判双卡） |
 | 退一格 | **已验·成立**（模糊题退树根，F1 0.347->0.931，+0.583） |
 
 注：facets / 退一格原是**设计信仰**，现已落地配测试集跑 P/R（见 receipts 10/11）。facets 朴素实现证伪（tag 子串匹配粗粒度拉沾边），退一格成立（top-conf 信号干净 + 只退树根一个文件）。按立论"规则不验证 = 信仰"，它们从信仰升级为 receipt（一正一负）。
@@ -187,9 +187,20 @@ claim**成立**（三轴全升，F1 +0.583，史上最大提升）。7 道模糊
 
 **为什么退一格 work 而 facets 不 work**：退一格信号干净（模糊题 top 0.08-0.16 vs 明确 0.33-0.54，0.2 分界清晰）+ 动作精准（只退树根一个文件，不拉沾边）；facets 信号粗（一个 tag 拉 4-5 文件）。**corpus 限制（诚实）**：当前 corpus 扁平（01-security.md 即阶段文件，无 L2 子叶子），退一格只退树根；多层树（叶子->阶段父）价值未验，留后续 corpus 扩 L2。
 
+### 12. L1+facets（facets 三连证伪）
+
+facets 证伪留的后续：facets 补 L0 漏候选 + LLM judge 滤沾边，看能否翻盘。L0 候选 ∪ facets 命中文件 -> judge -> yes 载入。同 10 题横切集：
+
+| | P | R | F1 |
+|---|---|---|---|
+| L1-only | 0.639 | 0.900 | 0.698 |
+| L1+facets | 0.634 | 0.900 | 0.692 |
+
+Δ ≈ 0（-0.007），80 次 LLM 调用。facets 在 L1 宽候选下边际≈0：L0 候选 thr=0.05 已覆盖大部分目标；facets 补到候选但 judge 误判（题5 加 05-execute 该 yes 判 no）；facets 引入新 FP（题8 加 A1 沾边 judge yes）。**facets 三连证伪**（L0 朴素 / L0 降权 / L1 judge）均不 work。机制对（补 L0 漏候选）但被 tag 粗粒度 + judge 误判双卡。要 work 需更细 tag + 更准 judge，大改留后续。facets 这条路在当前 corpus + tag 设计下真死。
+
 ---
 
-路由器自身现已积累 **17 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立），正负皆有。
+路由器自身现已积累 **18 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪），正负皆有。
 
 ## receipt 三分（复现 ≠ 证明有效）
 
@@ -266,4 +277,4 @@ reproducible/        可复现素材（见下）
 | `reproducible/gzh-rig/` | 独立 rig 示范，19 缺陷测双关卡 vs 单关卡 | `cd reproducible/gzh-rig && python rig.py`（纯 stdlib，自包含，无需外部依赖） |
 | `reproducible/dao-cache-rig.py` | 跨 session 骨架示范（缓存稳定性 A/B） | 需 `pip install anthropic` + `ANTHROPIC_API_KEY`--跨 session receipt 单对话跑不了，附骨架供有 key 时跑 |
 
-数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 17 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
+数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 18 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
