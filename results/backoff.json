@@ -1,0 +1,317 @@
+{
+  "timestamp": "2026-07-24",
+  "claim": "退一格：模糊题(top conf 低)退树根 00-pipeline 补召回，明确题(top 高)不触发不污染",
+  "corpusLimit": "当前 corpus 扁平，退一格只退树根；多层树（叶子->阶段父）价值未验，留后续 corpus 扩 L2",
+  "testsetSize": 12,
+  "l0Baseline": {
+    "threshold": 0.3,
+    "precision": 0.319,
+    "recall": 0.417,
+    "f1": 0.347
+  },
+  "backoffBest": {
+    "lowConfThreshold": 0.2,
+    "threshold": 0.3,
+    "precision": 0.903,
+    "recall": 1,
+    "f1": 0.931
+  },
+  "delta": {
+    "precision": 0.583,
+    "recall": 0.583,
+    "f1": 0.583
+  },
+  "allCombos": [
+    {
+      "lowConfThreshold": 0.15,
+      "threshold": 0.3,
+      "P": 0.819,
+      "R": 0.917,
+      "F1": 0.847
+    },
+    {
+      "lowConfThreshold": 0.2,
+      "threshold": 0.3,
+      "P": 0.903,
+      "R": 1,
+      "F1": 0.931
+    },
+    {
+      "lowConfThreshold": 0.25,
+      "threshold": 0.3,
+      "P": 0.903,
+      "R": 1,
+      "F1": 0.931
+    }
+  ],
+  "detail": [
+    {
+      "query": "这些规则整体怎么串起来的",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "pipeline的大致流程是什么",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "规则系统从头到尾怎么走",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "7个阶段是哪些顺序是什么",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "这套规则体系的总览在哪",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "整个流程有哪些阶段",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "规则体系怎么组织的",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": true,
+      "l0Predicted": [],
+      "boPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "middleware pipeline是什么",
+      "expected": [
+        "00-pipeline"
+      ],
+      "backoffTriggered": false,
+      "l0Predicted": [
+        "00-pipeline",
+        "06a-security-audit",
+        "A4-rule-measurement"
+      ],
+      "boPredicted": [
+        "00-pipeline",
+        "06a-security-audit",
+        "A4-rule-measurement"
+      ],
+      "l0": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "bo": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      }
+    },
+    {
+      "query": "commit message格式",
+      "expected": [
+        "07-output"
+      ],
+      "backoffTriggered": false,
+      "l0Predicted": [
+        "07-output"
+      ],
+      "boPredicted": [
+        "07-output"
+      ],
+      "l0": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "上下文满了怎么办",
+      "expected": [
+        "02-context"
+      ],
+      "backoffTriggered": false,
+      "l0Predicted": [
+        "02-context"
+      ],
+      "boPredicted": [
+        "02-context"
+      ],
+      "l0": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "怎么设计skill的description",
+      "expected": [
+        "A2-skill-design"
+      ],
+      "backoffTriggered": false,
+      "l0Predicted": [
+        "A2-skill-design"
+      ],
+      "boPredicted": [
+        "A2-skill-design"
+      ],
+      "l0": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "bo": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "并行landing冲突",
+      "expected": [
+        "05-execute"
+      ],
+      "backoffTriggered": false,
+      "l0Predicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "boPredicted": [
+        "05-execute",
+        "06-verify"
+      ],
+      "l0": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "bo": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {"query": "这些规则整体怎么串起来的", "expected": ["00-pipeline"]},
+  {"query": "pipeline的大致流程是什么", "expected": ["00-pipeline"]},
+  {"query": "规则系统从头到尾怎么走", "expected": ["00-pipeline"]},
+  {"query": "7个阶段是哪些顺序是什么", "expected": ["00-pipeline"]},
+  {"query": "这套规则体系的总览在哪", "expected": ["00-pipeline"]},
+  {"query": "整个流程有哪些阶段", "expected": ["00-pipeline"]},
+  {"query": "规则体系怎么组织的", "expected": ["00-pipeline"]},
+  {"query": "middleware pipeline是什么", "expected": ["00-pipeline"]},
+  {"query": "commit message格式", "expected": ["07-output"]},
+  {"query": "上下文满了怎么办", "expected": ["02-context"]},
+  {"query": "怎么设计skill的description", "expected": ["A2-skill-design"]},
+  {"query": "并行landing冲突", "expected": ["05-execute"]}
+]
