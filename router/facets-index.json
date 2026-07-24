@@ -1,0 +1,37 @@
+{
+  "_comment": "facets 横切标签索引（第二个 receipt 的料）。spine = 文件自身关键词（L0），facets = 横跨多阶段的正交主题。query 子串命中某 tag 的 keyword -> 拉该 tag 全部文件并入候选（route-facets.js）。tag 集 + 文件归属按 README 第 228 行 + corpus 实际内容定。",
+  "facetConf": 0.5,
+  "tags": {
+    "security": {
+      "keywords": ["安全", "注入", "secret", "密钥", "token", "权限", "auth", "授权", "供应链", "审计", "泄露", "凭证", "认证", "密码", "越权"],
+      "files": ["01-security", "06a-security-audit"]
+    },
+    "parallel": {
+      "keywords": ["并行", "并发", "landing", "竞态", "冲突", "merge queue", "worktree", "flaky", "碰撞", "多agent", "同时跑", "同时推"],
+      "files": ["03-routing", "04-planning", "05-execute", "06-verify"]
+    },
+    "subagent": {
+      "keywords": ["子agent", "subagent", "委托", "fork", "maker-checker", "verifier", "编排", "agent路由", "agent选择", "子上下文", "独立上下文"],
+      "files": ["03-routing", "04-planning", "05-execute", "06-verify", "A2-skill-design"]
+    },
+    "ctx-stress": {
+      "keywords": ["上下文", "context", "compact", "窗口", "压缩", "重放", "懒加载", "context-bloat", "笨区", "context窗口"],
+      "files": ["02-context", "A1-memory", "A3-rule-craft"]
+    }
+  },
+  "fileTags": {
+    "01-security": ["security"],
+    "06a-security-audit": ["security"],
+    "02-context": ["ctx-stress"],
+    "A1-memory": ["ctx-stress"],
+    "A3-rule-craft": ["ctx-stress"],
+    "03-routing": ["parallel", "subagent"],
+    "04-planning": ["parallel", "subagent"],
+    "05-execute": ["parallel", "subagent"],
+    "06-verify": ["parallel", "subagent"],
+    "A2-skill-design": ["subagent"],
+    "00-pipeline": [],
+    "07-output": [],
+    "A4-rule-measurement": []
+  }
+}

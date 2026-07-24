@@ -1,0 +1,12 @@
+[
+  {"query": "代码有注入风险想做完整安全审计", "expected": ["01-security", "06a-security-audit"]},
+  {"query": "权限控制和供应链投毒怎么防", "expected": ["01-security"]},
+  {"query": "并行push撞同一个DB怎么办", "expected": ["05-execute", "06-verify"]},
+  {"query": "多agent并发跑测试flaky是碰撞不是随机", "expected": ["05-execute", "06-verify"]},
+  {"query": "委托subagent干活怎么不让它越界", "expected": ["03-routing", "05-execute"]},
+  {"query": "maker-checker要独立上下文验证", "expected": ["06-verify"]},
+  {"query": "上下文满了委托给子agent处理", "expected": ["02-context", "03-routing"]},
+  {"query": "compact后规则怎么不丢", "expected": ["02-context"]},
+  {"query": "同时推同分支landing冲突", "expected": ["05-execute", "06-verify"]},
+  {"query": "并行agent改了文件我要重读吗", "expected": ["05-execute"]}
+]
