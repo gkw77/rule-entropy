@@ -1,5 +1,5 @@
 {
-  "_comment": "退一格父树。当前 corpus 扁平（01-security.md 即阶段文件，无 L2 子叶子），退一格 = L0 top conf 低时载树根 00-pipeline 补总览召回。parent 字段为完整性 + 后续 corpus 扩 L2 时用。06a 挂 06-verify（安全审计是 verify 特化），A1-A4 挂 00-pipeline（辅助模块归总览）。",
+  "_comment": "退一格父树。L1 阶段文件（01-07/A1-A4）挂 00-pipeline 根；L2 子叶子（corpus-l2/，01-security-* / 06-verify-*）挂对应阶段父。多层退一格：top1 是子叶子退阶段父，top1 是阶段文件退树根，逐层退而非一步退树根。06a 挂 06-verify（安全审计是 verify 特化），A1-A4 挂 00-pipeline（辅助模块归总览）。",
   "root": "00-pipeline",
   "parent": {
     "00-pipeline": null,
@@ -14,6 +14,11 @@
     "A1-memory": "00-pipeline",
     "A2-skill-design": "00-pipeline",
     "A3-rule-craft": "00-pipeline",
-    "A4-rule-measurement": "00-pipeline"
+    "A4-rule-measurement": "00-pipeline",
+    "01-security-sql-injection": "01-security",
+    "01-security-api-key": "01-security",
+    "01-security-supply-chain": "01-security",
+    "06-verify-test-coverage": "06-verify",
+    "06-verify-code-review": "06-verify"
   }
 }

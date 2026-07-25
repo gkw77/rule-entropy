@@ -55,7 +55,7 @@ L0 零依赖纯 Node。L1 需 `ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` / `A
 | L0 关键词（文件级） | **已验**（P=0.511 / R=0.917，18 题） |
 | L1 便宜 LLM 按描述分类 | **已验**（P=0.620 / R=0.944，冲 precision +10.9 点，recall 不降反升） |
 | facets 横切标签 | **已验·证伪**（三连：L0 朴素 F1≤L0 / L0 降权 F1≤L0 / L1+facets Δ≈0；机制对但 tag 粗+judge 误判双卡） |
-| 退一格 | **已验·成立**（模糊题退树根，F1 0.347->0.931，+0.583） |
+| 退一格 | **已验·成立**（单层：模糊题退树根 F1 0.347->0.931；多层：corpus 扩 L2 逐层退阶段父，见 receipt 13） |
 
 注：facets / 退一格原是**设计信仰**，现已落地配测试集跑 P/R（见 receipts 10/11）。facets 朴素实现证伪（tag 子串匹配粗粒度拉沾边），退一格成立（top-conf 信号干净 + 只退树根一个文件）。按立论"规则不验证 = 信仰"，它们从信仰升级为 receipt（一正一负）。
 
@@ -185,7 +185,7 @@ claim「recall 升、precision 可控」**部分证伪**：recall 确升（0.80-
 
 claim**成立**（三轴全升，F1 +0.583，史上最大提升）。7 道模糊题（top conf 0.08-0.16）L0 全错（loaded 空 P0/R0），退一格补 00-pipeline 全对；4 道明确题（top 0.33-0.54）不触发，零污染。
 
-**为什么退一格 work 而 facets 不 work**：退一格信号干净（模糊题 top 0.08-0.16 vs 明确 0.33-0.54，0.2 分界清晰）+ 动作精准（只退树根一个文件，不拉沾边）；facets 信号粗（一个 tag 拉 4-5 文件）。**corpus 限制（诚实）**：当前 corpus 扁平（01-security.md 即阶段文件，无 L2 子叶子），退一格只退树根；多层树（叶子->阶段父）价值未验，留后续 corpus 扩 L2。
+**为什么退一格 work 而 facets 不 work**：退一格信号干净（模糊题 top 0.08-0.16 vs 明确 0.33-0.54，0.2 分界清晰）+ 动作精准（只退树根一个文件，不拉沾边）；facets 信号粗（一个 tag 拉 4-5 文件）。**corpus 限制（诚实）**：当前 corpus 扁平（01-security.md 即阶段文件，无 L2 子叶子），退一格只退树根；多层树（叶子->阶段父）见 receipt 13（已验·成立）。
 
 ### 12. L1+facets（facets 三连证伪）
 
@@ -198,9 +198,31 @@ facets 证伪留的后续：facets 补 L0 漏候选 + LLM judge 滤沾边，看�
 
 Δ ≈ 0（-0.007），80 次 LLM 调用。facets 在 L1 宽候选下边际≈0：L0 候选 thr=0.05 已覆盖大部分目标；facets 补到候选但 judge 误判（题5 加 05-execute 该 yes 判 no）；facets 引入新 FP（题8 加 A1 沾边 judge yes）。**facets 三连证伪**（L0 朴素 / L0 降权 / L1 judge）均不 work。机制对（补 L0 漏候选）但被 tag 粗粒度 + judge 误判双卡。要 work 需更细 tag + 更准 judge，大改留后续。facets 这条路在当前 corpus + tag 设计下真死。
 
+### 13. 多层退一格（corpus 扩 L2，成立）
+
+退一格 receipt 11 的 corpus 限制收尾：当时 corpus 扁平（阶段文件即叶子，无 L2 子叶子），退一格只退树根，多层树（叶子->阶段父）价值未验。本切片给 corpus 加 L2 子叶子（`corpus-l2/`，01-security 下 3 个 + 06-verify 下 2 个），验"逐层退"（top1 是子叶子退阶段父，top1 是阶段文件退树根）是否比"一步退树根"更精准。`corpus/` 13 文件不动，现有 18 个 receipt 零影响。
+
+15 题测试集（6 增益场景 + 3 子主题沾边 + 2 总览 + 4 明确），三者同在 18 文件联合 index 上对比：
+
+| | lct | thr | P | R | F1 |
+|---|---|---|---|---|---|
+| L0 baseline | - | 0.1 | 0.354 | 0.667 | 0.410 |
+| 单层退（退根） | 0.15 | 0.1 | 0.293 | 0.733 | 0.399 |
+| 多层退（逐层退） | 0.25 | 0.3 | **0.778** | 0.600 | **0.653** |
+
+Δ(多层 vs 单层) F1 **+0.254**（P +0.485，R -0.133）。claim**成立**。
+
+**增益场景**（6/15 题触发）：含子主题词的模糊长 query（"注入的防护措施有哪些方面"），L0 top1 是子叶子（sql-injection conf 0.146）且 conf 低 -> 多层退到阶段父 01-security（对），单层退到根 00-pipeline（错）。15 题里 14 题 predicted 不同。
+
+**机制（长 query 触发而短 query 不触发）**：子叶子标题聚焦（"SQL 注入防护"），短 query（"注入怎么防"）的"怎么防"不命中子叶子标题 -> 子叶子不进 top1（被阶段文件压过）-> 多层退=单层退；长 query 含更多子主题词（"防护/措施"）-> 子叶子标题命中更多 -> 子叶子进 top1 且 conf 低 -> 多层退退阶段父胜。子叶子 conf 两极化：精确 query 命中标题 conf 高不触发，模糊 query 不命中标题 top1 是阶段文件，唯含子主题词的模糊长 query 落在中间地带触发增益。
+
+**诚实边界**：recall -0.133。多层退 best thr=0.3 滤掉低 conf 子叶子（如 supply-chain 0.14），只留阶段父（0.3 backoff），precision 升但漏子叶子。增益在 precision，recall 是代价。若 expected 含子叶子且子叶子 conf 低，多层退退到阶段父但子叶子被 thr 滤 -> R<1（"恶意包怎么检测和防范" 多 F1=0.67 < L0 F1=1.0）。
+
+**单层退在此测试集 F1<L0**（0.399<0.410）：单层退退根对子主题题（expected=阶段父）是错的，6 题全错拉低。这不是单层退退化，是测试集含子主题题（receipt 11 测试集 8 题 expected=00-pipeline，退根对，F1=0.931）。多层退修补的正是单层退在子主题题上的缺陷。
+
 ---
 
-路由器自身现已积累 **18 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪），正负皆有。
+路由器自身现已积累 **19 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪、多层退一格成立），正负皆有。
 
 ## receipt 三分（复现 ≠ 证明有效）
 
@@ -245,6 +267,7 @@ TestSprite 数据点 + exploitarium 安全 fuzzing 实证：非 SOTA 模型 + �
 
 ```
 corpus/              13 个规则文件（快照自 ~/.claude/rules/common/，被路由的语料）
+corpus-l2/           5 个 L2 子叶子（01-security-* / 06-verify-*，多层退一格用，corpus/ 不动）
 router/router.js     L0 关键词路由器：建带权倒排索引，route(query) -> matched + loaded
 router/llm.js        L1 LLM judge：复用终端 env vars，judgeRelevance(query,rule) -> {verdict,reason}
 router/l1.js         L1 路由：L0 候选 -> 逐个 LLM 判 -> 过滤误报
@@ -263,7 +286,7 @@ reproducible/        可复现素材（见下）
 - [ ] **body 合并 + 部署**：frontmatter 合并已做，SKILL.md 正文合并 + 写入 `~/.claude` 替换原 skill（破坏性，需人判）
 - [ ] **ownership 标签**：给枢纽文件（04-planning / 06-verify）标"owns X / references X"，让"提到"和"拥有"可区分
 - [x] **facets 标签**：security / parallel / subagent / ctx-stress 横切索引，测横跨多阶段 query（receipt 10，证伪，需 LLM judge 留后续）
-- [x] **退一格**：叶子拿不准载父节点（00-pipeline 作树根）（receipt 11，成立，F1 +0.583；多层树留后续）
+- [x] **退一格**：叶子拿不准载父节点（receipt 11 单层退树根 F1 +0.583；receipt 13 多层逐层退阶段父 F1 +0.254，corpus 扩 L2 已验）
 - [ ] **security tag 写穷触发面**（BuilderIO 金标准 ~15 场景），验 L0 秒配的具体起手
 - [ ] 扩测试集到 30-50 题，跨 session 复验（single-shot 高估，agentic 下常缩水）
 

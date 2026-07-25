@@ -1,0 +1,658 @@
+{
+  "timestamp": "2026-07-25",
+  "claim": "多层退一格：子主题模糊题（top1 是子叶子 conf 低）逐层退到阶段父，比单层退树根更精准",
+  "corpus": "corpus/(13 阶段) + corpus-l2/(5 L2 子叶子) = 18 文件联合 index；corpus/ 不动，现有 receipt 零影响",
+  "testsetSize": 15,
+  "l0Baseline": {
+    "threshold": 0.1,
+    "precision": 0.354,
+    "recall": 0.667,
+    "f1": 0.41
+  },
+  "singleBackoff": {
+    "lct": 0.15,
+    "threshold": 0.1,
+    "precision": 0.293,
+    "recall": 0.733,
+    "f1": 0.399
+  },
+  "multiBackoff": {
+    "lct": 0.25,
+    "threshold": 0.3,
+    "precision": 0.778,
+    "recall": 0.6,
+    "f1": 0.653
+  },
+  "deltaMultiVsSingle": {
+    "precision": 0.485,
+    "recall": -0.133,
+    "f1": 0.254
+  },
+  "mechanism": {
+    "diffPredictedCount": 14,
+    "leafTriggerCount": 6,
+    "hint": "有触发题 top1 是子叶子，多层退退阶段父"
+  },
+  "detail": [
+    {
+      "query": "注入的防护措施有哪些方面",
+      "expected": [
+        "01-security",
+        "01-security-sql-injection"
+      ],
+      "l0Top1": "01-security-sql-injection",
+      "l0Top1Conf": 0.146,
+      "multiTriggered": true,
+      "multiBackoffTo": "01-security",
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "01-security-sql-injection"
+      ],
+      "singlePredicted": [
+        "00-pipeline",
+        "01-security-sql-injection"
+      ],
+      "multiPredicted": [
+        "01-security"
+      ],
+      "l0": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "single": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "query": "密钥这块怎么管理比较好",
+      "expected": [
+        "01-security",
+        "01-security-api-key"
+      ],
+      "l0Top1": "01-security-api-key",
+      "l0Top1Conf": 0.076,
+      "multiTriggered": true,
+      "multiBackoffTo": "01-security",
+      "top1IsLeaf": true,
+      "l0Predicted": [],
+      "singlePredicted": [
+        "00-pipeline"
+      ],
+      "multiPredicted": [
+        "01-security"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "single": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "query": "审查代码的流程是怎样的",
+      "expected": [
+        "06-verify",
+        "06-verify-code-review"
+      ],
+      "l0Top1": "06-verify-code-review",
+      "l0Top1Conf": 0.113,
+      "multiTriggered": true,
+      "multiBackoffTo": "06-verify",
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "06-verify-code-review",
+        "01-security"
+      ],
+      "singlePredicted": [
+        "06-verify-code-review",
+        "01-security",
+        "00-pipeline"
+      ],
+      "multiPredicted": [
+        "06-verify"
+      ],
+      "l0": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      },
+      "single": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "query": "secret 怎么轮换比较好",
+      "expected": [
+        "01-security",
+        "01-security-api-key"
+      ],
+      "l0Top1": "01-security-api-key",
+      "l0Top1Conf": 0.141,
+      "multiTriggered": true,
+      "multiBackoffTo": "01-security",
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "01-security-api-key",
+        "06-verify",
+        "01-security"
+      ],
+      "singlePredicted": [
+        "01-security-api-key",
+        "06-verify",
+        "01-security",
+        "00-pipeline"
+      ],
+      "multiPredicted": [
+        "01-security"
+      ],
+      "l0": {
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8
+      },
+      "single": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "query": "恶意包怎么检测和防范",
+      "expected": [
+        "01-security",
+        "01-security-supply-chain"
+      ],
+      "l0Top1": "01-security-supply-chain",
+      "l0Top1Conf": 0.14,
+      "multiTriggered": true,
+      "multiBackoffTo": "01-security",
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "01-security-supply-chain",
+        "01-security"
+      ],
+      "singlePredicted": [
+        "01-security-supply-chain",
+        "01-security",
+        "00-pipeline"
+      ],
+      "multiPredicted": [
+        "01-security"
+      ],
+      "l0": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "single": {
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "query": "参数化查询具体怎么做啊",
+      "expected": [
+        "06-verify",
+        "06a-security-audit"
+      ],
+      "l0Top1": "06a-security-audit",
+      "l0Top1Conf": 0.147,
+      "multiTriggered": true,
+      "multiBackoffTo": "06-verify",
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "06a-security-audit",
+        "01-security",
+        "01-security-sql-injection"
+      ],
+      "singlePredicted": [
+        "00-pipeline",
+        "06a-security-audit",
+        "01-security",
+        "01-security-sql-injection"
+      ],
+      "multiPredicted": [
+        "06-verify"
+      ],
+      "l0": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4
+      },
+      "single": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1": 0.3333333333333333
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      }
+    },
+    {
+      "query": "注入怎么防",
+      "expected": [
+        "01-security",
+        "01-security-sql-injection"
+      ],
+      "l0Top1": "04-planning",
+      "l0Top1Conf": 0.193,
+      "multiTriggered": true,
+      "multiBackoffTo": "00-pipeline",
+      "top1IsLeaf": false,
+      "l0Predicted": [
+        "04-planning",
+        "02-context",
+        "01-security-sql-injection",
+        "06-verify",
+        "A2-skill-design"
+      ],
+      "singlePredicted": [
+        "04-planning",
+        "02-context",
+        "01-security-sql-injection",
+        "06-verify",
+        "A2-skill-design"
+      ],
+      "multiPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0.2,
+        "recall": 0.5,
+        "f1": 0.28571428571428575
+      },
+      "single": {
+        "precision": 0.2,
+        "recall": 0.5,
+        "f1": 0.28571428571428575
+      },
+      "multi": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    },
+    {
+      "query": "依赖包安全",
+      "expected": [
+        "01-security",
+        "01-security-supply-chain"
+      ],
+      "l0Top1": "01-security",
+      "l0Top1Conf": 0.198,
+      "multiTriggered": true,
+      "multiBackoffTo": "00-pipeline",
+      "top1IsLeaf": false,
+      "l0Predicted": [
+        "01-security",
+        "06-verify",
+        "02-context",
+        "06a-security-audit",
+        "05-execute",
+        "01-security-supply-chain"
+      ],
+      "singlePredicted": [
+        "01-security",
+        "06-verify",
+        "02-context",
+        "06a-security-audit",
+        "05-execute",
+        "01-security-supply-chain"
+      ],
+      "multiPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "single": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "multi": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    },
+    {
+      "query": "安全方面要注意啥",
+      "expected": [
+        "01-security"
+      ],
+      "l0Top1": "04-planning",
+      "l0Top1Conf": 0.051,
+      "multiTriggered": true,
+      "multiBackoffTo": "00-pipeline",
+      "top1IsLeaf": false,
+      "l0Predicted": [],
+      "singlePredicted": [
+        "00-pipeline"
+      ],
+      "multiPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "single": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "multi": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    },
+    {
+      "query": "规则整体怎么串起来的",
+      "expected": [
+        "00-pipeline"
+      ],
+      "l0Top1": "06-verify",
+      "l0Top1Conf": 0.126,
+      "multiTriggered": true,
+      "multiBackoffTo": "00-pipeline",
+      "top1IsLeaf": false,
+      "l0Predicted": [
+        "06-verify",
+        "04-planning"
+      ],
+      "singlePredicted": [
+        "06-verify",
+        "04-planning",
+        "00-pipeline"
+      ],
+      "multiPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      "single": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "pipeline大致流程",
+      "expected": [
+        "00-pipeline"
+      ],
+      "l0Top1": "04-planning",
+      "l0Top1Conf": 0.226,
+      "multiTriggered": true,
+      "multiBackoffTo": "00-pipeline",
+      "top1IsLeaf": false,
+      "l0Predicted": [
+        "04-planning",
+        "00-pipeline",
+        "06a-security-audit",
+        "06-verify",
+        "01-security",
+        "03-routing",
+        "A2-skill-design",
+        "06-verify-test-coverage"
+      ],
+      "singlePredicted": [
+        "04-planning",
+        "00-pipeline",
+        "06a-security-audit",
+        "06-verify",
+        "01-security",
+        "03-routing",
+        "A2-skill-design",
+        "06-verify-test-coverage"
+      ],
+      "multiPredicted": [
+        "00-pipeline"
+      ],
+      "l0": {
+        "precision": 0.125,
+        "recall": 1,
+        "f1": 0.2222222222222222
+      },
+      "single": {
+        "precision": 0.125,
+        "recall": 1,
+        "f1": 0.2222222222222222
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "commit message格式",
+      "expected": [
+        "07-output"
+      ],
+      "l0Top1": "07-output",
+      "l0Top1Conf": 0.541,
+      "multiTriggered": false,
+      "multiBackoffTo": null,
+      "top1IsLeaf": false,
+      "l0Predicted": [
+        "07-output",
+        "06-verify",
+        "A1-memory",
+        "04-planning",
+        "06a-security-audit"
+      ],
+      "singlePredicted": [
+        "07-output",
+        "06-verify",
+        "A1-memory",
+        "04-planning",
+        "06a-security-audit"
+      ],
+      "multiPredicted": [
+        "07-output"
+      ],
+      "l0": {
+        "precision": 0.2,
+        "recall": 1,
+        "f1": 0.33333333333333337
+      },
+      "single": {
+        "precision": 0.2,
+        "recall": 1,
+        "f1": 0.33333333333333337
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "上下文满了怎么办",
+      "expected": [
+        "02-context"
+      ],
+      "l0Top1": "02-context",
+      "l0Top1Conf": 0.33,
+      "multiTriggered": false,
+      "multiBackoffTo": null,
+      "top1IsLeaf": false,
+      "l0Predicted": [
+        "02-context",
+        "04-planning",
+        "06-verify"
+      ],
+      "singlePredicted": [
+        "02-context",
+        "04-planning",
+        "06-verify"
+      ],
+      "multiPredicted": [
+        "02-context"
+      ],
+      "l0": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "single": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    },
+    {
+      "query": "sql注入防护",
+      "expected": [
+        "01-security-sql-injection",
+        "01-security"
+      ],
+      "l0Top1": "01-security-sql-injection",
+      "l0Top1Conf": 1,
+      "multiTriggered": false,
+      "multiBackoffTo": null,
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "01-security-sql-injection",
+        "01-security",
+        "06-verify",
+        "01-security-api-key",
+        "01-security-supply-chain",
+        "02-context"
+      ],
+      "singlePredicted": [
+        "01-security-sql-injection",
+        "01-security",
+        "06-verify",
+        "01-security-api-key",
+        "01-security-supply-chain",
+        "02-context"
+      ],
+      "multiPredicted": [
+        "01-security-sql-injection",
+        "01-security",
+        "06-verify"
+      ],
+      "l0": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "single": {
+        "precision": 0.3333333333333333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      "multi": {
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8
+      }
+    },
+    {
+      "query": "覆盖率要求",
+      "expected": [
+        "06-verify-test-coverage",
+        "06-verify"
+      ],
+      "l0Top1": "06-verify-test-coverage",
+      "l0Top1Conf": 0.41,
+      "multiTriggered": false,
+      "multiBackoffTo": null,
+      "top1IsLeaf": true,
+      "l0Predicted": [
+        "06-verify-test-coverage",
+        "06-verify",
+        "04-planning",
+        "05-execute",
+        "06-verify-code-review",
+        "01-security",
+        "A1-memory"
+      ],
+      "singlePredicted": [
+        "06-verify-test-coverage",
+        "06-verify",
+        "04-planning",
+        "05-execute",
+        "06-verify-code-review",
+        "01-security",
+        "A1-memory"
+      ],
+      "multiPredicted": [
+        "06-verify-test-coverage",
+        "06-verify"
+      ],
+      "l0": {
+        "precision": 0.2857142857142857,
+        "recall": 1,
+        "f1": 0.4444444444444445
+      },
+      "single": {
+        "precision": 0.2857142857142857,
+        "recall": 1,
+        "f1": 0.4444444444444445
+      },
+      "multi": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    }
+  ]
+}
