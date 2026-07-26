@@ -1,0 +1,472 @@
+{
+  "timestamp": "2026-07-26",
+  "corpus": "corpus/*.md (13 files)",
+  "router": "L1 judge ∪ 直接语义检索（retrieve 不再 judge），复用 l1-llm.json judge verdict",
+  "testsetSize": 18,
+  "macro": {
+    "precision": 0.62,
+    "recall": 0.972,
+    "f1": 0.719
+  },
+  "l1OnlyMacro": {
+    "precision": 0.62,
+    "recall": 0.944,
+    "f1": 0.7
+  },
+  "l0BaselineMacro": {
+    "precision": 0.511,
+    "recall": 0.917,
+    "f1": 0.631
+  },
+  "deltaVsL1": {
+    "precision": 0,
+    "recall": 0.028,
+    "f1": 0.019
+  },
+  "llmCalls": 18,
+  "note": "复用 l1-llm.json 的 judge verdict（116 次），只新跑 18 次 semanticRetrieve；测直接语义检索相对 L1-only 的纯增量",
+  "detail": [
+    {
+      "query": "我的代码有SQL注入风险，怎么防",
+      "expected": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "judgeYes": [
+        "01-security"
+      ],
+      "retrieved": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "predicted": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "API key不小心硬编码到源码里了",
+      "expected": [
+        "01-security"
+      ],
+      "judgeYes": [
+        "01-security",
+        "06-verify",
+        "06a-security-audit"
+      ],
+      "retrieved": [
+        "01-security",
+        "06a-security-audit",
+        "06-verify"
+      ],
+      "predicted": [
+        "01-security",
+        "06-verify",
+        "06a-security-audit"
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "处理用户隐私数据如邮件病历时怎么保护不泄露",
+      "expected": [
+        "01-security"
+      ],
+      "judgeYes": [
+        "01-security"
+      ],
+      "retrieved": [
+        "01-security"
+      ],
+      "predicted": [
+        "01-security"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "对话上下文快满了模型变笨怎么办",
+      "expected": [
+        "02-context"
+      ],
+      "judgeYes": [
+        "02-context",
+        "04-planning"
+      ],
+      "retrieved": [
+        "02-context"
+      ],
+      "predicted": [
+        "02-context",
+        "04-planning"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "压缩上下文后怎么避免重复执行旧任务",
+      "expected": [
+        "02-context"
+      ],
+      "judgeYes": [
+        "02-context",
+        "04-planning",
+        "A1-memory",
+        "05-execute"
+      ],
+      "retrieved": [
+        "02-context",
+        "05-execute"
+      ],
+      "predicted": [
+        "02-context",
+        "04-planning",
+        "A1-memory",
+        "05-execute"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "这个功能该用哪个agent，选Haiku还是Opus",
+      "expected": [
+        "03-routing"
+      ],
+      "judgeYes": [
+        "03-routing",
+        "A4-rule-measurement"
+      ],
+      "retrieved": [
+        "03-routing"
+      ],
+      "predicted": [
+        "03-routing",
+        "A4-rule-measurement"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "MCP工具太多占了太多context怎么精简",
+      "expected": [
+        "03-routing"
+      ],
+      "judgeYes": [
+        "03-routing",
+        "02-context"
+      ],
+      "retrieved": [
+        "02-context",
+        "03-routing"
+      ],
+      "predicted": [
+        "03-routing",
+        "02-context"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "新功能怎么拆分成可测试的切片",
+      "expected": [
+        "04-planning"
+      ],
+      "judgeYes": [
+        "04-planning"
+      ],
+      "retrieved": [
+        "04-planning"
+      ],
+      "predicted": [
+        "04-planning"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "写代码前要做哪些调研和搜索",
+      "expected": [
+        "04-planning"
+      ],
+      "judgeYes": [
+        "04-planning",
+        "05-execute"
+      ],
+      "retrieved": [
+        "04-planning",
+        "05-execute"
+      ],
+      "predicted": [
+        "04-planning",
+        "05-execute"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "首次编辑文件前要先调查什么",
+      "expected": [
+        "05-execute"
+      ],
+      "judgeYes": [
+        "05-execute"
+      ],
+      "retrieved": [
+        "05-execute"
+      ],
+      "predicted": [
+        "05-execute"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "并行跑多个agent怎么避免landing冲突",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "judgeYes": [
+        "05-execute",
+        "06-verify",
+        "04-planning",
+        "02-context"
+      ],
+      "retrieved": [
+        "05-execute",
+        "06-verify"
+      ],
+      "predicted": [
+        "05-execute",
+        "06-verify",
+        "04-planning",
+        "02-context"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 2,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "代码写完了要过哪些质量门和审查",
+      "expected": [
+        "06-verify",
+        "04-planning"
+      ],
+      "judgeYes": [
+        "06-verify",
+        "00-pipeline"
+      ],
+      "retrieved": [
+        "06-verify"
+      ],
+      "predicted": [
+        "06-verify",
+        "00-pipeline"
+      ],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "query": "怎么对代码库做完整的安全审计",
+      "expected": [
+        "06a-security-audit",
+        "01-security"
+      ],
+      "judgeYes": [
+        "06-verify",
+        "06a-security-audit",
+        "01-security"
+      ],
+      "retrieved": [
+        "01-security",
+        "06a-security-audit",
+        "06-verify"
+      ],
+      "predicted": [
+        "06-verify",
+        "06a-security-audit",
+        "01-security"
+      ],
+      "precision": 0.667,
+      "recall": 1,
+      "f1": 0.8,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "提交代码的commit message格式是什么",
+      "expected": [
+        "07-output"
+      ],
+      "judgeYes": [
+        "07-output"
+      ],
+      "retrieved": [
+        "07-output"
+      ],
+      "predicted": [
+        "07-output"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "规则写了怎么验证它真的有效不是信仰",
+      "expected": [
+        "A4-rule-measurement"
+      ],
+      "judgeYes": [
+        "04-planning",
+        "06-verify",
+        "A1-memory",
+        "A4-rule-measurement"
+      ],
+      "retrieved": [
+        "A4-rule-measurement"
+      ],
+      "predicted": [
+        "04-planning",
+        "06-verify",
+        "A1-memory",
+        "A4-rule-measurement"
+      ],
+      "precision": 0.25,
+      "recall": 1,
+      "f1": 0.4,
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    },
+    {
+      "query": "skill怎么设计，description该怎么写",
+      "expected": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "judgeYes": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "retrieved": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "predicted": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "CLAUDE.md文件太长怎么拆分和懒加载",
+      "expected": [
+        "A3-rule-craft"
+      ],
+      "judgeYes": [
+        "A3-rule-craft",
+        "00-pipeline",
+        "A2-skill-design"
+      ],
+      "retrieved": [
+        "A3-rule-craft",
+        "A2-skill-design",
+        "00-pipeline"
+      ],
+      "predicted": [
+        "A3-rule-craft",
+        "00-pipeline",
+        "A2-skill-design"
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "agent的记忆怎么管理，置信度怎么定",
+      "expected": [
+        "A1-memory"
+      ],
+      "judgeYes": [
+        "07-output",
+        "A1-memory",
+        "02-context"
+      ],
+      "retrieved": [
+        "A1-memory"
+      ],
+      "predicted": [
+        "07-output",
+        "A1-memory",
+        "02-context"
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    }
+  ]
+}

@@ -222,7 +222,29 @@ facets 证伪留的后续：facets 补 L0 漏候选 + LLM judge 滤沾边，看�
 
 ---
 
-路由器自身现已积累 **19 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪、多层退一格成立），正负皆有。
+### 14. rule 直接语义检索补召回（闭合 0714 旧账，边际正）
+
+receipt 4（L1 recall 提名）证伪时埋的伏笔："对比 skill 语料的直接语义检索成功--rule 语料的 recall 或许也该用直接语义检索而非'先提名再 judge'"。本切片闭合它：把 skill `semanticRetrieve`（直接检索、不再 judge、union 合并）原样挪到 rule 语料。L0 候选 judge 过滤得 judgeYes ∪ LLM 直接语义检索 retrieved（retrieve 结果不再 judge，对齐 skill 版，治 nominate 两个失败点：①「除已有外」被锚定 ②再 judge 被滤）。
+
+省成本：复用 `l1-llm.json` 已存的 116 次 judge verdict，只新跑 18 次 retrieve，隔离 retrieve 纯增量（咬合 scalefix / strictjudge 的「复用已存 verdict」模式）。
+
+| | P | R | F1 |
+|---|---|---|---|
+| L0 baseline | 0.511 | 0.917 | 0.631 |
+| L1-only | 0.620 | 0.944 | 0.700 |
+| L1+sem-retrieve | 0.620 | 0.972 | 0.719 |
+
+Δ vs L1-only: P +0 / R +0.028 / F1 +0.019，18 次 retrieve 调用。**边际正**。
+
+**机制（为什么 rule 语料收益远小于 skill）**：18 题里 17 题 retrieve 无新增（返回空或与 judgeYes 重合），唯一补回的是第 1 题（SQL 注入）retrieve 补了 `06a-security-audit`（judge 只载 01-security 漏 06a）--R +0.028 的全部来源。skill 语料同方法 F1 +0.493，rule 语料仅 +0.019，量级差约 25 倍。根因：skill 是中文 query vs 英文 description，L0 跨语言零匹配，retrieve 跨语言救回（R 0.500->1.000）；rule 是中文 query vs 中文 corpus，**无跨语言墙**，L0 recall 已 0.917，retrieve 能补的少。
+
+**未解**：L1-only 漏召回的第 12 题（"质量门和审查" expected 含 04-planning，judge 只载 06-verify + 00-pipeline）retrieve 也没救回--语义近义 gap（"质量门"该带规划但没带）非跨语言检索能补。
+
+**自指洞察**：语义层（L1）的收益随语料**跨表示差距**缩放--跨语言（skill 英文）+0.493 vs 同语言（rule 中文）+0.019。语义层的价值在跨表示墙（语言/表示差距），同表示下关键词层已近天花板。这是立论"路由规则也是规则、要验"的又一个自指验证：不测不知道 retrieve 在 rule 语料只值 +0.019（vs skill +0.493），凭 skill 的成功外推会高估约 25 倍。
+
+---
+
+路由器自身现已积累 **20 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪、多层退一格成立、rule 直接语义检索补召回），正负皆有。
 
 ## receipt 三分（复现 ≠ 证明有效）
 
@@ -287,6 +309,7 @@ reproducible/        可复现素材（见下）
 - [ ] **ownership 标签**：给枢纽文件（04-planning / 06-verify）标"owns X / references X"，让"提到"和"拥有"可区分
 - [x] **facets 标签**：security / parallel / subagent / ctx-stress 横切索引，测横跨多阶段 query（receipt 10，证伪，需 LLM judge 留后续）
 - [x] **退一格**：叶子拿不准载父节点（receipt 11 单层退树根 F1 +0.583；receipt 13 多层逐层退阶段父 F1 +0.254，corpus 扩 L2 已验）
+- [x] **rule 直接语义检索补召回**（receipt 14，闭合 0714 旧账）：把 skill `semanticRetrieve` 挪到 rule 语料，R +0.028 / F1 +0.019 边际正；rule 中文语料无跨语言墙，收益比 skill(+0.493) 小约 25 倍，语义层价值随跨表示差距缩放
 - [ ] **security tag 写穷触发面**（BuilderIO 金标准 ~15 场景），验 L0 秒配的具体起手
 - [ ] 扩测试集到 30-50 题，跨 session 复验（single-shot 高估，agentic 下常缩水）
 
@@ -300,4 +323,4 @@ reproducible/        可复现素材（见下）
 | `reproducible/gzh-rig/` | 独立 rig 示范，19 缺陷测双关卡 vs 单关卡 | `cd reproducible/gzh-rig && python rig.py`（纯 stdlib，自包含，无需外部依赖） |
 | `reproducible/dao-cache-rig.py` | 跨 session 骨架示范（缓存稳定性 A/B） | 需 `pip install anthropic` + `ANTHROPIC_API_KEY`--跨 session receipt 单对话跑不了，附骨架供有 key 时跑 |
 
-数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 18 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
+数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 20 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
