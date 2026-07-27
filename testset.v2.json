@@ -7,7 +7,7 @@
   { "query": "这个功能该用哪个agent，选Haiku还是Opus", "expected": ["03-routing"] },
   { "query": "MCP工具太多占了太多context怎么精简", "expected": ["03-routing"] },
   { "query": "新功能怎么拆分成可测试的切片", "expected": ["04-planning"] },
-  { "query": "写代码前要做哪些调研和搜索", "expected": ["04-planning", "05-execute"] },
+  { "query": "写代码前要做哪些调研和搜索", "expected": ["04-planning"] },
   { "query": "首次编辑文件前要先调查什么", "expected": ["05-execute"] },
   { "query": "并行跑多个agent怎么避免landing冲突", "expected": ["05-execute", "06-verify"] },
   { "query": "代码写完了要过哪些质量门和审查", "expected": ["06-verify", "04-planning"] },

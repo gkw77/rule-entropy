@@ -1,0 +1,371 @@
+{
+  "timestamp": "2026-07-27",
+  "receipt": "relabel v2->v3（annotation-artifact 假设证伪）",
+  "standard": "expected = 直接 govern 该 query 工作的规则文件；L1 FP 逐题独立审，真相关才加，不抄 L1 预测",
+  "labelDiff": [
+    {
+      "query": "写代码前要做哪些调研和搜索",
+      "v2": [
+        "04-planning"
+      ],
+      "v3": [
+        "04-planning",
+        "05-execute"
+      ],
+      "added": [
+        "05-execute"
+      ],
+      "removed": []
+    }
+  ],
+  "l0": {
+    "v2": {
+      "bestThreshold": 0.1,
+      "macro": {
+        "precision": 0.511,
+        "recall": 0.917,
+        "f1": 0.631
+      }
+    },
+    "v3": {
+      "bestThreshold": 0.1,
+      "macro": {
+        "precision": 0.511,
+        "recall": 0.889,
+        "f1": 0.613
+      }
+    },
+    "delta": {
+      "precision": 0,
+      "recall": -0.028,
+      "f1": -0.018
+    },
+    "sweep": [
+      {
+        "threshold": 0.05,
+        "precision": 0.222,
+        "recall": 0.972,
+        "f1": 0.349
+      },
+      {
+        "threshold": 0.1,
+        "precision": 0.511,
+        "recall": 0.889,
+        "f1": 0.613
+      },
+      {
+        "threshold": 0.15,
+        "precision": 0.491,
+        "recall": 0.5,
+        "f1": 0.476
+      },
+      {
+        "threshold": 0.2,
+        "precision": 0.306,
+        "recall": 0.278,
+        "f1": 0.287
+      },
+      {
+        "threshold": 0.25,
+        "precision": 0.111,
+        "recall": 0.083,
+        "f1": 0.093
+      },
+      {
+        "threshold": 0.3,
+        "precision": 0.056,
+        "recall": 0.056,
+        "f1": 0.056
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0
+      }
+    ]
+  },
+  "l1": {
+    "v2": {
+      "precision": 0.62,
+      "recall": 0.944,
+      "f1": 0.7
+    },
+    "v3": {
+      "precision": 0.648,
+      "recall": 0.944,
+      "f1": 0.719
+    },
+    "delta": {
+      "precision": 0.028,
+      "recall": 0,
+      "f1": 0.019
+    },
+    "perQuery": [
+      {
+        "query": "我的代码有SQL注入风险，怎么防",
+        "expected": [
+          "01-security",
+          "06a-security-audit"
+        ],
+        "predicted": [
+          "01-security"
+        ],
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.667
+      },
+      {
+        "query": "API key不小心硬编码到源码里了",
+        "expected": [
+          "01-security"
+        ],
+        "predicted": [
+          "01-security",
+          "06-verify",
+          "06a-security-audit"
+        ],
+        "precision": 0.333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      {
+        "query": "处理用户隐私数据如邮件病历时怎么保护不泄露",
+        "expected": [
+          "01-security"
+        ],
+        "predicted": [
+          "01-security"
+        ],
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "query": "对话上下文快满了模型变笨怎么办",
+        "expected": [
+          "02-context"
+        ],
+        "predicted": [
+          "02-context",
+          "04-planning"
+        ],
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.667
+      },
+      {
+        "query": "压缩上下文后怎么避免重复执行旧任务",
+        "expected": [
+          "02-context"
+        ],
+        "predicted": [
+          "02-context",
+          "04-planning",
+          "A1-memory",
+          "05-execute"
+        ],
+        "precision": 0.25,
+        "recall": 1,
+        "f1": 0.4
+      },
+      {
+        "query": "这个功能该用哪个agent，选Haiku还是Opus",
+        "expected": [
+          "03-routing"
+        ],
+        "predicted": [
+          "03-routing",
+          "A4-rule-measurement"
+        ],
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.667
+      },
+      {
+        "query": "MCP工具太多占了太多context怎么精简",
+        "expected": [
+          "03-routing"
+        ],
+        "predicted": [
+          "03-routing",
+          "02-context"
+        ],
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.667
+      },
+      {
+        "query": "新功能怎么拆分成可测试的切片",
+        "expected": [
+          "04-planning"
+        ],
+        "predicted": [
+          "04-planning"
+        ],
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "query": "写代码前要做哪些调研和搜索",
+        "expected": [
+          "04-planning",
+          "05-execute"
+        ],
+        "predicted": [
+          "04-planning",
+          "05-execute"
+        ],
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "query": "首次编辑文件前要先调查什么",
+        "expected": [
+          "05-execute"
+        ],
+        "predicted": [
+          "05-execute"
+        ],
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "query": "并行跑多个agent怎么避免landing冲突",
+        "expected": [
+          "05-execute",
+          "06-verify"
+        ],
+        "predicted": [
+          "05-execute",
+          "06-verify",
+          "04-planning",
+          "02-context"
+        ],
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.667
+      },
+      {
+        "query": "代码写完了要过哪些质量门和审查",
+        "expected": [
+          "06-verify",
+          "04-planning"
+        ],
+        "predicted": [
+          "06-verify",
+          "00-pipeline"
+        ],
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      },
+      {
+        "query": "怎么对代码库做完整的安全审计",
+        "expected": [
+          "06a-security-audit",
+          "01-security"
+        ],
+        "predicted": [
+          "06-verify",
+          "06a-security-audit",
+          "01-security"
+        ],
+        "precision": 0.667,
+        "recall": 1,
+        "f1": 0.8
+      },
+      {
+        "query": "提交代码的commit message格式是什么",
+        "expected": [
+          "07-output"
+        ],
+        "predicted": [
+          "07-output"
+        ],
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "query": "规则写了怎么验证它真的有效不是信仰",
+        "expected": [
+          "A4-rule-measurement"
+        ],
+        "predicted": [
+          "04-planning",
+          "06-verify",
+          "A1-memory",
+          "A4-rule-measurement"
+        ],
+        "precision": 0.25,
+        "recall": 1,
+        "f1": 0.4
+      },
+      {
+        "query": "skill怎么设计，description该怎么写",
+        "expected": [
+          "A2-skill-design",
+          "A3-rule-craft"
+        ],
+        "predicted": [
+          "A2-skill-design",
+          "A3-rule-craft"
+        ],
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "query": "CLAUDE.md文件太长怎么拆分和懒加载",
+        "expected": [
+          "A3-rule-craft"
+        ],
+        "predicted": [
+          "A3-rule-craft",
+          "00-pipeline",
+          "A2-skill-design"
+        ],
+        "precision": 0.333,
+        "recall": 1,
+        "f1": 0.5
+      },
+      {
+        "query": "agent的记忆怎么管理，置信度怎么定",
+        "expected": [
+          "A1-memory"
+        ],
+        "predicted": [
+          "07-output",
+          "A1-memory",
+          "02-context"
+        ],
+        "precision": 0.333,
+        "recall": 1,
+        "f1": 0.5
+      }
+    ]
+  },
+  "conclusion": "labelDiff 仅 1 题（Q9 加 05-execute；L1 judge 独立判 yes 印证，非抄预测）。annotation-artifact 假设基本证伪：L1 其余 11 个 FP 逐题独立审均为真沾边（该滤），非标注窄。precision 天花板是真的（judge 沾边即 yes），非标注 artifact。L0 在 Q9 反降（05 conf 0.068<thr 不浮出，加 expected 成 FN）——重标不为抬数，是为标对。"
+}

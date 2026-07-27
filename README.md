@@ -244,7 +244,30 @@ receipt 4（L1 recall 提名）证伪时埋的伏笔："对比 skill 语料的�
 
 ---
 
-路由器自身现已积累 **20 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪、多层退一格成立、rule 直接语义检索补召回），正负皆有。
+### 15. 测试集重标（annotation-artifact 假设证伪）
+
+反复被点名的诚实缺口：L1 precision 0.62（rule）可能因测试集单标注低估了"一到多合理多载"--而"一到多"恰是项目目标。拿错靶子量，precision 天花板就不真。本切片全量重标 18 题为多标签，公平评真天花板。
+
+**重标标准（防 game）**：expected = 直接 govern 该 query 工作的规则文件；逐题独立审 L1 的每个 FP（predicted-but-not-expected），真相关才加进 expected，**不抄 L1 预测**（抄了 precision=1.0 就是自欺）。corpus 内容独立判断，L1 预测只作诊断线索。
+
+**结果**：18 题里**只 1 题**（Q9「写代码前调研搜索」）真欠标--04 的 Web Research + 05 的 GateGuard 调查清单都直接 govern"写代码前调研"，合理一到多，加 `05-execute`。L1 的 judge 对 05 独立判 yes（理由"规则核心正是写代码前先调查"），与独立判断吻合--非抄预测，是两条路走到同一结论。**其余 11 个 L1 FP 逐题独立审均为真沾边**（Q5 的 A1 失败考古 ≠ post-compact 防重放；Q15 的 06-verify 验代码 ≠ 验规则；Q2 的 06a 审计 ≠ 已知 key 的 Secret 管理……），非标注窄。
+
+复用已存预测不重跑（零 LLM）：L0 重 route（确定性关键词），L1 重打分 `l1-llm.json` 的 predicted。
+
+| | P | R | F1 |
+|---|---|---|---|
+| L1 v2（原标） | 0.620 | 0.944 | 0.700 |
+| L1 v3（重标） | 0.648 | 0.944 | 0.719 |
+| L0 v2（原标） | 0.511 | 0.917 | 0.631 |
+| L0 v3（重标） | 0.511 | 0.889 | 0.613 |
+
+Δ L1: P +0.028 / R 0 / F1 +0.019。**L0 反降**（Q9 的 05 conf 0.068 < thr 0.1 不浮出，加进 expected 成 FN，R -0.028）--正好证明重标不为抬数，是为标对：L0 确实浮不出 05，这是 L0 的真漏，不是标注委屈了它。
+
+**结论（证伪）**：annotation-artifact 假设基本证伪。12 个 L1 FP 只 1 个是欠标，precision 天花板（~0.65）是真的，剩余 gap 到 1.0 是 judge"沾边即 yes"问题（skill 语料已用严 judge 部分修，rule 语料留后续），非标注 artifact。负 receipt：堵住"precision 低是标注不公"这个自我安慰，逼后续修法对准真病因（judge 松）而非重标。
+
+---
+
+路由器自身现已积累 **21 个独立 rig receipt**（L0 baseline / v2 / v3 证伪、L1 rule、L1 skill、L1 recall 证伪、L0+L1 规模效应、覆盖度、规模悬崖修法、skill 评分、skill 语义去重、去重逐对确认、precision 规模退化修法、同类项两两合并、facets 证伪、facets 修法证伪、退一格成立、L1+facets 证伪、多层退一格成立、rule 直接语义检索补召回、测试集重标证伪），正负皆有。
 
 ## receipt 三分（复现 ≠ 证明有效）
 
@@ -310,6 +333,7 @@ reproducible/        可复现素材（见下）
 - [x] **facets 标签**：security / parallel / subagent / ctx-stress 横切索引，测横跨多阶段 query（receipt 10，证伪，需 LLM judge 留后续）
 - [x] **退一格**：叶子拿不准载父节点（receipt 11 单层退树根 F1 +0.583；receipt 13 多层逐层退阶段父 F1 +0.254，corpus 扩 L2 已验）
 - [x] **rule 直接语义检索补召回**（receipt 14，闭合 0714 旧账）：把 skill `semanticRetrieve` 挪到 rule 语料，R +0.028 / F1 +0.019 边际正；rule 中文语料无跨语言墙，收益比 skill(+0.493) 小约 25 倍，语义层价值随跨表示差距缩放
+- [x] **测试集重标公平评 L1 precision 真天花板**（receipt 15，annotation-artifact 假设证伪）：全 18 题独立重标多标签，只 1 题真欠标，precision 天花板 ~0.65 是真的非标注 artifact；L1 P +0.028 / F1 +0.019，L0 反降（重标不为抬数，是为标对）
 - [ ] **security tag 写穷触发面**（BuilderIO 金标准 ~15 场景），验 L0 秒配的具体起手
 - [ ] 扩测试集到 30-50 题，跨 session 复验（single-shot 高估，agentic 下常缩水）
 
@@ -323,4 +347,4 @@ reproducible/        可复现素材（见下）
 | `reproducible/gzh-rig/` | 独立 rig 示范，19 缺陷测双关卡 vs 单关卡 | `cd reproducible/gzh-rig && python rig.py`（纯 stdlib，自包含，无需外部依赖） |
 | `reproducible/dao-cache-rig.py` | 跨 session 骨架示范（缓存稳定性 A/B） | 需 `pip install anthropic` + `ANTHROPIC_API_KEY`--跨 session receipt 单对话跑不了，附骨架供有 key 时跑 |
 
-数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 20 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
+数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 21 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
