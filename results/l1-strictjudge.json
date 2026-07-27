@@ -1,0 +1,627 @@
+{
+  "timestamp": "2026-07-27",
+  "method": "L1-only predicted（lenient judgeYes）-> 严 judge 重判（只直接要用/近义重复 yes）-> strict-yes",
+  "baseline": "L1-only v3（relabel-v3.json，v3 标签）",
+  "llmCalls": 41,
+  "macro": {
+    "precision": 0.861,
+    "recall": 0.917,
+    "f1": 0.859
+  },
+  "baselineMacro": {
+    "precision": 0.648,
+    "recall": 0.944,
+    "f1": 0.719
+  },
+  "delta": {
+    "precision": 0.213,
+    "recall": -0.027,
+    "f1": 0.14
+  },
+  "note": "严 judge 治 precision（重标证伪后的真病因）。失败保守判 no（不载）。参照 skill 语料严 judge P 0.577->0.650",
+  "detail": [
+    {
+      "query": "我的代码有SQL注入风险，怎么防",
+      "expected": [
+        "01-security",
+        "06a-security-audit"
+      ],
+      "lenientPredicted": [
+        "01-security"
+      ],
+      "strictYes": [
+        "01-security"
+      ],
+      "judged": [
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "query": "API key不小心硬编码到源码里了",
+      "expected": [
+        "01-security"
+      ],
+      "lenientPredicted": [
+        "01-security",
+        "06-verify",
+        "06a-security-audit"
+      ],
+      "strictYes": [
+        "01-security"
+      ],
+      "judged": [
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "reason": "泄漏的凭据管理需要安全处理协议，而非侧重代码覆盖率、测试、审查和质量门的通用验证规则。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "no",
+          "reason": "问题陈述的是已知密钥泄露的紧急处理，而规则的核心是不从直觉推理、执行6阶段审计pipeline寻找未知漏洞，功能不同。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "处理用户隐私数据如邮件病历时怎么保护不泄露",
+      "expected": [
+        "01-security"
+      ],
+      "lenientPredicted": [
+        "01-security"
+      ],
+      "strictYes": [
+        "01-security"
+      ],
+      "judged": [
+        {
+          "path": "01-security",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "对话上下文快满了模型变笨怎么办",
+      "expected": [
+        "02-context"
+      ],
+      "lenientPredicted": [
+        "02-context",
+        "04-planning"
+      ],
+      "strictYes": [
+        "02-context"
+      ],
+      "judged": [
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "reason": "问题探讨上下文饱和导致模型性能下降的应对策略，直接对应规则中关于上下文管理、双信号压缩及状态交接等核心内容。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "reason": "该规则是关于编码前的任务规划、垂直切片与测试流程，而非处理对话上下文超载导致模型性能下降的问题。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "压缩上下文后怎么避免重复执行旧任务",
+      "expected": [
+        "02-context"
+      ],
+      "lenientPredicted": [
+        "02-context",
+        "04-planning",
+        "A1-memory",
+        "05-execute"
+      ],
+      "strictYes": [
+        "02-context",
+        "A1-memory",
+        "05-execute"
+      ],
+      "judged": [
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "reason": "规则明确包含防止压缩后重放旧任务的机制，如'Session 摘要防重放'、'Post-compact 规则重注入'和'防重放规则'。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "reason": "规则04-planning的核心是任务规划、切片与研究门禁，不涉及上下文压缩后如何避免重复执行旧任务的状态管理。"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 0.333,
+      "recall": 1,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "query": "这个功能该用哪个agent，选Haiku还是Opus",
+      "expected": [
+        "03-routing"
+      ],
+      "lenientPredicted": [
+        "03-routing",
+        "A4-rule-measurement"
+      ],
+      "strictYes": [
+        "03-routing"
+      ],
+      "judged": [
+        {
+          "path": "03-routing",
+          "verdict": "yes",
+          "reason": "该规则包含Agent路由表和模型选择策略（Haiku/Sonnet/Opus），直接回答了功能应选哪个模型的问题。"
+        },
+        {
+          "path": "A4-rule-measurement",
+          "verdict": "no",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "MCP工具太多占了太多context怎么精简",
+      "expected": [
+        "03-routing"
+      ],
+      "lenientPredicted": [
+        "03-routing",
+        "02-context"
+      ],
+      "strictYes": [
+        "03-routing",
+        "02-context"
+      ],
+      "judged": [
+        {
+          "path": "03-routing",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "path": "02-context",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "新功能怎么拆分成可测试的切片",
+      "expected": [
+        "04-planning"
+      ],
+      "lenientPredicted": [
+        "04-planning"
+      ],
+      "strictYes": [
+        "04-planning"
+      ],
+      "judged": [
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "写代码前要做哪些调研和搜索",
+      "expected": [
+        "04-planning",
+        "05-execute"
+      ],
+      "lenientPredicted": [
+        "04-planning",
+        "05-execute"
+      ],
+      "strictYes": [
+        "04-planning",
+        "05-execute"
+      ],
+      "judged": [
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "reason": "规则明确包含「Step 0: Web Research」及其搜索清单，直接回答了写代码前应进行的调研与搜索步骤。"
+        },
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "reason": "问题问写代码前做哪些调研，候选规则核心就是「GateGuard：先调查再编辑」及首次编辑前的「调查清单」。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "首次编辑文件前要先调查什么",
+      "expected": [
+        "05-execute"
+      ],
+      "lenientPredicted": [
+        "05-execute"
+      ],
+      "strictYes": [
+        "05-execute"
+      ],
+      "judged": [
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "reason": "问题询问首次编辑文件前需调查什么，该规则（05-execute）明确包含GateGuard及“调查清单（首次编辑前）”，直接回答此问题。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "并行跑多个agent怎么避免landing冲突",
+      "expected": [
+        "05-execute",
+        "06-verify"
+      ],
+      "lenientPredicted": [
+        "05-execute",
+        "06-verify",
+        "04-planning",
+        "02-context"
+      ],
+      "strictYes": [
+        "05-execute",
+        "06-verify",
+        "04-planning"
+      ],
+      "judged": [
+        {
+          "path": "05-execute",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "reason": "规则中明确包含“先查并发共享资源”、“序列化 landing 阶段”等针对并行冲突的执行规则，直接回答了该问题。"
+        },
+        {
+          "path": "04-planning",
+          "verdict": "yes",
+          "reason": "规则中明确包含“Wavefront 并行/波前”、“Plan Handoff Contract/Task 间显式契约”等核心机制，正是用于指导和约束并行多 agent 任务以避免冲突的规划原则。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "reason": ""
+        }
+      ],
+      "precision": 0.667,
+      "recall": 1,
+      "f1": 0.8,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "代码写完了要过哪些质量门和审查",
+      "expected": [
+        "06-verify",
+        "04-planning"
+      ],
+      "lenientPredicted": [
+        "06-verify",
+        "00-pipeline"
+      ],
+      "strictYes": [
+        "06-verify"
+      ],
+      "judged": [
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "reason": ""
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "query": "怎么对代码库做完整的安全审计",
+      "expected": [
+        "06a-security-audit",
+        "01-security"
+      ],
+      "lenientPredicted": [
+        "06-verify",
+        "06a-security-audit",
+        "01-security"
+      ],
+      "strictYes": [
+        "06-verify",
+        "06a-security-audit"
+      ],
+      "judged": [
+        {
+          "path": "06-verify",
+          "verdict": "yes",
+          "reason": "规则中明确包含「安全审计 pipeline」及「安全检查清单」等内容，正是直接回答如何做安全审计所需遵循的流程和规范。"
+        },
+        {
+          "path": "06a-security-audit",
+          "verdict": "yes",
+          "reason": "问题直接询问如何进行完整的安全审计，与规则06a-security-audit的6阶段审计pipeline完全对应。"
+        },
+        {
+          "path": "01-security",
+          "verdict": "no",
+          "reason": "问题问的是宏观的安全审计流程，规则核心是具体的 Policy 门禁和供应链攻击检测机制，功能不完全匹配"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "query": "提交代码的commit message格式是什么",
+      "expected": [
+        "07-output"
+      ],
+      "lenientPredicted": [
+        "07-output"
+      ],
+      "strictYes": [
+        "07-output"
+      ],
+      "judged": [
+        {
+          "path": "07-output",
+          "verdict": "yes",
+          "reason": "规则07-output明确包含'Commit Message Format'，正是回答该问题直接所需遵循的规则。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "规则写了怎么验证它真的有效不是信仰",
+      "expected": [
+        "A4-rule-measurement"
+      ],
+      "lenientPredicted": [
+        "04-planning",
+        "06-verify",
+        "A1-memory",
+        "A4-rule-measurement"
+      ],
+      "strictYes": [
+        "A4-rule-measurement"
+      ],
+      "judged": [
+        {
+          "path": "04-planning",
+          "verdict": "no",
+          "reason": "问题是关于验证“规则”本身有效性，而非代码实现或任务规划，本规则聚焦于开发阶段的规划与测试流程。"
+        },
+        {
+          "path": "06-verify",
+          "verdict": "no",
+          "reason": "该规则的核心是验证代码和产物的质量门，而非验证规则本身是否有效"
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "path": "A4-rule-measurement",
+          "verdict": "yes",
+          "reason": "问题直接询问如何验证规则真的有效而非盲目信仰，与候选规则的标题和核心主题“Rule Measurement（规则度量与验证）”完全对应。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "skill怎么设计，description该怎么写",
+      "expected": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "lenientPredicted": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "strictYes": [
+        "A2-skill-design",
+        "A3-rule-craft"
+      ],
+      "judged": [
+        {
+          "path": "A2-skill-design",
+          "verdict": "yes",
+          "reason": "问题询问 skill 怎么设计及 description 怎么写，候选规则正是 Skill 设计模式规范且明确指出 description 是触发器，直接回答该问题。"
+        },
+        {
+          "path": "A3-rule-craft",
+          "verdict": "yes",
+          "reason": "规则摘要明确指出“Skill description 是触发器”，直接回答了该问题中关于skill设计和description该怎么写的需求。"
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "query": "CLAUDE.md文件太长怎么拆分和懒加载",
+      "expected": [
+        "A3-rule-craft"
+      ],
+      "lenientPredicted": [
+        "A3-rule-craft",
+        "00-pipeline",
+        "A2-skill-design"
+      ],
+      "strictYes": [
+        "A3-rule-craft",
+        "A2-skill-design"
+      ],
+      "judged": [
+        {
+          "path": "A3-rule-craft",
+          "verdict": "yes",
+          "reason": "该规则核心内容包含CLAUDE.md文件大小、paths frontmatter规则懒加载等技巧，直接回答了如何拆分和懒加载的问题。"
+        },
+        {
+          "path": "00-pipeline",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "path": "A2-skill-design",
+          "verdict": "yes",
+          "reason": "规则中明确包含「渐进披露」、「目录即 Skill」及「Skill-as-pointer-to-local-docs」等核心模式，直接解答文件过长如何拆分与懒加载的问题。"
+        }
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "query": "agent的记忆怎么管理，置信度怎么定",
+      "expected": [
+        "A1-memory"
+      ],
+      "lenientPredicted": [
+        "07-output",
+        "A1-memory",
+        "02-context"
+      ],
+      "strictYes": [
+        "A1-memory"
+      ],
+      "judged": [
+        {
+          "path": "07-output",
+          "verdict": "no",
+          "reason": ""
+        },
+        {
+          "path": "A1-memory",
+          "verdict": "yes",
+          "reason": "问题直接询问记忆管理方式和置信度如何设定，该规则核心内容正是记忆系统格式与置信度评分升降规则。"
+        },
+        {
+          "path": "02-context",
+          "verdict": "no",
+          "reason": ""
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    }
+  ]
+}
