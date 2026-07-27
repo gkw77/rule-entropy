@@ -1,23 +1,26 @@
-# 规则系统的熵：给 AI agent 的规则装一个会自测的路由器
+# 规则系统的熵：你的 CLAUDE.md 有多少条规则是"信仰"？
 
-> 你的 agent 每次把全部 CLAUDE.md / skills 塞进 context，规则越堆越多、越来越笨，还没人知道哪条在帮忙、哪条在添乱。这个工具做两件事：**路由**（输入问题 -> 只载相关规则，不全量塞）+ **自测**（自带测试集，跑出路由准不准的真实 P/R，不是"感觉对"）。这个测试集叫 **receipt**（验证凭证）。clone 即跑，L0 零依赖。
+> 你的 agent 每次把全部 CLAUDE.md / skills 塞进 context，规则越堆越多、越来越笨，还没人知道哪条在帮忙、哪条只是"感觉对"的信仰。作者拿自己的规则开刀建仪器测仪器：扫 167 个规则块，**87% 是没度量的行为规则、12 处声称了度量但零 receipt**。工具附上，clone 即跑，扫你自己的。
 
-## TL;DR
+## 30 秒：扫你自己的规则，看多少是"信仰"
 
 ```bash
 git clone https://github.com/gkw77/rule-entropy.git && cd rule-entropy
-node router/router.js "我的代码有SQL注入风险，怎么防"   # -> 输出该用哪些规则 + 置信度 + 理由
+node reproducible/rule-evidence-audit.js corpus .                          # 扫本 repo 的 13 个规则快照，零依赖
+node reproducible/rule-evidence-audit.js ~/.claude/rules "common,python"   # 扫你自己的规则
 ```
+
+输出每个规则块的 evidence 评级：`behavior_NA`（纯行为规则无度量）/ `claimNoMetric`（声称度量但零 receipt）/ `faith`（声称且未测）/ `secondhand_needsRepro`（引别人数字待复现）/ `selftested_partial`（有自测）。大部分会是前两类--这就是规则系统的熵增：不验证就只增不减。
 
 ## 用它能干什么
 
 1. **路由**--问题来了只载相关规则，不全量载入。作者自己的 13 个规则文件 ~60KB 默认每 session 全塞进 context，路由后只载相关的 1-3 个。治 context-bloat。
-2. **自测**--路由准不准有 P/R 数字，不是"感觉对"。skill 语料 L0 P=0.30 / R=0.50（撞语言墙）-> L1 P=0.785 / R=1.0（跨语言救回 + 共享词过滤）。路由规则也是规则，按"规则不验证 = 信仰"必须被测。
+2. **自测**--路由准不准有 P/R 数字，不是"感觉对"。rule 语料 L0 P=0.511 -> L1 P=0.648 -> 严 judge P=0.861；skill 语料 L0 P=0.30 -> L1 P=0.785 / R=1.0（跨语言救回）。路由规则也是规则，按"规则不验证 = 信仰"必须被测。
 3. **去重**--给 skill 评分 + 找语义重复，识别赘余该合并。325 个 skill 里 22 个冗余该合并、3 个破损该删。
 
 三个都配 receipt（真实数字），不是框架空谈。
 
-## 跑起来（30 秒）
+## 跑路由器
 
 ```bash
 git clone https://github.com/gkw77/rule-entropy.git
