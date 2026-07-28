@@ -1,0 +1,27 @@
+{
+  "_comment": "ownership 标签索引 -- facets 的差分版（receipt 17）。facets（receipt 10 falsified）命中 tag 后所有文件一律 facetConf，均匀下拉致 precision 崩；ownership 区分 owns（文件标题级主营该主题，grep 验证）与 refs（顺带提及），owns 给高分 refs 给低分，打破'全过或全滤'阈值陷阱。owns/refs 赋值基于语料标题级内容（见 README receipt 17 的 grep 证据），非测试集拟合（避 receipt 15 annotation-artifact 批评）。",
+  "ownsConf": 0.5,
+  "refsConf": 0.15,
+  "tags": {
+    "security": {
+      "keywords": ["安全", "注入", "secret", "密钥", "token", "权限", "auth", "授权", "供应链", "审计", "泄露", "凭证", "认证", "密码", "越权"],
+      "owns": ["01-security", "06a-security-audit"],
+      "refs": []
+    },
+    "parallel": {
+      "keywords": ["并行", "并发", "landing", "竞态", "冲突", "merge queue", "worktree", "flaky", "碰撞", "多agent", "同时跑", "同时推"],
+      "owns": ["05-execute", "06-verify"],
+      "refs": ["03-routing", "04-planning"]
+    },
+    "subagent": {
+      "keywords": ["子agent", "subagent", "委托", "fork", "maker-checker", "verifier", "编排", "agent路由", "agent选择", "子上下文", "独立上下文"],
+      "owns": ["03-routing", "05-execute", "06-verify"],
+      "refs": ["04-planning", "A2-skill-design"]
+    },
+    "ctx-stress": {
+      "keywords": ["上下文", "context", "compact", "窗口", "压缩", "重放", "懒加载", "context-bloat", "笨区", "context窗口"],
+      "owns": ["02-context"],
+      "refs": ["A1-memory", "A3-rule-craft"]
+    }
+  }
+}

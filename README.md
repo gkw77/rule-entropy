@@ -60,9 +60,10 @@ Three faces: **faith transmission** (A cites B's number, B cites C, the source i
 | L0 keyword (file-level) | **verified** (P=0.511 / R=0.917, 18 queries) |
 | L1 cheap LLM by description | **verified** (P=0.620 / R=0.944, +10.9 pts precision, recall up not down) |
 | facets cross-cutting tags | **verified·falsified** (triple: naive L0 F1≤L0 / downweighted L0 F1≤L0 / L1+facets Δ≈0; mechanism right but tag-coarse + judge-misjudge double-bind) |
+| ownership (owns/refs differential) | **verified·holds** (facets variant that beats L0: F1 0.695->0.820, owns high/refs low breaks the all-pass-or-all-filter trap; see receipt 17) |
 | backoff | **verified·holds** (single-level: fuzzy queries back off to root F1 0.347->0.931; multi-level: corpus extended with L2, back off to stage-parent, see receipt 13) |
 
-Note: facets / backoff were **design faith**, now landed with test sets and P/R (see receipts 10/11). facets naive impl falsified (tag substring matching coarsely pulls tangential files); backoff holds (top-conf signal is clean + backs off to only the root file). By the thesis "unverified rule = faith", they got upgraded from faith to receipt (one positive, one negative).
+Note: facets / backoff were **design faith**, now landed with test sets and P/R (see receipts 10/11). facets naive impl falsified (tag substring matching coarsely pulls tangential files); backoff holds (top-conf signal is clean + backs off to only the root file). ownership (receipt 17) is the facets variant that holds: owns/refs differential beats L0 where uniform facets was net-negative. By the thesis "unverified rule = faith", they got upgraded from faith to receipt (two positive, one negative).
 
 ## Self-reference: the router turns on itself
 
@@ -295,7 +296,38 @@ Cost saved: `l1-llm.json` already stores predicted (lenient judgeYes); re-judge 
 
 ---
 
-The router has accumulated **22 independent rig receipts** (L0 baseline / v2 / v3 falsified, L1 rule, L1 skill, L1 recall falsified, L0+L1 scale effect, coverage, scale-cliff fix, skill scoring, skill semantic dedup, dedup pairwise confirmation, precision scale-degradation fix, pairwise merge of like terms, facets falsified, facets-fix falsified, backoff holds, L1+facets falsified, multi-level backoff holds, rule direct semantic retrieval, test-set relabeling falsified, rule strict judge), positive and negative.
+### 17. Ownership tags (owns/refs differential, fixes facets' coarse-pull)
+
+facets (receipt 10) failed because hitting a tag pulled ALL its files at uniform confidence - downweighting (receipt 10 fix) was also falsified: a uniform low weight is still "all pass the threshold or all get filtered", can't distinguish true-relevant from tangential. The roadmap item "tag hub files with owns/references" tests the direct fix: split each tag's files into **owns** (heading-level primary topic, grep-verified) and **refs** (mentioned in passing), give owns high confidence and refs low - **differential, not uniform**.
+
+owns/refs assignment is content-based (heading grep, not testset-fit, to avoid receipt 15's annotation-artifact criticism):
+- security: owns=[01, 06a], refs=[]
+- parallel: owns=[05 (`## 并行执行` / `### 并行 landing 门`), 06 (`### 并行下的 flaky`)], refs=[03, 04]
+- subagent: owns=[03 (agent routing core), 05 (delegation), 06 (maker-checker)], refs=[04, A2]
+- ctx-stress: owns=[02 (`## 双信号压缩` / `## 上下文敏感任务调度` / `## Post-compact`)], refs=[A1, A3]
+
+| | P | R | F1 |
+|---|---|---|---|
+| L0 baseline | 0.664 | 0.800 | 0.695 |
+| original facets (0.5, unconditional) | 0.436 | 1.000 | 0.576 |
+| ownership (owns=0.5, refs=0.12, thr=0.3) | **0.742** | **1.000** | **0.820** |
+
+Δ vs L0: P +0.077 / R +0.2 / F1 +0.125 (all three axes up). Δ vs original facets: F1 +0.244. **Claim holds - the first facets variant to beat L0**, and decisively.
+
+**Why differential beats uniform (the mechanism receipt 10 couldn't access)**: at threshold 0.3, owns (0.5) survive, refs (≤0.25) get filtered. The owns/refs split + threshold separates true-relevant (owns) from tangential (refs) - exactly the distinction receipt 10's uniform downweight couldn't make ("all filtered = L0" or "all pass = overload"). refsConf's exact value barely matters (0.12-0.25 all give 0.82 at lct=0) because threshold 0.3 filters all refs regardless - the win is the split, not the tuning.
+
+**Recall gap filled**: query "委托subagent干活怎么不让它越界" (expected 03+05) was an L0 total miss (R0, per receipt 10); ownership's subagent-tag owns pulls 03+05, R=1.0. lct=0 (unconditional) is best - unlike facets' fix which needed a conditional trigger, ownership's differential is enough, no gating on L0 confidence.
+
+**Honest boundary (owns-level FPs remain)**:
+- 5/10 queries perfect; 5 have owns-level FPs but all R=1.0. ownership reduces FPs vs facets (refs filtered) but doesn't eliminate tag-coarseness at the owns level.
+- Query "maker-checker要独立上下文验证" (expected 06) is worst (P=0.25): fires both subagent + ctx-stress tags, their owns (03/05/06 + 02) pile up. A single owns/refs split per tag can't distinguish "delegate subagent" (wants 03+05) from "maker-checker verify" (wants 06) - both are subagent-tag queries wanting different subsets. Inherent tag coarseness, honestly recorded.
+- This is a lighter rework than receipt 12's "needs finer tags + more accurate judge" - same 4 tags, just an owns/refs split, and that alone beats L0. Doesn't fully solve tag coarseness, but it's net-positive where naive facets was net-negative.
+
+Reproduce: `node router/eval-ownership.js` (L0 vs original facets vs ownership, 10-query facets testset, sweeps ownsConf × refsConf × lowConfTrigger × threshold).
+
+---
+
+The router has accumulated **23 independent rig receipts** (L0 baseline / v2 / v3 falsified, L1 rule, L1 skill, L1 recall falsified, L0+L1 scale effect, coverage, scale-cliff fix, skill scoring, skill semantic dedup, dedup pairwise confirmation, precision scale-degradation fix, pairwise merge of like terms, facets falsified, facets-fix falsified, backoff holds, L1+facets falsified, multi-level backoff holds, rule direct semantic retrieval, test-set relabeling falsified, rule strict judge, ownership tags holds), positive and negative.
 
 ## Receipt triage (reproduction ≠ proof of efficacy)
 
@@ -357,7 +389,7 @@ Router design: descriptors extracted from H1/H2/H3 headings + `**bold**` terms +
 ## Roadmap
 
 - [ ] **body merge + deploy**: frontmatter merge done, SKILL.md body merge + write to `~/.claude` replacing original skills (destructive, needs human judgment)
-- [ ] **ownership tags**: tag hub files (04-planning / 06-verify) with "owns X / references X", so "mentions" and "owns" are distinguishable
+- [x] **ownership tags**: tag hub files (04-planning / 06-verify) with "owns X / references X", so "mentions" and "owns" are distinguishable (receipt 17, holds: owns/refs differential F1 0.695->0.820, the first facets variant to beat L0; owns-level FPs remain, inherent tag coarseness)
 - [x] **facets tags**: security / parallel / subagent / ctx-stress cross-cutting index, test cross-stage queries (receipt 10, falsified, needs LLM judge, left for later)
 - [x] **backoff**: uncertain leaf loads parent (receipt 11 single-level to root F1 +0.583; receipt 13 multi-level to stage-parent F1 +0.254, corpus extended with L2 verified)
 - [x] **rule direct semantic retrieval to fill recall** (receipt 14, closes the 0714 debt): port skill `semanticRetrieve` to rule corpus, R +0.028 / F1 +0.019 marginally positive; rule Chinese corpus has no language wall, gain ~25x smaller than skill (+0.493), semantic-layer value scales with cross-representation gap
