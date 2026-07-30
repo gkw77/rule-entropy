@@ -27,7 +27,7 @@ All three come with receipts (real numbers), not framework hand-waving.
 ```bash
 git clone https://github.com/gkw77/rule-entropy.git
 cd rule-entropy
-node router/router.js "我的代码有SQL注入风险，怎么防"        # L0 single-query routing (zero deps)
+node router/router.js "首次编辑文件前要先调查什么"        # L0 single-query routing (zero deps) -> loads 05-execute
 node router/l1.js "提交代码前要做哪些质量检查"                # L1 semantic routing (needs LLM env)
 node router/eval.js                                           # full test set -> L0 P/R receipt
 node router/eval-l1.js                                        # L1 receipt (vs L0)
@@ -408,4 +408,4 @@ Not "attachable" - already in the repo, clone and run. The thesis says "reproduc
 | `reproducible/gzh-rig/` | independent rig demo, 19 defects testing dual-gate vs single-gate | `cd reproducible/gzh-rig && python rig.py` (pure stdlib, self-contained, no external deps) |
 | `reproducible/dao-cache-rig.py` | cross-session skeleton demo (cache stability A/B) | needs `pip install anthropic` + `ANTHROPIC_API_KEY` - cross-session receipt can't run in one conversation, skeleton attached for when you have a key |
 
-Data point: 177 blocks / 0 self-tested -> 3 P0 receipts (gzh independent rig + agent-chief reproduction + this router initial; the router has since accumulated to 22, see the receipts section above). Note: 177 blocks is the author's full `rules/{common,python}`; `corpus/` is the 13 common-files snapshot (the routed subset), scanning it gives the repo-corpus distribution, not the full 177.
+Data point: 177 blocks / 0 self-tested -> 3 P0 receipts (gzh independent rig + agent-chief reproduction + this router initial; the router has since accumulated to 23, see the receipts section above). Note: 177 blocks is the author's full `rules/{common,python}`; `corpus/` is the 13 common-files snapshot (the routed subset), scanning it gives the repo-corpus distribution, not the full 177.
