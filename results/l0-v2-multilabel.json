@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-07-13",
+  "timestamp": "2026-07-30",
   "corpus": "corpus/*.md (13 files)",
   "router": "L0 keyword, weighted-coverage + idf, CJK bigram",
   "testsetSize": 18,
   "sweep": [
     {
       "threshold": 0.05,
-      "precision": 0.20815696649029986,
+      "precision": 0.22204585537918875,
       "recall": 0.9722222222222222,
-      "f1": 0.33391454224787565
+      "f1": 0.3487293570626904
     },
     {
       "threshold": 0.1,
       "precision": 0.5111111111111112,
-      "recall": 0.9166666666666666,
-      "f1": 0.6314814814814815
+      "recall": 0.8888888888888888,
+      "f1": 0.6129629629629629
     },
     {
       "threshold": 0.15,
@@ -68,8 +68,8 @@
   "bestThreshold": 0.1,
   "macroAtBest": {
     "precision": 0.511,
-    "recall": 0.917,
-    "f1": 0.631
+    "recall": 0.889,
+    "f1": 0.613
   },
   "detail": [
     {
@@ -637,17 +637,18 @@
     {
       "query": "写代码前要做哪些调研和搜索",
       "expected": [
-        "04-planning"
+        "04-planning",
+        "05-execute"
       ],
       "predicted": [
         "04-planning"
       ],
       "precision": 1,
-      "recall": 1,
-      "f1": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
       "tp": 1,
       "fp": 0,
-      "fn": 0,
+      "fn": 1,
       "matchedTop": [
         {
           "path": "04-planning",

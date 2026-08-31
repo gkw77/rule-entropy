@@ -327,7 +327,29 @@ Reproduce: `node router/eval-ownership.js` (L0 vs original facets vs ownership, 
 
 ---
 
-The router has accumulated **23 independent rig receipts** (L0 baseline / v2 / v3 falsified, L1 rule, L1 skill, L1 recall falsified, L0+L1 scale effect, coverage, scale-cliff fix, skill scoring, skill semantic dedup, dedup pairwise confirmation, precision scale-degradation fix, pairwise merge of like terms, facets falsified, facets-fix falsified, backoff holds, L1+facets falsified, multi-level backoff holds, rule direct semantic retrieval, test-set relabeling falsified, rule strict judge, ownership tags holds), positive and negative.
+### 18. Expanded test set (18 -> 44 queries, single-shot overestimate check)
+
+Roadmap item "expand test set to 30-50 queries, cross-session re-verify". 26 harder new queries added (fuzzy/backoff/synonym-gap, one-to-many TDD/调研上线, 同形词 审查, 1 empty no-rule), all 44 through one pipeline (L0 deterministic + lenient + strict judge, deepseek-chat), 307 LLM calls. Purpose: check whether receipt 16's small-N numbers hold at larger N.
+
+| | P | R | F1 |
+|---|---|---|---|
+| L0 base18 @thr 0.1 | 0.511 | 0.889 | 0.613 |
+| L0 full N=44 | 0.366 | 0.614 | 0.424 |
+| L1-strict base18 | 0.861 | 0.75 | 0.778 |
+| L1-strict full | 0.614 | 0.591 | 0.576 |
+| L1-strict new-only (N=26) | 0.442 | 0.481 | 0.436 |
+
+Δ full-vs-base18: L0 F1 -0.189, L1-strict F1 -0.202. **Single-shot overestimate confirmed: every number drops at N=44.** The 26 harder new queries (long-query dilution, synonym gaps, backoff) drag all axes down; 8/26 have an expected rule below L0's 0.05 candidate cut (L1-unreachable, needs the rule-corpus semanticRetrieve port from receipt 14's skill line).
+
+**Judge-model dependence (the bigger finding)**: judge endpoint changed glm-5.2(ARK) -> deepseek-chat; base18 strict recall 0.917 -> 0.75 while precision held 0.861. Attribution of the 7 lost base18 expected rules: **6 are judge-layer rejections** (4 lenient FN - Q9 05, Q11 06, Q12 04, Q14 07 were in L0 candidates but lenient dropped them; 2 strict FN - Q4 02, Q16 A3), **1 true L0 candidate gap** (Q1 06a not in candidates). Receipt 16's own claim ("judge-model dependence, recall is judge-sensitive") re-confirmed at N=44: precision ceiling is judge-model-stable, recall is not.
+
+**Honest boundary**: base18 drop is confounded (judge swap + N growth, can't cleanly separate the two effects); new-query labels are single-annotator author labels (same criticism class as receipt 15); 1 empty no-rule query tests overload precision only.
+
+Reproduce: `node router/eval-expand.js l0` (deterministic) / `ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic ANTHROPIC_MODEL=deepseek-chat node router/eval-expand.js` (L1, needs token).
+
+---
+
+The router has accumulated **24 independent rig receipts** (L0 baseline / v2 / v3 falsified, L1 rule, L1 skill, L1 recall falsified, L0+L1 scale effect, coverage, scale-cliff fix, skill scoring, skill semantic dedup, dedup pairwise confirmation, precision scale-degradation fix, pairwise merge of like terms, facets falsified, facets-fix falsified, backoff holds, L1+facets falsified, multi-level backoff holds, rule direct semantic retrieval, test-set relabeling falsified, rule strict judge, ownership tags holds, expanded test set - single-shot overestimate confirmed), positive and negative.
 
 ## Receipt triage (reproduction ≠ proof of efficacy)
 
@@ -378,7 +400,10 @@ router/llm.js        L1 LLM judge: reuses terminal env vars, judgeRelevance(quer
 router/l1.js         L1 routing: L0 candidates -> per-rule LLM judge -> filter false positives
 router/eval.js       L0 evaluator: test set + threshold sweep -> P/R receipt
 router/eval-l1.js    L1 evaluator: vs L0
-results/             receipt archive (l0-v2-multilabel.json / l1-llm.json / skills-l0-full.json / ...)
+router/eval-expand.js  expanded-testset evaluator (18->44, L0 + lenient + strict, receipt 18)
+testset.json         original 18-query v3 relabeled test set
+testset-expanded.json  44-query expanded test set (18 base + 26 new, receipt 18)
+results/             receipt archive (l0-v2-multilabel.json / l1-llm.json / skills-l0-full.json / expand-receipt.json / ...)
 reproducible/        reproducible artifacts (see below)
 ```
 
@@ -396,7 +421,7 @@ Router design: descriptors extracted from H1/H2/H3 headings + `**bold**` terms +
 - [x] **test-set relabeling to fairly evaluate L1 precision true ceiling** (receipt 15, annotation-artifact hypothesis falsified): all 18 queries independently relabeled multi-label, only 1 truly under-labeled, precision ceiling ~0.65 is real not annotation artifact; L1 P +0.028 / F1 +0.019, L0 dropped (relabeling isn't to inflate, it's to label correctly)
 - [x] **rule strict judge fixes precision** (receipt 16, the true cause after relabel falsification): re-judge L1 predicted with strict judge (only directly-needed yes), P 0.648->0.861 (+0.213), F1 0.719->0.859, rule line's biggest precision gain; small recall cost -0.027 (over-filtered 1 TP + pre-existing miss), still leaves some FPs
 - [ ] **security tag exhaustive trigger surface** (BuilderIO gold standard ~15 scenarios), verify L0 instant-match specifics
-- [ ] expand test set to 30-50 queries, cross-session re-verify (single-shot overestimates, agentic often shrinks)
+- [x] **expand test set to 30-50 queries, cross-session re-verify** (receipt 18, single-shot overestimate confirmed): 18 -> 44 queries, one pipeline, 307 LLM calls; L0 F1 0.613->0.424, L1-strict 0.778->0.576 at N=44; judge-model dependence re-confirmed (base18 strict recall 0.917->0.75 on deepseek-chat, precision held; 6/7 lost rules are judge rejections not L0 gaps)
 
 ## Reproducible artifacts (reproducible/)
 
