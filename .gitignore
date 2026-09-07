@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# nested standalone project (own repo: rule-autopsy)
+rule-autopsy/
