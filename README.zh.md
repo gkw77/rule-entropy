@@ -376,4 +376,4 @@ reproducible/        可复现素材（见下）
 | `reproducible/gzh-rig/` | 独立 rig 示范，19 缺陷测双关卡 vs 单关卡 | `cd reproducible/gzh-rig && python rig.py`（纯 stdlib，自包含，无需外部依赖） |
 | `reproducible/dao-cache-rig.py` | 跨 session 骨架示范（缓存稳定性 A/B） | 需 `pip install anthropic` + `ANTHROPIC_API_KEY`--跨 session receipt 单对话跑不了，附骨架供有 key 时跑 |
 
-数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 22 个，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
+数据点：177 块 / 0 自测 -> 3 个 P0 receipt（gzh 独立 rig + agent-chief 复现 + 本路由器初始；路由器后续累积到 24 个 rig，见上 receipts 段）。注：177 块是作者完整 `rules/{common,python}` 的数；`corpus/` 是 13 个 common 文件快照（被路由的语料子集），扫它出的分布是 repo 语料的，非 177 全量。
