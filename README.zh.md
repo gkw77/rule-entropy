@@ -12,6 +12,17 @@ node reproducible/rule-evidence-audit.js corpus .                          # 扫
 node reproducible/rule-evidence-audit.js ~/.claude/rules "common,python"   # 扫你自己的规则
 ```
 
+本 repo 自身 13 个规则快照的真实运行结果（截到 summary 块；完整输出会逐个列出被标记的规则块）：
+
+```json
+{
+  "summary": { "total": 167, "behavior_NA": 145, "behaviorPct": 87,
+               "claimNoMetric": 12, "selftested_partial": 5,
+               "secondhand_needsRepro": 4, "faith_unmeasured": 1 },
+  "gate": { "errors": 0, "warnings": 1, "info": 2 }
+}
+```
+
 输出每个规则块的 evidence 评级：`behavior_NA`（纯行为规则无度量）/ `claimNoMetric`（声称度量但零 receipt）/ `faith`（声称且未测）/ `secondhand_needsRepro`（引别人数字待复现）/ `selftested_partial`（有自测）。大部分会是前两类--这就是规则系统的熵增：不验证就只增不减。
 
 ## 用它能干什么

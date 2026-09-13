@@ -12,6 +12,17 @@ node reproducible/rule-evidence-audit.js corpus .                          # sca
 node reproducible/rule-evidence-audit.js ~/.claude/rules "common,python"   # scan your own rules
 ```
 
+Real output on this repo's own 13 rule snapshots (trimmed to the summary block; the full run also lists every flagged block):
+
+```json
+{
+  "summary": { "total": 167, "behavior_NA": 145, "behaviorPct": 87,
+               "claimNoMetric": 12, "selftested_partial": 5,
+               "secondhand_needsRepro": 4, "faith_unmeasured": 1 },
+  "gate": { "errors": 0, "warnings": 1, "info": 2 }
+}
+```
+
 Each rule block gets an evidence verdict: `behavior_NA` (behavior rule, no metric) / `claimNoMetric` (claims a metric, zero receipt) / `faith` (claims and unmeasured) / `secondhand_needsRepro` (cites someone else's number, needs reproduction) / `selftested_partial` (has self-testing). Most of your blocks will land in the first two - that's rule entropy: unverified, it only grows.
 
 ## What it does
