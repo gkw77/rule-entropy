@@ -2,7 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# nested standalone project (own repo: rule-autopsy)
+# nested standalone repos (each has its own .git and GitHub remote)
 rule-autopsy/
 ai-toolscore/
 paper-ink-charts/
+gkw77/
