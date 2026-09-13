@@ -4,4 +4,5 @@ __pycache__/
 
 # nested standalone project (own repo: rule-autopsy)
 rule-autopsy/
-tool-autopsy/
+ai-toolscore/
+paper-ink-charts/
