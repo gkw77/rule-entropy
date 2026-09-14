@@ -2,7 +2,7 @@
 
 > English: [README.md](README.md)
 >
-> 你的 agent 每次把全部 CLAUDE.md / skills 塞进 context，规则越堆越多、越来越笨，还没人知道哪条在帮忙、哪条只是"感觉对"的信仰。作者拿自己的规则开刀建仪器测仪器：扫 167 个规则块，**87% 是没度量的行为规则、12 处声称了度量但零 receipt**。工具附上，clone 即跑，扫你自己的。
+> 你的 agent 每次把全部 CLAUDE.md / skills 塞进 context，规则越堆越多、越来越笨，还没人知道哪条在帮忙、哪条只是"感觉对"的信仰。作者拿自己的规则开刀建仪器测仪器：扫 167 个规则块，**87% 是根本不写度量的行为规则；声称有效果的 22 条里，被真正测过的只有 5 条**。工具附上，clone 即跑，扫你自己的。
 
 ## 30 秒：扫你自己的规则，看多少是"信仰"
 
@@ -23,7 +23,7 @@ node reproducible/rule-evidence-audit.js ~/.claude/rules "common,python"   # 扫
 }
 ```
 
-输出每个规则块的 evidence 评级：`behavior_NA`（纯行为规则无度量）/ `claimNoMetric`（声称度量但零 receipt）/ `faith`（声称且未测）/ `secondhand_needsRepro`（引别人数字待复现）/ `selftested_partial`（有自测）。大部分会是前两类--这就是规则系统的熵增：不验证就只增不减。
+输出每个规则块的 evidence 评级：`behavior_NA`（纯行为规则，不声称度量）/ `claimNoMetric`（声称有效果，但从不说幅度）/ `faith`（断言了数字，无出处）/ `secondhand_needsRepro`（引别人的数字，从未复现）/ `selftested_partial`（有自测）。大部分会是前两类--这就是规则系统的熵增：不验证就只增不减。
 
 ## 用它能干什么
 

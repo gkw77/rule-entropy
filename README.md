@@ -2,7 +2,7 @@
 
 > 中文文档见 [README.zh.md](README.zh.md)
 >
-> Every session your agent stuffs the entire CLAUDE.md / skills into context. Rules pile up, the agent gets dumber, and nobody knows which rule is actually helping vs. which is just "feels right" faith. The author turned the tool on his own rules: scanned 167 rule blocks - **87% are behavior rules with no metric, 12 claim metrics with zero receipt**. The tool is included; clone and run it on your own rules.
+> Every session your agent stuffs the entire CLAUDE.md / skills into context. Rules pile up, the agent gets dumber, and nobody knows which rule is actually helping vs. which is just "feels right" faith. The author turned the tool on his own rules: scanned 167 rule blocks - **87% are behavior rules that state no metric at all; of the 22 that claim some effect, 5 have ever been tested**. The tool is included; clone and run it on your own rules.
 
 ## 30 seconds: scan your own rules, see how many are "faith"
 
@@ -23,7 +23,7 @@ Real output on this repo's own 13 rule snapshots (trimmed to the summary block; 
 }
 ```
 
-Each rule block gets an evidence verdict: `behavior_NA` (behavior rule, no metric) / `claimNoMetric` (claims a metric, zero receipt) / `faith` (claims and unmeasured) / `secondhand_needsRepro` (cites someone else's number, needs reproduction) / `selftested_partial` (has self-testing). Most of your blocks will land in the first two - that's rule entropy: unverified, it only grows.
+Each rule block gets an evidence verdict: `behavior_NA` (behavior rule, no metric claimed) / `claimNoMetric` (states an effect, never says by how much) / `faith` (asserts a number, no source) / `secondhand_needsRepro` (cites someone else's number, never reproduced) / `selftested_partial` (has a self-test). Most of your blocks will land in the first two - that's rule entropy: unverified, it only grows.
 
 ## What it does
 
